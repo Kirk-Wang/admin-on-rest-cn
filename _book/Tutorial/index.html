@@ -1,0 +1,841 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Admin-on-REST 教程 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="./" />
+    
+    
+    <link rel="prev" href="../" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Admin-on-REST 教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="./">
+            
+                <a href="./#Installation">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Admin-on-REST 教程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="admin-on-rest-&#x6559;&#x7A0B;">Admin-on-REST &#x6559;&#x7A0B;</h1>
+<p>This 15 minutes tutorial will expose how to create a new admin app based on an existing REST API.</p>
+<p><img src="http://static.marmelab.com/admin-on-rest.gif" alt="admin-on-rest blog demo"></p>
+<h2 id="Installation">&#x5B89;&#x88C5;</h2>
+<p>Admin-on-REST uses React. We&apos;ll use Facebook&apos;s <a href="https://github.com/facebookincubator/create-react-app" target="_blank">create-react-app</a> to create an empty React app, and install the <code>admin-on-rest</code> package:</p>
+<pre><code class="lang-sh">npm install -g create-react-app
+create-react-app <span class="hljs-built_in">test</span>-admin
+<span class="hljs-built_in">cd</span> <span class="hljs-built_in">test</span>-admin/
+yarn add admin-on-rest
+yarn start
+</code></pre>
+<p>You should be up and running with an empty React application on port 3000.</p>
+<h2 id="making-contact-with-the-api">Making Contact With The API</h2>
+<p>We&apos;ll be using <a href="http://jsonplaceholder.typicode.com/" target="_blank">JSONPlaceholder</a>, a fake REST API designed for testing and prototyping, as the datasource for the admin.</p>
+<pre><code>curl http://jsonplaceholder.typicode.com/posts/12
+</code></pre><pre><code class="lang-json">{
+  <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">12</span>,
+  <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;in quibusdam tempore odit est dolorem&quot;</span>,
+  <span class="hljs-string">&quot;body&quot;</span>: <span class="hljs-string">&quot;itaque id aut magnam\npraesentium quia et ea odit et ea voluptas et\nsapiente quia nihil amet occaecati quia id voluptatem\nincidunt ea est distinctio odio&quot;</span>,
+  <span class="hljs-string">&quot;userId&quot;</span>: <span class="hljs-number">2</span>
+}
+</code></pre>
+<p>JSONPlaceholder provides endpoints for posts, comments, and users. The admin we&apos;ll build will allow to Create, Retrieve, Update, and Delete (CRUD) these resources.</p>
+<p>Replace the <code>src/App.js</code> by the following code:</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/App.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { jsonServerRestClient, Admin, Resource } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">import</span> { PostList } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./posts&apos;</span>;
+
+<span class="hljs-keyword">const</span> App = () =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Admin</span> <span class="hljs-attr">restClient</span>=<span class="hljs-string">{jsonServerRestClient(&apos;http:</span>//<span class="hljs-attr">jsonplaceholder.typicode.com</span>&apos;)}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Resource</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;posts&quot;</span> <span class="hljs-attr">list</span>=<span class="hljs-string">{PostList}</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Admin</span>&gt;</span>
+);
+
+export default App;
+</span></code></pre>
+<p>The <code>App</code> component now renders an <code>&lt;Admin&gt;</code> component, which is the main component of admin-on-rest. This component expects a REST client as a parameter - a function capable of translating REST commands into HTTP requests. Since REST isn&apos;t a standard, you will probably have to provide a custom client to connect to your own APIs. But we&apos;ll dive into REST clients later. For now, let&apos;s take advantage of the <code>jsonServerRestClient</code>, which speaks the same REST dialect as JSONPlaceholder.</p>
+<p>The <code>&lt;Admin&gt;</code> component can contain one or more <code>&lt;Resource&gt;</code> components, each resource being mapped to an endpoint in the API. To begin with, we&apos;ll display the list of posts. Here is what the <code>&lt;PostList&gt;</code> component looks like:</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/posts.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { List, Datagrid, TextField } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PostList = (props) =&gt; (
+    &lt;List {...props}&gt;
+        &lt;Datagrid&gt;
+            &lt;TextField source=&quot;id&quot; /&gt;
+            &lt;TextField source=&quot;title&quot; /&gt;
+            &lt;TextField source=&quot;body&quot; /&gt;
+        &lt;/Datagrid&gt;
+    &lt;/List&gt;
+);
+</code></pre>
+<p>The main component of the post list is a <code>&lt;List&gt;</code> component, responsible for grabbing the information from the API, displaying the page title, and handling pagination. This list then delegates the display of the actual list of posts to a <code>&lt;Datagrid&gt;</code>, responsible for displaying a table with one row for each post. The datagrid uses it child components (here, a list of <code>&lt;TextField&gt;</code>) to determine the columns to render. Each Field component maps a different field in the API response, specified by the <code>source</code> prop.</p>
+<p>That&apos;s enough to display the post list:</p>
+<p><img src="img/simple-post-list.png" alt="Simple posts list"></p>
+<p>The list is already functional: you can reorder it by clicking on column headers, or change pages by using the bottom pagination controls.</p>
+<h2 id="field-types">Field Types</h2>
+<p>You&apos;ve just met the <code>&lt;TextField&gt;</code> component, but admin-on-rest provides many Field components to map various content types. For instance, <a href="http://jsonplaceholder.typicode.com/users" target="_blank">the <code>/users</code> endpoint in JSONPlaceholder</a> contains emails.</p>
+<pre><code>curl http://jsonplaceholder.typicode.com/users/2
+</code></pre><pre><code class="lang-json">{
+  <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">2</span>,
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Ervin Howell&quot;</span>,
+  <span class="hljs-string">&quot;username&quot;</span>: <span class="hljs-string">&quot;Antonette&quot;</span>,
+  <span class="hljs-string">&quot;email&quot;</span>: <span class="hljs-string">&quot;Shanna@melissa.tv&quot;</span>,
+  <span class="hljs-string">&quot;address&quot;</span>: {
+    <span class="hljs-string">&quot;street&quot;</span>: <span class="hljs-string">&quot;Victor Plains&quot;</span>,
+    <span class="hljs-string">&quot;suite&quot;</span>: <span class="hljs-string">&quot;Suite 879&quot;</span>,
+    <span class="hljs-string">&quot;city&quot;</span>: <span class="hljs-string">&quot;Wisokyburgh&quot;</span>,
+    <span class="hljs-string">&quot;zipcode&quot;</span>: <span class="hljs-string">&quot;90566-7771&quot;</span>,
+    <span class="hljs-string">&quot;geo&quot;</span>: {
+      <span class="hljs-string">&quot;lat&quot;</span>: <span class="hljs-string">&quot;-43.9509&quot;</span>,
+      <span class="hljs-string">&quot;lng&quot;</span>: <span class="hljs-string">&quot;-34.4618&quot;</span>
+    }
+  },
+  <span class="hljs-string">&quot;phone&quot;</span>: <span class="hljs-string">&quot;010-692-6593 x09125&quot;</span>,
+  <span class="hljs-string">&quot;website&quot;</span>: <span class="hljs-string">&quot;anastasia.net&quot;</span>,
+  <span class="hljs-string">&quot;company&quot;</span>: {
+    <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;Deckow-Crist&quot;</span>,
+    <span class="hljs-string">&quot;catchPhrase&quot;</span>: <span class="hljs-string">&quot;Proactive didactic contingency&quot;</span>,
+    <span class="hljs-string">&quot;bs&quot;</span>: <span class="hljs-string">&quot;synergize scalable supply-chains&quot;</span>
+  }
+}
+</code></pre>
+<p>Let&apos;s create a new <code>UserList</code>, using <code>&lt;EmailField&gt;</code> to map the <code>email</code> field:</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/users.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { List, Datagrid, EmailField, TextField } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> UserList = (props) =&gt; (
+    &lt;List title=&quot;All users&quot; {...props}&gt;
+        &lt;Datagrid&gt;
+            &lt;TextField source=&quot;id&quot; /&gt;
+            &lt;TextField source=&quot;name&quot; /&gt;
+            &lt;TextField source=&quot;username&quot; /&gt;
+            &lt;EmailField source=&quot;email&quot; /&gt;
+        &lt;/Datagrid&gt;
+    &lt;/List&gt;
+);
+</code></pre>
+<p>You&apos;ll notice that this list overrides the default <code>title</code>. To include the new <code>users</code> resource in the admin app, add it in <code>src/App.js</code>:</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/App.js</span>
+<span class="hljs-keyword">import</span> { PostList } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./posts&apos;</span>;
+<span class="hljs-keyword">import</span> { UserList } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./users&apos;</span>;
+
+<span class="hljs-keyword">const</span> App = () =&gt; (
+    &lt;Admin restClient={jsonServerRestClient(&apos;http://jsonplaceholder.typicode.com&apos;)}&gt;
+        &lt;Resource name=&quot;posts&quot; list={PostList} /&gt;
+        &lt;Resource name=&quot;users&quot; list={UserList} /&gt;
+    &lt;/Admin&gt;
+);
+</code></pre>
+<p><img src="img/simple-user-list.png" alt="Simple user datagrid"></p>
+<p>The sidebar now gives access to the second resource, Users. The users list shows the email as a <code>&lt;a href=&quot;mailto:&quot;&gt;</code> tag.</p>
+<p>In admin-on-rest, fields are simple React components. At runtime, they receive the <code>record</code> fetched from the API on (e.g. <code>{ &quot;id&quot;: 2, &quot;name&quot;: &quot;Ervin Howell&quot;, &quot;username&quot;: &quot;Antonette&quot;, &quot;email&quot;: &quot;Shanna@melissa.tv&quot;, ... }</code>), and the <code>source</code> field they should display (e.g. &apos;email&apos;).</p>
+<p>That means that writing a custom Field component is really simple. For instance, to create an <code>UrlField</code>:</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in admin-on-rest/src/mui/field/UrlField.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> PropTypes <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;prop-types&apos;</span>;
+
+<span class="hljs-keyword">const</span> UrlField = ({ record = {}, source }) =&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">{record[source]}</span>&gt;</span>
+        {record[source]}
+    <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></span>;
+
+UrlField.propTypes = {
+    record: PropTypes.object,
+    source: PropTypes.string.isRequired,
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> UrlField;
+</code></pre>
+<h2 id="relationships">Relationships</h2>
+<p>In JSONPlaceholder, each <code>post</code> record includes a <code>userId</code> field, which points to a <code>user</code>:</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;userId&quot;</span>: <span class="hljs-number">1</span>,
+    <span class="hljs-string">&quot;title&quot;</span>: <span class="hljs-string">&quot;sunt aut facere repellat provident occaecati excepturi optio reprehenderit&quot;</span>,
+    <span class="hljs-string">&quot;body&quot;</span>: <span class="hljs-string">&quot;quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto&quot;</span>
+}
+</code></pre>
+<p>Admin-on-REST knows how to take advantage of these foreign keys to fetch references. For instance, to include the user name in the posts list, use the <code>&lt;ReferenceField&gt;</code>:</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/posts.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { List, Datagrid, TextField, EmailField, ReferenceField } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PostList = (props) =&gt; (
+    &lt;List {...props}&gt;
+        &lt;Datagrid&gt;
+            &lt;TextField source=&quot;id&quot; /&gt;
+            &lt;ReferenceField label=&quot;User&quot; source=&quot;userId&quot; reference=&quot;users&quot;&gt;
+                &lt;TextField source=&quot;name&quot; /&gt;
+            &lt;/ReferenceField&gt;
+            &lt;TextField source=&quot;title&quot; /&gt;
+            &lt;TextField source=&quot;body&quot; /&gt;
+        &lt;/Datagrid&gt;
+    &lt;/List&gt;
+);
+</code></pre>
+<p>When displaying the posts list, the app now fetches related user records, and displays their <code>name</code> as a <code>&lt;TextField&gt;</code>. Notice the <code>label</code> property: you can use it on any field component to customize the field label.</p>
+<p><img src="img/reference-posts.png" alt="reference posts in comment list"></p>
+<p><strong>Tip</strong>: Reference components always pass the data they fetch to a child component, which is responsible for displaying the data.</p>
+<h2 id="creation-and-edition">Creation and Edition</h2>
+<p>An admin interface is about displaying remote data, but also about editing and creating. Admin-on-REST provides <code>&lt;Create&gt;</code> and <code>&lt;Edit&gt;</code> components for that purpose. Add them to the <code>posts</code> script:</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/posts.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { List, Edit, Create, Datagrid, ReferenceField, TextField, EditButton, DisabledInput, LongTextInput, ReferenceInput, SelectInput, SimpleForm, TextInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PostList = (props) =&gt; (
+    &lt;List {...props}&gt;
+        &lt;Datagrid&gt;
+            &lt;TextField source=&quot;id&quot; /&gt;
+            &lt;ReferenceField label=&quot;User&quot; source=&quot;userId&quot; reference=&quot;users&quot;&gt;
+                &lt;TextField source=&quot;name&quot; /&gt;
+            &lt;/ReferenceField&gt;
+            &lt;TextField source=&quot;title&quot; /&gt;
+            &lt;TextField source=&quot;body&quot; /&gt;
+            &lt;EditButton /&gt;
+        &lt;/Datagrid&gt;
+    &lt;/List&gt;
+);
+
+const PostTitle = ({ record }) =&gt; {
+    return &lt;span&gt;Post {record ? `&quot;${record.title}&quot;` : &apos;&apos;}&lt;/span&gt;;
+};
+
+export const PostEdit = (props) =&gt; (
+    &lt;Edit title={&lt;PostTitle /&gt;} {...props}&gt;
+        &lt;SimpleForm&gt;
+            &lt;DisabledInput source=&quot;id&quot; /&gt;
+            &lt;ReferenceInput label=&quot;User&quot; source=&quot;userId&quot; reference=&quot;users&quot;&gt;
+                &lt;SelectInput optionText=&quot;name&quot; /&gt;
+            &lt;/ReferenceInput&gt;
+            &lt;TextInput source=&quot;title&quot; /&gt;
+            &lt;LongTextInput source=&quot;body&quot; /&gt;
+        &lt;/SimpleForm&gt;
+    &lt;/Edit&gt;
+);
+
+export const PostCreate = (props) =&gt; (
+    &lt;Create {...props}&gt;
+        &lt;SimpleForm&gt;
+            &lt;ReferenceInput label=&quot;User&quot; source=&quot;userId&quot; reference=&quot;users&quot; allowEmpty&gt;
+                &lt;SelectInput optionText=&quot;name&quot; /&gt;
+            &lt;/ReferenceInput&gt;
+            &lt;TextInput source=&quot;title&quot; /&gt;
+            &lt;LongTextInput source=&quot;body&quot; /&gt;
+        &lt;/SimpleForm&gt;
+    &lt;/Create&gt;
+);
+</code></pre>
+<p>Notice the additional <code>&lt;EditButton&gt;</code> field in the <code>&lt;PostList&gt;</code> children: that&apos;s what gives access to the post edition page. Also, the <code>&lt;Edit&gt;</code> component uses a custom <code>&lt;PostTitle&gt;</code> component as title, which shows the way to customize the title for a given page.</p>
+<p>If you&apos;ve understood the <code>&lt;List&gt;</code> component, the <code>&lt;Edit&gt;</code> and <code>&lt;Create&gt;</code> components will be no surprise. They are responsible for fetching the record, and displaying the page title. They pass the record down to the <code>&lt;SimpleForm&gt;</code> component, which is responsible for the form layout, default values, and validation. Just like <code>&lt;Datagrid&gt;</code>, <code>&lt;SimpleForm&gt;</code> uses its children to determine the form inputs to display. It expects <em>input components</em> as children. <code>&lt;DisabledInput&gt;</code>, <code>&lt;TextInput&gt;</code>, <code>&lt;LongTextInput&gt;</code>, and <code>&lt;ReferenceInput&gt;</code> are such inputs.</p>
+<p>As for the <code>&lt;ReferenceInput&gt;</code>, it takes the same props as the <code>&lt;ReferenceField&gt;</code> (used earlier in the list page). <code>&lt;ReferenceInput&gt;</code> uses these props to fetch the API for possible references related to the current record (in this case, possible <code>users</code> for the current <code>post</code>). It then passes these possible references to the child component (<code>&lt;SelectInput&gt;</code>), which is responsible for displaying them (via their <code>name</code> in that case), and letting the user select one. <code>&lt;SelectInput&gt;</code> renders as a <code>&lt;select&gt;</code> tag in HTML.</p>
+<p><strong>Tip</strong>: The <code>&lt;Edit&gt;</code> and the <code>&lt;Create&gt;</code> components use the same <code>&lt;ReferenceInput&gt;</code> configuration, except for the <code>allowEmpty</code> attribute, which is required in <code>&lt;Create&gt;</code>.</p>
+<p>To use the new <code>&lt;PostEdit&gt;</code> and <code>&lt;PostCreate&gt;</code> components in the posts resource, just add them as <code>edit</code> and <code>create</code> attributes in the <code>&lt;Resource&gt;</code> component:</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/App.js</span>
+<span class="hljs-keyword">import</span> { PostList, PostEdit, PostCreate } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./posts&apos;</span>;
+<span class="hljs-keyword">import</span> { UserList } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./users&apos;</span>;
+
+<span class="hljs-keyword">const</span> App = () =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Admin</span> <span class="hljs-attr">restClient</span>=<span class="hljs-string">{jsonServerRestClient(&apos;http:</span>//<span class="hljs-attr">jsonplaceholder.typicode.com</span>&apos;)}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Resource</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;posts&quot;</span> <span class="hljs-attr">list</span>=<span class="hljs-string">{PostList}</span> <span class="hljs-attr">edit</span>=<span class="hljs-string">{PostEdit}</span> <span class="hljs-attr">create</span>=<span class="hljs-string">{PostCreate}</span> /&gt;</span>
+        // ...
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Admin</span>&gt;</span>
+);
+</span></code></pre>
+<p>Admin-on-rest automatically adds a &quot;create&quot; button on top of the posts list to give access to the <code>&lt;PostCreate&gt;</code> component. And the <code>&lt;EditButton&gt;</code> renders in each line of the list to give access to the <code>&lt;PostEdit&gt;</code> component.</p>
+<p><img src="img/editable-post.png" alt="post list with access to edit and create"></p>
+<p>The form rendered in the create and edit pages is already functional. It issues <code>POST</code> and <code>PUT</code> requests to the REST API upon submission.</p>
+<p><img src="img/post-edition.png" alt="post edition form"></p>
+<p><strong>Note</strong>: JSONPlaceholder is a read-only API; although it seems to accept <code>POST</code> and <code>PUT</code> requests, it doesn&apos;t take into account the creations and editions - that&apos;s why, in this particular case, you will see errors after creation, and you won&apos;t see your editions after you save them. It&apos;s just an artifact of JSONPlaceholder.</p>
+<h2 id="deletion">Deletion</h2>
+<p>There is not much to configure in a deletion view. To add removal abilities to a <code>Resource</code>, simply use the bundled <code>&lt;Delete&gt;</code> component from admin-on-rest, and register it using the <code>remove</code> prop (&apos;delete&apos; is a reserved word in JavaScript):</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/App.js</span>
+<span class="hljs-keyword">import</span> { Delete } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">const</span> App = () =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Admin</span> <span class="hljs-attr">restClient</span>=<span class="hljs-string">{jsonServerRestClient(&apos;http:</span>//<span class="hljs-attr">jsonplaceholder.typicode.com</span>&apos;)}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Resource</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;posts&quot;</span> <span class="hljs-attr">list</span>=<span class="hljs-string">{PostList}</span> <span class="hljs-attr">edit</span>=<span class="hljs-string">{PostEdit}</span> <span class="hljs-attr">create</span>=<span class="hljs-string">{PostCreate}</span> <span class="hljs-attr">remove</span>=<span class="hljs-string">{Delete}</span> /&gt;</span>
+        // ...
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Admin</span>&gt;</span>
+);
+</span></code></pre>
+<p>In the edition view, a new &quot;delete&quot; button appears. And you can also use the <code>&lt;DeleteButton&gt;</code> as a field in the list.</p>
+<p><img src="img/post-deletion.png" alt="post deletion view"></p>
+<h2 id="filters">Filters</h2>
+<p>Let&apos;s get back to the post list for a minute. It offers sorting and pagination, but one feature is missing: the ability to search content.</p>
+<p>Admin-on-rest can use input components to create a multi-criteria search engine in the list view. First, create a <code>&lt;Filter&gt;</code> component just like you would write a <code>&lt;SimpleForm&gt;</code> component, using input components as children. Then, add it to the list using the <code>filters</code> prop:</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/posts.js</span>
+<span class="hljs-keyword">import</span> { Filter, ReferenceInput, SelectInput, TextInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">const</span> PostFilter = (props) =&gt; (
+    &lt;Filter {...props}&gt;
+        &lt;TextInput label=&quot;Search&quot; source=&quot;q&quot; alwaysOn /&gt;
+        &lt;ReferenceInput label=&quot;User&quot; source=&quot;userId&quot; reference=&quot;users&quot; allowEmpty&gt;
+            &lt;SelectInput optionText=&quot;name&quot; /&gt;
+        &lt;/ReferenceInput&gt;
+    &lt;/Filter&gt;
+);
+
+export const PostList = (props) =&gt; (
+    &lt;List {...props} filters={&lt;PostFilter /&gt;}&gt;
+        // ...
+    &lt;/List&gt;
+);
+</code></pre>
+<p>The first filter, &apos;q&apos;, takes advantage of a full-text functionality offered by JSONPlaceholder. It is <code>alwaysOn</code>, so it always appears on the screen. The second filter, &apos;userId&apos;, can be added by way of the &quot;add filter&quot; button, located on the top of the list. As it&apos;s a <code>&lt;ReferenceInput&gt;</code>, it&apos;s already populated with possible users. It can be turned off by the end user.</p>
+<p>Filters are &quot;search-as-you-type&quot;, meaning that when the user enters new values in the filter form, the list refreshes (via an API request) immediately.</p>
+<p><img src="img/filters.gif" alt="posts search engine"></p>
+<h2 id="customizing-the-menu-icons">Customizing the Menu Icons</h2>
+<p>The sidebar menu shows the same icon for both posts and users. Fortunately, customizing the menu icon is just a matter of passing an <code>icon</code> attribute to each <code>&lt;Resource&gt;</code>:</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/App.js</span>
+<span class="hljs-keyword">import</span> PostIcon <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;material-ui/svg-icons/action/book&apos;</span>;
+<span class="hljs-keyword">import</span> UserIcon <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;material-ui/svg-icons/social/group&apos;</span>;
+
+<span class="hljs-keyword">const</span> App = () =&gt; (
+    &lt;Admin restClient={jsonServerRestClient(&apos;http://jsonplaceholder.typicode.com&apos;)}&gt;
+        &lt;Resource name=&quot;posts&quot; list={PostList} edit={PostEdit} create={PostCreate} remove={Delete} icon={PostIcon} /&gt;
+        &lt;Resource name=&quot;users&quot; list={UserList} icon={UserIcon} /&gt;
+    &lt;/Admin&gt;
+);
+</code></pre>
+<p><img src="img/custom-menu.png" alt="custom menu icons"></p>
+<h2 id="using-a-custom-home-page">Using a Custom Home Page</h2>
+<p>By default, admin-on-rest displays the list page of the first resource as home page. If you want to display a custom component instead, pass it in the <code>dashboard</code> prop of the <code>&lt;Admin&gt;</code> component.</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/Dashboard.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { Card, CardHeader, CardText } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;material-ui/Card&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> () =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Card</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{{</span> <span class="hljs-attr">margin:</span> &apos;<span class="hljs-attr">2em</span>&apos; }}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">CardHeader</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;Welcome to the administration&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">CardText</span>&gt;</span>Lorem ipsum sic dolor amet...<span class="hljs-tag">&lt;/<span class="hljs-name">CardText</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Card</span>&gt;</span>
+);
+</span></code></pre>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/App.js</span>
+<span class="hljs-keyword">import</span> Dashboard <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Dashboard&apos;</span>;
+
+<span class="hljs-keyword">const</span> App = () =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Admin</span> <span class="hljs-attr">dashboard</span>=<span class="hljs-string">{Dashboard}</span> <span class="hljs-attr">restClient</span>=<span class="hljs-string">{jsonServerRestClient(&apos;http:</span>//<span class="hljs-attr">jsonplaceholder.typicode.com</span>&apos;)}&gt;</span>
+        // ...
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Admin</span>&gt;</span></span>
+);
+</code></pre>
+<p><img src="img/dashboard.png" alt="Custom home page"></p>
+<h2 id="adding-a-login-page">Adding a Login Page</h2>
+<p>Most admin apps require authentication. Admin-on-rest can check user credentials before displaying a page, and redirect to a login form when the REST API returns a 403 error code.</p>
+<p><em>What</em> those credentials are, and <em>how</em> to get them, are questions that you must answer. Admin-on-rest makes no assumption about your authentication strategy (basic auth, OAuth, custom route, etc), but gives you the hooks to plug your logic at the right place - by calling an <code>authClient</code> function.</p>
+<p>For this tutorial, since there is no public authentication API we can use, let&apos;s use a fake authentication provider that accepts every login request, and stores the <code>username</code> in <code>localStorage</code>. Each page change will require that <code>localStorage</code> contains a <code>username</code> item.</p>
+<p>The <code>authClient</code> is a simple function, which must return a <code>Promise</code>:</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/authClient.js</span>
+<span class="hljs-keyword">import</span> { AUTH_LOGIN, AUTH_LOGOUT, AUTH_ERROR, AUTH_CHECK } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> (type, params) =&gt; {
+    <span class="hljs-comment">// called when the user attempts to log in</span>
+    <span class="hljs-keyword">if</span> (type === AUTH_LOGIN) {
+        <span class="hljs-keyword">const</span> { username } = params;
+        localStorage.setItem(<span class="hljs-string">&apos;username&apos;</span>, username);
+        <span class="hljs-comment">// accept all username/password combinations</span>
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.resolve();
+    }
+    <span class="hljs-comment">// called when the user clicks on the logout button</span>
+    <span class="hljs-keyword">if</span> (type === AUTH_LOGOUT) {
+        localStorage.removeItem(<span class="hljs-string">&apos;username&apos;</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.resolve();
+    }
+    <span class="hljs-comment">// called when the API returns an error</span>
+    <span class="hljs-keyword">if</span> (type === AUTH_ERROR) {
+        <span class="hljs-keyword">const</span> { status } = params;
+        <span class="hljs-keyword">if</span> (status === <span class="hljs-number">401</span> || status === <span class="hljs-number">403</span>) {
+            localStorage.removeItem(<span class="hljs-string">&apos;username&apos;</span>);
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.reject();
+        }
+        <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.resolve();
+    }
+    <span class="hljs-comment">// called when the user navigates to a new location</span>
+    <span class="hljs-keyword">if</span> (type === AUTH_CHECK) {
+        <span class="hljs-keyword">return</span> localStorage.getItem(<span class="hljs-string">&apos;username&apos;</span>) ? <span class="hljs-built_in">Promise</span>.resolve() : <span class="hljs-built_in">Promise</span>.reject();
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.reject(<span class="hljs-string">&apos;Unknown method&apos;</span>);
+};
+</code></pre>
+<p><strong>Tip</strong>: As the <code>restClient</code> response is asynchronous, you can easily fetch an authentication server in there.</p>
+<p>To enable this authentication strategy, pass the client as the <code>authClient</code> prop in the <code>&lt;Admin&gt;</code> component:</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/App.js</span>
+<span class="hljs-keyword">import</span> Dashboard <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./Dashboard&apos;</span>;
+<span class="hljs-keyword">import</span> authClient <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./authClient&apos;</span>;
+
+<span class="hljs-keyword">const</span> App = () =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Admin</span> <span class="hljs-attr">authClient</span>=<span class="hljs-string">{authClient}</span> <span class="hljs-attr">restClient</span>=<span class="hljs-string">{jsonServerRestClient(&apos;http:</span>//<span class="hljs-attr">jsonplaceholder.typicode.com</span>&apos;)}&gt;</span>
+        // ...
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Admin</span>&gt;</span></span>
+);
+</code></pre>
+<p>Once the app reloads, it&apos;s now behind a login form that accepts everyone:</p>
+<p><img src="img/login.gif" alt="Login form"></p>
+<h2 id="responsive-list">Responsive List</h2>
+<p>The admin-on-rest layout is already responsive. Try to resize your browser to see how the sidebar switches to a drawer on smaller screens.</p>
+<p>But a responsive layout is not enough to make a responsive app. Datagrid components work well on desktop, but are absolutely not adapted to mobile devices. If your admin must be used on mobile devices, you&apos;ll have to provide an alternative component for small screens</p>
+<p>First, you should know that you don&apos;t have to use the <code>&lt;Datagrid&gt;</code> component as <code>&lt;List&gt;</code> child. You can use any other component you like. For instance, the <code>&lt;SimpleList&gt;</code> component:</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/posts.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { List, SimpleList } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PostList = (props) =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">List</span> {<span class="hljs-attr">...props</span>}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">SimpleList</span>
+            <span class="hljs-attr">primaryText</span>=<span class="hljs-string">{record</span> =&gt;</span> record.title}
+            secondaryText={record =&gt; `${record.views} views`}
+            tertiaryText={record =&gt; new Date(record.published_at).toLocaleDateString()}
+        /&gt;
+    <span class="hljs-tag">&lt;/<span class="hljs-name">List</span>&gt;</span>
+);
+</span></code></pre>
+<p>The <code>&lt;SimpleList&gt;</code> component uses <a href="http://www.material-ui.com/#/components/list" target="_blank">material-ui&apos;s <code>&lt;List&gt;</code> and <code>&lt;ListItem&gt;</code> components</a>, and expects functions as <code>primaryText</code>, <code>secondaryText</code>, and <code>tertiaryText</code> props.</p>
+<p><img src="img/mobile-post-list.png" alt="Mobile post list" style="display:block;margin:2em auto;box-shadow:none;filter:drop-shadow(13px 12px 7px rgba(0,0,0,0.5));"></p>
+<p>That works fine on mobile, but now the desktop user experience is worse. The best compromise would be to use <code>&lt;SimpleList&gt;</code> on small screens, and <code>&lt;Datagrid&gt;</code> on other screens. That&apos;s where the <code>&lt;Responsive&gt;</code> component comes in:</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/posts.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { List, Responsive, SimpleList, Datagrid, TextField, ReferenceField, EditButton } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PostList = (props) =&gt; (
+    &lt;List {...props}&gt;
+        &lt;Responsive
+            small={
+                &lt;SimpleList
+                    primaryText={record =&gt; record.title}
+                    secondaryText={record =&gt; `${record.views} views`}
+                    tertiaryText={record =&gt; new Date(record.published_at).toLocaleDateString()}
+                /&gt;
+            }
+            medium={
+                &lt;Datagrid&gt;
+                    &lt;TextField source=&quot;id&quot; /&gt;
+                    &lt;ReferenceField label=&quot;User&quot; source=&quot;userId&quot; reference=&quot;users&quot;&gt;
+                        &lt;TextField source=&quot;name&quot; /&gt;
+                    &lt;/ReferenceField&gt;
+                    &lt;TextField source=&quot;title&quot; /&gt;
+                    &lt;TextField source=&quot;body&quot; /&gt;
+                    &lt;EditButton /&gt;
+                &lt;/Datagrid&gt;
+            }
+        /&gt;
+    &lt;/List&gt;
+);
+</code></pre>
+<p>This works exactly the way you expect. The lesson here is that admin-on-rest takes care of responsive web design for the layout, but it&apos;s your job to use <code>&lt;Responsive&gt;</code> in pages.</p>
+<p><img src="img/responsive-list.gif" alt="Responsive List"></p>
+<h2 id="using-another-rest-dialect">Using Another REST Dialect</h2>
+<p>Here is the elephant in the room of this tutorial. In real world projects, the REST dialect of your API won&apos;t match the JSONPLaceholder dialect. Writing a REST client is probably the first thing you&apos;ll have to do to make admin-on-rest work. Depending on your API, this can require a few hours of additional work.</p>
+<p>Admin-on-rest delegates every REST calls to a REST client function. This function must simply return a promise for the result. This gives extreme freedom to map any API dialect, add authentication headers, use endpoints from several domains, etc.</p>
+<p>For instance, let&apos;s imagine you have to use the my.api.url API, which expects the following parameters:</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Expected REST request</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Get list</td>
+<td><code>GET http://my.api.url/posts?sort=[&apos;title&apos;,&apos;ASC&apos;]&amp;range=[0, 24]&amp;filter={title:&apos;bar&apos;}</code></td>
+</tr>
+<tr>
+<td>Get one record</td>
+<td><code>GET http://my.api.url/posts/123</code></td>
+</tr>
+<tr>
+<td>Get several records</td>
+<td><code>GET http://my.api.url/posts?filter={ids:[123,456,789]}</code></td>
+</tr>
+<tr>
+<td>Update a record</td>
+<td><code>PUT http://my.api.url/posts/123</code></td>
+</tr>
+<tr>
+<td>Create a record</td>
+<td><code>POST http://my.api.url/posts/123</code></td>
+</tr>
+<tr>
+<td>Delete a record</td>
+<td><code>DELETE http://my.api.url/posts/123</code></td>
+</tr>
+</tbody>
+</table>
+<p>Admin-on-rest defines custom verbs for each of the actions of this list. Just like HTTP verbs (<code>GET</code>, <code>POST</code>, etc.), REST verbs qualify a request to a REST server. Admin-on-rest verbs are called <code>GET_LIST</code>, <code>GET_ONE</code>, <code>GET_MANY</code>, <code>CREATE</code>, <code>UPDATE</code>, and <code>DELETE</code>. The REST client will have to map each of these verbs to one (or many) HTTP request(s).</p>
+<p>The code for an API client for my.api.url is as follows:</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/restClient</span>
+<span class="hljs-keyword">import</span> {
+    GET_LIST,
+    GET_ONE,
+    GET_MANY,
+    GET_MANY_REFERENCE,
+    CREATE,
+    UPDATE,
+    DELETE,
+    fetchUtils,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">const</span> API_URL = <span class="hljs-string">&apos;my.api.url&apos;</span>;
+
+<span class="hljs-comment">/**
+ * @param {String} type One of the constants appearing at the top if this file, e.g. &apos;UPDATE&apos;
+ * @param {String} resource Name of the resource to fetch, e.g. &apos;posts&apos;
+ * @param {Object} params The REST request params, depending on the type
+ * @returns {Object} { url, options } The HTTP request parameters
+ */</span>
+<span class="hljs-keyword">const</span> convertRESTRequestToHTTP = (type, resource, params) =&gt; {
+    <span class="hljs-keyword">let</span> url = <span class="hljs-string">&apos;&apos;</span>;
+    <span class="hljs-keyword">const</span> { queryParameters } = fetchUtils;
+    <span class="hljs-keyword">const</span> options = {};
+    <span class="hljs-keyword">switch</span> (type) {
+    <span class="hljs-keyword">case</span> GET_LIST: {
+        <span class="hljs-keyword">const</span> { page, perPage } = params.pagination;
+        <span class="hljs-keyword">const</span> { field, order } = params.sort;
+        <span class="hljs-keyword">const</span> query = {
+            sort: <span class="hljs-built_in">JSON</span>.stringify([field, order]),
+            range: <span class="hljs-built_in">JSON</span>.stringify([(page - <span class="hljs-number">1</span>) * perPage, page * perPage - <span class="hljs-number">1</span>]),
+            filter: <span class="hljs-built_in">JSON</span>.stringify(params.filter),
+        };
+        url = <span class="hljs-string">`<span class="hljs-subst">${API_URL}</span>/<span class="hljs-subst">${resource}</span>?<span class="hljs-subst">${queryParameters(query)}</span>`</span>;
+        <span class="hljs-keyword">break</span>;
+    }
+    <span class="hljs-keyword">case</span> GET_ONE:
+        url = <span class="hljs-string">`<span class="hljs-subst">${API_URL}</span>/<span class="hljs-subst">${resource}</span>/<span class="hljs-subst">${params.id}</span>`</span>;
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> GET_MANY: {
+        <span class="hljs-keyword">const</span> query = {
+            filter: <span class="hljs-built_in">JSON</span>.stringify({ id: params.ids }),
+        };
+        url = <span class="hljs-string">`<span class="hljs-subst">${API_URL}</span>/<span class="hljs-subst">${resource}</span>?<span class="hljs-subst">${queryParameters(query)}</span>`</span>;
+        <span class="hljs-keyword">break</span>;
+    }
+    <span class="hljs-keyword">case</span> GET_MANY_REFERENCE: {
+        <span class="hljs-keyword">const</span> { page, perPage } = params.pagination;
+        <span class="hljs-keyword">const</span> { field, order } = params.sort;
+        <span class="hljs-keyword">const</span> query = {
+            sort: <span class="hljs-built_in">JSON</span>.stringify([field, order]),
+            range: <span class="hljs-built_in">JSON</span>.stringify([(page - <span class="hljs-number">1</span>) * perPage, (page * perPage) - <span class="hljs-number">1</span>]),
+            filter: <span class="hljs-built_in">JSON</span>.stringify({ ...params.filter, [params.target]: params.id }),
+        };
+        url = <span class="hljs-string">`<span class="hljs-subst">${API_URL}</span>/<span class="hljs-subst">${resource}</span>?<span class="hljs-subst">${queryParameters(query)}</span>`</span>;
+        <span class="hljs-keyword">break</span>;
+    }
+    <span class="hljs-keyword">case</span> UPDATE:
+        url = <span class="hljs-string">`<span class="hljs-subst">${API_URL}</span>/<span class="hljs-subst">${resource}</span>/<span class="hljs-subst">${params.id}</span>`</span>;
+        options.method = <span class="hljs-string">&apos;PUT&apos;</span>;
+        options.body = <span class="hljs-built_in">JSON</span>.stringify(params.data);
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> CREATE:
+        url = <span class="hljs-string">`<span class="hljs-subst">${API_URL}</span>/<span class="hljs-subst">${resource}</span>`</span>;
+        options.method = <span class="hljs-string">&apos;POST&apos;</span>;
+        options.body = <span class="hljs-built_in">JSON</span>.stringify(params.data);
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> DELETE:
+        url = <span class="hljs-string">`<span class="hljs-subst">${API_URL}</span>/<span class="hljs-subst">${resource}</span>/<span class="hljs-subst">${params.id}</span>`</span>;
+        options.method = <span class="hljs-string">&apos;DELETE&apos;</span>;
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">default</span>:
+        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>(<span class="hljs-string">`Unsupported fetch action type <span class="hljs-subst">${type}</span>`</span>);
+    }
+    <span class="hljs-keyword">return</span> { url, options };
+};
+
+<span class="hljs-comment">/**
+ * @param {Object} response HTTP response from fetch()
+ * @param {String} type One of the constants appearing at the top if this file, e.g. &apos;UPDATE&apos;
+ * @param {String} resource Name of the resource to fetch, e.g. &apos;posts&apos;
+ * @param {Object} params The REST request params, depending on the type
+ * @returns {Object} REST response
+ */</span>
+<span class="hljs-keyword">const</span> convertHTTPResponseToREST = (response, type, resource, params) =&gt; {
+    <span class="hljs-keyword">const</span> { headers, json } = response;
+    <span class="hljs-keyword">switch</span> (type) {
+    <span class="hljs-keyword">case</span> GET_LIST:
+        <span class="hljs-keyword">return</span> {
+            data: json.map(x =&gt; x),
+            total: <span class="hljs-built_in">parseInt</span>(headers.get(<span class="hljs-string">&apos;content-range&apos;</span>).split(<span class="hljs-string">&apos;/&apos;</span>).pop(), <span class="hljs-number">10</span>),
+        };
+    <span class="hljs-keyword">case</span> CREATE:
+        <span class="hljs-keyword">return</span> { data: { ...params.data, id: json.id } };
+    <span class="hljs-keyword">default</span>:
+        <span class="hljs-keyword">return</span> { data: json };
+    }
+};
+
+<span class="hljs-comment">/**
+ * @param {string} type Request type, e.g GET_LIST
+ * @param {string} resource Resource name, e.g. &quot;posts&quot;
+ * @param {Object} payload Request parameters. Depends on the request type
+ * @returns {Promise} the Promise for a REST response
+ */</span>
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> (type, resource, params) =&gt; {
+    <span class="hljs-keyword">const</span> { fetchJson } = fetchUtils;
+    <span class="hljs-keyword">const</span> { url, options } = convertRESTRequestToHTTP(type, resource, params);
+    <span class="hljs-keyword">return</span> fetchJson(url, options)
+        .then(response =&gt; convertHTTPResponseToREST(response, type, resource, params));
+};
+</code></pre>
+<p>Using this client instead of the previous <code>jsonServerRestClient</code> is just a matter of switching a function:</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/app.js</span>
+<span class="hljs-keyword">import</span> myApiRestClient <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./restClient&apos;</span>;
+
+<span class="hljs-keyword">const</span> App = () =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Admin</span> <span class="hljs-attr">restClient</span>=<span class="hljs-string">{myApiRestClient}</span> <span class="hljs-attr">dashboard</span>=<span class="hljs-string">{Dashboard}</span>&gt;</span>
+        // ...
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Admin</span>&gt;</span></span>
+);
+</code></pre>
+<h2 id="conclusion">Conclusion</h2>
+<p>Admin-on-rest was build with customization in mind. You can replace any admin-on-rest component with a component of your own, for instance to display a custom list layout, or a different edition form for a given resource.</p>
+<p>Now that you&apos;ve completed the tutorial, continue reading the <a href="http://marmelab.com/admin-on-rest/" target="_blank">admin-on-rest documentation</a>, and read the <a href="http://www.material-ui.com/#/" target="_blank">Material UI components documentation</a>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../" class="navigation navigation-prev " aria-label="Previous page: 介绍">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="./#Installation" class="navigation navigation-next " aria-label="Next page: 安装">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Admin-on-REST 教程","level":"1.2","depth":1,"next":{"title":"安装","level":"1.2.1","depth":2,"anchor":"#Installation","path":"Tutorial/README.md","ref":"Tutorial/README.md#Installation","articles":[]},"previous":{"title":"介绍","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Tutorial/README.md","mtime":"2017-07-02T16:10:16.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-02T15:00:38.318Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
