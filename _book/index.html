@@ -172,6 +172,118 @@
 <li>&#x53EF;&#x4EE5;&#x88AB;&#x5305;&#x542B;&#x5728;&#x53E6;&#x4E00;&#x4E2A;React&#x5E94;&#x7528;&#x4E2D;</li>
 <li>&#x53D7;&#x6D41;&#x884C;&#x5E93; <a href="https://github.com/marmelab/ng-admin" target="_blank">ng-admin</a> &#x7684;&#x542F;&#x53D1; (ng-admin &#x4E5F;&#x662F;&#x88AB;marmelab&#x5F00;&#x6E90;&#x548C;&#x7EF4;&#x62A4;)</li>
 </ul>
+<h2 id="installation">Installation</h2>
+<p>Admin-on-rest &#x53EF;&#x4EE5;&#x4ECE;npm&#x83B7;&#x5F97;. &#x4F60;&#x53EF;&#x4EE5;&#x5B89;&#x88C5;&#x5B83;&#xFF08;&#x548C;&#x5B83;&#x6240;&#x5FC5;&#x9700;&#x7684;&#x4F9D;&#x8D56;&#xFF09;
+&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-sh">npm install --save-dev admin-on-rest
+</code></pre>
+<h2 id="&#x7528;&#x6CD5;">&#x7528;&#x6CD5;</h2>
+<p>&#x9605;&#x8BFB;&#x5927;&#x7EA6;15&#x5206;&#x949F;&#x7684; <a href="Tutorial.html">&#x6559;&#x7A0B;</a> &#x4ECB;&#x7ECD;&#x3002;&#x4E4B;&#x540E;&#xFF0C;&#x524D;&#x5F80;<a href="index.html">&#x6587;&#x6863;</a>&#xFF0C;&#x6216;&#x8005;&#x68C0;&#x51FA;&#x4E00;&#x4E2A;&#x6817;&#x5B50;&#x1F330;&#x7528;&#x6CD5;&#x7684;<a href="https://github.com/marmelab/admin-on-rest-demo" target="_blank">&#x6F14;&#x793A;&#x6E90;&#x7801;</a>&#x3002;</p>
+<h2 id="&#x79D2;&#x1F440;&#x770B;&#x4E2A;&#x6817;&#x5B50;&#x1F330;">&#x79D2;&#x1F440;&#x770B;&#x4E2A;&#x6817;&#x5B50;&#x1F330;</h2>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in app.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { render } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react-dom&apos;</span>;
+<span class="hljs-keyword">import</span> { simpleRestClient, Admin, Resource } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">import</span> { PostList, PostEdit, PostCreate, PostIcon } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./posts&apos;</span>;
+
+render(
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Admin</span> <span class="hljs-attr">restClient</span>=<span class="hljs-string">{simpleRestClient(&apos;http:</span>//<span class="hljs-attr">localhost:3000</span>&apos;)}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Resource</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;posts&quot;</span> <span class="hljs-attr">list</span>=<span class="hljs-string">{PostList}</span> <span class="hljs-attr">edit</span>=<span class="hljs-string">{PostEdit}</span> <span class="hljs-attr">create</span>=<span class="hljs-string">{PostCreate}</span> <span class="hljs-attr">icon</span>=<span class="hljs-string">{PostIcon}</span>/&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Admin</span>&gt;</span>,
+    document.getElementById(&apos;root&apos;)
+);
+</span></code></pre>
+<p><code>&lt;Resource&gt;</code> &#x7EC4;&#x4EF6;&#x662F;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x7EC4;&#x4EF6;&#xFF0C;&#x5B83;&#x5141;&#x8BB8;&#x4F60;&#x4E3A;&#x6BCF;&#x4E2A;&#x7BA1;&#x7406;&#x89C6;&#x56FE;&#x5B9A;&#x4E49;&#x5B50;&#x7EC4;&#x4EF6;&#xFF1A; <code>list</code>&#xFF0C;<code>edit</code>&#xFF0C;and <code>create</code>&#x3002; 
+&#x8FD9;&#x4E9B;&#x7EC4;&#x4EF6;&#x4F7F;&#x7528;&#x6765;&#x81EA;&#x4E8E;admin-on-rest&#x4E2D;&#x7684; Material UI &#x548C; &#x5B9A;&#x5236;&#x7EC4;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in posts.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { List, Datagrid, Edit, Create, SimpleForm, DateField, TextField, EditButton, DisabledInput, TextInput, LongTextInput, DateInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+<span class="hljs-keyword">export</span> PostIcon <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;material-ui/svg-icons/action/book&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PostList = (props) =&gt; (
+    &lt;List {...props}&gt;
+        &lt;Datagrid&gt;
+            &lt;TextField source=&quot;id&quot; /&gt;
+            &lt;TextField source=&quot;title&quot; /&gt;
+            &lt;DateField source=&quot;published_at&quot; /&gt;
+            &lt;TextField source=&quot;average_note&quot; /&gt;
+            &lt;TextField source=&quot;views&quot; /&gt;
+            &lt;EditButton basePath=&quot;/posts&quot; /&gt;
+        &lt;/Datagrid&gt;
+    &lt;/List&gt;
+);
+
+const PostTitle = ({ record }) =&gt; {
+    return &lt;span&gt;Post {record ? `&quot;${record.title}&quot;` : &apos;&apos;}&lt;/span&gt;;
+};
+
+export const PostEdit = (props) =&gt; (
+    &lt;Edit title={&lt;PostTitle /&gt;} {...props}&gt;
+        &lt;SimpleForm&gt;
+            &lt;DisabledInput source=&quot;id&quot; /&gt;
+            &lt;TextInput source=&quot;title&quot; /&gt;
+            &lt;TextInput source=&quot;teaser&quot; options={{ multiLine: true }} /&gt;
+            &lt;LongTextInput source=&quot;body&quot; /&gt;
+            &lt;DateInput label=&quot;Publication date&quot; source=&quot;published_at&quot; /&gt;
+            &lt;TextInput source=&quot;average_note&quot; /&gt;
+            &lt;DisabledInput label=&quot;Nb views&quot; source=&quot;views&quot; /&gt;
+        &lt;/SimpleForm&gt;
+    &lt;/Edit&gt;
+);
+
+export const PostCreate = (props) =&gt; (
+    &lt;Create title=&quot;Create a Post&quot; {...props}&gt;
+        &lt;SimpleForm&gt;
+            &lt;TextInput source=&quot;title&quot; /&gt;
+            &lt;TextInput source=&quot;teaser&quot; options={{ multiLine: true }} /&gt;
+            &lt;LongTextInput source=&quot;body&quot; /&gt;
+            &lt;TextInput label=&quot;Publication date&quot; source=&quot;published_at&quot; /&gt;
+            &lt;TextInput source=&quot;average_note&quot; /&gt;
+        &lt;/SimpleForm&gt;
+    &lt;/Create&gt;
+);
+</code></pre>
+<h2 id="&#x5B83;&#x662F;&#x5426;&#x9002;&#x7528;&#x4E8E;&#x6211;&#x7684;rest-api&#xFF1F;">&#x5B83;&#x662F;&#x5426;&#x9002;&#x7528;&#x4E8E;&#x6211;&#x7684;REST API&#xFF1F;</h2>
+<p>Yes.</p>
+<p>Admin-on-rest&#x4F7F;&#x7528;&#x4E00;&#x79CD;&#x79F0;&#x4E3A;<em>REST client</em>&#x6982;&#x5FF5;&#x7684;&#x9002;&#x914D;&#x5668;&#x65B9;&#x6CD5;&#x3002;&#x5B83;&#x76EE;&#x524D;&#x7684;rest&#x5BA2;&#x6237;&#x7AEF;&#x80FD;&#x88AB;&#x7528;&#x4E8E;blueprint&#x4E3A;&#x4F60;&#x8BBE;&#x8BA1;&#x7684;API&#xFF0C;&#x6216;&#x8005;&#x4F60;&#x53EF;&#x4EE5;&#x5199;&#x4F60;&#x81EA;&#x5DF1;&#x7684;REST&#x5BA2;&#x6237;&#x7AEF;&#x53BB;&#x67E5;&#x8BE2;&#x4E00;&#x4E2A;&#x73B0;&#x5B58;&#x7684;API&#x3002;&#x5199;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x5C31;&#x662F;&#x51E0;&#x4E2A;&#x5C0F;&#x65F6;&#x4E4B;&#x5185;&#x7684;&#x4E8B;&#x60C5;&#x3002;</p>
+<p><img src="https://marmelab.com/admin-on-rest/img/rest-client.png" alt="REST client architecture"></p>
+<p>&#x67E5;&#x770B;&#x8BE6;&#x7EC6;&#x7684;<a href="https://marmelab.com/admin-on-rest/RestClients.html" target="_blank">REST&#x5BA2;&#x6237;&#x7AEF;&#x6587;&#x6863;</a>&#x3002;</p>
+<h2 id="&#x5305;&#x542B;&#x1F50B;&#x7535;&#x6C60;&#x4F46;&#x53EF;&#x62C6;&#x88C5;">&#x5305;&#x542B;&#x1F50B;&#x7535;&#x6C60;&#x4F46;&#x53EF;&#x62C6;&#x88C5;</h2>
+<p>Admin-on-rest&#x88AB;&#x8BBE;&#x8BA1;&#x4E3A;&#x4E00;&#x4E2A;&#x677E;&#x6563;&#x5408;&#x7684;React&#x7EC4;&#x4EF6;&#x5E93;&#xFF0C;&#x5B83;&#x5EFA;&#x7ACB;&#x5728;<a href="http://www.material-ui.com/#/" target="_blank">material-ui</a>&#x4E4B;&#x4E0A;&#xFF0C;&#x9664;&#x4E86;&#x63A7;&#x5236;&#x5668;&#x529F;&#x80FD;&#x5B9E;&#x73B0;&#x4E86;Redux&#x65B9;&#x6CD5;&#x4EE5;&#x5916;&#x3002;&#x5B83;&#x4E5F;&#x975E;&#x5E38;&#x5BB9;&#x6613;&#x7528;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x65B9;&#x6CD5;&#x53BB;&#x66FF;&#x6362;admin-on-rest&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x53BB;&#x81EA;&#x5B9A;&#x4E49;datagrid&#xFF0C;GraphQL&#x4EE3;&#x66FF;REST&#xFF0C;&#x6216;&#x8005;bootstrap&#x4EE3;&#x66FF;Material Design&#x3002;</p>
+<h2 id="&#x8D21;&#x732E;">&#x8D21;&#x732E;</h2>
+<p>&#x6B22;&#x8FCE;&#x6240;&#x6709;&#x5728;<a href="https://github.com/marmelab/admin-on-rest" target="_blank">GitHub repository</a>&#x4E0A;&#x7684;PR&#x3002;&#x5C1D;&#x8BD5;&#x9075;&#x5FAA;&#x73B0;&#x6709;&#x6587;&#x4EF6;&#x7684;&#x7F16;&#x7801;&#x98CE;&#x683C;&#xFF0C;&#x5E76;&#x5305;&#x62EC;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x548C;&#x6587;&#x6863;&#x3002;&#x4E3A;&#x5168;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5BA1;&#x67E5;&#x505A;&#x597D;&#x51C6;&#x5907;&#xFF0C;&#x5E76;&#x4E14;&#x5BF9;&#x5408;&#x5E76;&#x8981;&#x6709;&#x8010;&#x5FC3; - &#x8FD9;&#x662F;&#x4E00;&#x9879;&#x5F00;&#x6E90;&#x7684;&#x5021;&#x8BAE;&#x3002;</p>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x901A;&#x8FC7;&#x8C03;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-sh">make run
+</code></pre>
+<p>&#x7136;&#x540E;&#x6D4F;&#x89C8;&#x5230;<a href="http://localhost:4000/" target="_blank">http://localhost:4000/</a>&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x8D21;&#x732E;&#x8FD9;&#x4E2A;&#x6587;&#x6863;&#xFF0C;&#x5B89;&#x88C5;jekyll&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-sh">make doc
+</code></pre>
+<p>&#x7136;&#x540E;&#x6D4F;&#x89C8;&#x5230;<a href="http://localhost:4000/" target="_blank">http://localhost:4000/</a></p>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x8FD0;&#x884C;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x901A;&#x8FC7;&#x8C03;&#x7528;&#xFF1A;</p>
+<pre><code class="lang-sh">make <span class="hljs-built_in">test</span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x4F60;&#x6B63;&#x4F7F;&#x7528;admin-on-rest&#x4F5C;&#x4E3A;&#x4F9D;&#x8D56;&#x9879;&#xFF0C;&#x5E76;&#x4E14;&#x5982;&#x679C;&#x60A8;&#x60F3;&#x5C1D;&#x8BD5;&#x5E76;hack&#x5B83;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x5EFA;&#x8BAE;&#x7684;&#x8FC7;&#x7A0B;&#xFF1A;</p>
+<pre><code class="lang-sh"><span class="hljs-comment"># in myapp</span>
+<span class="hljs-comment"># install admin-on-rest from GitHub in another directory</span>
+$ <span class="hljs-built_in">cd</span> ..
+$ git <span class="hljs-built_in">clone</span> git@github.com:marmelab/admin-on-rest.git &amp;&amp; <span class="hljs-built_in">cd</span> admin-on-rest &amp;&amp; make install
+<span class="hljs-comment"># replace your node_modules/admin-on-rest by a symbolic link to the github checkout</span>
+$ <span class="hljs-built_in">cd</span> ../myapp
+$ npm link ../admin-on-rest
+<span class="hljs-comment"># go back to the checkout, and replace the version of react by the one in your app</span>
+$ <span class="hljs-built_in">cd</span> ../admin-on-rest
+$ npm link ../myapp/node_modules/react
+$ make watch
+<span class="hljs-comment"># in another terminal, go back to your app, and start it as usual</span>
+$ <span class="hljs-built_in">cd</span> ../myapp
+$ npm run
+</code></pre>
+<h2 id="&#x8BB8;&#x53EF;">&#x8BB8;&#x53EF;</h2>
+<p>Admin-on-rest&#x9075;&#x5FAA;<a href="https://github.com/marmelab/admin-on-rest/blob/master/LICENSE.md" target="_blank">MIT Licence</a>&#xFF0C; &#x7531;<a href="http://marmelab.com" target="_blank">marmelab</a>&#x8D5E;&#x52A9;&#x548C;&#x652F;&#x6301;&#x3002;</p>
+<h2 id="&#x6350;&#x8D60;">&#x6350;&#x8D60;</h2>
+<p>&#x8FD9;&#x4E2A;&#x5E93;&#x662F;&#x514D;&#x8D39;&#x4F7F;&#x7528;&#x7684;&#xFF0C;&#x5373;&#x4F7F;&#x662F;&#x5546;&#x4E1A;&#x7528;&#x9014;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x56DE;&#x9988;&#xFF0C;&#x8BF7;&#x4EA4;&#x6D41;&#x5B83;&#xFF0C;&#x5E2E;&#x52A9;&#x65B0;&#x4EBA;&#xFF0C;&#x6216;&#x8D21;&#x732E;&#x4EE3;&#x7801;&#x3002;&#x4F46;&#x6700;&#x597D;&#x7684;&#x56DE;&#x9988;&#x662F;<strong>&#x6350;&#x8D60;&#x7ED9;&#x6148;&#x5584;&#x673A;&#x6784;</strong>&#x3002;&#x6211;&#x4EEC;&#x63A8;&#x8350; <a href="http://www.doctorswithoutborders.org/" target="_blank">Doctors Without Borders</a>&#x3002;</p>
 
                                 
                                 </section>
@@ -207,7 +319,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"介绍","level":"1.1","depth":1,"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2017-06-30T16:37:22.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-06-30T15:38:24.522Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"介绍","level":"1.1","depth":1,"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"README.md","mtime":"2017-07-02T15:35:45.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-02T15:00:38.318Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
