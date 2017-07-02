@@ -2,7 +2,7 @@
 
 admin-on-rest是一个用于构建在REST服务之上的浏览器中运行的管理应用程序前端框架，它使用了ES6，[React](https://facebook.github.io/react/)和[Material Design](https://material.io/)。 它被 [marmelab](https://marmelab.com/) 开源和维护。 
 
-[👀演示](https://marmelab.com/admin-on-rest-demo/) - [👃文档](https://marmelab.com/admin-on-rest/) - [发行版本](https://github.com/marmelab/admin-on-rest/releases) - [服务支持](http://stackoverflow.com/questions/tagged/admin-on-rest)
+[👀演示](https://marmelab.com/admin-on-rest-demo/) - [👃文档](https://www.admin-on-rest.com/) - [发行版本](https://github.com/marmelab/admin-on-rest/releases) - [服务支持](http://stackoverflow.com/questions/tagged/admin-on-rest)
 
 [![admin-on-rest-视频展示（请自带梯子）](https://marmelab.com/admin-on-rest/img/admin-on-rest-demo-still.png)](https://vimeo.com/205118063)
 

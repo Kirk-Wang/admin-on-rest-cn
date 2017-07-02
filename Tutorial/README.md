@@ -687,4 +687,4 @@ const App = () => (
 
 Admin-on-rest是以考虑定制为基础构建的。你可以将任何admin-on-rest组件替换为你自己的组件，例如显示自定义列表布局或为一个给定的resource不同的编辑表单。
 
-现在你已经完成了这个教程，继续阅读[admin-on-rest documentation](https://kirk-wang.gitbooks.io/admin-on-rest/)，和阅读[Material UI components documentation](http://www.material-ui.com/#/)。
+现在你已经完成了这个教程，继续阅读[admin-on-rest documentation](https://www.admin-on-rest.com/)，和阅读[Material UI components documentation](http://www.material-ui.com/#/)。
