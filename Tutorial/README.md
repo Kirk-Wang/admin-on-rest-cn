@@ -1,12 +1,12 @@
 # Admin-on-REST 教程
 
-This 15 minutes tutorial will expose how to create a new admin app based on an existing REST API.
+这个15分钟的教程将介绍如何根据现有的REST API创建一个新的管理应用程序。
 
 ![admin-on-rest blog demo](http://static.marmelab.com/admin-on-rest.gif)
 
 ## 安装{#Installation}
 
-Admin-on-REST uses React. We'll use Facebook's [create-react-app](https://github.com/facebookincubator/create-react-app) to create an empty React app, and install the `admin-on-rest` package:
+Admin-on-REST使用React。我们将用Facebook的[react-create-app](https://github.com/facebookincubator/create-react-app)去创建一个空的React app， 并且安装 `admin-on-rest` 包：
 
 ```sh
 npm install -g create-react-app
@@ -16,11 +16,11 @@ yarn add admin-on-rest
 yarn start
 ```
 
-You should be up and running with an empty React application on port 3000.
+您应该是在3000端口上启动并运行着一个空的React应用程序。
 
-## Making Contact With The API
+## 与API进行关联{#MakingContactWithTheAPI}
 
-We'll be using [JSONPlaceholder](http://jsonplaceholder.typicode.com/), a fake REST API designed for testing and prototyping, as the datasource for the admin.
+我们将使用[JSONPlaceholder](http://jsonplaceholder.typicode.com/)，一个用于测试和原型设计的假REST API，作为管理员的数据源。
 
 ```
 curl http://jsonplaceholder.typicode.com/posts/12
@@ -35,9 +35,9 @@ curl http://jsonplaceholder.typicode.com/posts/12
 }
 ```
 
-JSONPlaceholder provides endpoints for posts, comments, and users. The admin we'll build will allow to Create, Retrieve, Update, and Delete (CRUD) these resources.
+JSONPlaceholder为帖子，评论和用户提供端点。 我们建立的管理员将允许创建，检索，更新和删除（CRUD）这些资源。
 
-Replace the `src/App.js` by the following code:
+通过以下代码替换`src/App.js`：
 
 ```jsx
 // in src/App.js
@@ -55,9 +55,9 @@ const App = () => (
 export default App;
 ```
 
-The `App` component now renders an `<Admin>` component, which is the main component of admin-on-rest. This component expects a REST client as a parameter - a function capable of translating REST commands into HTTP requests. Since REST isn't a standard, you will probably have to provide a custom client to connect to your own APIs. But we'll dive into REST clients later. For now, let's take advantage of the `jsonServerRestClient`, which speaks the same REST dialect as JSONPlaceholder.
+`App`组件现在渲染了一个`<Admin>`组件，它是admin-on-rest的主组件。这个组件期望一个REST client作为一个参数 - 一个有转换REST命令到HTTP请求能力的函数。由于REST不是一个标准，你将可能不得不提供一个自定义 client去连接你自己的API。 稍后我们将深入到REST客户端。现在，让我们好好利用的`jsonServerRestClient`，它说的是与JSONPlaceholder相同的REST dialect 。
 
-The `<Admin>` component can contain one or more `<Resource>` components, each resource being mapped to an endpoint in the API. To begin with, we'll display the list of posts. Here is what the `<PostList>` component looks like:
+`<Admin>`组件可以包含一个或多个`<Resource>`组件，每个resource被映射到API中的一个端点。 首先, 我们将显示帖子列表。下面这个`<PostList>`组件👀起来🐘这样子：
 
 ```jsx
 // in src/posts.js
@@ -75,17 +75,17 @@ export const PostList = (props) => (
 );
 ```
 
-The main component of the post list is a `<List>` component, responsible for grabbing the information from the API, displaying the page title, and handling pagination. This list then delegates the display of the actual list of posts to a `<Datagrid>`, responsible for displaying a table with one row for each post. The datagrid uses it child components (here, a list of `<TextField>`) to determine the columns to render. Each Field component maps a different field in the API response, specified by the `source` prop.
+这个帖子列表的主组件是一个`<List>`组件，负责从API中抓取信息，显示页面标题，和处理分页。这个list然后委托到一个`<Datagrid>`组件实际显示帖子列表，负责显示一个为每个帖子一行的表。这个datagrid使用它的子组件（这里，列表中的`<TextField>`）来确定要渲染的列。在API响应中每个Field组件映射一个不同的字段，由`source`属性指定。
 
-That's enough to display the post list:
+这足以显示帖子列表：
 
-![Simple posts list](./img/simple-post-list.png)
+![Simple posts list](https://marmelab.com/admin-on-rest/img/simple-post-list.png)
 
-The list is already functional: you can reorder it by clicking on column headers, or change pages by using the bottom pagination controls.
+这个列表已经可使用：您可以通过单击列标题来重新排序，或者使用底部的分页控件更改页面。
 
-## Field Types
+## 字段类型{#FieldTypes}
 
-You've just met the `<TextField>` component, but admin-on-rest provides many Field components to map various content types. For instance, [the `/users` endpoint in JSONPlaceholder](http://jsonplaceholder.typicode.com/users) contains emails.
+你刚已👀到`<TextField>`组件，但admin-on-rest提供了许多字段组件去映射各种内容类型。举个例子，[在JSONPlaceholder中的端点`/users` ](http://jsonplaceholder.typicode.com/users)包含了邮箱📮。
 
 ```
 curl http://jsonplaceholder.typicode.com/users/2
@@ -117,7 +117,7 @@ curl http://jsonplaceholder.typicode.com/users/2
 }
 ```
 
-Let's create a new `UserList`, using `<EmailField>` to map the `email` field:
+让我们创建一个新的`UserList`，使用`<EmailField>`映射`email`字段：
 
 ```jsx
 // in src/users.js
@@ -136,7 +136,7 @@ export const UserList = (props) => (
 );
 ```
 
-You'll notice that this list overrides the default `title`. To include the new `users` resource in the admin app, add it in `src/App.js`:
+你会注意到这个列表覆写了默认`title`。去包含一个新的`users`resource组件在admin app中，并添加它在`src/App.js`中：
 
 ```jsx
 // in src/App.js
@@ -151,13 +151,13 @@ const App = () => (
 );
 ```
 
-![Simple user datagrid](./img/simple-user-list.png)
+![Simple user datagrid](https://marmelab.com/admin-on-rest/img/simple-user-list.png)
 
-The sidebar now gives access to the second resource, Users. The users list shows the email as a `<a href="mailto:">` tag.
+侧栏现在可以访问第二个资源，Users。这个users列表显示这个email为一个`<a href="mailto:">`标签。
 
-In admin-on-rest, fields are simple React components. At runtime, they receive the `record` fetched from the API on (e.g. `{ "id": 2, "name": "Ervin Howell", "username": "Antonette", "email": "Shanna@melissa.tv", ... }`), and the `source` field they should display (e.g. 'email').
+在admin-on-rest中，所有字段都是一个个简单的React组件。在运行时, 他们接收从API上获取的 `record` （例如：`{ "id": 2, "name": "Ervin Howell", "username": "Antonette", "email": "Shanna@melissa.tv", ... }`)，和它们应该显示的`source`字段(例如：'email')。
 
-That means that writing a custom Field component is really simple. For instance, to create an `UrlField`:
+这意味着编写自定义字段组件非常简单。例如，去创建一个`UrlField`：
 
 ```jsx
 // in admin-on-rest/src/mui/field/UrlField.js
@@ -177,9 +177,9 @@ UrlField.propTypes = {
 export default UrlField;
 ```
 
-## Relationships
+## 关系{#Relationships}
 
-In JSONPlaceholder, each `post` record includes a `userId` field, which points to a `user`:
+在JSONPlaceholder中, 每个`post`记录包含一个`userId`字段，它指向一个`user`：
 
 ```json
 {
@@ -190,7 +190,7 @@ In JSONPlaceholder, each `post` record includes a `userId` field, which points t
 }
 ```
 
-Admin-on-REST knows how to take advantage of these foreign keys to fetch references. For instance, to include the user name in the posts list, use the `<ReferenceField>`:
+Admin-on-REST知道如何利用这些外键来获取引用。例如，在这些帖子列表中包含用户名，使用`<ReferenceField>`：
 
 ```jsx
 // in src/posts.js
@@ -211,15 +211,15 @@ export const PostList = (props) => (
 );
 ```
 
-When displaying the posts list, the app now fetches related user records, and displays their `name` as a `<TextField>`. Notice the `label` property: you can use it on any field component to customize the field label.
+当我们显示这些帖子列表时，这个app现在会获取关联的用户纪录，并显示他们的`name`作为一个`<TextField>`。 注意这个`label`属性：你可以用它在字段组件上来自定这个字段标签🏷️。
 
-![reference posts in comment list](./img/reference-posts.png)
+![reference posts in comment list](https://marmelab.com/admin-on-rest/img/reference-posts.png)
 
-**Tip**: Reference components always pass the data they fetch to a child component, which is responsible for displaying the data.
+**提示**：Reference组件总是传递它们检索的数据到一个子组件，它是负责显示数据的。
 
-## Creation and Edition
+## 创建和编辑{#CreationAndEdition}
 
-An admin interface is about displaying remote data, but also about editing and creating. Admin-on-REST provides `<Create>` and `<Edit>` components for that purpose. Add them to the `posts` script:
+一个admin界面有关于显示远程数据的，但也有关于编辑和创建的。Admin-on-REST提供了`<Create>`和`<Edit>`组件来做这件事。添加它们到`posts`脚本：
 
 ```jsx
 // in src/posts.js
@@ -270,15 +270,15 @@ export const PostCreate = (props) => (
 );
 ```
 
-Notice the additional `<EditButton>` field in the `<PostList>` children: that's what gives access to the post edition page. Also, the `<Edit>` component uses a custom `<PostTitle>` component as title, which shows the way to customize the title for a given page.
+注意在`<PostList>`字组件中增加的`<EditButton>`字段：这是给予获🉐编辑页的访问。也是如此，这个 `<Edit>`组件用了一个自定义的`<PostTitle>`组件作为标题，它展示了给一个规定的页面自定义标题的方法。
 
-If you've understood the `<List>` component, the `<Edit>` and `<Create>` components will be no surprise. They are responsible for fetching the record, and displaying the page title. They pass the record down to the `<SimpleForm>` component, which is responsible for the form layout, default values, and validation. Just like `<Datagrid>`, `<SimpleForm>` uses its children to determine the form inputs to display. It expects *input components* as children. `<DisabledInput>`, `<TextInput>`, `<LongTextInput>`, and `<ReferenceInput>` are such inputs.
+如果你已经理解`<List>`组件，这个`<Edit>`和`<Create>`组件将不足为奇。它们负责获取记录，并显示页面标题。它们传递纪录到这个`<SimpleForm>`组件，它负责表单布局，默认值，和验证。就像`<Datagrid>`，`<SimpleForm>`用它的子组件来确定要显示的表单输入🐘。它期望*input components*作为字组件。`<DisabledInput>`，`<TextInput>`，`<LongTextInput>`和`<ReferenceInput>`都是🐘这样的组件。
 
-As for the `<ReferenceInput>`, it takes the same props as the `<ReferenceField>` (used earlier in the list page). `<ReferenceInput>` uses these props to fetch the API for possible references related to the current record (in this case, possible `users` for the current `post`). It then passes these possible references to the child component (`<SelectInput>`), which is responsible for displaying them (via their `name` in that case), and letting the user select one. `<SelectInput>` renders as a `<select>` tag in HTML.
+至于`<ReferenceInput>`，它采用🐘同的属性作为`<ReferenceField>`（在早先的列表页用过）。 `<ReferenceInput>`用这些属性去获取可能引用关联到当前纪录的API（在这个🍐子中, 可能 `users`关联到 `post`）。它然后传递这些可能的引用到字组件（`<SelectInput>`），它是负责显示它们（在这种情况通过它们的`name`），并且让用户选择一个。在HTML中`<SelectInput>`渲染为一个`<select>`🏷️标签。
 
-**Tip**: The `<Edit>` and the `<Create>` components use the same `<ReferenceInput>` configuration, except for the `allowEmpty` attribute, which is required in `<Create>`.
+**提示**：`<Edit>`和`<Create>`使用相同的`<ReferenceInput>`配置，➗了`allowEmpty`属性，它在`<Create>`中是必需的。
 
-To use the new `<PostEdit>` and `<PostCreate>` components in the posts resource, just add them as `edit` and `create` attributes in the `<Resource>` component:
+在这个名为posts的resource组件中使用新的`<PostEdit>`和`<PostCreate>`组件，在`<Resource>`组件中仅仅添加它们作为`edit`和`create`的属性：
 
 ```jsx
 // in src/App.js
@@ -293,19 +293,19 @@ const App = () => (
 );
 ```
 
-Admin-on-rest automatically adds a "create" button on top of the posts list to give access to the `<PostCreate>` component. And the `<EditButton>` renders in each line of the list to give access to the `<PostEdit>` component.
+Admin-on-rest自动地添加一个"create"按钮在帖子列表顶部来给予访问`<PostCreate>`组件。并且 `<EditButton>`呈现在列表中的每一行来提供访问`<PostEdit>`组件。
 
-![post list with access to edit and create](./img/editable-post.png)
+![post list with access to edit and create](https://marmelab.com/admin-on-rest/img/editable-post.png)
 
-The form rendered in the create and edit pages is already functional. It issues `POST` and `PUT` requests to the REST API upon submission.
+这个表单在创建和编辑页中已经是可使用了的。在提交上它分别发送`POST`和`PUT`请求到REST API。
 
-![post edition form](./img/post-edition.png)
+![post edition form](https://marmelab.com/admin-on-rest/img/post-edition.png)
 
-**Note**: JSONPlaceholder is a read-only API; although it seems to accept `POST` and `PUT` requests, it doesn't take into account the creations and editions - that's why, in this particular case, you will see errors after creation, and you won't see your editions after you save them. It's just an artifact of JSONPlaceholder.
+**注意**：JSONPlaceholder是一个只读的 api；虽然它似乎接受`POST`和`PUT`请求，但它并没有考虑账户的新建和编辑 - 这就是为什么，在这种特定情况下，你将在创建后看到错误，并且在保存之后将不会看到你的编辑。它只是一个JSONPlaceholder的假象。
 
-## Deletion
+## 删除{#Deletion}
 
-There is not much to configure in a deletion view. To add removal abilities to a `Resource`, simply use the bundled `<Delete>` component from admin-on-rest, and register it using the `remove` prop ('delete' is a reserved word in JavaScript):
+在一个删除视图中没有太多去配置。去添加删除能力到`Resource`组件，简单地使用捆绑来自于admin-on-rest中`<Delete>`的组件，并且用`remove`属性®️注册它（'delete'在JavaScript中是一个保留关键字）：
 
 ```jsx
 // in src/App.js
@@ -319,15 +319,15 @@ const App = () => (
 );
 ```
 
-In the edition view, a new "delete" button appears. And you can also use the `<DeleteButton>` as a field in the list.
+在编辑视图中，一个新的"delete"按钮出现了。并且你也可以使用`<DeleteButton>`作为列表中的一个字段。
 
-![post deletion view](./img/post-deletion.png)
+![post deletion view](https://marmelab.com/admin-on-rest/img/post-deletion.png)
 
-## Filters
+## 过滤器{#Filters}
 
-Let's get back to the post list for a minute. It offers sorting and pagination, but one feature is missing: the ability to search content.
+让我们回到帖子列表一分钟。它提供排序和分页，但缺少一个功能：搜索内容的能力。
 
-Admin-on-rest can use input components to create a multi-criteria search engine in the list view. First, create a `<Filter>` component just like you would write a `<SimpleForm>` component, using input components as children. Then, add it to the list using the `filters` prop:
+Admin-on-rest可以使用输入组件在列表视图中创建一个多条件的搜索引擎。首先，创建一个`<Filter>`组件，就像编写一个`<SimpleForm>`组件一样，使用输入组件作为子元素。然后，将其添加到列表中使用`filters`属性：
 
 ```jsx
 // in src/posts.js
@@ -349,15 +349,15 @@ export const PostList = (props) => (
 );
 ```
 
-The first filter, 'q', takes advantage of a full-text functionality offered by JSONPlaceholder. It is `alwaysOn`, so it always appears on the screen. The second filter, 'userId', can be added by way of the "add filter" button, located on the top of the list. As it's a `<ReferenceInput>`, it's already populated with possible users. It can be turned off by the end user.
+第一个过滤器‘q’利用了JSONPlaceholder提供的全文功能。它是`alwaysOn`，所以它总是出现在屏幕上。第二个筛选器，‘userId’可以通过位于列表顶部的“add filter”按钮来添加。因为它是一个`<ReferenceInput>`，所以它已经填充了可能的用户。它可以由终端用户关闭。
 
-Filters are "search-as-you-type", meaning that when the user enters new values in the filter form, the list refreshes (via an API request) immediately.
+过滤器是“search-as-you-type”，这意味着当用户在筛选表单中输入新值时，列表会立即刷新 (通过API请求)。
 
-![posts search engine](./img/filters.gif)
+![posts search engine](https://marmelab.com/admin-on-rest/img/filters.gif)
 
-## Customizing the Menu Icons
+## 自定义菜单图标{#CustomizingtheMenuIcons}
 
-The sidebar menu shows the same icon for both posts and users. Fortunately, customizing the menu icon is just a matter of passing an `icon` attribute to each `<Resource>`:
+侧栏菜单显示出posts和users图标一样。幸运的是，自定义菜单图标只是将`icon`属性传递给每个 `<Resource>`：
 
 ```jsx
 // in src/App.js
@@ -372,11 +372,11 @@ const App = () => (
 );
 ```
 
-![custom menu icons](./img/custom-menu.png)
+![custom menu icons](https://marmelab.com/admin-on-rest/img/custom-menu.png)
 
-## Using a Custom Home Page
+## 使用自定义主页{#UsingaCustomHomePage}
 
-By default, admin-on-rest displays the list page of the first resource as home page. If you want to display a custom component instead, pass it in the `dashboard` prop of the `<Admin>` component.
+默认情况下，admin-on-rest显示第一个资源列表页为主页。如果你想要显示一个自定义组件来代替，传递它在`<Admin>`组件的`dashboard`属性中。
 
 {% raw %}
 ```jsx
@@ -404,17 +404,17 @@ const App = () => (
 );
 ```
 
-![Custom home page](./img/dashboard.png)
+![Custom home page](https://marmelab.com/admin-on-rest/img/dashboard.png)
 
-## Adding a Login Page
+## 添加登录页{#AddingaLoginPage}
 
-Most admin apps require authentication. Admin-on-rest can check user credentials before displaying a page, and redirect to a login form when the REST API returns a 403 error code.
+大多数admin apps都需要身份验证。Admin-on-rest可以在显示页面之前检查用户凭据，并在REST API返回403错误代码时重定向到登录表单。
 
-*What* those credentials are, and *how* to get them, are questions that you must answer. Admin-on-rest makes no assumption about your authentication strategy (basic auth, OAuth, custom route, etc), but gives you the hooks to plug your logic at the right place - by calling an `authClient` function.
+这些凭据是*什么*，以及*如何*获取它们，都是你必须回答的问题。Admin-on-rest对您的身份验证策略（basic auth，OAuth，custom route，等等）不作任何假设，但是在权限地方给你一个钩子去插入你的逻辑－通过调用一个`authClient`功能。
 
-For this tutorial, since there is no public authentication API we can use, let's use a fake authentication provider that accepts every login request, and stores the `username` in `localStorage`. Each page change will require that `localStorage` contains a `username` item.
+对于本教程，由于没有我们能使用的公共认证API，让我们使用一个假身份验证提供程序，接受每一个登录请求，并存储 `username`在`localStorage`中。每个页面更改将需要`localStorage`包含一个`username`项。
 
-The `authClient` is a simple function, which must return a `Promise`:
+`authClient`是一个简单函数，他必须返回一个`Promise`：
 
 ```jsx
 // in src/authClient.js
@@ -450,9 +450,9 @@ export default (type, params) => {
 };
 ```
 
-**Tip**: As the `restClient` response is asynchronous, you can easily fetch an authentication server in there.
+**提示**：由于`restClient`响应是异步的，因此您可以轻松地在其中获取身份验证服务器。
 
-To enable this authentication strategy, pass the client as the `authClient` prop in the `<Admin>` component:
+要启用此身份验证策略，传递这个client作为`<Admin>`组件中的`authClient`属性：
 
 ```jsx
 // in src/App.js
@@ -466,17 +466,17 @@ const App = () => (
 );
 ```
 
-Once the app reloads, it's now behind a login form that accepts everyone:
+一旦应用程序重新加载，登录表单背后现在接受每个用户：
 
-![Login form](./img/login.gif)
+![Login form](https://marmelab.com/admin-on-rest/img/dashboard.png)
 
-## Responsive List
+## 响应式列表{#ResponsiveList}
 
-The admin-on-rest layout is already responsive. Try to resize your browser to see how the sidebar switches to a drawer on smaller screens.
+admin-on-rest布局已是响应式。尝试调整浏览器大小来查看侧栏如何切换到较小屏幕上的抽屉样式。
 
-But a responsive layout is not enough to make a responsive app. Datagrid components work well on desktop, but are absolutely not adapted to mobile devices. If your admin must be used on mobile devices, you'll have to provide an alternative component for small screens
+但是一个响应式布局不足以去做一个响应式的app。datagrid组件在桌面上工作良好，但绝对不能适应移动设备。如果你的管理必须在移动设备上使用，你得为小屏幕提供替代的组件。
 
-First, you should know that you don't have to use the `<Datagrid>` component as `<List>` child. You can use any other component you like. For instance, the `<SimpleList>` component:
+首先，您应该知道您不必使用`<Datagrid>`组件作为`<List>`子级。您可以使用您喜欢的任何其他组件。例如，`<SimpleList>`组件：
 
 ```jsx
 // in src/posts.js
@@ -494,11 +494,11 @@ export const PostList = (props) => (
 );
 ```
 
-The `<SimpleList>` component uses [material-ui's `<List>` and `<ListItem>` components](http://www.material-ui.com/#/components/list), and expects functions as `primaryText`, `secondaryText`, and `tertiaryText` props.
+`<SimpleList>`组件使用[material-ui的`<List>`和`<ListItem>`组件](http://www.material-ui.com/#/components/list)，并且期望函数作为`primaryText`, `secondaryText`, 和 `tertiaryText` 的属性.
 
-<img src="./img/mobile-post-list.png" alt="Mobile post list" style="display:block;margin:2em auto;box-shadow:none;filter:drop-shadow(13px 12px 7px rgba(0,0,0,0.5));" />
+<img src="https://marmelab.com/admin-on-rest/img/mobile-post-list.png" alt="Mobile post list" style="display:block;margin:2em auto;box-shadow:none;filter:drop-shadow(13px 12px 7px rgba(0,0,0,0.5));" />
 
-That works fine on mobile, but now the desktop user experience is worse. The best compromise would be to use `<SimpleList>` on small screens, and `<Datagrid>` on other screens. That's where the `<Responsive>` component comes in:
+在移动方面工作正常，但现在桌面用户体验更差。最好的折衷办法是想要小的屏幕上用`<SimpleList>`，其它屏膜上用`<Datagrid>`。这就是`<Responsive>`组件的来源：
 
 ```jsx
 // in src/posts.js
@@ -531,17 +531,17 @@ export const PostList = (props) => (
 );
 ```
 
-This works exactly the way you expect. The lesson here is that admin-on-rest takes care of responsive web design for the layout, but it's your job to use `<Responsive>` in pages.
+这完全按你期望的方式工作。这里的教训是admin-on-rest为布局注意了响应式的web设计，但它是你的工作－在页面中用`<Responsive>`。
 
-![Responsive List](./img/responsive-list.gif)
+![Responsive List](https://marmelab.com/admin-on-rest/img/responsive-list.gif)
 
-## Using Another REST Dialect
+## 使用其它rest Dialect{#UsingAnotherRESTDialect}
 
-Here is the elephant in the room of this tutorial. In real world projects, the REST dialect of your API won't match the JSONPLaceholder dialect. Writing a REST client is probably the first thing you'll have to do to make admin-on-rest work. Depending on your API, this can require a few hours of additional work.
+这是本教程房间里的大象。在现实世界的项目中，你的API的REST dialect与JSONPLaceholder dialect不匹配。写一个REST客户端可能是你要做的第一件事，你将得使admin-on-rest依赖在你的API上，这可能需要几个小时的额外工作。
 
-Admin-on-rest delegates every REST calls to a REST client function. This function must simply return a promise for the result. This gives extreme freedom to map any API dialect, add authentication headers, use endpoints from several domains, etc.
+Admin-on-rest委托每个REST调用到一个REST客户端函数。这个函数必须简单地返回一个promise结果。这样给予了极大地自由来映射任何API dialect、添加身份验证标头、使用多个域中的端点等。
 
-For instance, let's imagine you have to use the my.api.url API, which expects the following parameters:
+例如，让我们猜想你不得不用这个my.api.url API，它期望有如下参数：
 
 | Action              | Expected REST request |
 |---------------------|---------------------- |
@@ -552,9 +552,9 @@ For instance, let's imagine you have to use the my.api.url API, which expects th
 | Create a record     | `POST http://my.api.url/posts/123` |
 | Delete a record     | `DELETE http://my.api.url/posts/123` |
 
-Admin-on-rest defines custom verbs for each of the actions of this list. Just like HTTP verbs (`GET`, `POST`, etc.), REST verbs qualify a request to a REST server. Admin-on-rest verbs are called `GET_LIST`, `GET_ONE`, `GET_MANY`, `CREATE`, `UPDATE`, and `DELETE`. The REST client will have to map each of these verbs to one (or many) HTTP request(s).
+Admin-on-rest为这个列表的每个动作定义了自定义动词。就像HTTP动词（`GET`，`POST`，等。），REST动词限定一个请求到REST服务器。Admin-on-rest动词被叫做`GET_LIST`，`GET_ONE`，`GET_MANY`，`CREATE`，`UPDATE`和 `DELETE`。REST客户端将得映射这些动词的每一个对应一个（或多个）HTTP 请求。
 
-The code for an API client for my.api.url is as follows:
+My.api.url API 客户端代码如下所示：
 
 ```jsx
 // in src/restClient
@@ -670,7 +670,7 @@ export default (type, resource, params) => {
 };
 ```
 
-Using this client instead of the previous `jsonServerRestClient` is just a matter of switching a function:
+使用这个客户端代替之前的`jsonServerRestClient`仅仅是切换一个函数的问题：
 
 ```jsx
 // in src/app.js
@@ -683,8 +683,8 @@ const App = () => (
 );
 ```
 
-## Conclusion
+## 结论{#Conclusion}
 
-Admin-on-rest was build with customization in mind. You can replace any admin-on-rest component with a component of your own, for instance to display a custom list layout, or a different edition form for a given resource.
+Admin-on-rest是以考虑定制为基础构建的。你可以将任何admin-on-rest组件替换为你自己的组件，例如显示自定义列表布局或为一个给定的resource不同的编辑表单。
 
-Now that you've completed the tutorial, continue reading the [admin-on-rest documentation](http://marmelab.com/admin-on-rest/), and read the [Material UI components documentation](http://www.material-ui.com/#/).
+现在你已经完成了这个教程，继续阅读[admin-on-rest documentation](https://kirk-wang.gitbooks.io/admin-on-rest/)，和阅读[Material UI components documentation](http://www.material-ui.com/#/)。
