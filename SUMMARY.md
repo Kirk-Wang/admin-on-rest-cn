@@ -21,6 +21,23 @@
     * [JSON Server REST客户端](RestClients/README.md#JSONServerREST)
     * [添加自定义头](RestClients/README.md#AddingCustomHeaders)
     * [装饰你的REST客户端(文件上传的例子)](RestClients/README.md#DecoratingyourRESTClient)
+    * [请求格式](RestClients/README.md#RequestFormat)
+    * [响应格式](RestClients/README.md#ResponseFormat)
+    * [错误格式](RestClients/README.md#ErrorFormat)
+    * [示例实现](RestClients/README.md#Exampleimplementation)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
