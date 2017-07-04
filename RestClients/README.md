@@ -48,7 +48,7 @@ Admin-on-rest默认提供了两个REST客户端：
 
 ### 简易的REST客户端{#SimpleREST}
 
-This REST client fits APIs using simple GET parameters for filters and sorting. This is the dialect used for instance in [FakeRest](https://github.com/marmelab/FakeRest).
+这个REST客户端适合API使用简单 GET 参数进行筛选和排序。这个dialect适用于例如在[FakeRest](https://github.com/marmelab/FakeRest)中。
 
 | REST verb            | API calls
 |----------------------|----------------------------------------------------------------
@@ -60,19 +60,19 @@ This REST client fits APIs using simple GET parameters for filters and sorting. 
 | `GET_MANY`           | `GET http://my.api.url/posts?filter={ids:[123,456,789]}`
 | `GET_MANY_REFERENCE` | `GET http://my.api.url/posts?filter={author_id:345}`
 
-**Note**: The simple REST client expects the API to include a `Content-Range` header in the response to `GET_LIST` calls. The value must be the total number of resources in the collection. This allows admin-on-rest to know how many pages of resources there are in total, and build the pagination controls.
+**注意**: 这个简易的REST客户端期望API在响应 `GET_LIST` 调用中包含一个`Content-Range`头。该值必须是集合中的资源总数。这使 admin-on-rest 能够知道总共有多少页资源，并生成分页控件。
 
 ```
 Content-Range: posts 0-24/319
 ```
 
-If your API is on another domain as the JS code, you'll need to whitelist this header with an `Access-Control-Expose-Headers` [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) header.
+在JS代码中如果您的API是在另一个域中，你需要到白名单中为这个头添加一个`Access-Control-Expose-Headers` [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) 头。
 
 ```
 Access-Control-Expose-Headers: Content-Range
 ```
 
-Here is how to use it in your admin:
+这里是如何在你的admin中用它：
 
 ```jsx
 // in src/App.js
