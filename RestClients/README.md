@@ -93,7 +93,7 @@ export default App;
 
 ### JSON Server REST客户端{#JSONServerREST}
 
-This REST client fits APIs powered by [JSON Server](https://github.com/typicode/json-server), such as [JSONPlaceholder](http://jsonplaceholder.typicode.com/).
+此REST客户端适合API由[JSON Server](https://github.com/typicode/json-server)驱动比如 [JSONPlaceholder](http://jsonplaceholder.typicode.com/)。
 
 | REST verb            | API calls
 |----------------------|----------------------------------------------------------------
@@ -105,19 +105,19 @@ This REST client fits APIs powered by [JSON Server](https://github.com/typicode/
 | `GET_MANY`           | `GET http://my.api.url/posts/123, GET http://my.api.url/posts/456, GET http://my.api.url/posts/789`
 | `GET_MANY_REFERENCE` | `GET http://my.api.url/posts?author_id=345`
 
-**Note**: The jsonServer REST client expects the API to include a `X-Total-Count` header in the response to `GET_LIST` calls. The value must be the total number of resources in the collection. This allows admin-on-rest to know how many pages of resources there are in total, and build the pagination controls.
+**注意**: 这个jsonServer REST客户端期望在响应GET_LIST调用中包含一个`X-Total-Count`头。该值必须是集合中的资源总数。这使admin-on-rest能够知道总共有多少页资源，并生成分页控件。
 
 ```
 X-Total-Count: 319
 ```
 
-If your API is on another domain as the JS code, you'll need to whitelist this header with an `Access-Control-Expose-Headers` [CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) header.
+在JS代码中如果您的API是在另一个域中，你需要到白名单中为这个头添加一个`Access-Control-Expose-Headers`[CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS) 头。
 
 ```
 Access-Control-Expose-Headers: X-Total-Count
 ```
 
-Here is how to use it in your admin:
+这里是如何在你的admin中用它：
 
 ```jsx
 // in src/App.js
