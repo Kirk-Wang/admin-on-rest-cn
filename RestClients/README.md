@@ -1,6 +1,6 @@
 # REST 客户端
 
-Admin-on-rest可以与任何rest服务器通信，而不考虑它使用的 REST dialect。 无论是[JSON API](http://jsonapi.org/), [HAL](http://stateless.co/hal_specification.html), [OData](http://www.odata.org/)或者一个自定义dialect，Admin-on-rest唯一需要的就是一个 REST client 函数。这个地方是来转换REST请求到HTTP请求，和HTTP响应到REST响应。
+Admin-on-rest可以与任何rest服务器通信，而不考虑它使用的 REST dialect。 无论是[JSON API](http://jsonapi.org/), [HAL](http://stateless.co/hal_specification.html), [OData](http://www.odata.org/)或者一个自定义dialect，Admin-on-rest唯一需要的就是一个 REST client 函数。这个地方是来转换REST请求到HTTP请求和HTTP响应到REST响应。
 
 ![REST client architecture](https://marmelab.com/admin-on-rest/img/rest-client.png)
 
