@@ -181,7 +181,7 @@ const httpClient = (url, options) => {
 
 ### 装饰你的REST客户端(文件上传的例子){#DecoratingyourRESTClient}
 
-Instead of writing your own REST client or using a third-party one, you can enhance its capabilities on a given resource. For instance, if you want to use upload components (such as `<ImageInput />` one), you can decorate it the following way:
+您可以在给定的资源上增强其功能而不是编写自己的REST client或使用第三方的REST client。例如，如果您想要使用上传组件（如`<ImageInput />`组件），你可以按以下方式修饰它：
 
 ```jsx
 /**
@@ -230,7 +230,7 @@ const addUploadCapabilities = requestHandler => (type, resource, params) => {
 export default addUploadCapabilities;
 ```
 
-This way, you can use simply your upload-capable client to your app calling this decorator:
+这样，您可以简单地使用你的upload-capable客户端到你的app调用此装饰：
 
 ```jsx
 import jsonRestClient from 'aor-json-rest-client';
@@ -248,17 +248,18 @@ render(
 
 ```
 
-## Writing Your Own REST Client
+### 编写你自己的REST客户端{#Writing Your Own REST Client}
 
-Quite often, none of the the core REST clients match your API exactly. In such cases, you'll have to write your own REST client. But don't be afraid, it's easy!
+很多时候，没有一个核心的REST客户端完全匹配你的API。在这种情况下，您不得不编写自己的REST客户端。但不要害怕，这很容易！
 
-### Request Format
+### 请求格式{#RequestFormat}
 
-REST requests require a *type* (e.g. `GET_ONE`), a *resource* (e.g. 'posts') and a set of *parameters*.
+REST请求必需要一个*type*（例如：`GET_ONE`），一个*resource*（例如：'posts'）和一组*parameters*。
 
-*Tip*: In comparison, HTTP requests require a *verb* (e.g. 'GET'), an *url* (e.g. 'http://myapi.com/posts'), a list of *headers* (like `Content-Type`) and a *body*.
+*提示*：相比之下， HTTP 请求需要一个*动词*（例如：‘GET’）, 一个 *url*（例如： ‘http://myapi.com/posts’），一系列 *headers*（🐘 `Content-Type`）和一个 *body*。
 
-Possible types are:
+
+可能的类型是：
 
 Type                 | Params format
 -------------------- | ----------------
@@ -270,7 +271,7 @@ Type                 | Params format
 `GET_MANY`           | `{ ids: {mixed[]} }`
 `GET_MANY_REFERENCE` | `{ target: {string}, id: {mixed}, pagination: { page: {int} , perPage: {int} }, sort: { field: {string}, order: {string} }, filter: {Object} }`
 
-Examples:
+例子：
 
 ```jsx
 restClient(GET_LIST, 'posts', {
@@ -290,9 +291,9 @@ restClient(GET_MANY_REFERENCE, 'comments', {
 });
 ```
 
-### Response Format
+### 响应格式{#ResponseFormat}
 
-REST responses are objects. The format depends on the type.
+REST响应是对象。格式取决于类型。
 
 Type                 | Response format
 -------------------- | ----------------
@@ -304,9 +305,9 @@ Type                 | Response format
 `GET_MANY`           | `{ data: {Record[]} }`
 `GET_MANY_REFERENCE` | `{ data: {Record[]}, total: {int} }`
 
-A `{Record}` is an object literal with at least an `id` property, e.g. `{ id: 123, title: "hello, world" }`.
+`{Record}`是一个至少具有`id`属性的对象字面量，例如：`{ id: 123, title: "hello, world" }`。
 
-Examples:
+例子：
 
 ```jsx
 restClient(GET_LIST, 'posts', {
@@ -375,10 +376,10 @@ restClient(GET_MANY_REFERENCE, 'comments', {
 // }
 ```
 
-### Error Format
+### 错误格式{#ErrorFormat}
 
-When the REST API returns an error, the rest client should `throw` an `Error` object. This object should contain a `status` property with the HTTP response code (404, 500, etc.). Admin-on-rest inspects this error code, and uses it for [authentication](./Authentication.md) (in case of 401 or 403 errors).
+当REST API返回一个错误时，这个rest客户端应该`抛出` 一个 `Error` 对象。这个对象应该包含一个具有HTTP 响应代码（404，500，等等）的`status`属性。Admin-on-rest检查这个错误代码并将其用于[身份验证](./Authentication.md)（在401或403错误的情况下）
 
-### Example implementation
+### 示例实现{#Exampleimplementation}
 
-Check the code from the [simple REST client](https://github.com/marmelab/admin-on-rest/blob/master/src/rest/simple.js): it's a good starting point for a custom rest client implementation.
+查看来自[simple REST client](https://github.com/marmelab/admin-on-rest/blob/master/src/rest/simple.js)中的代码：它是一个好的开始来达到一个自定义的rest client实现。
