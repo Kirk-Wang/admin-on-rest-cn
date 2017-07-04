@@ -28,25 +28,25 @@ const restClient = (type, resource, params) => new Promise();
 
 ## 可用客户端{#AvailableClients}
 
-Admin-on-rest ships 2 REST client by default:
+Admin-on-rest默认提供了两个REST客户端：
 
-* simple REST: [simpleRestClient](#simple-rest) serves mostly as an example. Incidentally, it is compatible with the [FakeRest](https://github.com/marmelab/FakeRest) API.
-* **[JSON server](https://github.com/typicode/json-server)**: [jsonServerRestClient](#json-server-rest)
+* [simpleRestClient](#simple-rest)主要服务作为一个例子。顺便说一下，它是与[FakeRest](https://github.com/marmelab/FakeRest)API兼容。
+* **[JSON server](https://github.com/typicode/json-server)**：[jsonServerRestClient](#json-server-rest)
 
-You can find REST clients for various backends in third-party repositories:
+你可以在第三方的仓库中为admin-on-rest找到更多REST客户端：
 
-* **[Feathersjs](http://www.feathersjs.com/)**: [josx/aor-feathers-client](https://github.com/josx/aor-feathers-client)
-* **[Firebase](https://firebase.google.com/)**: [sidferreira/aor-firebase-client](https://github.com/sidferreira/aor-firebase-client)
-* **[GraphQL](http://graphql.org/)**: [marmelab/aor-simple-graphql-client](https://github.com/marmelab/aor-simple-graphql-client) (uses [Apollo](http://www.apollodata.com/))
-* **[JSON API](http://jsonapi.org/)**: [moonlight-labs/aor-jsonapi-client](https://github.com/moonlight-labs/aor-jsonapi-client)
-* Local JSON: [marmelab/aor-json-rest-client](https://github.com/marmelab/aor-json-rest-client). It doesn't even use HTTP. Use it for testing purposes.
+* **[Feathersjs](http://www.feathersjs.com/)**：[josx/aor-feathers-client](https://github.com/josx/aor-feathers-client)
+* **[Firebase](https://firebase.google.com/)**：[sidferreira/aor-firebase-client](https://github.com/sidferreira/aor-firebase-client)
+* **[GraphQL](http://graphql.org/)**：[marmelab/aor-simple-graphql-client](https://github.com/marmelab/aor-simple-graphql-client) (使用[Apollo](http://www.apollodata.com/))
+* **[JSON API](http://jsonapi.org/)**：[moonlight-labs/aor-jsonapi-client](https://github.com/moonlight-labs/aor-jsonapi-client)
+* Local JSON：[marmelab/aor-json-rest-client](https://github.com/marmelab/aor-json-rest-client)。它甚至不使用HTTP。 用于测试目的。
 * **[Loopback](http://loopback.io/)**: [kimkha/aor-loopback](https://github.com/kimkha/aor-loopback)
 * **[Parse Server](https://github.com/ParsePlatform/parse-server)**: [leperone/aor-parseserver-client](https://github.com/leperone/aor-parseserver-client)
 * **[PostgREST](http://postgrest.com/en/v0.4/)**: [tomberek/aor-postgrest-client](https://github.com/tomberek/aor-postgrest-client)
 
-If you've written a REST client for anoter backend, and open-sourced it, please help complete this list with your package.
+如果您为另一个后端编写了REST客户端，并开放源代码，请完善此列表具有您的软件包。
 
-### Simple REST
+### 简易的REST客户端{#SimpleREST}
 
 This REST client fits APIs using simple GET parameters for filters and sorting. This is the dialect used for instance in [FakeRest](https://github.com/marmelab/FakeRest).
 
