@@ -1,10 +1,10 @@
-# REST Clients
+# REST 客户端
 
-Admin-on-rest can communicate with any REST server, regardless of the REST dialect it uses. Whether it's [JSON API](http://jsonapi.org/), [HAL](http://stateless.co/hal_specification.html), [OData](http://www.odata.org/) or a custom dialect, the only thing admin-on-rest needs is a REST client function. This is the place to translate REST requests to HTTP requests, and HTTP responses to REST responses.
+Admin-on-rest可以与任何rest服务器通信，而不考虑它使用的 REST dialect。 无论是[JSON API](http://jsonapi.org/), [HAL](http://stateless.co/hal_specification.html), [OData](http://www.odata.org/)或者一个自定义dialect，Admin-on-rest唯一需要的就是一个 REST client 函数。这个地方是来转换REST请求到HTTP请求，和HTTP响应到REST响应。
 
-![REST client architecture](./img/rest-client.png)
+![REST client architecture](https://marmelab.com/admin-on-rest/img/rest-client.png)
 
-The `restClient` parameter of the `<Admin>` component, must be a function with the following signature:
+`<Admin>`组件的`restClient`参数必须是一个具有如下签名的函数：
 
 ```jsx
 /**
@@ -22,11 +22,11 @@ The `restClient` parameter of the `<Admin>` component, must be a function with t
 const restClient = (type, resource, params) => new Promise();
 ```
 
-You can find a REST client example implementation in [`src/rest/simple.js`](https://github.com/marmelab/admin-on-rest/blob/master/src/rest/simple.js);
+你会发现一个实现了REST client的例子在[`src/rest/simple.js`](https://github.com/marmelab/admin-on-rest/blob/master/src/rest/simple.js)；
 
-The `restClient` is also the ideal place to add custom HTTP headers, authentication, etc.
+`restClient`也是在这个理想的地方来添加HTTP头，身份验证，等等。
 
-## Available Clients
+## 可用客户端{#AvailableClients}
 
 Admin-on-rest ships 2 REST client by default:
 
