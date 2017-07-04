@@ -138,8 +138,7 @@ export default App;
 
 ### 添加自定义头{#AddingCustomHeaders}
 
-Both the `simpleRestClient` and the `jsonServerRestClient` functions accept an http client function as second argument. By default, they use admin-on-rest's `fetchUtils.fetchJson()` as http client. It's similar to HTML5 `fetch()`, except it handles JSON decoding and HTTP error codes automatically.
-`simpleRestClient`和`jsonServerRestClient`函数都接受 http client函数作为第二个参数。默认情况下, 他们使用 admin-on-rest 的 `fetchUtils.fetchJson()` 作为 http client。它类似于 HTML5 的`fetch()`，除了它会自动处理 json 解码和 http 错误代码。
+`simpleRestClient`和`jsonServerRestClient`函数都接受http client函数作为第二个参数。默认情况下, 他们使用admin-on-rest的`fetchUtils.fetchJson()`作为http client。它类似于HTML5的`fetch()`，除了它会自动处理json解码和http错误代码。
 
 这意味着如果你需要添加自定义头到你的请求中，你只需*封装*这个`fetchJson()`回调在你自己的函数内部：
 
