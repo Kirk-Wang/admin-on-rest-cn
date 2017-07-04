@@ -136,7 +136,7 @@ const App = () => (
 export default App;
 ```
 
-### Adding Custom Headers
+### 添加自定义头{#AddingCustomHeaders}
 
 Both the `simpleRestClient` and the `jsonServerRestClient` functions accept an http client function as second argument. By default, they use admin-on-rest's `fetchUtils.fetchJson()` as http client. It's similar to HTML5 `fetch()`, except it handles JSON decoding and HTTP error codes automatically.
 
