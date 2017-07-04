@@ -139,8 +139,9 @@ export default App;
 ### 添加自定义头{#AddingCustomHeaders}
 
 Both the `simpleRestClient` and the `jsonServerRestClient` functions accept an http client function as second argument. By default, they use admin-on-rest's `fetchUtils.fetchJson()` as http client. It's similar to HTML5 `fetch()`, except it handles JSON decoding and HTTP error codes automatically.
+`simpleRestClient`和`jsonServerRestClient`函数都接受 http client函数作为第二个参数。默认情况下, 他们使用 admin-on-rest 的 `fetchUtils.fetchJson()` 作为 http client。它类似于 HTML5 的`fetch()`，除了它会自动处理 json 解码和 http 错误代码。
 
-That means that if you need to add custom headers to your requests, you just need to *wrap* the `fetchJson()` call inside your own function:
+这意味着如果你需要添加自定义头到你的请求中，你只需*封装*这个`fetchJson()`回调在你自己的函数内部：
 
 ```jsx
 import { simpleRestClient, fetchUtils, Admin, Resource } from 'admin-on-rest';
@@ -162,9 +163,9 @@ render(
 );
 ```
 
-Now all the requests to the REST API will contain the `X-Custom-Header: foobar` header.
+现在所有到REST API请求都将包含`X-Custom-Header: foobar`头。
 
-**Tip**: The most common usage of custom headers is for authentication. `fetchJson` has built-on support for the `Authorization` token header:
+**提示**：自定义头的最常见用法是进行身份验证。`fetchJson`已经将`Authorization`令牌头作为基础支持：
 
 ```jsx
 const httpClient = (url, options) => {
@@ -176,9 +177,9 @@ const httpClient = (url, options) => {
 }
 ```
 
-Now all the requests to the REST API will contain the `Authorization: SRTRDFVESGNJYTUKTYTHRG` header.
+现在对REST API的所有请求都将包含`Authorization: SRTRDFVESGNJYTUKTYTHRG`头。
 
-## Decorating your REST Client (Example of File Upload)
+### 装饰你的REST客户端(文件上传的例子){#DecoratingyourRESTClient}
 
 Instead of writing your own REST client or using a third-party one, you can enhance its capabilities on a given resource. For instance, if you want to use upload components (such as `<ImageInput />` one), you can decorate it the following way:
 

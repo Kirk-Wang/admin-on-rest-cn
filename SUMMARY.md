@@ -20,6 +20,9 @@
     * [简易的REST客户端](RestClients/README.md#SimpleREST)
     * [JSON Server REST客户端](RestClients/README.md#JSONServerREST)
     * [添加自定义头](RestClients/README.md#AddingCustomHeaders)
+    * [装饰你的REST客户端(文件上传的例子)](RestClients/README.md#DecoratingyourRESTClient)
+
+
 
 
 
