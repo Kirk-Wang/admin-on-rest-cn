@@ -63,6 +63,11 @@
     * [SimpleList 组件](List/README.md#SimpleList)
     * [SingleFieldList 组件](List/README.md#SingleFieldList)
     * [使用一个自定义迭代器](List/README.md#Using-a-Custom-Iterator)
+* [Show 视图](Show/README.md)
+    * [Show 组件](Show/README.md#show)
+    * [title（页面标题）](Show/README.md#page-title)
+    * [actions（动作）](Show/README.md#actions)
+    * [SimpleShowLayout 组件](Show/README.md#SimpleShowLayout)
 
 
 

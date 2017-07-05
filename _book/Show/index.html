@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Resource 组件 · GitBook</title>
+        <title>Show 视图 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -61,7 +61,7 @@
     <link rel="next" href="./" />
     
     
-    <link rel="prev" href="../Admin/" />
+    <link rel="prev" href="../List/" />
     
 
     <style>
@@ -665,9 +665,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5" data-path="./">
+        <li class="chapter " data-level="1.5" data-path="../Resource/">
             
-                <a href="./">
+                <a href="../Resource/">
             
                     
                     Resource 组件
@@ -679,9 +679,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="./">
+        <li class="chapter " data-level="1.5.1" data-path="../Resource/">
             
-                <a href="./#name">
+                <a href="../Resource/#name">
             
                     
                     name（名字）
@@ -692,9 +692,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="./">
+        <li class="chapter " data-level="1.5.2" data-path="../Resource/">
             
-                <a href="./#icon">
+                <a href="../Resource/#icon">
             
                     
                     icon（图标）
@@ -705,9 +705,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="./">
+        <li class="chapter " data-level="1.5.3" data-path="../Resource/">
             
-                <a href="./#options">
+                <a href="../Resource/#options">
             
                     
                     options（选项）
@@ -950,9 +950,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="../Show/">
+        <li class="chapter active" data-level="1.7" data-path="./">
             
-                <a href="../Show/">
+                <a href="./">
             
                     
                     Show 视图
@@ -964,9 +964,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="../Show/">
+        <li class="chapter " data-level="1.7.1" data-path="./">
             
-                <a href="../Show/#show">
+                <a href="./#show">
             
                     
                     Show 组件
@@ -977,9 +977,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="../Show/">
+        <li class="chapter " data-level="1.7.2" data-path="./">
             
-                <a href="../Show/#page-title">
+                <a href="./#page-title">
             
                     
                     title（页面标题）
@@ -990,9 +990,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.3" data-path="../Show/">
+        <li class="chapter " data-level="1.7.3" data-path="./">
             
-                <a href="../Show/#actions">
+                <a href="./#actions">
             
                     
                     actions（动作）
@@ -1003,9 +1003,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.4" data-path="../Show/">
+        <li class="chapter " data-level="1.7.4" data-path="./">
             
-                <a href="../Show/#SimpleShowLayout">
+                <a href="./#SimpleShowLayout">
             
                     
                     SimpleShowLayout 组件
@@ -1051,7 +1051,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Resource 组件</a>
+        <a href=".." >Show 视图</a>
     </h1>
 </div>
 
@@ -1066,96 +1066,129 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="resource&#x7EC4;&#x4EF6;"><code>&lt;Resource&gt;</code>&#x7EC4;&#x4EF6;</h1>
-<p>&#x4E00;&#x4E2A;<code>&lt;Resource&gt;</code>&#x7EC4;&#x4EF6;&#x5C06;&#x4E00;&#x4E2A;API&#x7AEF;&#x70B9;&#x6620;&#x5C04;&#x5230;&#x4E00;&#x4E2A;CRUD&#x754C;&#x9762;&#x3002;&#x4E0B;&#x9762;&#x7684;&#x7BA1;&#x7406;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E3A; <a href="http://jsonplaceholder.typicode.com/posts" target="_blank"><code>http://jsonplaceholder.typicode.com/posts</code></a>&#x548C; <a href="http://jsonplaceholder.typicode.com/users" target="_blank"><code>http://jsonplaceholder.typicode.com/users</code></a>&#x4E2D;&#x7684;JSONPlaceholder API&#x516C;&#x5F00;&#x7684;&#x8D44;&#x6E90;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E2A;&#x53EA;&#x8BFB;&#x754C;&#x9762;&#xFF1A;</p>
+                                <h1 id="show&#x89C6;&#x56FE;">Show&#x89C6;&#x56FE;</h1>
+<p>Show&#x89C6;&#x56FE;&#x4EE5;&#x53EA;&#x8BFB;&#x65B9;&#x5F0F;&#x663E;&#x793A;&#x4ECE;API&#x83B7;&#x53D6;&#x7684;&#x8BB0;&#x5F55;&#x3002;&#x5B83;&#x5C06;&#x8BB0;&#x5F55;&#x7684;&#x5B9E;&#x9645;&#x5448;&#x73B0;&#x65B9;&#x5F0F;&#x59D4;&#x6258;&#x7ED9;&#x4E00;&#x4E2A;&#x5E03;&#x5C40;&#x7EC4;&#x4EF6;&#x2014;&#x2014;&#x901A;&#x5E38;&#x662F;<code>&lt;SimpleShowLayout&gt;</code>&#x3002;&#x8FD9;&#x4E2A;&#x5E03;&#x5C40;&#x7EC4;&#x4EF6;&#x4F7F;&#x7528;&#x5B83;&#x7684;&#x5B50;&#x5143;&#x7D20;&#xFF08;<a href="Fields.html"><code>&lt;Fields&gt;</code></a> &#x7EC4;&#x4EF6;&#xFF09;&#x6765;&#x5448;&#x73B0;&#x6BCF;&#x4E2A;&#x8BB0;&#x5F55;&#x5B57;&#x6BB5;&#x3002;</p>
+<p><img src="https://marmelab.com/admin-on-rest/img/show-view.png" alt="post show view"></p>
+<h3 id="show"><code>&lt;Show&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p><code>&lt;Show&gt;</code>&#x7EC4;&#x4EF6;&#x5448;&#x73B0;&#x9875;&#x9762;&#x6807;&#x9898;&#x548C;&#x64CD;&#x4F5C;&#xFF0C;&#x5E76;&#x4ECE;REST API&#x83B7;&#x53D6;&#x8BB0;&#x5F55;&#x3002; &#x5B83;&#x4E0D;&#x8D1F;&#x8D23;&#x6E32;&#x67D3;&#x5B9E;&#x9645;&#x7684;&#x8BB0;&#x5F55; - &#x8FD9;&#x662F;&#x5B83;&#x7684;&#x5B50;&#x7EC4;&#x4EF6;&#xFF08;&#x901A;&#x5E38;&#x662F;<code>&lt;SimpleShowLayout&gt;</code>&#xFF09;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x5B83;&#x4EEC;&#x4F20;&#x9012;<code>record</code>&#x4F5C;&#x4E3A;&#x5C5E;&#x6027;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x901A;&#x8FC7;<code>&lt;Show&gt;</code>&#x7EC4;&#x4EF6;&#x63A5;&#x53D7;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#xFF1A;</p>
+<ul>
+<li><a href="#page-title"><code>title</code></a></li>
+<li><a href="#actions"><code>actions</code></a></li>
+</ul>
+<p>&#x4E0B;&#x9762;&#x662F;&#x53BB;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x89C6;&#x56FE;&#x6765;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x5E16;&#x5B50;&#x6240;&#x5FC5;&#x987B;&#x7684;&#x6700;&#x5C11;&#x4EE3;&#x7801;&#xFF1A;</p>
 <pre><code class="lang-jsx"><span class="hljs-comment">// in src/App.js</span>
 <span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
 <span class="hljs-keyword">import</span> { jsonServerRestClient, Admin, Resource } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
 
-<span class="hljs-keyword">import</span> { PostList } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./posts&apos;</span>;
-<span class="hljs-keyword">import</span> { UserList } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./posts&apos;</span>;
+<span class="hljs-keyword">import</span> { PostCreate, PostEdit, PostShow } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./posts&apos;</span>;
 
 <span class="hljs-keyword">const</span> App = () =&gt; (
     &lt;Admin restClient={jsonServerRestClient(&apos;http://jsonplaceholder.typicode.com&apos;)}&gt;
-        &lt;Resource name=&quot;posts&quot; list={PostList} /&gt;
-        &lt;Resource name=&quot;users&quot; list={UserList} /&gt;
+        &lt;Resource name=&quot;posts&quot; show={PostShow} create={PostCreate} edit={PostEdit} /&gt;
     &lt;/Admin&gt;
 );
-</code></pre>
-<p><code>&lt;Resource&gt;</code>&#x5141;&#x8BB8;&#x4F60;&#x4E3A;&#x6BCF;&#x4E2A;CRUD&#x64CD;&#x4F5C;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#xFF0C;&#x4F7F;&#x7528;&#x4E0B;&#x5217;&#x5C5E;&#x6027;&#x540D;&#x79F0;&#xFF1A;</p>
-<ul>
-<li><code>list</code></li>
-<li><code>create</code></li>
-<li><code>edit</code></li>
-<li><code>show</code></li>
-<li><code>remove</code></li>
-</ul>
-<p>&#x8FD9;&#x91CC;&#x662F;&#x4E00;&#x4E2A;&#x66F4;&#x5B8C;&#x6574;&#x7684;admin&#xFF0C;&#x5177;&#x6709;&#x4E3A;&#x6240;&#x6709;CRUD&#x64CD;&#x4F5C;&#x7684;&#x7EC4;&#x4EF6;&#xFF1A;</p>
-<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
-<span class="hljs-keyword">import</span> { jsonServerRestClient, Admin, Resource } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
 
-<span class="hljs-keyword">import</span> { PostList, PostCreate, PostEdit, PostShow, PostIcon } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./posts&apos;</span>;
-<span class="hljs-keyword">import</span> { UserList } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./posts&apos;</span>;
-<span class="hljs-keyword">import</span> { CommentList, CommentEdit, CommentCreate, CommentIcon } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./comments&apos;</span>;
+export default App;
 
-<span class="hljs-keyword">const</span> App = () =&gt; (
-    &lt;Admin restClient={jsonServerRestClient(&apos;http://jsonplaceholder.typicode.com&apos;)}&gt;
-        &lt;Resource name=&quot;posts&quot; list={PostList} create={PostCreate} edit={PostEdit} show={PostShow} remove={Delete} icon={PostIcon} /&gt;
-        &lt;Resource name=&quot;users&quot; list={UserList} /&gt;
-        &lt;Resource name=&quot;comments&quot; list={CommentList} create={CommentCreate} edit={CommentEdit} remove={Delete} icon={CommentIcon} /&gt;
-        &lt;Resource name=&quot;tags&quot; /&gt;
-    &lt;/Admin&gt;
+// in src/posts.js
+import React from &apos;react&apos;;
+import { Show, SimpleShowLayout, TextField, DateField, EditButton, RichTextField } from &apos;admin-on-rest&apos;;
+
+export const PostShow = (props) =&gt; (
+    &lt;Show {...props}&gt;
+        &lt;SimpleShowLayout&gt;
+            &lt;TextField source=&quot;title&quot; /&gt;
+            &lt;TextField source=&quot;teaser&quot; /&gt;
+            &lt;RichTextField source=&quot;body&quot; /&gt;
+            &lt;DateField label=&quot;Publication date&quot; source=&quot;created_at&quot; /&gt;
+        &lt;/SimpleShowLayout&gt;
+    &lt;/Show&gt;
 );
 </code></pre>
-<p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;&#x5728;hood&#x4E0B;&#xFF0C;<code>&lt;Resource&gt;</code>&#x7EC4;&#x4EF6;&#x4F7F;&#x7528;&#x4E86;react-router&#x53BB;&#x521B;&#x5EFA;&#x5404;&#x81EA;&#x7684;&#x8DEF;&#x7531;&#xFF1A;</p>
-<ul>
-<li><code>/</code>&#x6620;&#x5C04;&#x5230;<code>list</code>&#x7EC4;&#x4EF6;</li>
-<li><code>/create</code>&#x6620;&#x5C04;&#x5230;<code>create</code>&#x7EC4;&#x4EF6;</li>
-<li><code>/:id</code>&#x6620;&#x5C04;&#x5230;<code>edit</code>&#x7EC4;&#x4EF6;</li>
-<li><code>/:id/show</code>&#x6620;&#x5C04;&#x5230;<code>show</code>&#x7EC4;&#x4EF6;</li>
-<li><code>/:id/delete</code>&#x6620;&#x5C04;&#x5230;<code>remove</code>&#x7EC4;&#x4EF6;</li>
-</ul>
-<p><strong>&#x6CE8;&#x610F;</strong>: &#x5F53;&#x4F60;&#x58F0;&#x660E;&#x4E00;&#x4E2A;&#x5F15;&#x7528;&#x65F6;&#xFF0C;&#x60A8;&#x5FC5;&#x987B;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;<code>&lt;Resource&gt;</code>&#xFF08;&#x901A;&#x8FC7;<code>&lt;ReferenceField&gt;</code>&#x3001;<code>&lt;ReferenceArrayField&gt;</code>&#x3001;<code>&lt;ReferenceManyField&gt;</code>&#x3001;<code>&lt;ReferenceInput&gt;</code>&#x3001;<code>&lt;ReferenceArrayInput&gt;</code>&#x6216;<code>&lt;ReferenceManyInput&gt;</code>&#xFF09;&#xFF0C;&#x56E0;&#x4E3A;admin-on-rest&#x4F7F;&#x7528;resource&#x5B9A;&#x4E49;&#x7684;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x7ED3;&#x6784;&#x3002;&#x8FD9;&#x5C31;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;&#x5728;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x6709;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;<code>tag</code>resource&#x3002;</p>
-<p><code>&lt;Resource&gt;</code>&#x4E5F;&#x63A5;&#x53D7;&#x989D;&#x5916;&#x7684;&#x5C5E;&#x6027;&#xFF1A;</p>
-<ul>
-<li><a href="#name"><code>name</code></a></li>
-<li><a href="#icon"><code>icon</code></a></li>
-<li><a href="#icon"><code>options</code></a></li>
-</ul>
-<h3 id="name"><code>name</code>&#xFF08;&#x540D;&#x5B57;&#xFF09;</h3>
-<p>Admin-on-rest&#x4F7F;&#x7528;<code>name</code>&#x5C5E;&#x6027;&#x65E2;&#x786E;&#x5B9A;API&#x7AEF;&#x70B9;&#xFF08;&#x88AB;&#x4F20;&#x9012;&#x5230;<code>restClient</code>&#xFF09;&#x53C8;&#x4E3A;resource&#x6784;&#x6210;URL&#x3002;</p>
-<pre><code class="lang-jsx">&lt;Resource name=<span class="hljs-string">&quot;posts&quot;</span> list={PostList} create={PostCreate} edit={PostEdit} show={PostShow} remove={PostRemove} /&gt;
-</code></pre>
-<p>&#x5BF9;&#x4E8E;&#x6B64;&#x8D44;&#x6E90;&#xFF0C;admin-on-rest&#x5C06;&#x4E3A;&#x6570;&#x636E;&#x83B7;&#x53D6;<code>http://jsonplaceholder.typicode.com/posts</code>&#x7AEF;&#x70B9;&#x3002;</p>
-<p>&#x8DEF;&#x7531;&#x5C06;&#x6309;&#x5982;&#x4E0B;&#x65B9;&#x5F0F;&#x6620;&#x5C04;&#x7EC4;&#x4EF6;&#xFF1A;</p>
-<ul>
-<li><code>/posts/</code>&#x6620;&#x5C04;&#x5230;<code>PostList</code></li>
-<li><code>/posts/create</code>&#x6620;&#x5C04;&#x5230;<code>PostCreate</code></li>
-<li><code>/posts/:id</code>&#x6620;&#x5C04;&#x5230;<code>PostEdit</code></li>
-<li><code>/posts/:id/show</code>&#x6620;&#x5C04;&#x5230;<code>PostShow</code></li>
-<li><code>/posts/:id/delete</code>&#x6620;&#x5C04;&#x5230;<code>PostRemove</code></li>
-</ul>
-<p><strong>&#x63D0;&#x793A;</strong>: &#x5982;&#x679C;&#x60A8;&#x60F3;&#x4F7F;&#x7528;&#x7279;&#x6B8A;&#x7684;API&#x7AEF;&#x70B9;&#xFF08;&#x4F8B;&#x5982;&#xFF1A;&#xFF07;<a href="http://jsonplaceholder.typicode.com/my-custom-posts-endpoint&#xFF07;&#xFF09;&#x800C;&#x4E0D;&#x66F4;&#x6539;" target="_blank">http://jsonplaceholder.typicode.com/my-custom-posts-endpoint&#xFF07;&#xFF09;&#x800C;&#x4E0D;&#x66F4;&#x6539;</a> admin-on-rest&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;url&#xFF08;&#x6240;&#x4EE5;&#x4ECD;&#x7136;&#x4F7F;&#x7528;<code>/posts</code>&#xFF09;&#xFF0C;&#x5728;&#x4F60;&#x81EA;&#x5DF1;&#x7684;<a href="Admin.html#restclient"><code>restClient</code></a>&#x4E2D;&#x5199;&#x4E00;&#x4E2A;&#x4ECE;resource<code>name</code>&#xFF08;<code>posts</code>&#xFF09;&#x5230;API&#x7AEF;&#x70B9;(<code>my-custom-posts-endpoint</code>)&#x7684;&#x6620;&#x5C04;&#x3002;</p>
-<h3 id="icon"><code>icon</code>&#xFF08;&#x56FE;&#x6807;&#xFF09;</h3>
-<p>Admin-on-rest&#x5C06;&#x5728;&#x83DC;&#x5355;&#x4E2D;&#x5448;&#x73B0;<code>icon</code>&#x5C5E;&#x6027;&#x7EC4;&#x4EF6;&#xFF1A;</p>
-<pre><code class="lang-jsx"><span class="hljs-comment">// in src/App.js</span>
-<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
-<span class="hljs-keyword">import</span> PostIcon <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;material-ui/svg-icons/action/book&apos;</span>;
-<span class="hljs-keyword">import</span> UserIcon <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;material-ui/svg-icons/social/group&apos;</span>;
-<span class="hljs-keyword">import</span> { jsonServerRestClient, Admin, Resource } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
-
-<span class="hljs-keyword">import</span> { PostList } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./posts&apos;</span>;
-
-<span class="hljs-keyword">const</span> App = () =&gt; (
-    &lt;Admin restClient={jsonServerRestClient(&apos;http://jsonplaceholder.typicode.com&apos;)}&gt;
-        &lt;Resource name=&quot;posts&quot; list={PostList} icon={PostIcon} /&gt;
-        &lt;Resource name=&quot;users&quot; list={UserList} icon={UserIcon} /&gt;
-    &lt;/Admin&gt;
+<p>&#x8FD9;&#x5C31;&#x8DB3;&#x4EE5;&#x663E;&#x793A;&#x8FD9;&#x4E2A;&#x5E16;&#x5B50;&#x663E;&#x793A;&#x89C6;&#x56FE;</p>
+<p><img src="https://marmelab.com/admin-on-rest/img/post-show.png" alt="post show view"></p>
+<h3 id="page-title">title&#xFF08;&#x9875;&#x9762;&#x6807;&#x9898;&#xFF09;</h3>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;Show&#x89C6;&#x56FE;&#x7684;&#x663E;&#x793A;&#x6807;&#x9898;&#x662F;&quot;[resource_name] #[record_id]&quot;&#x3002;</p>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;<code>title</code>&#x5C5E;&#x6027;&#x6765;&#x81EA;&#x5B9A;&#x4E49;&#x6B64;&#x6807;&#x9898;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PostShow = (props) =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Show</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;Post view&quot;</span> {<span class="hljs-attr">...props</span>}&gt;</span>
+        ...
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Show</span>&gt;</span></span>
 );
 </code></pre>
-<h3 id="options">options&#xFF08;&#x9009;&#x9879;&#xFF09;</h3>
-<p><code>options.label</code>&#x5141;&#x8BB8;&#x5728;&#x83DC;&#x5355;&#x4E2D;&#x81EA;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x8D44;&#x6E90;&#x7684;&#x663E;&#x793A;&#x540D;&#x79F0;&#x3002;</p>
-<pre><code class="lang-jsx">&lt;Resource name=<span class="hljs-string">&quot;v2/posts&quot;</span> options={{ label: <span class="hljs-string">&apos;Posts&apos;</span> }} list={PostList} /&gt;
+<p>&#x66F4;&#x6709;&#x8DA3;&#x7684;&#x662F;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4F20;&#x9012;&#x4E00;&#x4E2A;&#x7EC4;&#x4EF6;&#x4F5C;&#x4E3A;<code>title</code>&#x3002;Admin-on-rest&#x514B;&#x9686;&#x6B64;&#x7EC4;&#x4EF6;&#xFF0C;&#x5E76;&#x5728;<showview>&#x4E2D;&#xFF0C;&#x6CE8;&#x5165;&#x5F53;&#x524D;<code>record</code>&#x3002;&#x8FD9;&#x5141;&#x8BB8;&#x6839;&#x636E;&#x5F53;&#x524D;&#x8BB0;&#x5F55;&#x81EA;&#x5B9A;&#x4E49;&#x6807;&#x9898;&#xFF1A;</showview></p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> PostTitle = ({ record }) =&gt; {
+    <span class="hljs-keyword">return</span> <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>Post {record ? `&quot;${record.title}&quot;` : &apos;&apos;}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>;
+};
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PostShow = (props) =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Show</span> <span class="hljs-attr">title</span>=<span class="hljs-string">{&lt;PostTitle</span> /&gt;</span>} {...props}&gt;
+        ...
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Show</span>&gt;</span>
+);
+</span></code></pre>
+<h3 id="actions">actions&#xFF08;&#x52A8;&#x4F5C;&#xFF09;</h3>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x5143;&#x7D20;&#x4F7F;&#x7528;<code>actions</code>&#x5C5E;&#x6027;&#x6765;&#x66FF;&#x6362;&#x9ED8;&#x8BA4;&#x52A8;&#x4F5C;&#x5217;&#x8868;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { CardActions } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;material-ui/Card&apos;</span>;
+<span class="hljs-keyword">import</span> FlatButton <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;material-ui/FlatButton&apos;</span>;
+<span class="hljs-keyword">import</span> NavigationRefresh <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;material-ui/svg-icons/navigation/refresh&apos;</span>;
+<span class="hljs-keyword">import</span> { ListButton, EditButton, DeleteButton } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">const</span> cardActionStyle = {
+    zIndex: <span class="hljs-number">2</span>,
+    display: <span class="hljs-string">&apos;inline-block&apos;</span>,
+    float: <span class="hljs-string">&apos;right&apos;</span>,
+};
+
+<span class="hljs-keyword">const</span> PostShowActions = ({ basePath, data, refresh }) =&gt; (
+    &lt;CardActions style={cardActionStyle}&gt;
+        &lt;EditButton basePath={basePath} record={data} /&gt;
+        &lt;ListButton basePath={basePath} /&gt;
+        &lt;DeleteButton basePath={basePath} record={data} /&gt;
+        &lt;FlatButton primary label=&quot;Refresh&quot; onClick={refresh} icon={&lt;NavigationRefresh /&gt;} /&gt;
+        {/* Add your custom actions */}
+        &lt;FlatButton primary label=&quot;Custom Action&quot; onClick={customAction} /&gt;
+    &lt;/CardActions&gt;
+);
+
+export const PostShow = (props) =&gt; (
+    &lt;Show actions={&lt;PostShowActions /&gt;} {...props}&gt;
+        ...
+    &lt;/Show&gt;
+);
+</code></pre>
+<h2 id="SimpleShowLayout"><code>&lt;SimpleShowLayout&gt;</code>&#x7EC4;&#x4EF6;</h2>
+<p><code>&lt;SimpleShowLayout&gt;</code>&#x7EC4;&#x4EF6;&#x4ECE;&#x5B83;&#x7684;&#x7236;&#x7EC4;&#x4EF6;&#x63A5;&#x6536;<code>record</code>&#x4F5C;&#x4E3A;&#x5C5E;&#x6027;&#x3002;&#x5B83;&#x8D1F;&#x8D23;&#x6E32;&#x67D3;&#x5B9E;&#x9645;&#x7684;&#x89C6;&#x56FE;&#x3002;<code>&lt;SimpleShowLayout&gt;</code>&#x9010;&#x884C;&#x5448;&#x73B0;&#x5176;&#x5B50;&#x7EC4;&#x4EF6;&#xFF08;&#x5728;<code>&lt;div&gt;</code>&#x7EC4;&#x4EF6;&#x5185;&#xFF09;&#x3002;</p>
+<p><code>&lt;SimpleShowLayout&gt;</code>&#x9010;&#x884C;&#x5448;&#x73B0;&#x5176;&#x5B50;&#x7EC4;&#x4EF6;&#xFF08;&#x5728;<code>&lt;div&gt;</code>&#x7EC4;&#x4EF6;&#x5185;&#xFF09;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PostShow = (props) =&gt; (
+    &lt;Show {...props}&gt;
+        &lt;SimpleShowLayout&gt;
+            &lt;TextField source=&quot;title&quot; /&gt;
+            &lt;RichTextField source=&quot;body&quot; /&gt;
+            &lt;NumberField source=&quot;nb_views&quot; /&gt;
+        &lt;/SimpleShowLayout&gt;
+    &lt;/Show&gt;
+);
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6307;&#x5B9A;<code>style</code> prop&#x6765;&#x8986;&#x76D6;&#x5B83;&#x7684;&#x6837;&#x5F0F;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> styles = {
+    container: {
+        display: <span class="hljs-string">&apos;flex&apos;</span>,
+    },
+    item: {
+        marginRight: <span class="hljs-string">&apos;1rem&apos;</span>,
+    },
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PostShow = (props) =&gt; (
+    &lt;Show {...props}&gt;
+        &lt;SimpleShowLayout style={styles.container}&gt;
+            &lt;TextField source=&quot;title&quot; style={styles.item} /&gt;
+            &lt;RichTextField source=&quot;body&quot; style={styles.item} /&gt;
+            &lt;NumberField source=&quot;nb_views&quot; style={styles.item} /&gt;
+        &lt;/SimpleShowLayout&gt;
+    &lt;/Show&gt;
+);
 </code></pre>
 
                                 
@@ -1184,12 +1217,12 @@
 
             
                 
-                <a href="../Admin/#Using-admin-on-rest-without-Admin-and-Resource" class="navigation navigation-prev " aria-label="Previous page: 在Admin和Resource组件外使用admin-on-rest">
+                <a href="../List/#Using-a-Custom-Iterator" class="navigation navigation-prev " aria-label="Previous page: 使用一个自定义迭代器">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="./#name" class="navigation navigation-next " aria-label="Next page: name（名字）">
+                <a href="./#show" class="navigation navigation-next " aria-label="Next page: Show 组件">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1200,7 +1233,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Resource 组件","level":"1.5","depth":1,"next":{"title":"name（名字）","level":"1.5.1","depth":2,"anchor":"#name","path":"Resource/README.md","ref":"Resource/README.md#name","articles":[]},"previous":{"title":"在Admin和Resource组件外使用admin-on-rest","level":"1.4.15","depth":2,"anchor":"#Using-admin-on-rest-without-Admin-and-Resource","path":"Admin/README.md","ref":"Admin/README.md#Using-admin-on-rest-without-Admin-and-Resource","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["github-buttons","livereload"],"pluginsConfig":{"github-buttons":{"repo":"Kirk-Wang/admin-on-rest-cn","types":["star","fork","watch"],"size":"large"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Resource/README.md","mtime":"2017-07-05T06:50:35.375Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-05T08:54:42.847Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Show 视图","level":"1.7","depth":1,"next":{"title":"Show 组件","level":"1.7.1","depth":2,"anchor":"#show","path":"Show/README.md","ref":"Show/README.md#show","articles":[]},"previous":{"title":"使用一个自定义迭代器","level":"1.6.16","depth":2,"anchor":"#Using-a-Custom-Iterator","path":"List/README.md","ref":"List/README.md#Using-a-Custom-Iterator","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["github-buttons","livereload"],"pluginsConfig":{"github-buttons":{"repo":"Kirk-Wang/admin-on-rest-cn","types":["star","fork","watch"],"size":"large"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Show/README.md","mtime":"2017-07-05T08:54:36.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-05T08:54:42.847Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
