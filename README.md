@@ -1,5 +1,4 @@
-# admin-on-rest 中文文档
-
+# admin-on-rest 中文文档~~~<a aria-label="Star azu/JavaScript-Plugin-Architecture on GitHub" href="https://github.com/azu/JavaScript-Plugin-Architecture" class="github-button"><img src="https://monosnap.com/file/MZsfLjZNkSNwTJ33apkwpBjlBZLbSh.png" alt="GitHub"></a>
 admin-on-rest是一个用于构建在REST服务之上的浏览器中运行的管理应用程序前端框架，它使用了ES6，[React](https://facebook.github.io/react/)和[Material Design](https://material.io/)。 它被 [marmelab](https://marmelab.com/) 开源和维护。 
 
 [👀演示](https://marmelab.com/admin-on-rest-demo/) - [👃文档](https://www.admin-on-rest.com/) - [发行版本](https://github.com/marmelab/admin-on-rest/releases) - [服务支持](http://stackoverflow.com/questions/tagged/admin-on-rest)
