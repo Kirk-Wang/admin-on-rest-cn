@@ -1,0 +1,1922 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>字段组件 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="./" />
+    
+    
+    <link rel="prev" href="../Show/" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"Kirk-Wang/admin-on-rest-cn","types":["star","fork","watch"],"size":"large"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/">
+            
+                    
+                    Admin-on-REST 教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#Installation">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#MakingContactWithTheAPI">
+            
+                    
+                    与API进行关联
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#FieldTypes">
+            
+                    
+                    字段类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#Relationships">
+            
+                    
+                    关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#CreationAndEdition">
+            
+                    
+                    创建和编辑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#Deletion">
+            
+                    
+                    删除
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#Filters">
+            
+                    
+                    过滤器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#CustomizingtheMenuIcons">
+            
+                    
+                    自定义菜单图标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#UsingaCustomHomePage">
+            
+                    
+                    使用自定义主页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#AddingaLoginPage">
+            
+                    
+                    添加登录页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#ResponsiveList">
+            
+                    
+                    响应式列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#UsingAnotherRESTDialect">
+            
+                    
+                    使用其它rest Dialect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#Conclusion">
+            
+                    
+                    结论
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../RestClients/">
+            
+                <a href="../RestClients/">
+            
+                    
+                    REST 客户端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../RestClients/">
+            
+                <a href="../RestClients/#AvailableClients">
+            
+                    
+                    可用客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../RestClients/">
+            
+                <a href="../RestClients/#SimpleREST">
+            
+                    
+                    简易的REST客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../RestClients/">
+            
+                <a href="../RestClients/#JSONServerREST">
+            
+                    
+                    JSON Server REST客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../RestClients/">
+            
+                <a href="../RestClients/#AddingCustomHeaders">
+            
+                    
+                    添加自定义头
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../RestClients/">
+            
+                <a href="../RestClients/#DecoratingyourRESTClient">
+            
+                    
+                    装饰你的REST客户端（文件上传的例子）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../RestClients/">
+            
+                <a href="../RestClients/#WritingYourOwnRESTClient">
+            
+                    
+                    编写你自己的REST客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../RestClients/">
+            
+                <a href="../RestClients/#RequestFormat">
+            
+                    
+                    请求格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../RestClients/">
+            
+                <a href="../RestClients/#ResponseFormat">
+            
+                    
+                    响应格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../RestClients/">
+            
+                <a href="../RestClients/#ErrorFormat">
+            
+                    
+                    错误格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../RestClients/">
+            
+                <a href="../RestClients/#Exampleimplementation">
+            
+                    
+                    示例实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Admin/">
+            
+                <a href="../Admin/">
+            
+                    
+                    Admin 组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Admin/">
+            
+                <a href="../Admin/#restClient">
+            
+                    
+                    restClient（rest客户端）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Admin/">
+            
+                <a href="../Admin/#title">
+            
+                    
+                    title（标题）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Admin/">
+            
+                <a href="../Admin/#dashboard">
+            
+                    
+                    dashboard（仪表盘）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Admin/">
+            
+                <a href="../Admin/#menu">
+            
+                    
+                    menu（仪表盘）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Admin/">
+            
+                <a href="../Admin/#theme">
+            
+                    
+                    theme（主题）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Admin/">
+            
+                <a href="../Admin/#appLayout">
+            
+                    
+                    appLayout（app布局）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../Admin/">
+            
+                <a href="../Admin/#customReducers">
+            
+                    
+                    customReducers（自定义Reducer）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../Admin/">
+            
+                <a href="../Admin/#customSagas">
+            
+                    
+                    customSagas（自定义Saga）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../Admin/">
+            
+                <a href="../Admin/#customRoutes">
+            
+                    
+                    customRoutes（自定义Route）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../Admin/">
+            
+                <a href="../Admin/#authClient">
+            
+                    
+                    authClient（授权客户端）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../Admin/">
+            
+                <a href="../Admin/#loginPage">
+            
+                    
+                    loginPage（登陆页）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../Admin/">
+            
+                <a href="../Admin/#logoutButton">
+            
+                    
+                    logoutButton（注销按钮）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../Admin/">
+            
+                <a href="../Admin/#initialState">
+            
+                    
+                    initialState（初始状态）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../Admin/">
+            
+                <a href="../Admin/#Internationalization">
+            
+                    
+                    国际化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="../Admin/">
+            
+                <a href="../Admin/#Using-admin-on-rest-without-Admin-and-Resource">
+            
+                    
+                    在Admin和Resource组件外使用admin-on-rest
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Resource/">
+            
+                <a href="../Resource/">
+            
+                    
+                    Resource 组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Resource/">
+            
+                <a href="../Resource/#name">
+            
+                    
+                    name（名字）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Resource/">
+            
+                <a href="../Resource/#icon">
+            
+                    
+                    icon（图标）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Resource/">
+            
+                <a href="../Resource/#options">
+            
+                    
+                    options（选项）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../List/">
+            
+                <a href="../List/">
+            
+                    
+                    List 视图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../List/">
+            
+                <a href="../List/#List">
+            
+                    
+                    List 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../List/">
+            
+                <a href="../List/#page-title">
+            
+                    
+                    title（页面标题）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../List/">
+            
+                <a href="../List/#actions">
+            
+                    
+                    actions（动作）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../List/">
+            
+                <a href="../List/#filters">
+            
+                    
+                    filters（过滤器）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../List/">
+            
+                <a href="../List/#records-per-page">
+            
+                    
+                    perPage（每页记录数）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../List/">
+            
+                <a href="../List/#default-sort-field">
+            
+                    
+                    sort（默认排序字段）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../List/">
+            
+                <a href="../List/#DisablingSorting">
+            
+                    
+                    禁用排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../List/">
+            
+                <a href="../List/#permanent-filter">
+            
+                    
+                    filter（永久过滤器）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../List/">
+            
+                <a href="../List/#pagination">
+            
+                    
+                    pagination（分页）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../List/">
+            
+                <a href="../List/#Datagrid">
+            
+                    
+                    Datagrid 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../List/">
+            
+                <a href="../List/#CustomGridStyle">
+            
+                    
+                    自定义表格样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../List/">
+            
+                <a href="../List/#RowStyleFunction">
+            
+                    
+                    行样式函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../List/">
+            
+                <a href="../List/#options-headerOptions-bodyOptions-rowOptions">
+            
+                    
+                    options、headerOptions、bodyOptions和rowOptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../List/">
+            
+                <a href="../List/#SimpleList">
+            
+                    
+                    SimpleList 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../List/">
+            
+                <a href="../List/#SingleFieldList">
+            
+                    
+                    SingleFieldList 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../List/">
+            
+                <a href="../List/#Using-a-Custom-Iterator">
+            
+                    
+                    使用一个自定义迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Show/">
+            
+                <a href="../Show/">
+            
+                    
+                    Show 视图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Show/">
+            
+                <a href="../Show/#show">
+            
+                    
+                    Show 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Show/">
+            
+                <a href="../Show/#page-title">
+            
+                    
+                    title（页面标题）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Show/">
+            
+                <a href="../Show/#actions">
+            
+                    
+                    actions（动作）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Show/">
+            
+                <a href="../Show/#SimpleShowLayout">
+            
+                    
+                    SimpleShowLayout 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./#FieldComponents">
+            
+                    
+                    字段组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="./">
+            
+                <a href="./#BooleanField">
+            
+                    
+                    BooleanField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="./">
+            
+                <a href="./#ChipField">
+            
+                    
+                    ChipField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="./">
+            
+                <a href="./#DateField">
+            
+                    
+                    DateField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="./">
+            
+                <a href="./#EmailField">
+            
+                    
+                    EmailField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="./">
+            
+                <a href="./#FunctionField">
+            
+                    
+                    FunctionField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="./">
+            
+                <a href="./#ImageField">
+            
+                    
+                    ImageField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="./">
+            
+                <a href="./#FileField">
+            
+                    
+                    FileField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="./">
+            
+                <a href="./#NumberField">
+            
+                    
+                    NumberField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="./">
+            
+                <a href="./#SelectField">
+            
+                    
+                    SelectField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="./">
+            
+                <a href="./#ReferenceField">
+            
+                    
+                    ReferenceField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="./">
+            
+                <a href="./#ReferenceManyField">
+            
+                    
+                    ReferenceManyField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="./">
+            
+                <a href="./#ReferenceArrayField">
+            
+                    
+                    ReferenceArrayField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="./">
+            
+                <a href="./#RichTextField">
+            
+                    
+                    RichTextField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="./">
+            
+                <a href="./#TextField">
+            
+                    
+                    TextField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="./">
+            
+                <a href="./#UrlField">
+            
+                    
+                    UrlField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16" data-path="./">
+            
+                <a href="./#StylingFields">
+            
+                    
+                    样式化字段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.17" data-path="./">
+            
+                <a href="./#WritingYourOwnFieldComponent">
+            
+                    
+                    编写你自己的字段组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >字段组件</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="FieldComponents">&#x5B57;&#x6BB5;&#x7EC4;&#x4EF6;</h1>
+<p>&#x4E00;&#x4E2A;<code>Field</code>&#x7EC4;&#x4EF6;&#x663E;&#x793A;&#x4E00;&#x4E2A;REST resource&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x7684;&#x5C5E;&#x6027;&#x3002;&#x6B64;&#x7C7B;&#x7EC4;&#x4EF6;&#x5907;&#x7528;&#x4E8E;&#x5728;<code>List</code>&#x89C6;&#x56FE;&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x4F60;&#x4E5F;&#x80FD;&#x7528;&#x5B83;&#x4EEC;&#x5728;<code>Edit</code>&#x548C;<code>Create</code>&#x89C6;&#x56FE;&#x4E2D;&#x7ED9;&#x53EA;&#x8BFB;&#x5B57;&#x6BB5;&#x3002;&#x6240;&#x6709;&#x5B57;&#x6BB5;&#x7EC4;&#x4EF6;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x662F;<code>&lt;TextField&gt;</code>&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/posts.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { List, Datagrid, TextField } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PostList = (props) =&gt; (
+    &lt;List {...props}&gt;
+        &lt;Datagrid&gt;
+            &lt;TextField source=&quot;id&quot; /&gt;
+            &lt;TextField source=&quot;title&quot; /&gt;
+            &lt;TextField source=&quot;body&quot; /&gt;
+        &lt;/Datagrid&gt;
+    &lt;/List&gt;
+);
+</code></pre>
+<p>&#x6240;&#x6709;&#x5B57;&#x6BB5;&#x7EC4;&#x4EF6;&#x90FD;&#x63A5;&#x53D7;&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;&#xFF1A;</p>
+<ul>
+<li><code>source</code>: &#x8981;&#x67E5;&#x770B;/&#x7F16;&#x8F91;&#x7684;&#x5B9E;&#x4F53;&#x7684;&#x5C5E;&#x6027;&#x540D;&#x79F0;&#x3002;&#x6B64;&#x5C5E;&#x6027;&#x662F;&#x5FC5;&#x9700;&#x7684;&#x3002;</li>
+<li><code>label</code>: &#x7528;&#x4F5C;&#x8F93;&#x5165;&#x6807;&#x7B7E;&#x7684;&#x8868;&#x5934;&#x3002; &#x7701;&#x7565;&#x65F6;&#x9ED8;&#x8BA4;&#x4E3A;<code>source</code>&#x3002;</li>
+<li><code>sortable</code>: &#x5E94;&#x8BE5;&#x4F7F;&#x7528;<code>source</code>&#x5C5E;&#x6027;&#x5BF9;&#x5217;&#x8868;&#x8FDB;&#x884C;&#x6392;&#x5E8F;&#x5417;&#xFF1F; &#x9ED8;&#x8BA4;&#x4E3A;<code>true</code>&#x3002;</li>
+<li><code>elStyle</code>: &#x4E00;&#x4E2A;&#x6837;&#x5F0F;&#x5BF9;&#x8C61;&#x6765;&#x81EA;&#x5B9A;&#x4E49;&#x5B57;&#x6BB5;&#x5143;&#x7D20;&#x672C;&#x8EAB;&#x7684;&#x754C;&#x9762;&#x5916;&#x89C2;&#x3002;</li>
+<li><code>style</code>:&#x4E00;&#x4E2A;&#x6837;&#x5F0F;&#x5BF9;&#x8C61;&#x6765;&#x81EA;&#x5B9A;&#x4E49;&#x5B57;&#x6BB5;&#x5BB9;&#x5668;&#x7684;&#x754C;&#x9762;&#x5916;&#x89C2;(&#x4F8B;&#x5982;&#xFF1A;datagrid&#x4E2D;&#x7684;<code>&lt;td&gt;</code>)&#x3002;</li>
+</ul>
+<pre><code class="lang-jsx">&lt;TextField source=<span class="hljs-string">&quot;zb_title&quot;</span> label=<span class="hljs-string">&quot;Title&quot;</span> style={{ color: <span class="hljs-string">&apos;purple&apos;</span> }} /&gt;
+</code></pre>
+<p><strong>&#x63D0;&#x793A;</strong>&#xFF1A;&#x5982;&#x679C;&#x4F60;&#x663E;&#x793A;&#x4E00;&#x6761;&#x5177;&#x6709;&#x4E00;&#x4E2A;&#x590D;&#x6742;&#x7ED3;&#x6784;&#x7684;&#x8BB0;&#x5F55;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5E26;&#x6709;&#x70B9;&#x5206;&#x9694;&#x7B26;&#x7684;&#x8DEF;&#x5F84;&#x4F5C;&#x4E3A;<code>source</code>&#x5C5E;&#x6027;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;API&#x8FD4;&#x56DE;&#x4EE5;&#x4E0B;&apos;book&apos;&#x8BB0;&#x5F55;&#xFF1A;</p>
+<pre><code class="lang-jsx">{
+    id: <span class="hljs-number">1234</span>,
+    title: <span class="hljs-string">&apos;War and Peace&apos;</span>,
+    author: {
+        firstName: <span class="hljs-string">&apos;Leo&apos;</span>,
+        lastName: <span class="hljs-string">&apos;Tolstoi&apos;</span>
+    }
+}
+</code></pre>
+<p>&#x7136;&#x540E;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x4F5C;&#x8005;&#x540D;&#x5B57;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-jsx">&lt;TextField source=<span class="hljs-string">&quot;author.firstName&quot;</span> /&gt;
+</code></pre>
+<p><strong>&#x63D0;&#x793A;</strong>&#xFF1A;&#x5982;&#x679C;&#x8981;&#x6839;&#x636E;&#x8BE5;&#x503C;&#x683C;&#x5F0F;&#x5316;&#x5B57;&#x6BB5;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;&#x9AD8;&#x9636;&#x7EC4;&#x4EF6;&#x6267;&#x884C;&#x6761;&#x4EF6;&#x683C;&#x5F0F;&#x8BBE;&#x7F6E;&#xFF0C;&#x5982;<a href="Theming.html#conditional-formatting">Theming documentation</a>&#x4E2D;&#x6240;&#x8FF0;&#x3002;</p>
+<p><strong>&#x63D0;&#x793A;</strong>&#xFF1A;&#x5982;&#x679C;&#x4F60;&#x7684;&#x754C;&#x9762;&#x5FC5;&#x987B;&#x652F;&#x6301;&#x591A;&#x79CD;&#x8BED;&#x8A00;&#xFF0C;&#x8BF7;&#x52FF;&#x4F7F;&#x7528;<code>label</code>&#xFF0C;&#x653E;&#x672C;&#x5730;&#x5316;&#x6807;&#x7B7E;&#x653E;&#x5728;&#x5B57;&#x5178;&#x4E2D;&#x4EE3;&#x66FF;&#x5B83;&#x3002; &#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;<a href="Translation.html#translating-resource-and-field-names">Translation documentation</a>&#x3002;</p>
+<h3 id="BooleanField"><code>&lt;BooleanField&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p>&#x663E;&#x793A;&#x5E03;&#x5C14;&#x503C;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;check&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { BooleanField } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">BooleanField</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;commentable&quot;</span> /&gt;</span>
+</span></code></pre>
+<p><img src="https://marmelab.com/admin-on-rest/img/boolean-field.png" alt="BooleanField"></p>
+<h3 id="ChipField"><code>&lt;ChipField&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p>&#x5728;<a href="http://www.material-ui.com/#/components/chip" target="_blank">&quot;Chip&quot;</a>&#x5185;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x503C;&#xFF0C;&#x8BE5;&#x503C;&#x662F;&#x6807;&#x7B7E;&#x7684;Material UI&#x7684;&#x672F;&#x8BED;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { ChipField } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ChipField</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;category&quot;</span> /&gt;</span>
+</span></code></pre>
+<p><img src="https://marmelab.com/admin-on-rest/img/chip-field.png" alt="ChipField"></p>
+<p>&#x8BE5;&#x5B57;&#x6BB5;&#x7C7B;&#x578B;&#x5BF9;&#x4E8E;&#x4E00;&#x5BF9;&#x591A;&#x5173;&#x7CFB;&#x5C24;&#x5176;&#x6709;&#x7528;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x7ED9;&#x5B9A;&#x4F5C;&#x8005;&#x7684;&#x4E66;&#x7C4D;&#x5217;&#x8868;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { ChipField, SingleFieldList, ReferenceManyField } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ReferenceManyField</span> <span class="hljs-attr">reference</span>=<span class="hljs-string">&quot;books&quot;</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;author_id&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">SingleFieldList</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ChipField</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;title&quot;</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">SingleFieldList</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ReferenceManyField</span>&gt;</span>
+</span></code></pre>
+<h3 id="DateField"><code>&lt;DateField&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p>&#x4F7F;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x533A;&#x57DF;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x65E5;&#x671F;&#x6216;&#x65E5;&#x671F;&#x65F6;&#x95F4;&#xFF08;&#x611F;&#x8C22;<code>Date.toLocaleDateString()</code>&#x548C;<code>Date.toLocaleString()</code>&#xFF09;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { DateField } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">DateField</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;publication_date&quot;</span> /&gt;</span>
+</span></code></pre>
+<p>&#x6B64;&#x7EC4;&#x4EF6;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;<code>showTime</code>&#x5C5E;&#x6027;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;false&#xFF09;&#xFF0C;&#x4EE5;&#x5F3A;&#x5236;&#x663E;&#x793A;&#x9664;&#x65E5;&#x671F;&#x4E4B;&#x5916;&#x7684;&#x65F6;&#x95F4;&#x3002;&#x5B83;&#x4F7F;&#x7528;<code>Intl.DateTimeFormat&#xFF08;&#xFF09;</code>&#x5982;&#x679C;&#x53EF;&#x7528;&#xFF0C;&#x4F20;&#x9012;<code>locales</code>&#x548C;<code>options</code>&#x9053;&#x5177;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x3002;&#x5982;&#x679C;Intl&#x4E0D;&#x53EF;&#x7528;&#xFF0C;&#x5B83;&#x5C06;&#x5FFD;&#x7565;<code>locales</code>&#x548C;<code>options</code>&#x5C5E;&#x6027;&#x3002;</p>
+<pre><code class="lang-jsx">&lt;DateField source=&quot;publication_date&quot; /&gt;
+// renders the record { id: 1234, publication_date: new Date(&apos;2017-04-23&apos;) } as
+&lt;span&gt;4/23/2017&lt;/span&gt;
+
+&lt;DateField source=&quot;publication_date&quot; showTime /&gt;
+// renders the record { id: 1234, publication_date: new Date(&apos;2017-04-23 23:05&apos;) } as
+&lt;span&gt;4/23/2017, 11:05:00 PM&lt;/span&gt;
+
+&lt;DateField source=&quot;publication_date&quot; options={{ weekday: &apos;long&apos;, year: &apos;numeric&apos;, month: &apos;long&apos;, day: &apos;numeric&apos; }} /&gt;
+// renders the record { id: 1234, publication_date: new Date(&apos;2017-04-23&apos;) } as
+&lt;span&gt;Sunday, April 23, 2017&lt;/span&gt;
+
+&lt;DateField source=&quot;publication_date&quot; locales=&quot;fr-FR&quot; /&gt;
+// renders the record { id: 1234, publication_date: new Date(&apos;2017-04-23&apos;) } as
+&lt;span&gt;23/04/2017&lt;/span&gt;
+
+&lt;DateField source=&quot;publication_date&quot; elStyle={{ color: &apos;red&apos; }} /&gt;
+// renders the record { id: 1234, publication_date: new Date(&apos;2017-04-23&apos;) } as
+&lt;span style=&quot;color:red;&quot;&gt;4/23/2017&lt;/span&gt;
+</code></pre>
+<p>&#x6709;&#x5173;<code>options</code>&#x5C5E;&#x6027;&#x8BED;&#x6CD5;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;<a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Date/toLocaleDateString" target="_blank">Intl.DateTimeformat documentation</a>&#x3002;</p>
+<p><strong>&#x63D0;&#x793A;</strong>&#xFF1A;&#x5982;&#x679C;&#x60A8;&#x9700;&#x8981;&#x6BD4;<code>Intl.DateTimeformat</code>&#x53EF;&#x63D0;&#x4F9B;&#x66F4;&#x591A;&#x7684;&#x683C;&#x5F0F;&#x5316;&#x9009;&#x9879;&#xFF0C;&#x5229;&#x7528;&#x4E00;&#x4E2A;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;&#x5982;<a href="http://momentjs.com/" target="_blank">moment.js</a>&#x6784;&#x5EFA;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x5B57;&#x6BB5;&#x7EC4;&#x4EF6;&#x3002;</p>
+<h3 id="EmailField"><code>&lt;EmailField&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p><code>&lt;EmailField&gt;</code>&#x5C06;&#x7535;&#x5B50;&#x90AE;&#x4EF6;&#x663E;&#x793A;&#x4E3A;<code>&lt;a href=&quot;mailto:&quot; /&gt;</code>&#x94FE;&#x63A5;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { EmailField } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">EmailField</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;personal_email&quot;</span> /&gt;</span>
+</span></code></pre>
+<h3 id="FunctionField"><code>&lt;FunctionField&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x51FD;&#x6570;&#x6765;&#x6E32;&#x67D3;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;&#xFF0C;&#x90A3;&#x4E48;<code>&lt;FunctionField&gt;</code>&#x5C31;&#x662F;&#x5B8C;&#x7F8E;&#x7684;&#x5339;&#x914D;&#x3002;&#x5B83;&#x5C06;<code>record</code>&#x4F20;&#x9012;&#x7ED9;&#x901A;&#x8FC7;&#x5F00;&#x53D1;&#x4EBA;&#x5458;&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x4E2A;<code>render</code>&#x51FD;&#x6570;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x8981;&#x663E;&#x793A;&#x57FA;&#x4E8E;<code>first_name</code>&#x548C;<code>last_name</code>&#x5C5E;&#x6027;&#x7684;<code>user</code>&#x8BB0;&#x5F55;&#x7684;&#x5168;&#x540D;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { FunctionField } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>
+
+&lt;FunctionField label=<span class="hljs-string">&quot;Name&quot;</span> render={record =&gt; <span class="hljs-string">`<span class="hljs-subst">${record.first_name}</span> <span class="hljs-subst">${record.last_name}</span>`</span>} /&gt;
+</code></pre>
+<p><strong>&#x63D0;&#x793A;</strong>&#xFF1A;&#x4ECE;&#x6280;&#x672F;&#x4E0A;&#x8BB2;&#xFF0C;&#x7531;&#x4E8E;&#x60A8;&#x63D0;&#x4F9B;&#x4E86;&#x6E32;&#x67D3;&#x529F;&#x80FD;&#xFF0C;&#x56E0;&#x6B64;&#x60A8;&#x53EF;&#x4EE5;&#x7701;&#x7565;<code>&lt;FunctionField&gt;</code>&#x7684;<code>source</code>&#x5C5E;&#x6027;&#x3002; &#x4F46;&#x662F;&#xFF0C;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;<code>source</code>&#x5C06;&#x5141;&#x8BB8;datagrid&#x4F7F;&#x5217;&#x53EF;&#x6392;&#x5E8F;&#xFF0C;&#x56E0;&#x4E3A;&#x5F53;&#x7528;&#x6237;&#x5355;&#x51FB;&#x5217;&#x65F6;&#xFF0C;datagrid&#x4F7F;&#x7528;<code>source</code>&#x5C5E;&#x6027;&#x4F5C;&#x4E3A;&#x6392;&#x5E8F;&#x5B57;&#x6BB5;&#x3002;</p>
+<h2 id="ImageField"><code>&lt;ImageField&gt;</code>&#x7EC4;&#x4EF6;</h2>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x663E;&#x793A;API&#x63D0;&#x4F9B;&#x7684;&#x56FE;&#x50CF;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>&lt;ImageField /&gt;</code>&#x7EC4;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { ImageField } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ImageField</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;url&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;title&quot;</span> /&gt;</span>
+</span></code></pre>
+<p>&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x4E5F;&#x901A;&#x5E38;&#x7528;&#x4E8E;&#x4E00;&#x4E2A;<a href="http://marmelab.com/admin-on-rest/Inputs.html#imageinput" target="_blank"><imageinput></imageinput></a>&#x7EC4;&#x4EF6;&#x5185;&#x4EE5;&#x663E;&#x793A;&#x9884;&#x89C8;&#x3002;</p>
+<p>&#x53EF;&#x9009;&#x7684;<code>title</code>&#x5C5E;&#x6027;&#x6307;&#x5411;&#x56FE;&#x7247;&#x6807;&#x9898;&#x5C5E;&#x6027;&#xFF0C;&#x7528;&#x4E8E;<code>alt</code>&#x548C;<code>title</code>&#x5C5E;&#x6027;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x786C;&#x7F16;&#x5199;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x5728;&#x4F60;JSON&#x5BF9;&#x8C61;&#x5185;&#x7684;&#x8DEF;&#x5F84;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// { picture: { url: &apos;cover.jpg&apos;, title: &apos;Larry Cover (French pun intended)&apos; } }</span>
+
+<span class="hljs-comment">// Title would be &quot;picture.title&quot;, hence &quot;Larry Cover (French pun intended)&quot;</span>
+&lt;ImageField source=<span class="hljs-string">&quot;picture.url&quot;</span> title=<span class="hljs-string">&quot;picture.title&quot;</span> /&gt;
+
+<span class="hljs-comment">// Title would be &quot;Picture&quot;, as &quot;Picture&quot; is not a path in previous given object</span>
+&lt;ImageField source=<span class="hljs-string">&quot;picture.url&quot;</span> title=<span class="hljs-string">&quot;Picture&quot;</span> /&gt;
+</code></pre>
+<p>&#x5982;&#x679C;&#x4F20;&#x9012;&#x7684;&#x503C;&#x662F;&#x5728;&#x4F60;JSON&#x5BF9;&#x8C61;&#x5185;&#x7684;&#x73B0;&#x6709;&#x8DEF;&#x5F84;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x5C06;&#x4F7F;&#x7528;object&#x5C5E;&#x6027;&#x3002;&#x5426;&#x5219;&#xFF0C;&#x5B83;&#x5C06;&#x5176;&#x503C;&#x89C6;&#x4E3A;&#x4E00;&#x4E2A;&#x786C;&#x7F16;&#x5199;&#x7684;&#x6807;&#x9898;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x8BE5;&#x8BB0;&#x5F55;&#x5B9E;&#x9645;&#x4E0A;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x7531;<code>source</code>&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x5728;&#x5B83;&#x5C5E;&#x6027;&#x4E2D;&#x7684;&#x56FE;&#x7247;&#x6570;&#x7EC4;&#xFF0C;&#x5219;&#x9700;&#x8981;<code>src</code>&#x5C5E;&#x6027;&#x6765;&#x786E;&#x5B9A;&#x56FE;&#x50CF;&#x7684;<code>src</code>&#x503C;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// This is the record</span>
+{
+    pictures: [
+        { url: <span class="hljs-string">&apos;image1.jpg&apos;</span>, desc: <span class="hljs-string">&apos;First image&apos;</span> },
+        { url: <span class="hljs-string">&apos;image2.jpg&apos;</span>, desc: <span class="hljs-string">&apos;Second image&apos;</span> },
+    ],
+}
+
+&lt;ImageField source=<span class="hljs-string">&quot;pictures&quot;</span> src=<span class="hljs-string">&quot;url&quot;</span> title=<span class="hljs-string">&quot;desc&quot;</span> /&gt;
+</code></pre>
+<h2 id="FileField"><code>&lt;FileField&gt;</code>&#x7EC4;&#x4EF6;</h2>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x663E;&#x793A;API&#x63D0;&#x4F9B;&#x7684;&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>&lt;FileField /&gt;</code>&#x7EC4;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { FileField } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">FileField</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;url&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;title&quot;</span> /&gt;</span>
+</span></code></pre>
+<p>&#x6B64;&#x5B57;&#x6BB5;&#x4E5F;&#x901A;&#x5E38;&#x7528;&#x4E8E;<a href="http://marmelab.com/admin-on-rest/Inputs.html#fileinput" target="_blank"><fileinput></fileinput></a>&#x7EC4;&#x4EF6;&#x4E2D;&#x4EE5;&#x663E;&#x793A;&#x9884;&#x89C8;&#x3002;</p>
+<p>&#x53EF;&#x9009;&#x7684;<code>title</code>&#x53C2;&#x6570;&#x6307;&#x5411;&#x6587;&#x4EF6;&#x6807;&#x9898;&#x5C5E;&#x6027;&#xFF0C;&#x7528;&#x4E8E;<code>title</code>&#x5C5E;&#x6027;&#x3002; &#x5B83;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x786C;&#x7F16;&#x5199;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4F60;JSON&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x8DEF;&#x5F84;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// { file: { url: &apos;doc.pdf&apos;, title: &apos;Presentation&apos; } }</span>
+
+<span class="hljs-comment">// Title would be &quot;file.title&quot;, hence &quot;Presentation&quot;</span>
+&lt;FileField source=<span class="hljs-string">&quot;file.url&quot;</span> title=<span class="hljs-string">&quot;file.title&quot;</span> /&gt;
+
+<span class="hljs-comment">// Title would be &quot;File&quot;, as &quot;File&quot; is not a path in previous given object</span>
+&lt;FileField source=<span class="hljs-string">&quot;file.url&quot;</span> title=<span class="hljs-string">&quot;File&quot;</span> /&gt;
+</code></pre>
+<p>&#x5982;&#x679C;&#x4F20;&#x9012;&#x7684;&#x503C;&#x662F;JSON&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x73B0;&#x6709;&#x8DEF;&#x5F84;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x5C06;&#x4F7F;&#x7528;object&#x5C5E;&#x6027;&#x3002;&#x5426;&#x5219;&#xFF0C;&#x5B83;&#x5C06;&#x5176;&#x503C;&#x89C6;&#x4E3A;&#x4E00;&#x4E2A;&#x786C;&#x7F16;&#x5199;&#x7684;&#x6807;&#x9898;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x8BB0;&#x5F55;&#x5B9E;&#x9645;&#x4E0A;&#x5305;&#x542B;&#x7531;<code>source</code>&#x5C5E;&#x6027;&#x5B9A;&#x4E49;&#x5728;&#x5B83;&#x5C5E;&#x6027;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x6570;&#x7EC4;&#xFF0C;&#x5219;&#x9700;&#x8981;<code>src</code>&#x5C5E;&#x6027;&#x6765;&#x786E;&#x5B9A;&#x94FE;&#x63A5;&#x7684;<code>href</code>&#x503C;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// This is the record</span>
+{
+    files: [
+        { url: <span class="hljs-string">&apos;image1.jpg&apos;</span>, desc: <span class="hljs-string">&apos;First image&apos;</span> },
+        { url: <span class="hljs-string">&apos;image2.jpg&apos;</span>, desc: <span class="hljs-string">&apos;Second image&apos;</span> },
+    ],
+}
+
+&lt;FileField source=<span class="hljs-string">&quot;files&quot;</span> src=<span class="hljs-string">&quot;url&quot;</span> title=<span class="hljs-string">&quot;desc&quot;</span> /&gt;
+</code></pre>
+<h2 id="NumberField"><code>&lt;NumberField&gt;</code>&#x7EC4;&#x4EF6;</h2>
+<p>&#x663E;&#x793A;&#x6839;&#x636E;&#x6D4F;&#x89C8;&#x5668;&#x533A;&#x57DF;&#x8BBE;&#x7F6E;&#x683C;&#x5F0F;&#x5316;&#x7684;&#x6570;&#x5B57;&#xFF0C;&#x53F3;&#x5BF9;&#x9F50;&#x3002;</p>
+<p>&#x4F7F;&#x7528;<code>Intl.NumberFormat&#xFF08;&#xFF09;</code>&#x5982;&#x679C;&#x53EF;&#x7528;&#xFF0C;&#x4F20;&#x9012;<code>locales</code>&#x548C;<code>options</code>&#x5C5E;&#x6027;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x3002; &#x8FD9;&#x5141;&#x8BB8;&#x5B8C;&#x7F8E;&#x663E;&#x793A;&#x5C0F;&#x6570;&#xFF0C;&#x8D27;&#x5E01;&#xFF0C;&#x767E;&#x5206;&#x6BD4;&#x7B49;&#x3002;</p>
+<p>&#x5982;&#x679C;Intl&#x4E0D;&#x53EF;&#x7528;&#xFF0C;&#x5B83;&#x4F1A;&#x6309;&#x539F;&#x6837;&#x8F93;&#x51FA;&#x6570;&#x5B57;&#xFF08;&#x5E76;&#x5FFD;&#x7565;<code>locales</code>&#x548C;<code>options</code>&#x5C5E;&#x6027;&#xFF09;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { NumberField }  <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+&lt;NumberField source=&quot;score&quot; /&gt;
+// renders the record { id: 1234, score: 567 } as
+&lt;span&gt;567&lt;/span&gt;
+
+&lt;NumberField source=&quot;score&quot; options={{ maximumFractionDigits: 2 }}/&gt;
+// renders the record { id: 1234, score: 567.3567458569 } as
+&lt;span&gt;567.35&lt;/span&gt;
+
+&lt;NumberField source=&quot;share&quot; options={{ style: &apos;percent&apos; }} /&gt;
+// renders the record { id: 1234, share: 0.2545 } as
+&lt;span&gt;25%&lt;/span&gt;
+
+&lt;NumberField source=&quot;price&quot; options={{ style: &apos;currency&apos;, currency: &apos;USD&apos; }} /&gt;
+// renders the record { id: 1234, price: 25.99 } as
+&lt;span&gt;$25.99&lt;/span&gt;
+
+&lt;NumberField source=&quot;price&quot; locales=&quot;fr-FR&quot; options={{ style: &apos;currency&apos;, currency: &apos;USD&apos; }} /&gt;
+// renders the record { id: 1234, price: 25.99 } as
+&lt;span&gt;25,99 $US&lt;/span&gt;
+
+&lt;NumberField source=&quot;score&quot; elStyle={{ color: &apos;red&apos; }} /&gt;
+// renders the record { id: 1234, score: 567 } as
+&lt;span style=&quot;color:red;&quot;&gt;567&lt;/span&gt;
+</code></pre>
+<p>&#x6709;&#x5173;<code>options</code>&#x5C5E;&#x6027;&#x8BED;&#x6CD5;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString" target="_blank">Intl.Numberformat documentation</a>&#x3002;</p>
+<p><strong>&#x63D0;&#x793A;</strong>&#xFF1A;&#x5982;&#x679C;&#x60A8;&#x9700;&#x8981;&#x6BD4;Intl.Numberformat&#x53EF;&#x4EE5;&#x63D0;&#x4F9B;&#x66F4;&#x591A;&#x7684;&#x683C;&#x5F0F;&#x5316;&#x9009;&#x9879;&#xFF0C;&#x4F7F;&#x7528;&#x50CF;<a href="http://numeraljs.com/" target="_blank">numeral.js</a>&#x4E00;&#x4E2A;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;&#x6784;&#x5EFA;&#x4F60;&#x81EA;&#x5DF1;&#x7684;field&#x7EC4;&#x4EF6;&#x3002;</p>
+<h2 id="SelectField"><code>&lt;SelectField&gt;</code>&#x7EC4;&#x4EF6;</h2>
+<p>&#x5F53;&#x60A8;&#x9700;&#x8981;&#x663E;&#x793A;&#x679A;&#x4E3E;&#x5B57;&#x6BB5;&#x65F6;&#xFF0C;<code>&lt;SelectField&gt;</code>&#x5C06;&#x8BE5;&#x503C;&#x6620;&#x5C04;&#x5230;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;<code>gender</code>&#x5B57;&#x6BB5;&#x53EF;&#x4EE5;&#x53D6;&#x503C;&#x201C;M&#x201D;&#x548C;&#x201C;F&#x201D;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x5982;&#x4F55;&#x663E;&#x793A;&#x5B83;&#x4F5C;&#x4E3A;&quot;Male&quot;&#x6216;&quot;Female&quot;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { SelectField } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectField</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;gender&quot;</span> <span class="hljs-attr">choices</span>=<span class="hljs-string">{[</span>
+   { <span class="hljs-attr">id:</span> &apos;<span class="hljs-attr">M</span>&apos;, <span class="hljs-attr">name:</span> &apos;<span class="hljs-attr">Male</span>&apos; },
+   { <span class="hljs-attr">id:</span> &apos;<span class="hljs-attr">F</span>&apos;, <span class="hljs-attr">name:</span> &apos;<span class="hljs-attr">Female</span>&apos; },
+]} /&gt;</span>
+</span></code></pre>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6587;&#x672C;&#x6784;&#x5EFA;&#x901A;&#x8FC7;</p>
+<ul>
+<li>&#x627E;&#x5230;&#x4E00;&#x4E2A;&apos;id&apos;&#x5C5E;&#x6027;&#x7B49;&#x4E8E;&#x5B57;&#x6BB5;&#x503C;&#x7684;&#x9009;&#x9879;</li>
+<li>&#x4F7F;&#x7528;&apos;name&apos;&#x5C5E;&#x6027;&#x4E00;&#x4E2A;&#x9009;&#x9879;&#x6587;&#x672C;</li>
+</ul>
+<p><strong>&#x8B66;&#x544A;</strong>&#xFF1A;&#x5982;&#x679C;&#x60A8;&#x540C;&#x65F6;&#x5BFC;&#x5165;&#x8FD9;&#x4E24;&#x4E2A;&#xFF0C;&#x5219;&#x6B64;&#x7EC4;&#x4EF6;&#x540D;&#x79F0;&#x53EF;&#x80FD;&#x4E0E;material-ui&#x7684;<a href="http://www.material-ui.com/#/components/select-field" target="_blank"><code>&lt;SelectField&gt;</code></a>&#x51B2;&#x7A81;&#x3002;</p>
+<p>&#x60A8;&#x8FD8;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x4E8E;&#x67E5;&#x627E;&#x503C;&#x548C;&#x6587;&#x672C;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x8981;&#x5F52;&#x529F;&#x4E8E;&apos;optionValue&apos;&#x548C;&apos;optionText&apos;&#x5C5E;&#x6027;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> choices = [
+   { _id: <span class="hljs-number">123</span>, full_name: <span class="hljs-string">&apos;Leo Tolstoi&apos;</span>, sex: <span class="hljs-string">&apos;M&apos;</span> },
+   { _id: <span class="hljs-number">456</span>, full_name: <span class="hljs-string">&apos;Jane Austen&apos;</span>, sex: <span class="hljs-string">&apos;F&apos;</span> },
+];
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectField</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;author_id&quot;</span> <span class="hljs-attr">choices</span>=<span class="hljs-string">{choices}</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;full_name&quot;</span> <span class="hljs-attr">optionValue</span>=<span class="hljs-string">&quot;_id&quot;</span> /&gt;</span>
+</span></code></pre>
+<p><code>optionText</code>&#x4E5F;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x53EF;&#x4EE5;&#x968F;&#x610F;&#x8BBE;&#x7F6E;&#x9009;&#x9879;&#x6587;&#x672C;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> choices = [
+   { id: <span class="hljs-number">123</span>, first_name: <span class="hljs-string">&apos;Leo&apos;</span>, last_name: <span class="hljs-string">&apos;Tolstoi&apos;</span> },
+   { id: <span class="hljs-number">456</span>, first_name: <span class="hljs-string">&apos;Jane&apos;</span>, last_name: <span class="hljs-string">&apos;Austen&apos;</span> },
+];
+<span class="hljs-keyword">const</span> optionRenderer = choice =&gt; <span class="hljs-string">`<span class="hljs-subst">${choice.first_name}</span> <span class="hljs-subst">${choice.last_name}</span>`</span>;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectField</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;author_id&quot;</span> <span class="hljs-attr">choices</span>=<span class="hljs-string">{choices}</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">{optionRenderer}</span> /&gt;</span>
+</span></code></pre>
+<p><code>optionText</code>&#x4E5F;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;React&#x5143;&#x7D20;&#xFF0C;&#x5B83;&#x5C06;&#x88AB;&#x514B;&#x9686;&#xFF0C;&#x5E76;&#x63A5;&#x6536;&#x76F8;&#x5173;&#x9009;&#x62E9;&#x4F5C;&#x4E3A;<code>record</code>&#x5C5E;&#x6027;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x5728;&#x90A3;&#x91CC;&#x4F7F;&#x7528;Field&#x7EC4;&#x4EF6;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> choices = [
+   { id: <span class="hljs-number">123</span>, first_name: <span class="hljs-string">&apos;Leo&apos;</span>, last_name: <span class="hljs-string">&apos;Tolstoi&apos;</span> },
+   { id: <span class="hljs-number">456</span>, first_name: <span class="hljs-string">&apos;Jane&apos;</span>, last_name: <span class="hljs-string">&apos;Austen&apos;</span> },
+];
+<span class="hljs-keyword">const</span> FullNameField = ({ record }) =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Chip</span>&gt;</span>{record.first_name} {record.last_name}<span class="hljs-tag">&lt;/<span class="hljs-name">Chip</span>&gt;</span></span>;
+&lt;SelectField source=&quot;gender&quot; choices={choices} optionText={&lt;FullNameField /&gt;}/&gt;
+</code></pre>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x7FFB;&#x8BD1;&#x5F53;&#x524D;&#x9009;&#x9879;&#xFF0C;&#x56E0;&#x6B64;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7FFB;&#x8BD1;&#x6807;&#x8BC6;&#x7B26;&#x4F5C;&#x4E3A;&#x9009;&#x62E9;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> choices = [
+   { id: <span class="hljs-string">&apos;M&apos;</span>, name: <span class="hljs-string">&apos;myroot.gender.male&apos;</span> },
+   { id: <span class="hljs-string">&apos;F&apos;</span>, name: <span class="hljs-string">&apos;myroot.gender.female&apos;</span> },
+];
+</code></pre>
+<p>&#x7136;&#x800C;&#xFF0C;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF08;&#x4F8B;&#x5982;&#x5728;<code>&lt;ReferenceField&gt;</code>&#x5185;&#xFF09;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x4E0D;&#x5E0C;&#x671B;&#x7FFB;&#x8BD1;&#x8BE5;&#x9009;&#x62E9;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8BF7;&#x5C06;<code>translateChoice</code>&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x4E3A;false&#x3002;</p>
+<pre><code class="lang-jsx">&lt;SelectField source=<span class="hljs-string">&quot;gender&quot;</span> choices={choices} translateChoice={<span class="hljs-literal">false</span>}/&gt;
+</code></pre>
+<p><strong>&#x63D0;&#x793A;</strong>&#xFF1A;<referencefield>&#x9ED8;&#x8BA4;&#x5C06;<code>translateChoice</code>&#x8BBE;&#x7F6E;&#x4E3A;false&#x3002;</referencefield></p>
+<h2 id="ReferenceField"><code>&lt;ReferenceField&gt;</code>&#x7EC4;&#x4EF6;</h2>
+<p>&#x8BE5;&#x7EC4;&#x4EF6;&#x83B7;&#x53D6;&#x5355;&#x4E2A;&#x5F15;&#x7528;&#x8BB0;&#x5F55;&#xFF08;&#x4F7F;&#x7528;<code>GET_MANY</code>REST&#x65B9;&#x6CD5;&#xFF09;&#xFF0C;&#x5E76;&#x663E;&#x793A;&#x6B64;&#x8BB0;&#x5F55;&#x7684;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;&#x3002;&#x8FD9;&#x5C31;&#x662F;&#x4E3A;&#x4EC0;&#x4E48;<code>&lt;ReferenceField&gt;</code>&#x5FC5;&#x987B;&#x6709;&#x4E00;&#x4E2A;&#x5B50;&#x7EA7;<code>&lt;Field&gt;</code>&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x8FD9;&#x91CC;&#x662F;&#x5982;&#x4F55;&#x83B7;&#x53D6;&#x4E0E;<code>comment</code>&#x76F8;&#x5173;&#x7684;<code>post</code>&#x8BB0;&#x5F55;&#xFF0C;&#x5E76;&#x663E;&#x793A;&#x6BCF;&#x4E2A;&#x7684;<code>title</code>&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { List, Datagrid, ReferenceField, TextField } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> CommentList = (props) =&gt; (
+    &lt;List {...props}&gt;
+        &lt;Datagrid&gt;
+            &lt;TextField source=&quot;id&quot; /&gt;
+            &lt;ReferenceField label=&quot;Post&quot; source=&quot;post_id&quot; reference=&quot;posts&quot;&gt;
+                &lt;TextField source=&quot;title&quot; /&gt;
+            &lt;/ReferenceField&gt;
+        &lt;/Datagrid&gt;
+    &lt;/List&gt;
+);
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x6B64;&#x914D;&#x7F6E;&#xFF0C;<code>&lt;ReferenceField&gt;</code>&#x5C06;&#x8BC4;&#x8BBA;&#x6807;&#x9898;&#x5305;&#x88F9;&#x5230;&#x76F8;&#x5173;&#x5E16;&#x5B50;<code>&lt;Edit&gt;</code>&#x9875;&#x9762;&#x7684;&#x94FE;&#x63A5;&#x4E2D;&#x3002;</p>
+<p><img src="https://marmelab.com/admin-on-rest/img/reference-field.png" alt="ReferenceField"></p>
+<p><code>&lt;ReferenceField&gt;</code>&#x63A5;&#x53D7;&#x4E00;&#x4E2A;<code>reference</code>&#x5C5E;&#x6027;&#xFF0C;&#x5B83;&#x6307;&#x5B9A;&#x4E3A;&#x76F8;&#x5173;&#x8BB0;&#x5F55;&#x83B7;&#x53D6;&#x8D44;&#x6E90;&#x3002; &#x6B64;&#x5916;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4EFB;&#x4F55;<code>Field</code>&#x7EC4;&#x4EF6;&#x4F5C;&#x4E3A;&#x5B50;&#x7EA7;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;&#x4F60;<strong>must</strong>&#x4E3A;&#x5F15;&#x7528;&#x8D44;&#x6E90;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;<code>&lt;Resource&gt;</code> - admin-on-rest&#x9700;&#x8981;&#x5B83;&#x6765;&#x83B7;&#x53D6;&#x5F15;&#x7528;&#x6570;&#x636E;&#x3002;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x5728;&#x4FA7;&#x8FB9;&#x680F;&#x83DC;&#x5355;&#x4E2D;&#x9690;&#x85CF;&#x5B83;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#x6B64;&#x5F15;&#x7528;&#x4E2D;&#x7684;<code>list</code>&#x5C5E;&#x6027;&#x3002;</p>
+<pre><code class="lang-jsx">&lt;Admin restClient={myRestClient}&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Resource</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;comments&quot;</span> <span class="hljs-attr">list</span>=<span class="hljs-string">{CommentList}</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Resource</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;posts&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">Admin</span>&gt;</span>
+</span></code></pre>
+<p>&#x8981;&#x66F4;&#x6539;&#x94FE;&#x63A5;&#x4ECE;<code>&lt;Edit&gt;</code>&#x9875;&#x9762;&#x4E3A;<code>&lt;Show&gt;</code>&#x9875;&#x9762;&#xFF0C;&#x8BBE;&#x7F6E;<code>linkType</code>&#x7684;&#x5C5E;&#x6027;&#x4E3A;&#x201C;show&#x201D;&#x3002;</p>
+<pre><code class="lang-jsx">&lt;ReferenceField label=<span class="hljs-string">&quot;User&quot;</span> source=<span class="hljs-string">&quot;userId&quot;</span> reference=<span class="hljs-string">&quot;users&quot;</span> linkType=<span class="hljs-string">&quot;show&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">TextField</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;name&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ReferenceField</span>&gt;</span></span>
+</code></pre>
+<p>&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5C06;<code>linkType</code>&#x8BBE;&#x7F6E;&#x4E3A;<code>false</code>&#x6765;&#x963B;&#x6B62;<code>&lt;ReferenceField&gt;</code>&#x6DFB;&#x52A0;&#x94FE;&#x63A5;&#x5230;&#x5B50;&#x7EA7;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// No link</span>
+&lt;ReferenceField label=<span class="hljs-string">&quot;User&quot;</span> source=<span class="hljs-string">&quot;userId&quot;</span> reference=<span class="hljs-string">&quot;users&quot;</span> linkType={<span class="hljs-literal">false</span>}&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">TextField</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;name&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ReferenceField</span>&gt;</span></span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x60A8;&#x5728;<code>&lt;Edit&gt;</code>&#x6216;<code>&lt;Show&gt;</code>&#x9875;&#x9762;&#x4E2D;&#x4F7F;&#x7528;&#x8BE5;&#x5B57;&#x6BB5;&#xFF0C;&#x5219;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x663E;&#x793A;&#x4E0E;&#x6B63;&#x5728;&#x663E;&#x793A;&#x7684;&#x5B57;&#x6BB5;&#x76F8;&#x5173;&#x8054;&#x7684;&#x6807;&#x7B7E;&#x3002; &#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EA;&#x9700;&#x6DFB;&#x52A0;<code>addLabel</code>&#x5C5E;&#x6027;&#x5230;<code>&lt;ReferenceField&gt;</code>&#x6765;&#x8BA9;<code>source</code>&#x5C5E;&#x6027;&#x663E;&#x793A;&#x5728;&#x5B57;&#x6BB5;&#x9876;&#x90E8;&#xFF0C;&#x6216;&#x8005;&#x53EF;&#x9009;&#x7684;<code>label</code>&#x5C5E;&#x6027;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x4E2A;&#x6027;&#x5316;&#x5B83;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// Display &apos;User&apos; Label on top of the TexField</span>
+&lt;ReferenceField addLabel label=<span class="hljs-string">&quot;User&quot;</span> source=<span class="hljs-string">&quot;userId&quot;</span> reference=<span class="hljs-string">&quot;users&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">TextField</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;name&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ReferenceField</span>&gt;</span></span>
+</code></pre>
+<p><strong>&#x63D0;&#x793A;</strong>&#xFF1A;Admin-on-rest&#x4F7F;&#x7528;<code>CRUD_GET_ONE_REFERENCE</code>&#x52A8;&#x4F5C;&#x6765;&#x7D2F;&#x79EF;&#x5E76;&#x5220;&#x9664;&#x91CD;&#x590D;&#x6570;&#x636E;&#x5F15;&#x7528;&#x8BB0;&#x5F55;&#x7684;id&#xFF0C;&#x4EE5;&#x4FBF;&#x4E3A;&#x6574;&#x4E2A;&#x5217;&#x8868;&#x8FDB;&#x884C;&#x4E00;&#x4E2A;<code>GET_MANY</code> &#x8C03;&#x7528;&#xFF0C;&#x800C;&#x4E0D;&#x662F;<code>GET_ONE</code>&#x8C03;&#x7528;&#x3002;&#x4F8B;&#x5982;, &#x5982;&#x679C;&#x8FD9;&#x4E2A;API&#x8FD4;&#x56DE;&#x4E0B;&#x9762;&#x7684;&#x8BC4;&#x8BBA;&#x5217;&#x8868;:</p>
+<pre><code class="lang-jsx">[
+    {
+        id: <span class="hljs-number">123</span>,
+        body: <span class="hljs-string">&apos;Totally agree&apos;</span>,
+        post_id: <span class="hljs-number">789</span>,
+    },
+    {
+        id: <span class="hljs-number">124</span>,
+        title: <span class="hljs-string">&apos;You are right my friend&apos;</span>,
+        post_id: <span class="hljs-number">789</span>
+    },
+    {
+        id: <span class="hljs-number">125</span>,
+        title: <span class="hljs-string">&apos;Not sure about this one&apos;</span>,
+        post_id: <span class="hljs-number">735</span>
+    }
+]
+</code></pre>
+<p>&#x7136;&#x540E;admin-on-rest&#x4F7F;&#x7528;<code>&lt;ReferenceField&gt;</code>&#x52A0;&#x8F7D;&#x5668;&#x5448;&#x73B0;<code>&lt;CommentList&gt;</code>&#xFF0C;&#x5728;&#x4E00;&#x6B21;&#x8C03;&#x7528;&#xFF08;<code>GET http://path.to.my.api/posts?ids=[789,735]</code>&#xFF09;&#x4E2D;&#x83B7;&#x53D6;&#x76F8;&#x5173;&#x5E16;&#x5B50;&#x7684;API&#xFF0C;&#x5E76;&#x5728;&#x6570;&#x636E;&#x5230;&#x8FBE;&#x540E;&#x91CD;&#x65B0;&#x5448;&#x73B0;&#x5217;&#x8868;&#x3002; &#x8FD9;&#x52A0;&#x901F;&#x4E86;&#x6E32;&#x67D3;&#xFF0C;&#x5E76;&#x6700;&#x5927;&#x9650;&#x5EA6;&#x5730;&#x51CF;&#x5C11;&#x4E86;&#x7F51;&#x7EDC;&#x8D1F;&#x8F7D;&#x3002;</p>
+<h3 id="ReferenceManyField"><code>&lt;ReferenceManyField&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p>&#x8BE5;&#x7EC4;&#x4EF6;&#x901A;&#x8FC7;&#x5728;&#x5176;&#x4ED6;&#x8D44;&#x6E90;&#xFF08;&#x4F7F;&#x7528;<code>GET_MANY_REFERENCE</code>REST&#x65B9;&#x6CD5;&#xFF09;&#x4E2D;&#x53CD;&#x5411;&#x67E5;&#x627E;&#x5F53;&#x524D;&#x7684;<code>record.id</code>&#x6765;&#x83B7;&#x53D6;&#x5F15;&#x7528;&#x7684;&#x8BB0;&#x5F55;&#x5217;&#x8868;&#x3002; &#x53E6;&#x4E00;&#x8D44;&#x6E90;&#x4E2D;&#x5F53;&#x524D;&#x8BB0;&#x5F55;&#x7684;id&#x7684;&#x5B57;&#x6BB5;&#x540D;&#x7531;&#x6240;&#x9700;&#x7684;<code>target</code>&#x5B57;&#x6BB5;&#x6307;&#x5B9A;&#x3002; &#x7136;&#x540E;&#x5C06;&#x7ED3;&#x679C;&#x4F20;&#x9012;&#x7ED9;&#x8FED;&#x4EE3;&#x5668;&#x7EC4;&#x4EF6;&#xFF08;&#x5982;<code>&lt;SingleFieldList&gt;</code>&#x6216;<code>&lt;Datagrid&gt;</code>&#xFF09;&#x3002; &#x8FED;&#x4EE3;&#x5668;&#x7EC4;&#x4EF6;&#x901A;&#x5E38;&#x5177;&#x6709;&#x4E00;&#x4E2A;&#x6216;&#x66F4;&#x591A;&#x5B50;<code>&lt;Field&gt;</code>&#x7EC4;&#x4EF6;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x8FD9;&#x91CC;&#x662F;&#x5982;&#x4F55;&#x901A;&#x8FC7;&#x5C06;<code>comment.post_id</code>&#x5339;&#x914D;&#x5230;<code>post.id</code>&#x6765;&#x83B7;&#x53D6;&#x4E0E;<code>post</code>&#x8BB0;&#x5F55;&#x76F8;&#x5173;&#x7684;<code>comments</code>&#xFF0C;&#x7136;&#x540E;&#x5728;<code>&lt;ChipField&gt;</code>&#x4E2D;&#x663E;&#x793A;<code>author.name</code>&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { List, Datagrid, ChipField, ReferenceManyField, SingleFieldList, TextField } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PostList = (props) =&gt; (
+    &lt;List {...props}&gt;
+        &lt;Datagrid&gt;
+            &lt;TextField source=&quot;id&quot; /&gt;
+            &lt;TextField source=&quot;title&quot; type=&quot;email&quot; /&gt;
+            &lt;ReferenceManyField label=&quot;Comments by&quot; reference=&quot;comments&quot; target=&quot;post_id&quot;&gt;
+                &lt;SingleFieldList&gt;
+                    &lt;ChipField source=&quot;author.name&quot; /&gt;
+                &lt;/SingleFieldList&gt;
+            &lt;/ReferenceManyField&gt;
+            &lt;EditButton /&gt;
+        &lt;/Datagrid&gt;
+    &lt;/List&gt;
+);
+</code></pre>
+<p><img src="https://marmelab.com/admin-on-rest/img/reference-many-field-single-field-list.png" alt="ReferenceManyFieldSingleFieldList"></p>
+<p><code>&lt;ReferenceManyField&gt;</code>&#x63A5;&#x53D7;&#x4E00;&#x4E2A;<code>reference</code>&#x5C5E;&#x6027;&#xFF0C;&#x5B83;&#x6307;&#x5B9A;&#x83B7;&#x53D6;&#x76F8;&#x5173;&#x8BB0;&#x5F55;&#x7684;&#x8D44;&#x6E90;&#x3002;</p>
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;&#x4F60;<strong>&#x5FC5;&#x987B;</strong>&#x4E3A;&#x5F15;&#x7528;&#x8D44;&#x6E90;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;<code>&lt;Resource&gt;</code> - admin-on-rest&#x9700;&#x8981;&#x5B83;&#x6765;&#x83B7;&#x53D6;&#x5F15;&#x7528;&#x6570;&#x636E;&#x3002; &#x5982;&#x679C;&#x60A8;&#x60F3;&#x5C06;&#x5176;&#x9690;&#x85CF;&#x5728;&#x4FA7;&#x8FB9;&#x680F;&#x83DC;&#x5355;&#x4E2D;&#xFF0C;&#x4F60;<em>&#x53EF;&#x4EE5;</em>&#x7701;&#x7565;&#x6B64;&#x5F15;&#x7528;&#x4E2D;&#x7684;<code>list</code>&#x5C5E;&#x6027;&#x3002;</p>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>&lt;Datagrid&gt;</code>&#x800C;&#x4E0D;&#x662F;<code>&lt;SingleFieldList&gt;</code>- &#x4F46;&#x4E0D;&#x80FD;&#x5728;&#x53E6;&#x4E00;&#x4E2A;<code>&lt;Datagrid&gt;</code>&#x5185;&#xFF01; &#x5982;&#x679C;&#x8981;&#x663E;&#x793A;&#x76F8;&#x5173;&#x8BB0;&#x5F55;&#x7684;&#x53EA;&#x8BFB;&#x5217;&#x8868;&#xFF0C;&#x8FD9;&#x5F88;&#x6709;&#x7528;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x5728;&#x5E16;&#x5B50;&#x7684;<code>&lt;Edit&gt;</code>&#x89C6;&#x56FE;&#x4E2D;&#x663E;&#x793A;&#x4E0E;<code>post</code>&#x76F8;&#x5173;&#x7684;<code>comments</code>&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { Edit, Datagrid, SimpleForm, DisabledInput, DateField, EditButton, ReferenceManyField, TextField, TextInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PostEdit = (props) =&gt; (
+    &lt;Edit {...props}&gt;
+        &lt;SimpleForm&gt;
+            &lt;DisabledInput label=&quot;Id&quot; source=&quot;id&quot; /&gt;
+            &lt;TextInput source=&quot;title&quot; /&gt;
+            &lt;ReferenceManyField label=&quot;Comments&quot; reference=&quot;comments&quot; target=&quot;post_id&quot;&gt;
+                &lt;Datagrid&gt;
+                    &lt;TextField source=&quot;body&quot; /&gt;
+                    &lt;DateField source=&quot;created_at&quot; /&gt;
+                    &lt;EditButton /&gt;
+                &lt;/Datagrid&gt;
+            &lt;/ReferenceManyField&gt;
+        &lt;/SimpleForm&gt;
+    &lt;/Edit&gt;
+);
+</code></pre>
+<p><img src="https://marmelab.com/admin-on-rest/img/reference-many-field-datagrid.png" alt="ReferenceManyFieldDatagrid"></p>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;admin-on-rest&#x5C06;&#x53EF;&#x80FD;&#x7684;&#x503C;&#x9650;&#x5236;&#x4E3A;25&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;<code>perPage</code>&#x5C5E;&#x6027;&#x6765;&#x66F4;&#x6539;&#x6B64;&#x9650;&#x5236;&#x3002;</p>
+<pre><code class="lang-jsx">&lt;ReferenceManyField perPage={10} reference=&quot;comments&quot; target=&quot;post_id&quot;&gt;
+   ...
+&lt;/ReferenceManyField&gt;
+</code></pre>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5B83;&#x901A;&#x8FC7;id desc&#x6392;&#x5E8F;&#x53EF;&#x80FD;&#x7684;&#x503C;&#x3002; &#x60A8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;<code>sort</code> &#x5C5E;&#x6027;&#xFF08;&#x5177;&#x6709;<code>field</code>&#x548C;<code>order</code>&#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x8C61;&#xFF09;&#x6765;&#x66F4;&#x6539;&#x6B64;&#x987A;&#x5E8F;&#x3002;</p>
+<pre><code class="lang-jsx">&lt;ReferenceManyField sort={{ field: &apos;created_at&apos;, order: &apos;DESC&apos; }} reference=&quot;comments&quot; target=&quot;post_id&quot;&gt;
+   ...
+&lt;/ReferenceManyField&gt;
+</code></pre>
+<p>&#x6B64;&#x5916;&#xFF0C;&#x60A8;&#x8FD8;&#x53EF;&#x4EE5;&#x8FC7;&#x6EE4;&#x7528;&#x4E8E;&#x586B;&#x5145;&#x53EF;&#x80FD;&#x503C;&#x7684;&#x67E5;&#x8BE2;&#x3002;&#x4F7F;&#x7528;<code>filter</code>&#x5C5E;&#x6027;&#x3002;</p>
+<pre><code class="lang-jsx">&lt;ReferenceManyField filter={{ is_published: true }} reference=&quot;comments&quot; target=&quot;post_id&quot;&gt;
+   ...
+&lt;/ReferenceManyField&gt;
+</code></pre>
+<h3 id="ReferenceArrayField"><code>&lt;ReferenceArrayField&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p>&#x4F7F;&#x7528;<code>&lt;ReferenceArrayField&gt;</code>&#x6765;&#x663E;&#x793A;&#x57FA;&#x4E8E;&#x5916;&#x952E;&#x6570;&#x7EC4;&#x7684;&#x5F15;&#x7528;&#x503C;&#x5217;&#x8868;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x4E00;&#x4E2A;&#x5E16;&#x5B50;&#x6709;&#x5F88;&#x591A;&#x6807;&#x7B7E;&#xFF0C;&#x4E00;&#x4E2A;&#x5E16;&#x5B50;&#x8D44;&#x6E90;&#x53EF;&#x80FD;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-js">{
+    id: <span class="hljs-number">1234</span>,
+    title: <span class="hljs-string">&apos;Lorem Ipsum&apos;</span>,
+    tag_ids: [<span class="hljs-number">1</span>, <span class="hljs-number">23</span>, <span class="hljs-number">4</span>]
+}
+</code></pre>
+<p><code>[1, 23, 4]</code>&#x6307;&#x7684;&#x662F;<code>tag</code>&#x8D44;&#x6E90;&#x7684;id&#x3002;</p>
+<p><code>&lt;ReferenceArrayField&gt;</code>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5C06;<code>post.tag_ids</code>&#x5339;&#x914D;&#x5230;<code>tag.id</code>&#x6765;&#x83B7;&#x53D6;&#x4E0E;&#x8FD9;&#x4E2A;<code>post</code>&#x8D44;&#x6E90;&#x76F8;&#x5173;&#x7684;<code>tag</code>&#x8D44;&#x6E90;&#x3002; <code>&lt;ReferenceArrayField source=&quot;tags_ids&quot; reference=&quot;tags&quot;&gt;</code>&#x5C06;&#x53D1;&#x51FA;&#x4E00;&#x4E2A;HTTP&#x8BF7;&#x6C42;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code>http://myapi.com/tags?id=[1,23,4]
+</code></pre><p><strong>&#x63D0;&#x793A;</strong>&#xFF1A;<code>&lt;ReferenceArrayField&gt;</code>&#x4F7F;&#x7528;<code>GET_MANY</code> REST&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x76F8;&#x5173;&#x8D44;&#x6E90;&#xFF0C;&#x6240;&#x4EE5;&#x5B9E;&#x9645;&#x7684;HTTP&#x8BF7;&#x6C42;&#x53D6;&#x51B3;&#x4E8E;&#x4F60;&#x7684;REST&#x5BA2;&#x6237;&#x7AEF;&#x3002;</p>
+<p>&#x4E00;&#x65E6;&#x63A5;&#x6536;&#x5230;&#x76F8;&#x5173;&#x7684;&#x8D44;&#x6E90;&#xFF0C;<code>&lt;ReferenceArrayField&gt;</code>&#x4F7F;&#x7528;<code>ids</code>&#x548C;<code>data</code>&#x5C5E;&#x6027;&#x4F20;&#x9012;&#x5B83;&#x4EEC;&#x7ED9;&#x5B83;&#x7684;&#x5B50;&#x7EC4;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x5B69;&#x5B50;&#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x8FED;&#x4EE3;&#x5668;&#x7EC4;&#x4EF6;&#xFF08;&#x5982;<code>&lt;SingleFieldList&gt;</code>&#x6216;<code>&lt;Datagrid&gt;</code>&#xFF09;&#x3002;&#x8FED;&#x4EE3;&#x5668;&#x7EC4;&#x4EF6;&#x901A;&#x5E38;&#x5177;&#x6709;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5B50;<code>&lt;Field&gt;</code>&#x7EC4;&#x4EF6;&#x3002;</p>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x5982;&#x4F55;&#x83B7;&#x53D6;<code>PostList</code>&#x4E2D;&#x6BCF;&#x4E2A;&#x5E16;&#x5B50;&#x7684;&#x6807;&#x7B7E;&#x5217;&#x8868;&#xFF0C;&#x5E76;&#x5728;<code>&lt;ChipField&gt;</code>&#x4E2D;&#x663E;&#x793A;&#x6BCF;&#x4E2A;<code>tag</code>&#x7684;<code>name</code>&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { List, Datagrid, ChipField, ReferenceArrayField, SingleFieldList, TextField } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PostList = (props) =&gt; (
+    &lt;List {...props}&gt;
+        &lt;Datagrid&gt;
+            &lt;TextField source=&quot;id&quot; /&gt;
+            &lt;TextField source=&quot;title&quot; /&gt;
+            &lt;ReferenceArrayField label=&quot;Tags&quot; reference=&quot;tags&quot; source=&quot;tag_ids&quot;&gt;
+                &lt;SingleFieldList&gt;
+                    &lt;ChipField source=&quot;name&quot; /&gt;
+                &lt;/SingleFieldList&gt;
+            &lt;/ReferenceArrayField&gt;
+            &lt;EditButton /&gt;
+        &lt;/Datagrid&gt;
+    &lt;/List&gt;
+);
+</code></pre>
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;&#x60A8;<strong>&#x5FC5;&#x987B;</strong>&#x4E3A;&#x5F15;&#x7528;&#x8D44;&#x6E90;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;<code>&lt;Resource&gt;</code>&#x7EC4;&#x4EF6;&#x5230;&#x60A8;&#x7684;<code>&lt;Admin&gt;</code>&#x7EC4;&#x4EF6;&#xFF0C;&#x56E0;&#x4E3A;admin-on-rest&#x9700;&#x8981;&#x5B83;&#x6765;&#x83B7;&#x53D6;&#x5F15;&#x7528;&#x6570;&#x636E;&#x3002; &#x5982;&#x679C;&#x60A8;&#x4E0D;&#x60F3;&#x5728;&#x4FA7;&#x8FB9;&#x680F;&#x83DC;&#x5355;&#x4E2D;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x6761;&#x76EE;&#x7ED9;&#x5B83;&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x6B64;&#x8D44;&#x6E90;&#x4E2D;&#x7701;&#x7565;<code>list</code>&#x5C5E;&#x6027;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> App = () =&gt; (
+    &lt;Admin restClient={simpleRestClient(&apos;http://path.to.my.api&apos;)}&gt;
+        &lt;Resource name=&quot;posts&quot; list={PostList} /&gt;
+        &lt;Resource name=&quot;tags&quot; /&gt; // &lt;= this one is compulsory
+    &lt;/Admin&gt;
+);
+</code></pre>
+<p>&#x5728;&#x201C;&#x663E;&#x793A;&#x7F16;&#x8F91;&#x201D;&#x89C6;&#x56FE;&#x4E2D;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x5C06;<code>&lt;ReferenceArrayField&gt;</code>&#x4E0E;<code>&lt;Datagrid&gt;</code>&#x7EC4;&#x5408;&#x5728;&#x8868;&#x4E2D;&#x663E;&#x793A;&#x76F8;&#x5173;&#x8D44;&#x6E90;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x8981;&#x5728;<code>PostShow</code>&#x89C6;&#x56FE;&#x4E2D;&#x663E;&#x793A;&#x6709;&#x5173;&#x4E0E;&#x5E16;&#x5B50;&#x76F8;&#x5173;&#x7684;&#x6807;&#x7B7E;&#x7684;&#x66F4;&#x591A;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { Show, SimpleShowLayout, TextField, ReferenceArrayField, Datagrid, ShowButton } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PostShow = (props) =&gt; (
+    &lt;Show {...props}&gt;
+        &lt;SimpleShowLayout&gt;
+            &lt;TextField source=&quot;id&quot; /&gt;
+            &lt;TextField source=&quot;title&quot; /&gt;
+            &lt;ReferenceArrayField label=&quot;Tags&quot; reference=&quot;tags&quot; source=&quot;tag_ids&quot;&gt;
+                &lt;Datagrid&gt;
+                    &lt;TextField source=&quot;id&quot; /&gt;
+                    &lt;TextField source=&quot;name&quot; /&gt;
+                    &lt;ShowButton /&gt;
+                &lt;/Datagrid&gt;
+            &lt;/ReferenceArrayField&gt;
+            &lt;EditButton /&gt;
+        &lt;/SimpleShowLayout&gt;
+    &lt;/Show&gt;
+);
+</code></pre>
+<h3 id="RichTextField"><code>&lt;RichTextField&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p>&#x6B64;&#x7EC4;&#x4EF6;&#x663E;&#x793A;&#x4E00;&#x4E9B;HTML&#x5185;&#x5BB9;&#x3002; &#x5185;&#x5BB9;&#x9ED8;&#x8BA4;&#x4E3A;&#x201C;&#x4E30;&#x5BCC;&#x201D;&#xFF08;&#x5373;&#x672A;&#x8F6C;&#x4E49;&#xFF09;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { RichTextField } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">RichTextField</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;body&quot;</span> /&gt;</span>
+</span></code></pre>
+<p><img src="https://marmelab.com/admin-on-rest/img/rich-text-field.png" alt="RichTextField"></p>
+<p><code>stripTags</code>&#x5C5E;&#x6027;&#xFF08;&#x9ED8;&#x8BA4;<code>false</code>&#xFF09;&#x5141;&#x8BB8;&#x4F60;&#x5220;&#x9664;&#x4EFB;&#x4F55;HTML&#x6807;&#x8BB0;&#xFF0C;&#x9632;&#x6B62;&#x4E00;&#x4E9B;&#x663E;&#x793A;&#x6BDB;&#x523A;&#xFF08;&#x8FD9;&#x5728;&#x5217;&#x8868;&#x89C6;&#x56FE;&#x4E2D;&#x7279;&#x522B;&#x6709;&#x7528;&#xFF09;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { RichTextField } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">RichTextField</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;body&quot;</span> <span class="hljs-attr">stripTags</span> /&gt;</span>
+</span></code></pre>
+<h3 id="TextField"><code>&lt;TextField&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p>&#x6700;&#x7B80;&#x5355;&#x7684;&#x4F5C;&#x4E3A;&#x6240;&#x6709;&#x5B57;&#x6BB5;&#xFF0C;<code>&lt;TextField&gt;</code>&#x53EA;&#x662F;&#x5C06;&#x8BB0;&#x5F55;&#x5C5E;&#x6027;&#x663E;&#x793A;&#x4E3A;&#x7EAF;&#x6587;&#x672C;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { TextField } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">TextField</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;Author Name&quot;</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;name&quot;</span> /&gt;</span>
+</span></code></pre>
+<h3 id="UrlField"><code>&lt;UrlField&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p><code>&lt;UrlField&gt;</code>&#x5728;<code>&lt; a href=&quot;&quot;&gt;</code>&#x6807;&#x7B7E;&#x4E2D;&#x663E;&#x793A;&#x4E00;&#x4E2A;url&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { UrlField } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">UrlField</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;site_url&quot;</span> /&gt;</span>
+</span></code></pre>
+<h2 id="StylingFields">&#x6837;&#x5F0F;&#x5316;&#x5B57;&#x6BB5;</h2>
+<p>&#x6240;&#x6709;&#x7684;&#x5B57;&#x6BB5;&#x7EC4;&#x4EF6;&#x90FD;&#x63A5;&#x53D7;<code>style</code>&#x5C5E;&#x6027;&#xFF0C;&#x5B83;&#x8986;&#x76D6;&#x5B57;&#x6BB5;<em>&#x5BB9;&#x5668;</em>&#x7684;&#x9ED8;&#x8BA4;&#x6837;&#x5F0F;&#xFF1A;</p>
+<pre><code class="lang-jsx">&lt;TextField source=<span class="hljs-string">&quot;price&quot;</span> style={{ color: <span class="hljs-string">&apos;purple&apos;</span> }}/&gt;
+<span class="hljs-comment">// renders in the datagrid as</span>
+&lt;td style=<span class="hljs-string">&quot;color: purple;&quot;</span>&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span>
+</code></pre>
+<p>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x8986;&#x76D6;&#x5B57;&#x6BB5;<em>&#x5143;&#x7D20;</em>&#x7684;&#x6837;&#x5F0F;&#xFF0C;&#x4F7F;&#x7528;<code>elStyle</code>&#x5C5E;&#x6027;&#x4EE3;&#x66FF;&#xFF1A;</p>
+<pre><code class="lang-jsx">&lt;TextField source=<span class="hljs-string">&quot;price&quot;</span> elStyle={{ color: <span class="hljs-string">&apos;purple&apos;</span> }}/&gt;
+<span class="hljs-comment">// renders in the datagrid as</span>
+&lt;td&gt;<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;color: purple;&quot;</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span></span>
+</code></pre>
+<p>admin-on-rest&#x901A;&#x5E38;&#x5C06;&#x5B57;&#x6BB5;&#x7EC4;&#x4EF6;&#x7684;&#x5448;&#x73B0;&#x59D4;&#x6258;&#x7ED9;material ui&#x7EC4;&#x4EF6;&#x3002; &#x8BF7;&#x53C2;&#x9605;material&#x3000;ui&#x6587;&#x6863;&#x4EE5;&#x67E5;&#x770B;&#x5143;&#x7D20;&#x7684;&#x9ED8;&#x8BA4;&#x6837;&#x5F0F;&#x3002;</p>
+<p>&#x6700;&#x540E;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x8986;&#x76D6;&#x5B57;&#x6BB5;&#x5934;&#x90E8;&#xFF08;datagrid&#x4E2D;&#x7684;<code>&lt;th&gt;</code>&#x5143;&#x7D20;&#xFF09;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x4F7F;&#x7528;<code>headerStyle</code>&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> ProductList = (props) =&gt; (
+    &lt;List {...props}&gt;
+        &lt;Datagrid&gt;
+            &lt;TextField source=&quot;sku&quot; /&gt;
+            &lt;TextField source=&quot;price&quot;
+                style={{ textAlign: &apos;right&apos;}}
+                headerStyle={{ textAlign: &apos;right&apos; }}
+            /&gt;
+            &lt;EditButton /&gt;
+        &lt;/Datagrid&gt;
+    &lt;/List&gt;
+);
+// renders in the datagrid as
+&lt;td style=&quot;text-align:right&quot;&gt;&lt;span&gt;2&lt;/span&gt;&lt;/td&gt;
+// renders in the table header as
+&lt;th style=&quot;text-align:right;font-weight:bold&quot;&gt;&lt;button&gt;Price&lt;/button&gt;&lt;/td&gt;
+</code></pre>
+<h3 id="WritingYourOwnFieldComponent">&#x7F16;&#x5199;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x5B57;&#x6BB5;&#x7EC4;&#x4EF6;</h3>
+<p>&#x5982;&#x679C;&#x4F60;&#x5728;&#x4E0A;&#x9762;&#x7684;&#x5217;&#x8868;&#x4E2D;&#x627E;&#x4E0D;&#x5230;&#x60A8;&#x9700;&#x8981;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x7F16;&#x5199;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x5B57;&#x6BB5;&#x7EC4;&#x4EF6;&#x975E;&#x5E38;&#x5BB9;&#x6613;&#x3002;&#x5B83;&#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x5E38;&#x89C4;&#x7684;React&#x7EC4;&#x4EF6;&#xFF0C;&#x4E0D;&#x4EC5;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;<code>source</code>&#x5C5E;&#x6027;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;<code>record</code>&#x5C5E;&#x6027;&#x3002; Admin-on-rest&#x5C06;&#x5728;&#x6E32;&#x67D3;&#x65F6;&#x57FA;&#x4E8E;API&#x54CD;&#x5E94;&#x6570;&#x636E;&#x6CE8;&#x5165;<code>record</code>&#x3002; &#x5B57;&#x6BB5;&#x7EC4;&#x4EF6;&#x53EA;&#x9700;&#x8981;&#x5728;<code>record</code>&#x4E2D;&#x627E;&#x5230;<code>source</code>&#x5E76;&#x663E;&#x793A;&#x5B83;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x8FD9;&#x91CC;&#x7B49;&#x540C;&#x4E8E;admin-on-rest&#x7684;<code>&lt;TextField&gt;</code>&#x7EC4;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> PropTypes <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;prop-types&apos;</span>;
+
+<span class="hljs-keyword">const</span> TextField = ({ source, record = {} }) =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{record[source]}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>;
+
+TextField.propTypes = {
+    label: PropTypes.string,
+    record: PropTypes.object,
+    source: PropTypes.string.isRequired,
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> TextField;
+</code></pre>
+<p><strong>&#x63D0;&#x793A;</strong>&#xFF1A;<code>render()</code>&#x65B9;&#x6CD5;&#x4E2D;&#x6CA1;&#x6709;&#x4F7F;&#x7528;<code>label</code>&#x5C5E;&#x6027;&#xFF0C;&#x4F46;&#x662F;admin-on-rest&#x4F7F;&#x7528;&#x5B83;&#x6765;&#x663E;&#x793A;&#x8868;&#x5934;&#x3002;</p>
+<p><strong>&#x63D0;&#x793A;</strong>&#xFF1A;&#x5982;&#x679C;&#x60F3;&#x8981;&#x652F;&#x6301;&#x6DF1;&#x57DF;&#x8D44;&#x6E90;&#xFF08;&#x4F8B;&#x5982;<code>author.name</code>&#x7B49;&#x6E90;&#x4EE3;&#x7801;&#xFF09;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;<code>lodash.get</code>&#x66FF;&#x6362;&#x7B80;&#x5355;&#x7684;&#x5BF9;&#x8C61;&#x67E5;&#x627E;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> get <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;lodash.get&apos;</span>;
+<span class="hljs-keyword">const</span> TextField = ({ source, record = {} }) =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{get(record, source)}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>;
+</code></pre>
+<p>&#x5982;&#x679C;&#x60A8;&#x4E0D;&#x662F;&#x5728;&#x5BFB;&#x627E;&#x53EF;&#x91CD;&#x7528;&#x6027;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x66F4;&#x7B80;&#x5355;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x6CA1;&#x6709;&#x4EFB;&#x4F55;&#x5C5E;&#x6027;&#x3002; &#x5047;&#x8BBE;&#x4E00;&#x4E2A;API&#x8FD4;&#x56DE;&#x5177;&#x6709;<code>firstName</code>&#x548C;<code>lastName</code>&#x5C5E;&#x6027;&#x7684;&#x7528;&#x6237;&#x8BB0;&#x5F55;&#xFF0C;&#x5E76;&#x4E14;&#x8981;&#x5728;&#x7528;&#x6237;&#x5217;&#x8868;&#x4E2D;&#x663E;&#x793A;&#x5168;&#x540D;&#x3002;</p>
+<pre><code class="lang-jsx">{
+    id: <span class="hljs-number">123</span>,
+    firstName: <span class="hljs-string">&apos;John&apos;</span>,
+    lastName: <span class="hljs-string">&apos;Doe&apos;</span>
+}
+</code></pre>
+<p>&#x548C;&#x5199;&#x4F5C;&#x4E00;&#x6837;&#x7B80;&#x5355;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { List, Datagrid, TextField } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">const</span> FullNameField = ({ record = {} }) =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{record.firstName} {record.lastName}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>;
+FullNameField.defaultProps = { label: <span class="hljs-string">&apos;Name&apos;</span> };
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> UserList = (props) =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">List</span> {<span class="hljs-attr">...props</span>}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Datagrid</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">FullNameField</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;lastName&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">Datagrid</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">List</span>&gt;</span>
+);
+</span></code></pre>
+<p><strong>&#x63D0;&#x793A;</strong>&#xFF1A;&#x5728;&#x8FD9;&#x6837;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x5B57;&#x6BB5;&#x4E2D;&#xFF0C;<code>source</code>&#x662F;&#x53EF;&#x9009;&#x7684;&#x3002; Admin-on-rest&#x7528;&#x5B83;&#x6765;&#x786E;&#x5B9A;&#x5728;&#x5217;&#x6807;&#x9898;&#x88AB;&#x5355;&#x51FB;&#x65F6;&#x5B83;&#x7684;&#x5217;&#x7528;&#x4E8E;&#x6392;&#x5E8F;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Show/#SimpleShowLayout" class="navigation navigation-prev " aria-label="Previous page: SimpleShowLayout 组件">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="./#BooleanField" class="navigation navigation-next " aria-label="Next page: BooleanField 组件">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"字段组件","level":"1.8","depth":1,"next":{"title":"BooleanField 组件","level":"1.8.1","depth":2,"anchor":"#BooleanField","path":"Fields/README.md","ref":"Fields/README.md#BooleanField","articles":[]},"previous":{"title":"SimpleShowLayout 组件","level":"1.7.4","depth":2,"anchor":"#SimpleShowLayout","path":"Show/README.md","ref":"Show/README.md#SimpleShowLayout","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["github-buttons","livereload"],"pluginsConfig":{"github-buttons":{"repo":"Kirk-Wang/admin-on-rest-cn","types":["star","fork","watch"],"size":"large"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Fields/README.md","mtime":"2017-07-05T12:26:18.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-05T12:26:26.817Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
