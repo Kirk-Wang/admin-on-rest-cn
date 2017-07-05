@@ -42,6 +42,10 @@
     * [initialState（初始状态）](Admin/README.md#initialState)
     * [国际化](Admin/README.md#Internationalization)
     * [在Admin和Resource组件外使用admin-on-rest](Admin/README.md#Using-admin-on-rest-without-Admin-and-Resource)
+* [Resource 组件](Resource/README.md)
+    * [name（名字）](Resource/README.md#name)
+    * [icon（图标）](Resource/README.md#icon)
+    * [options（图标）](Resource/README.md#options)
 
 
 
