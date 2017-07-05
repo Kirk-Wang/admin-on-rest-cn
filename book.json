@@ -1,0 +1,16 @@
+{
+  "plugins": [
+    "github-buttons"
+  ],
+  "pluginsConfig": {
+    "github-buttons": {
+      "repo": "Kirk-Wang/admin-on-rest-cn",
+      "types": [
+        "star",
+        "fork",
+        "watch"
+      ],
+      "size": "large"
+    }
+  }
+}

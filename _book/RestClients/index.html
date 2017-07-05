@@ -1,0 +1,1009 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>REST 客户端 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="./" />
+    
+    
+    <link rel="prev" href="../Tutorial/" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"Kirk-Wang/admin-on-rest-cn","types":["star","fork","watch"],"size":"large"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/">
+            
+                    
+                    Admin-on-REST 教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#Installation">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#MakingContactWithTheAPI">
+            
+                    
+                    与API进行关联
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#FieldTypes">
+            
+                    
+                    字段类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#Relationships">
+            
+                    
+                    关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#CreationAndEdition">
+            
+                    
+                    创建和编辑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#Deletion">
+            
+                    
+                    删除
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#Filters">
+            
+                    
+                    过滤器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#CustomizingtheMenuIcons">
+            
+                    
+                    自定义菜单图标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#UsingaCustomHomePage">
+            
+                    
+                    使用自定义主页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#AddingaLoginPage">
+            
+                    
+                    添加登录页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#ResponsiveList">
+            
+                    
+                    响应式列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#UsingAnotherRESTDialect">
+            
+                    
+                    使用其它rest Dialect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#Conclusion">
+            
+                    
+                    结论
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    REST 客户端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="./">
+            
+                <a href="./#AvailableClients">
+            
+                    
+                    可用客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="./">
+            
+                <a href="./#SimpleREST">
+            
+                    
+                    简易的REST客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="./">
+            
+                <a href="./#JSONServerREST">
+            
+                    
+                    JSON Server REST客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="./">
+            
+                <a href="./#AddingCustomHeaders">
+            
+                    
+                    添加自定义头
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="./">
+            
+                <a href="./#DecoratingyourRESTClient">
+            
+                    
+                    装饰你的REST客户端(文件上传的例子)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="./">
+            
+                <a href="./#WritingYourOwnRESTClient">
+            
+                    
+                    编写你自己的REST客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="./">
+            
+                <a href="./#RequestFormat">
+            
+                    
+                    请求格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="./">
+            
+                <a href="./#ResponseFormat">
+            
+                    
+                    响应格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="./">
+            
+                <a href="./#ErrorFormat">
+            
+                    
+                    错误格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="./">
+            
+                <a href="./#Exampleimplementation">
+            
+                    
+                    示例实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >REST 客户端</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="rest-&#x5BA2;&#x6237;&#x7AEF;">REST &#x5BA2;&#x6237;&#x7AEF;</h1>
+<p>Admin-on-rest&#x53EF;&#x4EE5;&#x4E0E;&#x4EFB;&#x4F55;rest&#x670D;&#x52A1;&#x5668;&#x901A;&#x4FE1;&#x800C;&#x4E0D;&#x8003;&#x8651;&#x5B83;&#x4F7F;&#x7528;&#x7684; REST dialect&#x3002; &#x65E0;&#x8BBA;&#x662F;<a href="http://jsonapi.org/" target="_blank">JSON API</a>, <a href="http://stateless.co/hal_specification.html" target="_blank">HAL</a>, <a href="http://www.odata.org/" target="_blank">OData</a>&#x6216;&#x8005;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;dialect&#xFF0C;Admin-on-rest&#x552F;&#x4E00;&#x9700;&#x8981;&#x7684;&#x5C31;&#x662F;&#x4E00;&#x4E2A; REST client &#x51FD;&#x6570;&#x3002;&#x8FD9;&#x4E2A;&#x5730;&#x65B9;&#x662F;&#x6765;&#x8F6C;&#x6362;REST&#x8BF7;&#x6C42;&#x5230;HTTP&#x8BF7;&#x6C42;&#x548C;HTTP&#x54CD;&#x5E94;&#x5230;REST&#x54CD;&#x5E94;&#x3002;</p>
+<p><img src="https://marmelab.com/admin-on-rest/img/rest-client.png" alt="REST client architecture"></p>
+<p><code>&lt;Admin&gt;</code>&#x7EC4;&#x4EF6;&#x7684;<code>restClient</code>&#x53C2;&#x6570;&#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x5982;&#x4E0B;&#x7B7E;&#x540D;&#x7684;&#x51FD;&#x6570;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">/**
+ * Execute the REST request and return a promise for a REST response
+ *
+ * @example
+ * restClient(GET_ONE, &apos;posts&apos;, { id: 123 })
+ *  =&gt; Promise.resolve({ data: { id: 123, title: &quot;hello, world&quot; } })
+ *
+ * @param {string} type Request type, e.g GET_LIST
+ * @param {string} resource Resource name, e.g. &quot;posts&quot;
+ * @param {Object} payload Request parameters. Depends on the action type
+ * @returns {Promise} the Promise for a REST response
+ */</span>
+<span class="hljs-keyword">const</span> restClient = (type, resource, params) =&gt; <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>();
+</code></pre>
+<p>&#x4F60;&#x4F1A;&#x53D1;&#x73B0;&#x4E00;&#x4E2A;&#x5B9E;&#x73B0;&#x4E86;REST client&#x7684;&#x4F8B;&#x5B50;&#x5728;<a href="https://github.com/marmelab/admin-on-rest/blob/master/src/rest/simple.js" target="_blank"><code>src/rest/simple.js</code></a>&#xFF1B;</p>
+<p><code>restClient</code>&#x4E5F;&#x662F;&#x5728;&#x8FD9;&#x4E2A;&#x7406;&#x60F3;&#x7684;&#x5730;&#x65B9;&#x6765;&#x6DFB;&#x52A0;HTTP&#x5934;&#xFF0C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#xFF0C;&#x7B49;&#x7B49;&#x3002;</p>
+<h2 id="AvailableClients">&#x53EF;&#x7528;&#x5BA2;&#x6237;&#x7AEF;</h2>
+<p>Admin-on-rest&#x9ED8;&#x8BA4;&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x4E2A;REST&#x5BA2;&#x6237;&#x7AEF;&#xFF1A;</p>
+<ul>
+<li><a href="#simple-rest">simpleRestClient</a>&#x4E3B;&#x8981;&#x670D;&#x52A1;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x4F8B;&#x5B50;&#x3002;&#x987A;&#x4FBF;&#x8BF4;&#x4E00;&#x4E0B;&#xFF0C;&#x5B83;&#x662F;&#x4E0E;<a href="https://github.com/marmelab/FakeRest" target="_blank">FakeRest</a>API&#x517C;&#x5BB9;&#x3002;</li>
+<li><strong><a href="https://github.com/typicode/json-server" target="_blank">JSON server</a></strong>&#xFF1A;<a href="#json-server-rest">jsonServerRestClient</a></li>
+</ul>
+<p>&#x4F60;&#x53EF;&#x4EE5;&#x5728;&#x7B2C;&#x4E09;&#x65B9;&#x7684;&#x4ED3;&#x5E93;&#x4E2D;&#x4E3A;admin-on-rest&#x627E;&#x5230;&#x66F4;&#x591A;REST&#x5BA2;&#x6237;&#x7AEF;&#xFF1A;</p>
+<ul>
+<li><strong><a href="http://www.feathersjs.com/" target="_blank">Feathersjs</a></strong>&#xFF1A;<a href="https://github.com/josx/aor-feathers-client" target="_blank">josx/aor-feathers-client</a></li>
+<li><strong><a href="https://firebase.google.com/" target="_blank">Firebase</a></strong>&#xFF1A;<a href="https://github.com/sidferreira/aor-firebase-client" target="_blank">sidferreira/aor-firebase-client</a></li>
+<li><strong><a href="http://graphql.org/" target="_blank">GraphQL</a></strong>&#xFF1A;<a href="https://github.com/marmelab/aor-simple-graphql-client" target="_blank">marmelab/aor-simple-graphql-client</a> (&#x4F7F;&#x7528;<a href="http://www.apollodata.com/" target="_blank">Apollo</a>)</li>
+<li><strong><a href="http://jsonapi.org/" target="_blank">JSON API</a></strong>&#xFF1A;<a href="https://github.com/moonlight-labs/aor-jsonapi-client" target="_blank">moonlight-labs/aor-jsonapi-client</a></li>
+<li>Local JSON&#xFF1A;<a href="https://github.com/marmelab/aor-json-rest-client" target="_blank">marmelab/aor-json-rest-client</a>&#x3002;&#x5B83;&#x751A;&#x81F3;&#x4E0D;&#x4F7F;&#x7528;HTTP&#x3002; &#x7528;&#x4E8E;&#x6D4B;&#x8BD5;&#x76EE;&#x7684;&#x3002;</li>
+<li><strong><a href="http://loopback.io/" target="_blank">Loopback</a></strong>: <a href="https://github.com/kimkha/aor-loopback" target="_blank">kimkha/aor-loopback</a></li>
+<li><strong><a href="https://github.com/ParsePlatform/parse-server" target="_blank">Parse Server</a></strong>: <a href="https://github.com/leperone/aor-parseserver-client" target="_blank">leperone/aor-parseserver-client</a></li>
+<li><strong><a href="http://postgrest.com/en/v0.4/" target="_blank">PostgREST</a></strong>: <a href="https://github.com/tomberek/aor-postgrest-client" target="_blank">tomberek/aor-postgrest-client</a></li>
+</ul>
+<p>&#x5982;&#x679C;&#x60A8;&#x4E3A;&#x53E6;&#x4E00;&#x4E2A;&#x540E;&#x7AEF;&#x7F16;&#x5199;&#x4E86;REST&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x5E76;&#x5F00;&#x653E;&#x6E90;&#x4EE3;&#x7801;&#xFF0C;&#x8BF7;&#x5B8C;&#x5584;&#x6B64;&#x5217;&#x8868;&#x5177;&#x6709;&#x60A8;&#x7684;&#x8F6F;&#x4EF6;&#x5305;&#x3002;</p>
+<h3 id="SimpleREST">&#x7B80;&#x6613;&#x7684;REST&#x5BA2;&#x6237;&#x7AEF;</h3>
+<p>&#x8FD9;&#x4E2A;REST&#x5BA2;&#x6237;&#x7AEF;&#x9002;&#x5408;API&#x4F7F;&#x7528;&#x7B80;&#x5355; GET &#x53C2;&#x6570;&#x8FDB;&#x884C;&#x7B5B;&#x9009;&#x548C;&#x6392;&#x5E8F;&#x3002;&#x8FD9;&#x4E2A;dialect&#x9002;&#x7528;&#x4E8E;&#x4F8B;&#x5982;&#x5728;<a href="https://github.com/marmelab/FakeRest" target="_blank">FakeRest</a>&#x4E2D;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>REST verb</th>
+<th>API calls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET_LIST</code></td>
+<td><code>GET http://my.api.url/posts?sort=[&apos;title&apos;,&apos;ASC&apos;]&amp;range=[0, 24]&amp;filter={title:&apos;bar&apos;}</code></td>
+</tr>
+<tr>
+<td><code>GET_ONE</code></td>
+<td><code>GET http://my.api.url/posts/123</code></td>
+</tr>
+<tr>
+<td><code>CREATE</code></td>
+<td><code>POST http://my.api.url/posts/123</code></td>
+</tr>
+<tr>
+<td><code>UPDATE</code></td>
+<td><code>PUT http://my.api.url/posts/123</code></td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><code>DELETE http://my.api.url/posts/123</code></td>
+</tr>
+<tr>
+<td><code>GET_MANY</code></td>
+<td><code>GET http://my.api.url/posts?filter={ids:[123,456,789]}</code></td>
+</tr>
+<tr>
+<td><code>GET_MANY_REFERENCE</code></td>
+<td><code>GET http://my.api.url/posts?filter={author_id:345}</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x6CE8;&#x610F;</strong>: &#x8FD9;&#x4E2A;&#x7B80;&#x6613;&#x7684;REST&#x5BA2;&#x6237;&#x7AEF;&#x671F;&#x671B;API&#x5728;&#x54CD;&#x5E94; <code>GET_LIST</code> &#x8C03;&#x7528;&#x4E2D;&#x5305;&#x542B;&#x4E00;&#x4E2A;<code>Content-Range</code>&#x5934;&#x3002;&#x8BE5;&#x503C;&#x5FC5;&#x987B;&#x662F;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x8D44;&#x6E90;&#x603B;&#x6570;&#x3002;&#x8FD9;&#x4F7F; admin-on-rest &#x80FD;&#x591F;&#x77E5;&#x9053;&#x603B;&#x5171;&#x6709;&#x591A;&#x5C11;&#x9875;&#x8D44;&#x6E90;&#xFF0C;&#x5E76;&#x751F;&#x6210;&#x5206;&#x9875;&#x63A7;&#x4EF6;&#x3002;</p>
+<pre><code>Content-Range: posts 0-24/319
+</code></pre><p>&#x5728;JS&#x4EE3;&#x7801;&#x4E2D;&#x5982;&#x679C;&#x60A8;&#x7684;API&#x662F;&#x5728;&#x53E6;&#x4E00;&#x4E2A;&#x57DF;&#x4E2D;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5230;&#x767D;&#x540D;&#x5355;&#x4E2D;&#x4E3A;&#x8FD9;&#x4E2A;&#x5934;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;<code>Access-Control-Expose-Headers</code> <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS" target="_blank">CORS</a> &#x5934;&#x3002;</p>
+<pre><code>Access-Control-Expose-Headers: Content-Range
+</code></pre><p>&#x8FD9;&#x91CC;&#x662F;&#x5982;&#x4F55;&#x5728;&#x4F60;&#x7684;admin&#x4E2D;&#x7528;&#x5B83;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/App.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-keyword">import</span> { simpleRestClient, Admin, Resource } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">import</span> { PostList } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./posts&apos;</span>;
+
+<span class="hljs-keyword">const</span> App = () =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Admin</span> <span class="hljs-attr">restClient</span>=<span class="hljs-string">{simpleRestClient(&apos;http:</span>//<span class="hljs-attr">path.to.my.api</span>/&apos;)}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Resource</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;posts&quot;</span> <span class="hljs-attr">list</span>=<span class="hljs-string">{PostList}</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Admin</span>&gt;</span>
+);
+
+export default App;
+</span></code></pre>
+<h3 id="JSONServerREST">JSON Server REST&#x5BA2;&#x6237;&#x7AEF;</h3>
+<p>&#x6B64;REST&#x5BA2;&#x6237;&#x7AEF;&#x9002;&#x5408;API&#x7531;<a href="https://github.com/typicode/json-server" target="_blank">JSON Server</a>&#x9A71;&#x52A8;&#x6BD4;&#x5982; <a href="http://jsonplaceholder.typicode.com/" target="_blank">JSONPlaceholder</a>&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>REST verb</th>
+<th>API calls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET_LIST</code></td>
+<td><code>GET http://my.api.url/posts?_sort=title&amp;_order=ASC&amp;_start=0&amp;_end=24&amp;title=bar</code></td>
+</tr>
+<tr>
+<td><code>GET_ONE</code></td>
+<td><code>GET http://my.api.url/posts/123</code></td>
+</tr>
+<tr>
+<td><code>CREATE</code></td>
+<td><code>POST http://my.api.url/posts/123</code></td>
+</tr>
+<tr>
+<td><code>UPDATE</code></td>
+<td><code>PUT http://my.api.url/posts/123</code></td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><code>DELETE http://my.api.url/posts/123</code></td>
+</tr>
+<tr>
+<td><code>GET_MANY</code></td>
+<td><code>GET http://my.api.url/posts/123, GET http://my.api.url/posts/456, GET http://my.api.url/posts/789</code></td>
+</tr>
+<tr>
+<td><code>GET_MANY_REFERENCE</code></td>
+<td><code>GET http://my.api.url/posts?author_id=345</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x6CE8;&#x610F;</strong>: &#x8FD9;&#x4E2A;jsonServer REST&#x5BA2;&#x6237;&#x7AEF;&#x671F;&#x671B;&#x5728;&#x54CD;&#x5E94;GET_LIST&#x8C03;&#x7528;&#x4E2D;&#x5305;&#x542B;&#x4E00;&#x4E2A;<code>X-Total-Count</code>&#x5934;&#x3002;&#x8BE5;&#x503C;&#x5FC5;&#x987B;&#x662F;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x8D44;&#x6E90;&#x603B;&#x6570;&#x3002;&#x8FD9;&#x4F7F;admin-on-rest&#x80FD;&#x591F;&#x77E5;&#x9053;&#x603B;&#x5171;&#x6709;&#x591A;&#x5C11;&#x9875;&#x8D44;&#x6E90;&#xFF0C;&#x5E76;&#x751F;&#x6210;&#x5206;&#x9875;&#x63A7;&#x4EF6;&#x3002;</p>
+<pre><code>X-Total-Count: 319
+</code></pre><p>&#x5728;JS&#x4EE3;&#x7801;&#x4E2D;&#x5982;&#x679C;&#x60A8;&#x7684;API&#x662F;&#x5728;&#x53E6;&#x4E00;&#x4E2A;&#x57DF;&#x4E2D;&#xFF0C;&#x4F60;&#x9700;&#x8981;&#x5230;&#x767D;&#x540D;&#x5355;&#x4E2D;&#x4E3A;&#x8FD9;&#x4E2A;&#x5934;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;<code>Access-Control-Expose-Headers</code><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS" target="_blank">CORS</a> &#x5934;&#x3002;</p>
+<pre><code>Access-Control-Expose-Headers: X-Total-Count
+</code></pre><p>&#x8FD9;&#x91CC;&#x662F;&#x5982;&#x4F55;&#x5728;&#x4F60;&#x7684;admin&#x4E2D;&#x7528;&#x5B83;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/App.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+
+<span class="hljs-keyword">import</span> { jsonServerRestClient, Admin, Resource } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">import</span> { PostList } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./posts&apos;</span>;
+
+<span class="hljs-keyword">const</span> App = () =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Admin</span> <span class="hljs-attr">restClient</span>=<span class="hljs-string">{jsonServerRestClient(&apos;http:</span>//<span class="hljs-attr">jsonplaceholder.typicode.com</span>&apos;)}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">Resource</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;posts&quot;</span> <span class="hljs-attr">list</span>=<span class="hljs-string">{PostList}</span> /&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Admin</span>&gt;</span>
+);
+
+export default App;
+</span></code></pre>
+<h3 id="AddingCustomHeaders">&#x6DFB;&#x52A0;&#x81EA;&#x5B9A;&#x4E49;&#x5934;</h3>
+<p><code>simpleRestClient</code>&#x548C;<code>jsonServerRestClient</code>&#x51FD;&#x6570;&#x90FD;&#x63A5;&#x53D7;http client&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;, &#x4ED6;&#x4EEC;&#x4F7F;&#x7528;admin-on-rest&#x7684;<code>fetchUtils.fetchJson()</code>&#x4F5C;&#x4E3A;http client&#x3002;&#x5B83;&#x7C7B;&#x4F3C;&#x4E8E;HTML5&#x7684;<code>fetch()</code>&#xFF0C;&#x9664;&#x4E86;&#x5B83;&#x4F1A;&#x81EA;&#x52A8;&#x5904;&#x7406;json&#x89E3;&#x7801;&#x548C;http&#x9519;&#x8BEF;&#x4EE3;&#x7801;&#x3002;</p>
+<p>&#x8FD9;&#x610F;&#x5473;&#x7740;&#x5982;&#x679C;&#x4F60;&#x9700;&#x8981;&#x6DFB;&#x52A0;&#x81EA;&#x5B9A;&#x4E49;&#x5934;&#x5230;&#x4F60;&#x7684;&#x8BF7;&#x6C42;&#x4E2D;&#xFF0C;&#x4F60;&#x53EA;&#x9700;<em>&#x5C01;&#x88C5;</em>&#x8FD9;&#x4E2A;<code>fetchJson()</code>&#x56DE;&#x8C03;&#x5728;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x51FD;&#x6570;&#x5185;&#x90E8;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { simpleRestClient, fetchUtils, Admin, Resource } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+<span class="hljs-keyword">const</span> httpClient = (url, options = {}) =&gt; {
+    <span class="hljs-keyword">if</span> (!options.headers) {
+        options.headers = <span class="hljs-keyword">new</span> Headers({ Accept: <span class="hljs-string">&apos;application/json&apos;</span> });
+    }
+    <span class="hljs-comment">// add your own headers here</span>
+    options.headers.set(<span class="hljs-string">&apos;X-Custom-Header&apos;</span>, <span class="hljs-string">&apos;foobar&apos;</span>);
+    <span class="hljs-keyword">return</span> fetchUtils.fetchJson(url, options);
+}
+<span class="hljs-keyword">const</span> restClient = simpleRestClient(<span class="hljs-string">&apos;http://localhost:3000&apos;</span>, httpClient);
+
+render(
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Admin</span> <span class="hljs-attr">restClient</span>=<span class="hljs-string">{restClient}</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;Example Admin&quot;</span>&gt;</span>
+       ...
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Admin</span>&gt;</span></span>,
+    <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>)
+);
+</code></pre>
+<p>&#x73B0;&#x5728;&#x6240;&#x6709;&#x5230;REST API&#x8BF7;&#x6C42;&#x90FD;&#x5C06;&#x5305;&#x542B;<code>X-Custom-Header: foobar</code>&#x5934;&#x3002;</p>
+<p><strong>&#x63D0;&#x793A;</strong>&#xFF1A;&#x81EA;&#x5B9A;&#x4E49;&#x5934;&#x7684;&#x6700;&#x5E38;&#x89C1;&#x7528;&#x6CD5;&#x662F;&#x8FDB;&#x884C;&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;&#x3002;<code>fetchJson</code>&#x5DF2;&#x7ECF;&#x5C06;<code>Authorization</code>&#x4EE4;&#x724C;&#x5934;&#x4F5C;&#x4E3A;&#x57FA;&#x7840;&#x652F;&#x6301;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> httpClient = (url, options) =&gt; {
+    options.user = {
+        authenticated: <span class="hljs-literal">true</span>,
+        token: <span class="hljs-string">&apos;SRTRDFVESGNJYTUKTYTHRG&apos;</span>
+    }
+    <span class="hljs-keyword">return</span> fetchUtils.fetchJson(url, options);
+}
+</code></pre>
+<p>&#x73B0;&#x5728;&#x5BF9;REST API&#x7684;&#x6240;&#x6709;&#x8BF7;&#x6C42;&#x90FD;&#x5C06;&#x5305;&#x542B;<code>Authorization: SRTRDFVESGNJYTUKTYTHRG</code>&#x5934;&#x3002;</p>
+<h3 id="DecoratingyourRESTClient">&#x88C5;&#x9970;&#x4F60;&#x7684;REST&#x5BA2;&#x6237;&#x7AEF;(&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x7684;&#x4F8B;&#x5B50;)</h3>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x5728;&#x7ED9;&#x5B9A;&#x7684;&#x8D44;&#x6E90;&#x4E0A;&#x589E;&#x5F3A;&#x5176;&#x529F;&#x80FD;&#x800C;&#x4E0D;&#x662F;&#x7F16;&#x5199;&#x81EA;&#x5DF1;&#x7684;REST client&#x6216;&#x4F7F;&#x7528;&#x7B2C;&#x4E09;&#x65B9;&#x7684;REST client&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x60F3;&#x8981;&#x4F7F;&#x7528;&#x4E0A;&#x4F20;&#x7EC4;&#x4EF6;&#xFF08;&#x5982;<code>&lt;ImageInput /&gt;</code>&#x7EC4;&#x4EF6;&#xFF09;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x6309;&#x4EE5;&#x4E0B;&#x65B9;&#x5F0F;&#x4FEE;&#x9970;&#x5B83;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">/**
+ * Convert a `File` object returned by the upload input into
+ * a base 64 string. That&apos;s easier to use on FakeRest, used on
+ * the ng-admin example. But that&apos;s probably not the most optimized
+ * way to do in a production database.
+ */</span>
+<span class="hljs-keyword">const</span> convertFileToBase64 = file =&gt; <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>((resolve, reject) =&gt; {
+    <span class="hljs-keyword">const</span> reader = <span class="hljs-keyword">new</span> FileReader();
+    reader.readAsDataURL(file);
+
+    reader.onload = () =&gt; resolve(reader.result);
+    reader.onerror = reject;
+});
+
+<span class="hljs-comment">/**
+ * For posts update only, convert uploaded image in base 64 and attach it to
+ * the `picture` sent property, with `src` and `title` attributes.
+ */</span>
+<span class="hljs-keyword">const</span> addUploadCapabilities = requestHandler =&gt; (type, resource, params) =&gt; {
+    <span class="hljs-keyword">if</span> (type === <span class="hljs-string">&apos;UPDATE&apos;</span> &amp;&amp; resource === <span class="hljs-string">&apos;posts&apos;</span>) {
+        <span class="hljs-keyword">if</span> (params.data.pictures &amp;&amp; params.data.pictures.length) {
+            <span class="hljs-comment">// only freshly dropped pictures are instance of File</span>
+            <span class="hljs-keyword">const</span> formerPictures = params.data.pictures.filter(p =&gt; !(p <span class="hljs-keyword">instanceof</span> File));
+            <span class="hljs-keyword">const</span> newPictures = params.data.pictures.filter(p =&gt; p <span class="hljs-keyword">instanceof</span> File);
+
+            <span class="hljs-keyword">return</span> <span class="hljs-built_in">Promise</span>.all(newPictures.map(convertFileToBase64))
+                .then(base64Pictures =&gt; base64Pictures.map(picture64 =&gt; ({
+                    src: picture64,
+                    title: <span class="hljs-string">`<span class="hljs-subst">${params.data.title}</span>`</span>,
+                })))
+                .then(transformedNewPictures =&gt; requestHandler(type, resource, {
+                    ...params,
+                    data: {
+                        ...params.data,
+                        pictures: [...transformedNewPictures, ...formerPictures],
+                    },
+                }));
+        }
+    }
+
+    <span class="hljs-keyword">return</span> requestHandler(type, resource, params);
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> addUploadCapabilities;
+</code></pre>
+<p>&#x8FD9;&#x6837;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x7B80;&#x5355;&#x5730;&#x4F7F;&#x7528;&#x4F60;&#x7684;upload-capable&#x5BA2;&#x6237;&#x7AEF;&#x5230;&#x4F60;&#x7684;app&#x8C03;&#x7528;&#x6B64;&#x88C5;&#x9970;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> jsonRestClient <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;aor-json-rest-client&apos;</span>;
+<span class="hljs-keyword">import</span> addUploadFeature <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./addUploadFeature&apos;</span>;
+
+<span class="hljs-keyword">const</span> restClient = jsonRestClient(data, <span class="hljs-literal">true</span>);
+<span class="hljs-keyword">const</span> uploadCapableClient = addUploadFeature(restClient);
+
+render(
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Admin</span> <span class="hljs-attr">restClient</span>=<span class="hljs-string">{uploadCapableClient}</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;Example Admin&quot;</span>&gt;</span>
+        // [...]
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Admin</span>&gt;</span></span>,
+    <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">&apos;root&apos;</span>),
+);
+</code></pre>
+<h3 id="WritingYourOwnRESTClient">&#x7F16;&#x5199;&#x4F60;&#x81EA;&#x5DF1;&#x7684;REST&#x5BA2;&#x6237;&#x7AEF;</h3>
+<p>&#x5F88;&#x591A;&#x65F6;&#x5019;&#xFF0C;&#x6CA1;&#x6709;&#x4E00;&#x4E2A;&#x6838;&#x5FC3;&#x7684;REST&#x5BA2;&#x6237;&#x7AEF;&#x5B8C;&#x5168;&#x5339;&#x914D;&#x4F60;&#x7684;API&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x60A8;&#x4E0D;&#x5F97;&#x4E0D;&#x7F16;&#x5199;&#x81EA;&#x5DF1;&#x7684;REST&#x5BA2;&#x6237;&#x7AEF;&#x3002;&#x4F46;&#x4E0D;&#x8981;&#x5BB3;&#x6015;&#xFF0C;&#x8FD9;&#x5F88;&#x5BB9;&#x6613;&#xFF01;</p>
+<h3 id="RequestFormat">&#x8BF7;&#x6C42;&#x683C;&#x5F0F;</h3>
+<p>REST&#x8BF7;&#x6C42;&#x5FC5;&#x9700;&#x8981;&#x4E00;&#x4E2A;<em>type</em>&#xFF08;&#x4F8B;&#x5982;&#xFF1A;<code>GET_ONE</code>&#xFF09;&#xFF0C;&#x4E00;&#x4E2A;<em>resource</em>&#xFF08;&#x4F8B;&#x5982;&#xFF1A;&apos;posts&apos;&#xFF09;&#x548C;&#x4E00;&#x7EC4;<em>parameters</em>&#x3002;</p>
+<p><em>&#x63D0;&#x793A;</em>&#xFF1A;&#x76F8;&#x6BD4;&#x4E4B;&#x4E0B;&#xFF0C; HTTP &#x8BF7;&#x6C42;&#x9700;&#x8981;&#x4E00;&#x4E2A;<em>&#x52A8;&#x8BCD;</em>&#xFF08;&#x4F8B;&#x5982;&#xFF1A;&#x2018;GET&#x2019;&#xFF09;, &#x4E00;&#x4E2A; <em>url</em>&#xFF08;&#x4F8B;&#x5982;&#xFF1A; &#x2018;<a href="http://myapi.com/posts&#x2019;&#xFF09;&#xFF0C;&#x4E00;&#x7CFB;&#x5217;" target="_blank">http://myapi.com/posts&#x2019;&#xFF09;&#xFF0C;&#x4E00;&#x7CFB;&#x5217;</a> <em>headers</em>&#xFF08;&#x1F418; <code>Content-Type</code>&#xFF09;&#x548C;&#x4E00;&#x4E2A; <em>body</em>&#x3002;</p>
+<p>&#x53EF;&#x80FD;&#x7684;&#x7C7B;&#x578B;&#x662F;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Params format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET_LIST</code></td>
+<td><code>{ pagination: { page: {int} , perPage: {int} }, sort: { field: {string}, order: {string} }, filter: {Object} }</code></td>
+</tr>
+<tr>
+<td><code>GET_ONE</code></td>
+<td><code>{ id: {mixed} }</code></td>
+</tr>
+<tr>
+<td><code>CREATE</code></td>
+<td><code>{ data: {Object} }</code></td>
+</tr>
+<tr>
+<td><code>UPDATE</code></td>
+<td><code>{ id: {mixed}, data: {Object} }</code></td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><code>{ id: {mixed} }</code></td>
+</tr>
+<tr>
+<td><code>GET_MANY</code></td>
+<td><code>{ ids: {mixed[]} }</code></td>
+</tr>
+<tr>
+<td><code>GET_MANY_REFERENCE</code></td>
+<td><code>{ target: {string}, id: {mixed}, pagination: { page: {int} , perPage: {int} }, sort: { field: {string}, order: {string} }, filter: {Object} }</code></td>
+</tr>
+</tbody>
+</table>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-jsx">restClient(GET_LIST, <span class="hljs-string">&apos;posts&apos;</span>, {
+    pagination: { page: <span class="hljs-number">1</span>, perPage: <span class="hljs-number">5</span> },
+    sort: { field: <span class="hljs-string">&apos;title&apos;</span>, order: <span class="hljs-string">&apos;ASC&apos;</span> },
+    filter: { author_id: <span class="hljs-number">12</span> },
+});
+restClient(GET_ONE, <span class="hljs-string">&apos;posts&apos;</span>, { id: <span class="hljs-number">123</span> });
+restClient(CREATE, <span class="hljs-string">&apos;posts&apos;</span>, { title: <span class="hljs-string">&quot;hello, world&quot;</span> });
+restClient(UPDATE, <span class="hljs-string">&apos;posts&apos;</span>, { id: <span class="hljs-number">123</span>, { title: <span class="hljs-string">&quot;hello, world!&quot;</span> } });
+restClient(DELETE, <span class="hljs-string">&apos;posts&apos;</span>, { id: <span class="hljs-number">123</span> });
+restClient(GET_MANY, <span class="hljs-string">&apos;posts&apos;</span>, { ids: [<span class="hljs-number">123</span>, <span class="hljs-number">124</span>, <span class="hljs-number">125</span>] });
+restClient(GET_MANY_REFERENCE, <span class="hljs-string">&apos;comments&apos;</span>, {
+    target: <span class="hljs-string">&apos;post_id&apos;</span>,
+    id: <span class="hljs-number">123</span>,
+    sort: { field: <span class="hljs-string">&apos;created_at&apos;</span>, order: <span class="hljs-string">&apos;DESC&apos;</span> }
+});
+</code></pre>
+<h3 id="ResponseFormat">&#x54CD;&#x5E94;&#x683C;&#x5F0F;</h3>
+<p>REST&#x54CD;&#x5E94;&#x662F;&#x5BF9;&#x8C61;&#x3002;&#x683C;&#x5F0F;&#x53D6;&#x51B3;&#x4E8E;&#x7C7B;&#x578B;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Response format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET_LIST</code></td>
+<td><code>{ data: {Record[]}, total: {int} }</code></td>
+</tr>
+<tr>
+<td><code>GET_ONE</code></td>
+<td><code>{ data: {Record} }</code></td>
+</tr>
+<tr>
+<td><code>CREATE</code></td>
+<td><code>{ data: {Record} }</code></td>
+</tr>
+<tr>
+<td><code>UPDATE</code></td>
+<td><code>{ data: {Record} }</code></td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td><code>{ data: {Record} }</code></td>
+</tr>
+<tr>
+<td><code>GET_MANY</code></td>
+<td><code>{ data: {Record[]} }</code></td>
+</tr>
+<tr>
+<td><code>GET_MANY_REFERENCE</code></td>
+<td><code>{ data: {Record[]}, total: {int} }</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>{Record}</code>&#x662F;&#x4E00;&#x4E2A;&#x81F3;&#x5C11;&#x5177;&#x6709;<code>id</code>&#x5C5E;&#x6027;&#x7684;&#x5BF9;&#x8C61;&#x5B57;&#x9762;&#x91CF;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;<code>{ id: 123, title: &quot;hello, world&quot; }</code>&#x3002;</p>
+<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre><code class="lang-jsx">restClient(GET_LIST, <span class="hljs-string">&apos;posts&apos;</span>, {
+    pagination: { page: <span class="hljs-number">1</span>, perPage: <span class="hljs-number">5</span> },
+    sort: { field: <span class="hljs-string">&apos;title&apos;</span>, order: <span class="hljs-string">&apos;ASC&apos;</span> },
+    filter: { author_id: <span class="hljs-number">12</span> },
+})
+.then(response =&gt; <span class="hljs-built_in">console</span>.log(response));
+<span class="hljs-comment">// {</span>
+<span class="hljs-comment">//     data: [</span>
+<span class="hljs-comment">//         { id: 126, title: &quot;allo?&quot;, author_id: 12 },</span>
+<span class="hljs-comment">//         { id: 127, title: &quot;bien le bonjour&quot;, author_id: 12 },</span>
+<span class="hljs-comment">//         { id: 124, title: &quot;good day sunshine&quot;, author_id: 12 },</span>
+<span class="hljs-comment">//         { id: 123, title: &quot;hello, world&quot;, author_id: 12 },</span>
+<span class="hljs-comment">//         { id: 125, title: &quot;howdy partner&quot;, author_id: 12 },</span>
+<span class="hljs-comment">//     ],</span>
+<span class="hljs-comment">//     total: 27</span>
+<span class="hljs-comment">// }</span>
+
+restClient(GET_ONE, <span class="hljs-string">&apos;posts&apos;</span>, { id: <span class="hljs-number">123</span> })
+.then(response =&gt; <span class="hljs-built_in">console</span>.log(response));
+<span class="hljs-comment">// {</span>
+<span class="hljs-comment">//     data: { id: 123, title: &quot;hello, world&quot; }</span>
+<span class="hljs-comment">// }</span>
+
+restClient(CREATE, <span class="hljs-string">&apos;posts&apos;</span>, { title: <span class="hljs-string">&quot;hello, world&quot;</span> })
+.then(response =&gt; <span class="hljs-built_in">console</span>.log(response));
+<span class="hljs-comment">// {</span>
+<span class="hljs-comment">//     data: { id: 450, title: &quot;hello, world&quot; }</span>
+<span class="hljs-comment">// }</span>
+
+restClient(UPDATE, <span class="hljs-string">&apos;posts&apos;</span>, { id: <span class="hljs-number">123</span>, { title: <span class="hljs-string">&quot;hello, world!&quot;</span> } })
+.then(response =&gt; <span class="hljs-built_in">console</span>.log(response));
+<span class="hljs-comment">// {</span>
+<span class="hljs-comment">//     data: { id: 123, title: &quot;hello, world!&quot; }</span>
+<span class="hljs-comment">// }</span>
+
+restClient(DELETE, <span class="hljs-string">&apos;posts&apos;</span>, { id: <span class="hljs-number">123</span> })
+.then(response =&gt; <span class="hljs-built_in">console</span>.log(response));
+<span class="hljs-comment">// {</span>
+<span class="hljs-comment">//     data: { id: 123, title: &quot;hello, world&quot; }</span>
+<span class="hljs-comment">// }</span>
+
+restClient(GET_MANY, <span class="hljs-string">&apos;posts&apos;</span>, { ids: [<span class="hljs-number">123</span>, <span class="hljs-number">124</span>, <span class="hljs-number">125</span>] })
+.then(response =&gt; <span class="hljs-built_in">console</span>.log(response));
+<span class="hljs-comment">// {</span>
+<span class="hljs-comment">//     data: [</span>
+<span class="hljs-comment">//         { id: 123, title: &quot;hello, world&quot; },</span>
+<span class="hljs-comment">//         { id: 124, title: &quot;good day sunshise&quot; },</span>
+<span class="hljs-comment">//         { id: 125, title: &quot;howdy partner&quot; },</span>
+<span class="hljs-comment">//     ]</span>
+<span class="hljs-comment">// }</span>
+
+restClient(GET_MANY_REFERENCE, <span class="hljs-string">&apos;comments&apos;</span>, {
+    target: <span class="hljs-string">&apos;post_id&apos;</span>,
+    id: <span class="hljs-number">123</span>,
+    sort: { field: <span class="hljs-string">&apos;created_at&apos;</span>, order: <span class="hljs-string">&apos;DESC&apos;</span> }
+});
+.then(response =&gt; <span class="hljs-built_in">console</span>.log(response));
+<span class="hljs-comment">// {</span>
+<span class="hljs-comment">//     data: [</span>
+<span class="hljs-comment">//         { id: 667, title: &quot;I agree&quot;, post_id: 123 },</span>
+<span class="hljs-comment">//         { id: 895, title: &quot;I don&apos;t agree&quot;, post_id: 123 },</span>
+<span class="hljs-comment">//     ],</span>
+<span class="hljs-comment">//     total: 2,</span>
+<span class="hljs-comment">// }</span>
+</code></pre>
+<h3 id="ErrorFormat">&#x9519;&#x8BEF;&#x683C;&#x5F0F;</h3>
+<p>&#x5F53;REST API&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;rest&#x5BA2;&#x6237;&#x7AEF;&#x5E94;&#x8BE5;<code>&#x629B;&#x51FA;</code> &#x4E00;&#x4E2A; <code>Error</code> &#x5BF9;&#x8C61;&#x3002;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x5E94;&#x8BE5;&#x5305;&#x542B;&#x4E00;&#x4E2A;&#x5177;&#x6709;HTTP &#x54CD;&#x5E94;&#x4EE3;&#x7801;&#xFF08;404&#xFF0C;500&#xFF0C;&#x7B49;&#x7B49;&#xFF09;&#x7684;<code>status</code>&#x5C5E;&#x6027;&#x3002;Admin-on-rest&#x68C0;&#x67E5;&#x8FD9;&#x4E2A;&#x9519;&#x8BEF;&#x4EE3;&#x7801;&#x5E76;&#x5C06;&#x5176;&#x7528;&#x4E8E;<a href="Authentication.md">&#x8EAB;&#x4EFD;&#x9A8C;&#x8BC1;</a>&#xFF08;&#x5728;401&#x6216;403&#x9519;&#x8BEF;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF09;</p>
+<h3 id="Exampleimplementation">&#x793A;&#x4F8B;&#x5B9E;&#x73B0;</h3>
+<p>&#x67E5;&#x770B;&#x6765;&#x81EA;<a href="https://github.com/marmelab/admin-on-rest/blob/master/src/rest/simple.js" target="_blank">simple REST client</a>&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#xFF1A;&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x597D;&#x7684;&#x5F00;&#x59CB;&#x6765;&#x8FBE;&#x5230;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;rest client&#x5B9E;&#x73B0;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Tutorial/#Conclusion" class="navigation navigation-prev " aria-label="Previous page: 结论">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="./#AvailableClients" class="navigation navigation-next " aria-label="Next page: 可用客户端">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"REST 客户端","level":"1.3","depth":1,"next":{"title":"可用客户端","level":"1.3.1","depth":2,"anchor":"#AvailableClients","path":"RestClients/README.md","ref":"RestClients/README.md#AvailableClients","articles":[]},"previous":{"title":"结论","level":"1.2.13","depth":2,"anchor":"#Conclusion","path":"Tutorial/README.md","ref":"Tutorial/README.md#Conclusion","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["github-buttons","livereload"],"pluginsConfig":{"github-buttons":{"repo":"Kirk-Wang/admin-on-rest-cn","types":["star","fork","watch"],"size":"large"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"RestClients/README.md","mtime":"2017-07-05T03:31:33.696Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-05T03:45:35.939Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

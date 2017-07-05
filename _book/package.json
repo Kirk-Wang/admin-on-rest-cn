@@ -1,0 +1,26 @@
+{
+  "name": "admin-on-rest-cn",
+  "version": "1.0.0",
+  "description": "admin-on-rest中文文档",
+  "main": "index.js",
+  "scripts": {
+    "start": "gitbook serve",
+    "build": "gitbook build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.kirk:Kirk-Wang/admin-on-rest-cn.git"
+  },
+  "keywords": [
+    "admin-on-rest",
+    "admin",
+    "rest"
+  ],
+  "author": "Kirk.Wang",
+  "license": "MIT",
+  "devDependencies": {
+    "gitbook-cli": "^2.3.0",
+    "gitbook-plugin-github-buttons": "^2.1.0"
+  }
+}
