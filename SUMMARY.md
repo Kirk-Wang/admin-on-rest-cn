@@ -86,7 +86,22 @@
     * [UrlField 组件](Fields/README.md#UrlField)
     * [样式化字段](Fields/README.md#StylingFields)
     * [编写你自己的字段组件](Fields/README.md#WritingYourOwnFieldComponent)
-
+* [Create和Edit 视图](CreateEdit/README.md#CreateEdit)
+    * [Create和Edit 组件](CreateEdit/README.md#CreateEditComponents)
+    * [title（页面标题）](CreateEdit/README.md#page-title)
+    * [actions（动作）](CreateEdit/README.md#actions)
+    * [SimpleForm 组件](CreateEdit/README.md#SimpleForm)
+    * [TabbedForm 组件](CreateEdit/README.md#TabbedForm)
+    * [defautValue（默认值）](CreateEdit/README.md#default-values)
+    * [全局默认值](CreateEdit/README.md#GlobalDefaultValue)
+    * [每个字段默认值](CreateEdit/README.md#PerFieldDefaultValue)
+    * [验证](CreateEdit/README.md#Validation)
+    * [全局验证](CreateEdit/README.md#GlobalValidation)
+    * [每个字段验证：函数验证](CreateEdit/README.md#PerFieldValidation-FunctionValidator)
+    * [内置字段验证器](CreateEdit/README.md#Built-inFieldValidators)
+    * [回车提交](CreateEdit/README.md#SubmitOnEnter)
+    * [提交后重定向](CreateEdit/README.md#RedirectionAfterSubmission)
+    * [工具栏](CreateEdit/README.md#Toolbar)
 
 
 
