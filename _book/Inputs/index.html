@@ -1,0 +1,2645 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>输入组件 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.2">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="./" />
+    
+    
+    <link rel="prev" href="../CreateEdit/" />
+    
+
+    <style>
+    @media only screen and (max-width: 640px) {
+        .book-header .hidden-mobile {
+            display: none;
+        }
+    }
+    </style>
+    <script>
+        window["gitbook-plugin-github-buttons"] = {"repo":"Kirk-Wang/admin-on-rest-cn","types":["star","fork","watch"],"size":"large"};
+    </script>
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/">
+            
+                    
+                    Admin-on-REST 教程
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#Installation">
+            
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#MakingContactWithTheAPI">
+            
+                    
+                    与API进行关联
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#FieldTypes">
+            
+                    
+                    字段类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#Relationships">
+            
+                    
+                    关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#CreationAndEdition">
+            
+                    
+                    创建和编辑
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#Deletion">
+            
+                    
+                    删除
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#Filters">
+            
+                    
+                    过滤器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#CustomizingtheMenuIcons">
+            
+                    
+                    自定义菜单图标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#UsingaCustomHomePage">
+            
+                    
+                    使用自定义主页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#AddingaLoginPage">
+            
+                    
+                    添加登录页
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#ResponsiveList">
+            
+                    
+                    响应式列表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#UsingAnotherRESTDialect">
+            
+                    
+                    使用其它rest Dialect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../Tutorial/">
+            
+                <a href="../Tutorial/#Conclusion">
+            
+                    
+                    结论
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../RestClients/">
+            
+                <a href="../RestClients/">
+            
+                    
+                    REST 客户端
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../RestClients/">
+            
+                <a href="../RestClients/#AvailableClients">
+            
+                    
+                    可用客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../RestClients/">
+            
+                <a href="../RestClients/#SimpleREST">
+            
+                    
+                    简易的REST客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../RestClients/">
+            
+                <a href="../RestClients/#JSONServerREST">
+            
+                    
+                    JSON Server REST客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../RestClients/">
+            
+                <a href="../RestClients/#AddingCustomHeaders">
+            
+                    
+                    添加自定义头
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../RestClients/">
+            
+                <a href="../RestClients/#DecoratingyourRESTClient">
+            
+                    
+                    装饰你的REST客户端（文件上传的例子）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../RestClients/">
+            
+                <a href="../RestClients/#WritingYourOwnRESTClient">
+            
+                    
+                    编写你自己的REST客户端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../RestClients/">
+            
+                <a href="../RestClients/#RequestFormat">
+            
+                    
+                    请求格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../RestClients/">
+            
+                <a href="../RestClients/#ResponseFormat">
+            
+                    
+                    响应格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../RestClients/">
+            
+                <a href="../RestClients/#ErrorFormat">
+            
+                    
+                    错误格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../RestClients/">
+            
+                <a href="../RestClients/#Exampleimplementation">
+            
+                    
+                    示例实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Admin/">
+            
+                <a href="../Admin/">
+            
+                    
+                    Admin 组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Admin/">
+            
+                <a href="../Admin/#restClient">
+            
+                    
+                    restClient（rest客户端）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Admin/">
+            
+                <a href="../Admin/#title">
+            
+                    
+                    title（标题）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Admin/">
+            
+                <a href="../Admin/#dashboard">
+            
+                    
+                    dashboard（仪表盘）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Admin/">
+            
+                <a href="../Admin/#menu">
+            
+                    
+                    menu（菜单）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Admin/">
+            
+                <a href="../Admin/#theme">
+            
+                    
+                    theme（主题）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Admin/">
+            
+                <a href="../Admin/#appLayout">
+            
+                    
+                    appLayout（app布局）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../Admin/">
+            
+                <a href="../Admin/#customReducers">
+            
+                    
+                    customReducers（自定义Reducer）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../Admin/">
+            
+                <a href="../Admin/#customSagas">
+            
+                    
+                    customSagas（自定义Saga）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../Admin/">
+            
+                <a href="../Admin/#customRoutes">
+            
+                    
+                    customRoutes（自定义Route）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../Admin/">
+            
+                <a href="../Admin/#authClient">
+            
+                    
+                    authClient（授权客户端）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../Admin/">
+            
+                <a href="../Admin/#loginPage">
+            
+                    
+                    loginPage（登陆页）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../Admin/">
+            
+                <a href="../Admin/#logoutButton">
+            
+                    
+                    logoutButton（注销按钮）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../Admin/">
+            
+                <a href="../Admin/#initialState">
+            
+                    
+                    initialState（初始状态）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../Admin/">
+            
+                <a href="../Admin/#Internationalization">
+            
+                    
+                    国际化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="../Admin/">
+            
+                <a href="../Admin/#Using-admin-on-rest-without-Admin-and-Resource">
+            
+                    
+                    在Admin和Resource组件外使用admin-on-rest
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Resource/">
+            
+                <a href="../Resource/">
+            
+                    
+                    Resource 组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Resource/">
+            
+                <a href="../Resource/#name">
+            
+                    
+                    name（名字）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Resource/">
+            
+                <a href="../Resource/#icon">
+            
+                    
+                    icon（图标）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Resource/">
+            
+                <a href="../Resource/#options">
+            
+                    
+                    options（选项）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../List/">
+            
+                <a href="../List/">
+            
+                    
+                    List 视图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../List/">
+            
+                <a href="../List/#List">
+            
+                    
+                    List 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../List/">
+            
+                <a href="../List/#page-title">
+            
+                    
+                    title（页面标题）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../List/">
+            
+                <a href="../List/#actions">
+            
+                    
+                    actions（动作）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../List/">
+            
+                <a href="../List/#filters">
+            
+                    
+                    filters（过滤器）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../List/">
+            
+                <a href="../List/#records-per-page">
+            
+                    
+                    perPage（每页记录数）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../List/">
+            
+                <a href="../List/#default-sort-field">
+            
+                    
+                    sort（默认排序字段）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../List/">
+            
+                <a href="../List/#DisablingSorting">
+            
+                    
+                    禁用排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../List/">
+            
+                <a href="../List/#permanent-filter">
+            
+                    
+                    filter（永久过滤器）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../List/">
+            
+                <a href="../List/#pagination">
+            
+                    
+                    pagination（分页）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../List/">
+            
+                <a href="../List/#Datagrid">
+            
+                    
+                    Datagrid 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../List/">
+            
+                <a href="../List/#CustomGridStyle">
+            
+                    
+                    自定义表格样式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../List/">
+            
+                <a href="../List/#RowStyleFunction">
+            
+                    
+                    行样式函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../List/">
+            
+                <a href="../List/#options-headerOptions-bodyOptions-rowOptions">
+            
+                    
+                    options、headerOptions、bodyOptions和rowOptions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../List/">
+            
+                <a href="../List/#SimpleList">
+            
+                    
+                    SimpleList 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../List/">
+            
+                <a href="../List/#SingleFieldList">
+            
+                    
+                    SingleFieldList 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../List/">
+            
+                <a href="../List/#Using-a-Custom-Iterator">
+            
+                    
+                    使用一个自定义迭代器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Show/">
+            
+                <a href="../Show/">
+            
+                    
+                    Show 视图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Show/">
+            
+                <a href="../Show/#show">
+            
+                    
+                    Show 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Show/">
+            
+                <a href="../Show/#page-title">
+            
+                    
+                    title（页面标题）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Show/">
+            
+                <a href="../Show/#actions">
+            
+                    
+                    actions（动作）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Show/">
+            
+                <a href="../Show/#SimpleShowLayout">
+            
+                    
+                    SimpleShowLayout 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Fields/">
+            
+                <a href="../Fields/#FieldComponents">
+            
+                    
+                    字段组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Fields/">
+            
+                <a href="../Fields/#BooleanField">
+            
+                    
+                    BooleanField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Fields/">
+            
+                <a href="../Fields/#ChipField">
+            
+                    
+                    ChipField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Fields/">
+            
+                <a href="../Fields/#DateField">
+            
+                    
+                    DateField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Fields/">
+            
+                <a href="../Fields/#EmailField">
+            
+                    
+                    EmailField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Fields/">
+            
+                <a href="../Fields/#FunctionField">
+            
+                    
+                    FunctionField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../Fields/">
+            
+                <a href="../Fields/#ImageField">
+            
+                    
+                    ImageField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../Fields/">
+            
+                <a href="../Fields/#FileField">
+            
+                    
+                    FileField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../Fields/">
+            
+                <a href="../Fields/#NumberField">
+            
+                    
+                    NumberField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../Fields/">
+            
+                <a href="../Fields/#SelectField">
+            
+                    
+                    SelectField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../Fields/">
+            
+                <a href="../Fields/#ReferenceField">
+            
+                    
+                    ReferenceField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../Fields/">
+            
+                <a href="../Fields/#ReferenceManyField">
+            
+                    
+                    ReferenceManyField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../Fields/">
+            
+                <a href="../Fields/#ReferenceArrayField">
+            
+                    
+                    ReferenceArrayField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="../Fields/">
+            
+                <a href="../Fields/#RichTextField">
+            
+                    
+                    RichTextField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="../Fields/">
+            
+                <a href="../Fields/#TextField">
+            
+                    
+                    TextField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="../Fields/">
+            
+                <a href="../Fields/#UrlField">
+            
+                    
+                    UrlField 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16" data-path="../Fields/">
+            
+                <a href="../Fields/#StylingFields">
+            
+                    
+                    样式化字段
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.17" data-path="../Fields/">
+            
+                <a href="../Fields/#WritingYourOwnFieldComponent">
+            
+                    
+                    编写你自己的字段组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../CreateEdit/">
+            
+                <a href="../CreateEdit/#CreateEdit">
+            
+                    
+                    Create和Edit 视图
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../CreateEdit/">
+            
+                <a href="../CreateEdit/#CreateEditComponents">
+            
+                    
+                    Create和Edit 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../CreateEdit/">
+            
+                <a href="../CreateEdit/#page-title">
+            
+                    
+                    title（页面标题）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../CreateEdit/">
+            
+                <a href="../CreateEdit/#actions">
+            
+                    
+                    actions（动作）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../CreateEdit/">
+            
+                <a href="../CreateEdit/#SimpleForm">
+            
+                    
+                    SimpleForm 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../CreateEdit/">
+            
+                <a href="../CreateEdit/#TabbedForm">
+            
+                    
+                    TabbedForm 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../CreateEdit/">
+            
+                <a href="../CreateEdit/#default-values">
+            
+                    
+                    defautValue（默认值）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../CreateEdit/">
+            
+                <a href="../CreateEdit/#GlobalDefaultValue">
+            
+                    
+                    全局默认值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../CreateEdit/">
+            
+                <a href="../CreateEdit/#PerFieldDefaultValue">
+            
+                    
+                    每个字段默认值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../CreateEdit/">
+            
+                <a href="../CreateEdit/#Validation">
+            
+                    
+                    验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../CreateEdit/">
+            
+                <a href="../CreateEdit/#GlobalValidation">
+            
+                    
+                    全局验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="../CreateEdit/">
+            
+                <a href="../CreateEdit/#PerFieldValidation-FunctionValidator">
+            
+                    
+                    每个字段验证：函数验证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="../CreateEdit/">
+            
+                <a href="../CreateEdit/#Built-inFieldValidators">
+            
+                    
+                    内置字段验证器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.13" data-path="../CreateEdit/">
+            
+                <a href="../CreateEdit/#SubmitOnEnter">
+            
+                    
+                    回车提交
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.14" data-path="../CreateEdit/">
+            
+                <a href="../CreateEdit/#RedirectionAfterSubmission">
+            
+                    
+                    提交后重定向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.15" data-path="../CreateEdit/">
+            
+                <a href="../CreateEdit/#Toolbar">
+            
+                    
+                    工具栏
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="./">
+            
+                <a href="./#InputComponents">
+            
+                    
+                    输入组件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="./">
+            
+                <a href="./#AutocompleteInput">
+            
+                    
+                    AutocompleteInput 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="./">
+            
+                <a href="./#BooleanInput-NullableBooleanInput">
+            
+                    
+                    BooleanInput与NullableBooleanInput 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="./">
+            
+                <a href="./#CheckboxGroupInput">
+            
+                    
+                    CheckboxGroupInput 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="./">
+            
+                <a href="./#DateInput">
+            
+                    
+                    DateInput 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="./">
+            
+                <a href="./#DisabledInput">
+            
+                    
+                    DisabledInput 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="./">
+            
+                <a href="./#ImageInput">
+            
+                    
+                    ImageInput 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="./">
+            
+                <a href="./#FileInput">
+            
+                    
+                    FileInput 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="./">
+            
+                <a href="./#LongTextInput">
+            
+                    
+                    LongTextInput 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="./">
+            
+                <a href="./#RadioButtonGroupInput">
+            
+                    
+                    RadioButtonGroupInput 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="./">
+            
+                <a href="./#ReferenceInput">
+            
+                    
+                    ReferenceInput 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="./">
+            
+                <a href="./#ReferenceArrayInput">
+            
+                    
+                    ReferenceArrayInput 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="./">
+            
+                <a href="./#RichTextInput">
+            
+                    
+                    RichTextInput 组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >输入组件</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="InputComponents">&#x8F93;&#x5165;&#x7EC4;&#x4EF6;</h1>
+<p>&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x7EC4;&#x4EF6;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x8F93;&#x5165;&#x6216;&#x4E00;&#x4E2A;&#x4E0B;&#x62C9;&#x5217;&#x8868;&#xFF0C;&#x4E00;&#x4E2A;&#x5355;&#x9009;&#x6309;&#x94AE;&#x5217;&#x8868;&#x7B49;&#x3002;&#x8FD9;&#x4E9B;&#x7EC4;&#x4EF6;&#x5141;&#x8BB8;&#x7F16;&#x8F91;&#x8BB0;&#x5F55;&#x5C5E;&#x6027;&#xFF0C;&#x5E76;&#x4E14;&#x5728;<code>&lt;Edit&gt;</code>&#xFF0C;<code>&lt;Create&gt;</code>&#x548C;<code>&lt;Filter&gt;</code>&#x89C6;&#x56FE;&#x4E2D;&#x662F;&#x5E38;&#x89C1;&#x7684;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/posts.js</span>
+<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;react&apos;</span>;
+<span class="hljs-keyword">import</span> { Edit, DisabledInput, LongTextInput, ReferenceInput, SelectInput, SimpleForm, TextInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PostEdit = (props) =&gt; (
+    &lt;Edit title={&lt;PostTitle /&gt;} {...props}&gt;
+        &lt;SimpleForm&gt;
+            &lt;DisabledInput source=&quot;id&quot; /&gt;
+            &lt;ReferenceInput label=&quot;User&quot; source=&quot;userId&quot; reference=&quot;users&quot;&gt;
+                &lt;SelectInput optionText=&quot;name&quot; /&gt;
+            &lt;/ReferenceInput&gt;
+            &lt;TextInput source=&quot;title&quot; /&gt;
+            &lt;LongTextInput source=&quot;body&quot; /&gt;
+        &lt;/SimpleForm&gt;
+    &lt;/Edit&gt;
+);
+</code></pre>
+<p>&#x6240;&#x6709;&#x8F93;&#x5165;&#x7EC4;&#x4EF6;&#x90FD;&#x63A5;&#x53D7;&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;&#xFF1A;</p>
+<ul>
+<li><code>source</code>&#xFF1A;&#x5230;view/edit&#x7684;&#x60A8;&#x7684;&#x5B9E;&#x4F53;&#x7684;&#x5C5E;&#x6027;&#x540D;&#x79F0;&#x3002;&#x6B64;&#x5C5E;&#x6027;&#x662F;&#x5FC5;&#x9700;&#x7684;&#x3002;</li>
+<li><code>defaultValue</code>&#xFF1A;&#x5F53;&#x5C5E;&#x6027;&#x4E3A;<code>null</code>&#x6216;<code>undefined</code>&#x65F6;&#x8981;&#x8BBE;&#x7F6E;&#x7684;&#x503C;&#x3002;</li>
+<li><code>validate</code>&#xFF1A;&#x5F53;&#x524D;&#x5C5E;&#x6027;&#x7684;&#x9A8C;&#x8BC1;&#x89C4;&#x5219;&#xFF08;&#x8BF7;&#x53C2;&#x9605;<a href="CreateEdit.html#validation">Validation Documentation</a>&#xFF09;</li>
+<li><code>label</code>&#xFF1A;&#x7528;&#x4F5C;&#x8F93;&#x5165;&#x6807;&#x7B7E;&#x7684;&#x8868;&#x5934;&#x3002;&#x7701;&#x7565;&#x65F6;&#x9ED8;&#x8BA4;&#x4E3A;<code>source</code>&#x3002;</li>
+<li><code>style</code>&#xFF1A;&#x7528;&#x4E8E;&#x5B9A;&#x5236;&#x5B57;&#x6BB5;&#x5BB9;&#x5668;&#x7684;&#x5916;&#x89C2;&#x548C;&#x98CE;&#x683C;&#x7684;&#x6837;&#x5F0F;&#x5BF9;&#x8C61;&#xFF08;&#x4F8B;&#x5982;&#x8868;&#x5355;&#x4E2D;&#x7684;<code>&lt;div&gt;</code>&#xFF09;&#x3002;</li>
+<li><code>elStyle</code>&#xFF1A;&#x4E00;&#x4E2A;&#x6837;&#x5F0F;&#x5BF9;&#x8C61;&#xFF0C;&#x7528;&#x4E8E;&#x5B9A;&#x5236;&#x5B57;&#x6BB5;&#x5143;&#x7D20;&#x672C;&#x8EAB;&#x7684;&#x5916;&#x89C2;&#x3002;</li>
+</ul>
+<p>&#x5176;&#x4ED6;&#x4E00;&#x4E9B;&#x5C5E;&#x6027;&#x9010;&#x6B65;&#x5B9E;&#x73B0;&#x3002;<code>&lt;TextInput /&gt;</code>&#x548C;<code>&lt;NumberInput /&gt;</code>&#x8F93;&#x5165;&#x4E5F;&#x63A5;&#x53D7;&#x4EE5;&#x4E0B;&#x5C5E;&#x6027;&#xFF1A;</p>
+<ul>
+<li><code>onBlur</code>&#xFF1A;&#x5F53;&#x8868;&#x5355;&#x57DF;&#x5931;&#x53BB;&#x7126;&#x70B9;&#x65F6;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#x3002;&#x5B83;&#x5E0C;&#x671B;&#x6536;&#x5230;<a href="https://facebook.github.io/react/docs/events.html" target="_blank">React SyntheticEvent</a>&#x548C;&#x8BE5;&#x5B57;&#x6BB5;&#x7684;&#x5F53;&#x524D;&#x503C;&#x7684;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x3002;</li>
+<li><code>onChange</code>&#xFF1A;&#x5728;&#x66F4;&#x6539;&#x8868;&#x5355;&#x5B57;&#x6BB5;&#x65F6;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#x3002;&#x5B83;&#x5E0C;&#x671B;&#x6536;&#x5230;<a href="https://facebook.github.io/react/docs/events.html" target="_blank">React SyntheticEvent</a>&#x548C;&#x8BE5;&#x5B57;&#x6BB5;&#x7684;&#x65B0;&#x503C;&#x7684;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x3002;</li>
+<li><code>onFocus</code>&#xFF1A;&#x5F53;&#x5B57;&#x6BB5;&#x83B7;&#x53D6;&#x7126;&#x70B9;&#x65F6;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#x3002;&#x5B83;&#x4EE5;<code>event</code>&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x3002;</li>
+</ul>
+<pre><code class="lang-jsx">&lt;TextInput source=<span class="hljs-string">&quot;zb_title&quot;</span> label=<span class="hljs-string">&quot;Title&quot;</span> /&gt;
+</code></pre>
+<p><strong>&#x63D0;&#x793A;</strong>&#xFF1A;&#x5982;&#x679C;&#x7F16;&#x8F91;&#x4E00;&#x6761;&#x5177;&#x6709;&#x590D;&#x6742;&#x7ED3;&#x6784;&#x7684;&#x8BB0;&#x5F55;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8DEF;&#x5F84;&#x4F5C;&#x4E3A;<code>source</code>&#x53C2;&#x6570;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;API&#x8FD4;&#x56DE;&#x4EE5;&#x4E0B;&#x201C;book&#x201D;&#x8BB0;&#x5F55;&#xFF1A;</p>
+<pre><code class="lang-jsx">{
+    id: <span class="hljs-number">1234</span>,
+    title: <span class="hljs-string">&apos;War and Peace&apos;</span>,
+    author: {
+        firstName: <span class="hljs-string">&apos;Leo&apos;</span>,
+        lastName: <span class="hljs-string">&apos;Tolstoi&apos;</span>
+    }
+}
+</code></pre>
+<p>&#x7136;&#x540E;&#x4F60;&#x53EF;&#x4EE5;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x6587;&#x672C;&#x8F93;&#x5165;&#x6765;&#x7F16;&#x8F91;&#x4F5C;&#x8005;&#x540D;&#x5B57;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-jsx">&lt;TextInput source=<span class="hljs-string">&quot;author.firstName&quot;</span> /&gt;
+</code></pre>
+<p><strong>&#x63D0;&#x793A;</strong>&#xFF1A;&#x5982;&#x679C;&#x60A8;&#x7684;&#x754C;&#x9762;&#x5FC5;&#x987B;&#x652F;&#x6301;&#x591A;&#x79CD;&#x8BED;&#x8A00;&#xFF0C;&#x8BF7;&#x52FF;&#x4F7F;&#x7528;<code>label</code>&#xFF0C;&#x5E76;&#x5C06;&#x672C;&#x5730;&#x5316;&#x6807;&#x7B7E;&#x653E;&#x5728;&#x5B57;&#x5178;&#x4E2D;&#x3002;&#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;<a href="Translation.html#translating-resource-and-field-names">Translation documentation</a>&#x3002;</p>
+<h3 id="AutocompleteInput"><code>&lt;AutocompleteInput&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p>&#x8981;&#x8BA9;&#x7528;&#x6237;&#x4F7F;&#x7528;&#x81EA;&#x52A8;&#x586B;&#x5145;&#x7684;&#x4E0B;&#x62C9;&#x5217;&#x8868;&#x9009;&#x62E9;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x503C;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;<code>&lt;AutocompleteInput&gt;</code>&#x3002; &#x5B83;&#x4F7F;&#x7528;<a href="http://www.material-ui.com/#/components/auto-complete" target="_blank">Material ui&#x7684;<code>&lt;AutoComplete&gt;</code>&#x7EC4;&#x4EF6;</a>&#x548C;<code>fuzzySearch</code>&#x8FC7;&#x6EE4;&#x5668;&#x3002;&#x8BBE;&#x7F6E;<code>choices</code>&#x5C5E;&#x6027;&#x6765;&#x786E;&#x5B9A;&#x9009;&#x9879;&#x5217;&#x8868;&#xFF08;&#x4F7F;&#x7528;<code>id</code>&#xFF0C;<code>name</code>&#x5143;&#x7EC4;&#xFF09;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { AutocompleteInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">AutocompleteInput</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;category&quot;</span> <span class="hljs-attr">choices</span>=<span class="hljs-string">{[</span>
+    { <span class="hljs-attr">id:</span> &apos;<span class="hljs-attr">programming</span>&apos;, <span class="hljs-attr">name:</span> &apos;<span class="hljs-attr">Programming</span>&apos; },
+    { <span class="hljs-attr">id:</span> &apos;<span class="hljs-attr">lifestyle</span>&apos;, <span class="hljs-attr">name:</span> &apos;<span class="hljs-attr">Lifestyle</span>&apos; },
+    { <span class="hljs-attr">id:</span> &apos;<span class="hljs-attr">photography</span>&apos;, <span class="hljs-attr">name:</span> &apos;<span class="hljs-attr">Photography</span>&apos; },
+]} /&gt;</span>
+</span></code></pre>
+<p>&#x60A8;&#x8FD8;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x4E8E;&#x9009;&#x9879;&#x540D;&#x79F0;&#x548C;&#x503C;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x8981;&#x5F52;&#x529F;&#x4E8E;<code>optionText</code>&#x548C;<code>optionValue</code>&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> choices = [
+    { _id: <span class="hljs-number">123</span>, full_name: <span class="hljs-string">&apos;Leo Tolstoi&apos;</span>, sex: <span class="hljs-string">&apos;M&apos;</span> },
+    { _id: <span class="hljs-number">456</span>, full_name: <span class="hljs-string">&apos;Jane Austen&apos;</span>, sex: <span class="hljs-string">&apos;F&apos;</span> },
+];
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">AutocompleteInput</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;author_id&quot;</span> <span class="hljs-attr">choices</span>=<span class="hljs-string">{choices}</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;full_name&quot;</span> <span class="hljs-attr">optionValue</span>=<span class="hljs-string">&quot;_id&quot;</span> /&gt;</span>
+</span></code></pre>
+<p><code>optionText</code>&#x4E5F;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x53EF;&#x4EE5;&#x968F;&#x610F;&#x8BBE;&#x7F6E;&#x9009;&#x9879;&#x6587;&#x672C;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> choices = [
+   { id: <span class="hljs-number">123</span>, first_name: <span class="hljs-string">&apos;Leo&apos;</span>, last_name: <span class="hljs-string">&apos;Tolstoi&apos;</span> },
+   { id: <span class="hljs-number">456</span>, first_name: <span class="hljs-string">&apos;Jane&apos;</span>, last_name: <span class="hljs-string">&apos;Austen&apos;</span> },
+];
+<span class="hljs-keyword">const</span> optionRenderer = choice =&gt; <span class="hljs-string">`<span class="hljs-subst">${choice.first_name}</span> <span class="hljs-subst">${choice.last_name}</span>`</span>;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">AutocompleteInput</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;author_id&quot;</span> <span class="hljs-attr">choices</span>=<span class="hljs-string">{choices}</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">{optionRenderer}</span> /&gt;</span>
+</span></code></pre>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x4E8E;&#x8FC7;&#x6EE4;&#x7ED3;&#x679C;&#x7684;<code>filter</code>&#x51FD;&#x6570;&#x3002;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5B83;&#x662F;<code>AutoComplete.fuzzyFilter</code>&#xFF0C;&#x4F46;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<a href="http://www.material-ui.com/#/components/auto-complete" target="_blank">&#x901A;&#x8FC7;<code>AutoComplete</code>&#x63D0;&#x4F9B;&#x7684;&#x529F;&#x80FD;</a>&#x7684;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x6216;&#x4F60;&#x81EA;&#x5DF1;&#x7684;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF08;<code>(searchText: string, key: string) =&gt; boolean</code>&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { AutocompleteInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+<span class="hljs-keyword">import</span> AutoComplete <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;material-ui/AutoComplete&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">AutocompleteInput</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;category&quot;</span> <span class="hljs-attr">filter</span>=<span class="hljs-string">{AutoComplete.caseInsensitiveFilter}</span> <span class="hljs-attr">choices</span>=<span class="hljs-string">{choices}</span> /&gt;</span>
+</span></code></pre>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x7FFB;&#x8BD1;&#x9009;&#x62E9;&#x9879;&#xFF0C;&#x56E0;&#x6B64;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7FFB;&#x8BD1;&#x6807;&#x8BC6;&#x7B26;&#x4F5C;&#x4E3A;&#x9009;&#x62E9;&#x9879;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> choices = [
+   { id: <span class="hljs-string">&apos;M&apos;</span>, name: <span class="hljs-string">&apos;myroot.gender.male&apos;</span> },
+   { id: <span class="hljs-string">&apos;F&apos;</span>, name: <span class="hljs-string">&apos;myroot.gender.female&apos;</span> },
+];
+</code></pre>
+<p>&#x7136;&#x800C;&#xFF0C;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF08;&#x4F8B;&#x5982;&#x5728;<code>&lt;ReferenceInput&gt;</code>&#x5185;&#xFF09;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x4E0D;&#x5E0C;&#x671B;&#x7FFB;&#x8BD1;&#x8BE5;&#x9009;&#x9879;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8BF7;&#x5C06;<code>translateChoice</code>&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x4E3A;false&#x3002;</p>
+<pre><code class="lang-jsx">&lt;AutocompleteInput source=<span class="hljs-string">&quot;gender&quot;</span> choices={choices} translateChoice={<span class="hljs-literal">false</span>}/&gt;
+</code></pre>
+<p>&#x6700;&#x540E;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x8986;&#x76D6;Material UI&#x7684;<code>&lt;AutoComplete&gt;</code>&#x5C5E;&#x6027;&#x7684;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;<code>options</code>&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code class="lang-jsx">&lt;AutocompleteInput source=<span class="hljs-string">&quot;category&quot;</span> options={{
+    fullWidth: <span class="hljs-literal">true</span>,
+    filter: AutoComplete.fuzzyFilter,
+}} /&gt;
+</code></pre>
+<p>&#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;<a href="http://www.material-ui.com/#/components/auto-complete" target="_blank">Material UI Autocomplete documentation</a>&#x3002;</p>
+<p><strong>&#x63D0;&#x793A;</strong>&#xFF1A;&#x5982;&#x679C;&#x8981;&#x4F7F;&#x7528;&#x76F8;&#x5173;&#x8BB0;&#x5F55;&#x7684;&#x5217;&#x8868;&#x586B;&#x5145;<code>choices</code>&#x5C5E;&#x6027;&#xFF0C;&#x5219;&#x5E94;&#x4F7F;&#x7528;<a href="#referenceinput"><code>&lt;ReferenceInput&gt;</code></a>&#x88C5;&#x9970;<code>&lt;AutocompleteInput&gt;</code>&#xFF0C;&#x5E76;&#x5C06;<code>choices</code>&#x7559;&#x7A7A;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { AutocompleteInput, ReferenceInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>
+
+&lt;ReferenceInput label=<span class="hljs-string">&quot;Post&quot;</span> source=<span class="hljs-string">&quot;post_id&quot;</span> reference=<span class="hljs-string">&quot;posts&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">AutocompleteInput</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;title&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ReferenceInput</span>&gt;</span></span>
+</code></pre>
+<p><strong>&#x63D0;&#x793A;</strong>&#xFF1A;<code>&lt;AutocompleteInput&gt;</code>&#x662F;&#x4E00;&#x4E2A;&#x65E0;&#x72B6;&#x6001;&#x7EC4;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x5B83;&#x53EA;&#x5141;&#x8BB8;<em>&#x8FC7;&#x6EE4;</em>&#x9009;&#x62E9;&#x5217;&#x8868;&#xFF0C;&#x800C;&#x4E0D;&#x662F;<em>&#x6269;&#x5C55;</em>&#x3002; &#x5982;&#x679C;&#x60A8;&#x9700;&#x8981;&#x6839;&#x636E;<code>fetch</code>&#x8C03;&#x7528;&#x7684;&#x7ED3;&#x679C;&#x586B;&#x5145;&#x9009;&#x9879;&#x5217;&#x8868;&#xFF08;&#x5982;&#x679C;<a href="#referenceinput"><code>&lt;ReferenceInput&gt;</code></a>&#x4E0D;&#x80FD;&#x6EE1;&#x8DB3;&#x60A8;&#x7684;&#x9700;&#x8981;&#xFF09;&#xFF0C;&#x4F60;&#x5F97;<a href="#writing-your-own-input-component">&#x7F16;&#x5199;&#x81EA;&#x5DF1;&#x7684;&#x8F93;&#x5165;&#x7EC4;&#x4EF6;</a>&#x57FA;&#x4E8E;material-ui <code>&lt;AutoComplete&gt;</code>&#x7EC4;&#x4EF6;&#x3002;</p>
+<p><strong>&#x63D0;&#x793A;</strong>&#xFF1A;Admin-on-rest&#x7684;<code>&lt;AutocompleteInput&gt;</code>&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5927;&#x5199;&#x5B57;&#x6BCD;A&#xFF0C;&#x800C;material-ui&#x7684;<code>&lt;AutoComplete&gt;</code>&#x6709;&#x4E00;&#x4E2A;&#x5927;&#x5199;&#x5B57;&#x6BCD;A&#x548C;&#x4E00;&#x4E2A;&#x5927;&#x5199;&#x5B57;&#x6BCD;C&#x3002;&#x4E0D;&#x8981;&#x6DF7;&#x6DC6;&#x7EC4;&#x4EF6;&#xFF01;</p>
+<h3 id="BooleanInput-NullableBooleanInput"><code>&lt;BooleanInput&gt;</code>&#x4E0E;<code>&lt;NullableBooleanInput&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p><code>&lt;BooleanInput /&gt;</code>&#x662F;&#x4E00;&#x4E2A;&#x5207;&#x6362;&#x6309;&#x94AE;&#xFF0C;&#x5141;&#x8BB8;&#x60A8;&#x628A;<code>true</code>&#x6216;<code>false</code>&#x503C;&#x5F52;&#x4E8E;&#x4E00;&#x4E2A;&#x8BB0;&#x5F55;&#x5B57;&#x6BB5;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { BooleanInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">BooleanInput</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;Allow comments?&quot;</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;commentable&quot;</span> /&gt;</span>
+</span></code></pre>
+<p><img src="https://marmelab.com/admin-on-rest/img/boolean-input.png" alt="BooleanInput"></p>
+<p>&#x6B64;&#x8F93;&#x5165;&#x4E0D;&#x5904;&#x7406;<code>null</code>&#x503C;&#x3002;&#x5982;&#x679C;&#x60A8;&#x5FC5;&#x987B;&#x5904;&#x7406;&#x975E;&#x8BBE;&#x7F6E;&#x7684;&#x5E03;&#x5C14;&#x503C;&#xFF0C;&#x5219;&#x9700;&#x8981;<code>&lt;NullableBooleanInput /&gt;</code>&#x7EC4;&#x4EF6;&#x3002;</p>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>options</code>&#x5C5E;&#x6027;&#x4F20;&#x9012;&#x88AB;Material UI<code>Toggle</code>&#x7EC4;&#x4EF6;&#x652F;&#x6301;&#x7684;&#x4EFB;&#x4F55;&#x9009;&#x9879;&#x3002;</p>
+<pre><code class="lang-jsx">&lt;BooleanInput source=<span class="hljs-string">&quot;finished&quot;</span> options={{
+    labelPosition: <span class="hljs-string">&apos;right&apos;</span>
+}} /&gt;
+</code></pre>
+<p>&#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;<a href="http://www.material-ui.com/#/components/toggle" target="_blank">Material UI Toggle documentation</a>&#x3002;</p>
+<p><code>&lt;NullableBooleanInput /&gt;</code>&#x6E32;&#x67D3;&#x4E3A;&#x4E0B;&#x62C9;&#x5217;&#x8868;&#xFF0C;&#x5141;&#x8BB8;&#x5728;true&#xFF0C;false&#x548C;null&#x503C;&#x4E4B;&#x95F4;&#x8FDB;&#x884C;&#x9009;&#x62E9;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { NullableBooleanInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">NullableBooleanInput</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;Allow comments?&quot;</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;commentable&quot;</span> /&gt;</span>
+</span></code></pre>
+<p><img src="https://marmelab.com/admin-on-rest/img/nullable-boolean-input.png" alt="NullableBooleanInput"></p>
+<h3 id="CheckboxGroupInput"><code>&lt;CheckboxGroupInput&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p>&#x5982;&#x679C;&#x8981;&#x8BA9;&#x7528;&#x6237;&#x901A;&#x8FC7;&#x663E;&#x793A;&#x6240;&#x6709;&#x503C;&#x6765;&#x9009;&#x62E9;&#x53EF;&#x80FD;&#x503C;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x591A;&#x4E2A;&#x503C;&#xFF0C;&#x5219;<code>&lt;CheckboxGroupInput&gt;</code>&#x662F;&#x6B63;&#x786E;&#x7684;&#x7EC4;&#x4EF6;&#x3002; &#x8BBE;&#x7F6E;<code>choices</code>&#x5C5E;&#x6027;&#x6765;&#x786E;&#x5B9A;&#x9009;&#x9879;&#xFF08;&#x4F7F;&#x7528;<code>id</code>&#xFF0C;<code>name</code>&#x5143;&#x7EC4;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { CheckboxGroupInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">CheckboxGroupInput</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;category&quot;</span> <span class="hljs-attr">choices</span>=<span class="hljs-string">{[</span>
+    { <span class="hljs-attr">id:</span> &apos;<span class="hljs-attr">programming</span>&apos;, <span class="hljs-attr">name:</span> &apos;<span class="hljs-attr">Programming</span>&apos; },
+    { <span class="hljs-attr">id:</span> &apos;<span class="hljs-attr">lifestyle</span>&apos;, <span class="hljs-attr">name:</span> &apos;<span class="hljs-attr">Lifestyle</span>&apos; },
+    { <span class="hljs-attr">id:</span> &apos;<span class="hljs-attr">photography</span>&apos;, <span class="hljs-attr">name:</span> &apos;<span class="hljs-attr">Photography</span>&apos; },
+]} /&gt;</span>
+</span></code></pre>
+<p><img src="https://marmelab.com/admin-on-rest/img/checkbox-group-input.png" alt="CheckboxGroupInput"></p>
+<p>&#x60A8;&#x8FD8;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x4E8E;&#x9009;&#x9879;&#x540D;&#x79F0;&#x548C;&#x503C;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x8981;&#x5F52;&#x529F;&#x4E8E;<code>optionText</code>&#x548C;<code>optionValue</code>&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> choices = [
+    { _id: <span class="hljs-number">123</span>, full_name: <span class="hljs-string">&apos;Leo Tolstoi&apos;</span>, sex: <span class="hljs-string">&apos;M&apos;</span> },
+    { _id: <span class="hljs-number">456</span>, full_name: <span class="hljs-string">&apos;Jane Austen&apos;</span>, sex: <span class="hljs-string">&apos;F&apos;</span> },
+];
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">CheckboxGroupInput</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;author_id&quot;</span> <span class="hljs-attr">choices</span>=<span class="hljs-string">{choices}</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;full_name&quot;</span> <span class="hljs-attr">optionValue</span>=<span class="hljs-string">&quot;_id&quot;</span> /&gt;</span>
+</span></code></pre>
+<p><code>optionText</code>&#x4E5F;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x53EF;&#x4EE5;&#x968F;&#x610F;&#x8BBE;&#x7F6E;&#x9009;&#x9879;&#x6587;&#x672C;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> choices = [
+   { id: <span class="hljs-number">123</span>, first_name: <span class="hljs-string">&apos;Leo&apos;</span>, last_name: <span class="hljs-string">&apos;Tolstoi&apos;</span> },
+   { id: <span class="hljs-number">456</span>, first_name: <span class="hljs-string">&apos;Jane&apos;</span>, last_name: <span class="hljs-string">&apos;Austen&apos;</span> },
+];
+<span class="hljs-keyword">const</span> optionRenderer = choice =&gt; <span class="hljs-string">`<span class="hljs-subst">${choice.first_name}</span> <span class="hljs-subst">${choice.last_name}</span>`</span>;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">CheckboxGroupInput</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;author_id&quot;</span> <span class="hljs-attr">choices</span>=<span class="hljs-string">{choices}</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">{optionRenderer}</span> /&gt;</span>
+</span></code></pre>
+<p><code>optionText</code>&#x4E5F;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;React&#x5143;&#x7D20;&#xFF0C;&#x5B83;&#x5C06;&#x88AB;&#x514B;&#x9686;&#xFF0C;&#x5E76;&#x63A5;&#x6536;&#x76F8;&#x5173;&#x8054;&#x9009;&#x9879;&#x4F5C;&#x4E3A;<code>record</code>&#x5C5E;&#x6027;&#x3002; &#x60A8;&#x53EF;&#x4EE5;&#x5728;&#x90A3;&#x91CC;&#x4F7F;&#x7528;Field&#x7EC4;&#x4EF6;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> choices = [
+   { id: <span class="hljs-number">123</span>, first_name: <span class="hljs-string">&apos;Leo&apos;</span>, last_name: <span class="hljs-string">&apos;Tolstoi&apos;</span> },
+   { id: <span class="hljs-number">456</span>, first_name: <span class="hljs-string">&apos;Jane&apos;</span>, last_name: <span class="hljs-string">&apos;Austen&apos;</span> },
+];
+<span class="hljs-keyword">const</span> FullNameField = ({ record }) =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{record.first_name} {record.last_name}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>;
+&lt;CheckboxGroupInput source=&quot;gender&quot; choices={choices} optionText={&lt;FullNameField /&gt;}/&gt;
+</code></pre>
+<p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x7FFB;&#x8BD1;&#x9009;&#x62E9;&#x9879;&#xFF0C;&#x56E0;&#x6B64;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7FFB;&#x8BD1;&#x6807;&#x8BC6;&#x7B26;&#x4F5C;&#x4E3A;&#x9009;&#x62E9;&#x9879;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> choices = [
+    { id: <span class="hljs-string">&apos;programming&apos;</span>, name: <span class="hljs-string">&apos;myroot.category.programming&apos;</span> },
+    { id: <span class="hljs-string">&apos;lifestyle&apos;</span>, name: <span class="hljs-string">&apos;myroot.category.lifestyle&apos;</span> },
+    { id: <span class="hljs-string">&apos;photography&apos;</span>, name: <span class="hljs-string">&apos;myroot.category.photography&apos;</span> },
+];
+</code></pre>
+<p>&#x7136;&#x800C;&#xFF0C;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF08;&#x4F8B;&#x5982;&#x5728;<code>&lt;ReferenceInput&gt;</code>&#x5185;&#xFF09;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x4E0D;&#x5E0C;&#x671B;&#x7FFB;&#x8BD1;&#x8BE5;&#x9009;&#x62E9;&#x9879;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8BF7;&#x5C06;<code>translateChoice</code>&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x4E3A;false&#x3002;</p>
+<pre><code class="lang-jsx">&lt;CheckboxGroupInput source=<span class="hljs-string">&quot;gender&quot;</span> choices={choices} translateChoice={<span class="hljs-literal">false</span>}/&gt;
+</code></pre>
+<p>&#x6700;&#x540E;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x8986;&#x76D6;&#x4EFB;&#x4F55;Material UI&#x7684;<code>&lt;Checkbox&gt;</code>&#x5C5E;&#x6027;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;<code>options</code>&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code class="lang-jsx">&lt;CheckboxGroupInput source=<span class="hljs-string">&quot;category&quot;</span> options={{
+    labelPosition: <span class="hljs-string">&apos;right&apos;</span>
+}} /&gt;
+</code></pre>
+<p>&#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;<a href="http://www.material-ui.com/#/components/checkbox" target="_blank">Material UI Checkbox documentation</a>&#x3002;</p>
+<h3 id="DateInput"><code>&lt;DateInput&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p>&#x7406;&#x60F3;&#x7684;&#x7F16;&#x8F91;&#x65E5;&#x671F;&#xFF0C;<code>&lt;DateInput&gt;</code>&#x5448;&#x73B0;&#x4E00;&#x4E2A;&#x7F8E;&#x4E3D;&#x7684;&#x5177;&#x6709;&#x5B8C;&#x5168;&#x672C;&#x5730;&#x5316;&#x652F;&#x6301;&#x7684;<a href="http://www.material-ui.com/#/components/date-picker" target="_blank">Date Picker</a>&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { DateInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">DateInput</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;published_at&quot;</span> /&gt;</span>
+</span></code></pre>
+<p><img src="https://marmelab.com/admin-on-rest/img/date-input.gif" alt="DateInput"></p>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;<code>options</code>&#x5C5E;&#x6027;&#x8986;&#x5199;Material UI&#x7684;<code>&lt;DatePicker&gt;</code>&#x7684;&#x4EFB;&#x4F55;&#x5C5E;&#x6027;&#x3002;</p>
+<pre><code class="lang-jsx">&lt;DateInput source=<span class="hljs-string">&quot;published_at&quot;</span> options={{
+    mode: <span class="hljs-string">&apos;landscape&apos;</span>,
+    minDate: <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(),
+    hintText: <span class="hljs-string">&apos;Choisissez une date&apos;</span>,
+    DateTimeFormat,
+    okLabel: <span class="hljs-string">&apos;OK&apos;</span>,
+    cancelLabel: <span class="hljs-string">&apos;Annuler&apos;</span>
+    locale: <span class="hljs-string">&apos;fr&apos;</span>
+}} /&gt;
+</code></pre>
+<p>&#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;<a href="http://www.material-ui.com/#/components/date-picker" target="_blank">Material UI Datepicker documentation</a>&#x3002;</p>
+<h3 id="DisabledInput"><code>&lt;DisabledInput&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p>&#x5F53;&#x60A8;&#x5E0C;&#x671B;&#x5728;&#x4E00;&#x4E2A;<code>&lt;Edit&gt;</code>&#x8868;&#x5355;&#x4E2D;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x8BB0;&#x5F55;&#x5C5E;&#x6027;&#x65F6;&#xFF0C;&#x4E0D;&#x8981;&#x8BA9;&#x7528;&#x6237;&#x66F4;&#x65B0;&#x5B83;&#xFF08;&#x4F8B;&#x5982;&#x81EA;&#x52A8;&#x9012;&#x589E;&#x7684;&#x4E3B;&#x952E;&#xFF09;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;<code>&lt;DisabledInput&gt;</code>&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { DisabledInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">DisabledInput</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;id&quot;</span> /&gt;</span>
+</span></code></pre>
+<p><img src="https://marmelab.com/admin-on-rest/img/disabled-input.png" alt="DisabledInput"></p>
+<p><strong>&#x63D0;&#x793A;</strong>&#xFF1A;&#x8981;&#x5C06;&#x4E0D;&#x53EF;&#x7F16;&#x8F91;&#x7684;&#x5B57;&#x6BB5;&#x6DFB;&#x52A0;&#x5230;<code>&lt;Edit&gt;</code>&#x89C6;&#x56FE;&#x4E2D;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;admin-on-rest&#x5176;&#x4E2D;&#x4E00;&#x4E2A;<code>Field</code>&#x7EC4;&#x4EF6;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/posts.js</span>
+<span class="hljs-keyword">import</span> { Edit, LongTextInput, SimpleForm, TextField } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PostEdit = (props) =&gt; (
+    &lt;Edit {...props}&gt;
+        &lt;SimpleForm&gt;
+            &lt;TextField source=&quot;title&quot; /&gt; {/* NOT EDITABLE */}
+            &lt;LongTextInput source=&quot;body&quot; /&gt;
+        &lt;/SimpleForm&gt;
+    &lt;/Edit&gt;
+);
+</code></pre>
+<p><strong>&#x63D0;&#x793A;</strong>&#xFF1A;&#x60A8;&#x751A;&#x81F3;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x81EA;&#x5DF1;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x53EA;&#x8981;&#x5B83;&#x63A5;&#x53D7;<code>record</code>&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in src/posts.js</span>
+<span class="hljs-keyword">import</span> { Edit, LongTextInput, SimpleForm } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+<span class="hljs-keyword">const</span> titleStyle = { textOverflow: <span class="hljs-string">&apos;ellipsis&apos;</span>, overflow: <span class="hljs-string">&apos;hidden&apos;</span>, maxWidth: <span class="hljs-string">&apos;20em&apos;</span> };
+<span class="hljs-keyword">const</span> Title = ({ record }) =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">style</span>=<span class="hljs-string">{titleStyle}</span>&gt;</span>{record.title}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>;
+Title.defaultProps = {
+    addLabel: <span class="hljs-literal">true</span>,
+};
+
+<span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> PostEdit = (props) =&gt; (
+    &lt;Edit {...props}&gt;
+        &lt;SimpleForm&gt;
+            &lt;Title label=&quot;Title&quot; /&gt;
+            &lt;LongTextInput source=&quot;body&quot; /&gt;
+        &lt;/SimpleForm&gt;
+    &lt;/Edit&gt;
+);
+</code></pre>
+<h3 id="ImageInput"><code>&lt;ImageInput&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p><code>&lt;ImageInput&gt;</code>&#x5141;&#x8BB8;&#x4F7F;&#x7528;<a href="https://github.com/okonet/react-dropzone" target="_blank">react-dropzone</a>&#x4E0A;&#x4F20;&#x4E00;&#x4E9B;&#x56FE;&#x7247;&#x3002;</p>
+<p><img src="https://marmelab.com/admin-on-rest/img/image-input.png" alt="ImageInput"></p>
+<p>&#x4F7F;&#x7528;<code>&lt;ImageInput&gt;</code>&#x5B50;&#x7EA7;&#x542F;&#x7528;&#x9884;&#x89C8;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-jsx">&lt;ImageInput source=<span class="hljs-string">&quot;pictures&quot;</span> label=<span class="hljs-string">&quot;Related pictures&quot;</span> accept=<span class="hljs-string">&quot;image/*&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ImageField</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;src&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;title&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ImageInput</span>&gt;</span></span>
+</code></pre>
+<p>&#x7F16;&#x5199;&#x7528;&#x4E8E;&#x663E;&#x793A;&#x5F53;&#x524D;&#x503C;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x5B57;&#x6BB5;&#x7EC4;&#x4EF6;&#x5F88;&#x7B80;&#x5355;&#xFF1A;&#x5B83;&#x662F;&#x6807;&#x51C6;&#x7684;<a href="Fields.html#writing_your_own_field_component">field</a>&#x3002;</p>
+<p>&#x5F53;&#x63A5;&#x6536;&#x5230;<strong>&#x65B0;&#x7684;</strong>&#x6587;&#x4EF6;&#x65F6;&#xFF0C;<code>ImageInput</code>&#x4F1A;&#x5C06;&#x4E00;&#x4E2A;<code>rawFile</code>&#x5C5E;&#x6027;&#x6DFB;&#x52A0;&#x5230;&#x4F5C;&#x4E3A;&#x5B50;&#x7EA7;<code>record</code>&#x5C5E;&#x6027;&#x4F20;&#x9012;&#x7684;&#x5BF9;&#x8C61;&#x4E2D;&#x3002; &#x8FD9;&#x4E2A;<code>rawFile</code>&#x662F;&#x65B0;&#x6DFB;&#x52A0;&#x7684;&#x6587;&#x4EF6;<a href="https://developer.mozilla.org/en-US/docs/Web/API/File" target="_blank">File</a>&#x7684;&#x5B9E;&#x4F8B;&#x3002;&#x8FD9;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x663E;&#x793A;&#x5173;&#x4E8E;&#x81EA;&#x5B9A;&#x4E49;&#x5B57;&#x6BB5;&#x4E2D;&#x7684;&#x5927;&#x5C0F;&#x6216;mimetype&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x9664;&#x4E86;admin-on-rest&#x90A3;&#x4E9B;&#x4E4B;&#x5916;&#xFF0C;<code>ImageInput</code>&#x7EC4;&#x4EF6;&#x8FD8;&#x63A5;&#x53D7;&#x6240;&#x6709;<a href="https://github.com/okonet/react-dropzone#features" target="_blank">react-dropzone properties</a>&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x9700;&#x8981;&#x4E00;&#x6B21;&#x4E0A;&#x4F20;&#x51E0;&#x4E2A;&#x56FE;&#x50CF;&#xFF0C;&#x53EA;&#x9700;&#x5C06;<code>multiple</code>DropZone&#x5C5E;&#x6027;&#x6DFB;&#x52A0;&#x5230;&#x60A8;&#x7684;<code>&lt;ImageInput /&gt;</code>&#x5B57;&#x6BB5;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x9ED8;&#x8BA4;&#x7684;Dropzone&#x6807;&#x7B7E;&#x4E0D;&#x7B26;&#x5408;&#x60A8;&#x7684;&#x9700;&#x8981;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x4E00;&#x4E2A;<code>placeholder</code>&#x5C5E;&#x6027;&#x6765;&#x8986;&#x76D6;&#x5B83;&#x3002;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x4F55;React&#x53EF;&#x4EE5;&#x6E32;&#x67D3;&#x7684;&#x4E1C;&#x897F;&#xFF08;<code>PropTypes.node</code>&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-jsx">&lt;ImageInput source=<span class="hljs-string">&quot;pictures&quot;</span> label=<span class="hljs-string">&quot;Related pictures&quot;</span> accept=<span class="hljs-string">&quot;image/*&quot;</span> placeholder={<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Drop your file here<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>}&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ImageField</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;src&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;title&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ImageInput</span>&gt;</span></span>
+</code></pre>
+<p>&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x56FE;&#x50CF;&#x4E0A;&#x4F20;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;<a href="https://developer.mozilla.org/en/docs/Web/API/File" target="_blank">File</a>&#x5BF9;&#x8C61;&#x3002;&#x60A8;&#x6709;&#x8D23;&#x4EFB;&#x6839;&#x636E;&#x60A8;&#x7684;API&#x884C;&#x4E3A;&#x6765;&#x5904;&#x7406;&#x5B83;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x7F16;&#x7801;&#x4E3A;base64&#xFF0C;&#x6216;&#x5C06;&#x5176;&#x4F5C;&#x4E3A;&#x591A;&#x90E8;&#x5206;&#x8868;&#x5355;&#x6570;&#x636E;&#x53D1;&#x9001;&#x3002;&#x901A;&#x8FC7;&#x6269;&#x5C55;REST&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x67E5;&#x770B;<a href="RestClients.html#decorating-your-rest-client-example-of-file-upload">this example</a>&#x6709;&#x5173;base64&#x7F16;&#x7801;&#x6570;&#x636E;&#x3002;</p>
+<h3 id="FileInput"><code>&lt;FileInput&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p><code>&lt;FileInput&gt;</code>&#x5141;&#x8BB8;&#x4F7F;&#x7528;<a href="https://github.com/okonet/react-dropzone" target="_blank">react-dropzone</a>&#x4E0A;&#x4F20;&#x4E00;&#x4E9B;&#x6587;&#x4EF6;&#x3002;</p>
+<p><img src="https://marmelab.com/admin-on-rest/img/file-input.png" alt="FileInput"></p>
+<p>&#x4F7F;&#x7528;<code>&lt;FileInput&gt;</code>&#x5B50;&#x7EA7;&#x542F;&#x7528;&#x9884;&#x89C8;&#xFF08;&#x5B9E;&#x9645;&#x4E0A;&#x662F;&#x4E00;&#x4E2A;&#x7B80;&#x5355;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x5217;&#x8868;&#xFF09;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-jsx">&lt;FileInput source=<span class="hljs-string">&quot;files&quot;</span> label=<span class="hljs-string">&quot;Related files&quot;</span> accept=<span class="hljs-string">&quot;application/pdf&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">FileField</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;src&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;title&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">FileInput</span>&gt;</span></span>
+</code></pre>
+<p>&#x7F16;&#x5199;&#x7528;&#x4E8E;&#x663E;&#x793A;&#x5F53;&#x524D;&#x503C;&#x7684;&#x81EA;&#x5B9A;&#x4E49;&#x5B57;&#x6BB5;&#x7EC4;&#x4EF6;&#x5F88;&#x7B80;&#x5355;&#xFF1A;&#x5B83;&#x662F;&#x6807;&#x51C6;&#x7684;<a href="Fields.html#writing_your_own_field_component">field</a>&#x3002;</p>
+<p>&#x5F53;&#x63A5;&#x6536;&#x5230;<strong>&#x65B0;&#x7684;</strong>&#x6587;&#x4EF6;&#x65F6;&#xFF0C;<code>FileInput</code>&#x5C06;&#x4F1A;&#x5C06;&#x4E00;&#x4E2A;<code>rawFile</code>&#x5C5E;&#x6027;&#x6DFB;&#x52A0;&#x5230;&#x4F5C;&#x4E3A;&#x5B50;&#x7EA7;<code>record</code>&#x5C5E;&#x6027;&#x4F20;&#x9012;&#x7684;&#x5BF9;&#x8C61;&#x4E2D;&#x3002; &#x8FD9;&#x4E2A;<code>rawFile</code>&#x662F;&#x65B0;&#x6DFB;&#x52A0;&#x7684;&#x6587;&#x4EF6;&#x7684;<a href="https://developer.mozilla.org/en-US/docs/Web/API/File" target="_blank">File</a>&#x5B9E;&#x4F8B;&#x3002; &#x8FD9;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x663E;&#x793A;&#x5173;&#x4E8E;&#x81EA;&#x5B9A;&#x4E49;&#x5B57;&#x6BB5;&#x4E2D;&#x7684;&#x5927;&#x5C0F;&#x6216;mimetype&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x9664;&#x4E86;admin-on-rest&#x90A3;&#x4E9B;&#x4E4B;&#x5916;&#xFF0C;<code>FileInput</code>&#x7EC4;&#x4EF6;&#x8FD8;&#x63A5;&#x53D7;&#x6240;&#x6709;<a href="https://github.com/okonet/react-dropzone#features" target="_blank">react-dropzone properties</a>&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x9700;&#x8981;&#x4E00;&#x6B21;&#x4E0A;&#x4F20;&#x591A;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x53EA;&#x9700;&#x5C06;<code>multiple</code>DropZone&#x5C5E;&#x6027;&#x6DFB;&#x52A0;&#x5230;&#x60A8;&#x7684;<code>&lt;FileInput /&gt;</code>&#x5B57;&#x6BB5;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x9ED8;&#x8BA4;&#x7684;Dropzone&#x6807;&#x7B7E;&#x4E0D;&#x7B26;&#x5408;&#x60A8;&#x7684;&#x9700;&#x8981;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x4F20;&#x9012;&#x4E00;&#x4E2A;<code>placeholder</code>&#x5C5E;&#x6027;&#x6765;&#x8986;&#x76D6;&#x5B83;&#x3002;&#x5C5E;&#x6027;&#x53EF;&#x4EE5;&#x662F;&#x4EFB;&#x4F55;React&#x53EF;&#x4EE5;&#x6E32;&#x67D3;&#x7684;&#x4E1C;&#x897F;&#xFF08;<code>PropTypes.node</code>&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-jsx">&lt;FileInput source=<span class="hljs-string">&quot;files&quot;</span> label=<span class="hljs-string">&quot;Related files&quot;</span> accept=<span class="hljs-string">&quot;application/pdf&quot;</span> placeholder={<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Drop your file here<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span>}&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">ImageField</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;src&quot;</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;title&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">FileInput</span>&gt;</span></span>
+</code></pre>
+<p>&#x8BF7;&#x6CE8;&#x610F;&#xFF0C;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x8FD4;&#x56DE;<a href="https://developer.mozilla.org/en/docs/Web/API/File" target="_blank">File</a>&#x5BF9;&#x8C61;&#x3002; &#x60A8;&#x6709;&#x8D23;&#x4EFB;&#x6839;&#x636E;&#x60A8;&#x7684;API&#x884C;&#x4E3A;&#x6765;&#x5904;&#x7406;&#x5B83;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x5C06;&#x5176;&#x7F16;&#x7801;&#x4E3A;base64&#xFF0C;&#x6216;&#x5C06;&#x5176;&#x4F5C;&#x4E3A;&#x591A;&#x90E8;&#x5206;&#x8868;&#x5355;&#x6570;&#x636E;&#x53D1;&#x9001;&#x3002;&#x901A;&#x8FC7;&#x6269;&#x5C55;REST&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x67E5;&#x770B;<a href="RestClients.html#decorating-your-rest-client-example-of-file-upload">this example</a>&#x5173;&#x4E8E;base64&#x7F16;&#x7801;&#x6570;&#x636E;&#x3002;</p>
+<h3 id="LongTextInput"><code>&lt;LongTextInput&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p><code>&lt;LongTextInput&gt;</code>&#x662F;&#x591A;&#x884C;&#x6587;&#x672C;&#x503C;&#x7684;&#x6700;&#x4F73;&#x9009;&#x62E9;&#x3002;&#x5B83;&#x5448;&#x73B0;&#x4E3A;&#x4E00;&#x4E2A;&#x81EA;&#x52A8;&#x5C55;&#x5F00;&#x7684;&#x6587;&#x672C;&#x533A;&#x57DF;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { LongTextInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">LongTextInput</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;teaser&quot;</span> /&gt;</span>
+</span></code></pre>
+<p><img src="https://marmelab.com/admin-on-rest/img/long-text-input.png" alt="LongTextInput"></p>
+<h3 id="NumberInput"><code>&lt;NumberInput&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p><code>&lt;NumberInput&gt;</code>&#x8F6C;&#x6362;&#x4E3A;HTMl<code>&lt;input type=&quot;number&quot;&gt;</code>&#x3002;&#x7531;&#x4E8E;[known React bug]&#xFF08;<a href="https://github.com/facebook/react/issues/1425&#xFF09;&#xFF0C;&#x56E0;&#x6B64;&#x6570;&#x5B57;&#x503C;&#x662F;&#x5FC5;&#x9700;&#x7684;&#xFF0C;&#x5728;&#x90A3;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x8FD9;&#x963B;&#x6B62;&#x4E86;&#x4F7F;&#x7528;&#x66F4;&#x901A;&#x7528;&#x7684;[`" target="_blank">https://github.com/facebook/react/issues/1425&#xFF09;&#xFF0C;&#x56E0;&#x6B64;&#x6570;&#x5B57;&#x503C;&#x662F;&#x5FC5;&#x9700;&#x7684;&#xFF0C;&#x5728;&#x90A3;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x8FD9;&#x963B;&#x6B62;&#x4E86;&#x4F7F;&#x7528;&#x66F4;&#x901A;&#x7528;&#x7684;[`</a><textinput>`](#textinput)&#x3002;</textinput></p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { NumberInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">NumberInput</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;nb_views&quot;</span> /&gt;</span>
+</span></code></pre>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;<code>step</code>&#x5C5E;&#x6027;&#xFF08;&#x9ED8;&#x8BA4;&#x4E3A;&#x201C;any&#x201D;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-jsx">&lt;NumberInput source=<span class="hljs-string">&quot;nb_views&quot;</span> step={<span class="hljs-number">1</span>} /&gt;
+</code></pre>
+<h3 id="RadioButtonGroupInput"><code>&lt;RadioButtonGroupInput&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p>&#x5982;&#x679C;&#x8981;&#x8BA9;&#x7528;&#x6237;&#x901A;&#x8FC7;&#x663E;&#x793A;&#x7684;&#x6240;&#x6709;&#x503C;&#xFF08;&#x800C;&#x4E0D;&#x662F;&#x5C06;&#x5B83;&#x4EEC;&#x9690;&#x85CF;&#x5728;&#x4E0B;&#x62C9;&#x5217;&#x8868;&#x4E4B;&#x540E;&#xFF09;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x5728;&#x53EF;&#x80FD;&#x503C;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x503C;&#xFF0C;&#x5982;<a href="#selectinput"><code>&lt;SelectInput&gt;</code></a>&#xFF0C;<code>&lt;RadioButtonGroupInput&gt;</code> &#x662F;&#x6B63;&#x786E;&#x7684;&#x7EC4;&#x4EF6;&#x3002;&#x8BBE;&#x7F6E;<code>choices</code>&#x5C5E;&#x6027;&#x6765;&#x786E;&#x5B9A;&#x9009;&#x9879;&#xFF08;&#x4F7F;&#x7528;<code>id</code>&#xFF0C;<code>name</code>&#x5143;&#x7EC4;&#xFF09;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { RadioButtonGroupInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">RadioButtonGroupInput</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;category&quot;</span> <span class="hljs-attr">choices</span>=<span class="hljs-string">{[</span>
+    { <span class="hljs-attr">id:</span> &apos;<span class="hljs-attr">programming</span>&apos;, <span class="hljs-attr">name:</span> &apos;<span class="hljs-attr">Programming</span>&apos; },
+    { <span class="hljs-attr">id:</span> &apos;<span class="hljs-attr">lifestyle</span>&apos;, <span class="hljs-attr">name:</span> &apos;<span class="hljs-attr">Lifestyle</span>&apos; },
+    { <span class="hljs-attr">id:</span> &apos;<span class="hljs-attr">photography</span>&apos;, <span class="hljs-attr">name:</span> &apos;<span class="hljs-attr">Photography</span>&apos; },
+]} /&gt;</span>
+</span></code></pre>
+<p><img src="https://marmelab.com/admin-on-rest/img/radio-button-group-input.png" alt="RadioButtonGroupInput"></p>
+<p>&#x60A8;&#x8FD8;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x7528;&#x4E8E;&#x9009;&#x9879;&#x540D;&#x79F0;&#x548C;&#x503C;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x8981;&#x5F52;&#x529F;&#x4E8E;<code>optionText</code>&#x548C;<code>optionValue</code>&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> choices = [
+    { _id: <span class="hljs-number">123</span>, full_name: <span class="hljs-string">&apos;Leo Tolstoi&apos;</span>, sex: <span class="hljs-string">&apos;M&apos;</span> },
+    { _id: <span class="hljs-number">456</span>, full_name: <span class="hljs-string">&apos;Jane Austen&apos;</span>, sex: <span class="hljs-string">&apos;F&apos;</span> },
+];
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">RadioButtonGroupInput</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;author_id&quot;</span> <span class="hljs-attr">choices</span>=<span class="hljs-string">{choices}</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;full_name&quot;</span> <span class="hljs-attr">optionValue</span>=<span class="hljs-string">&quot;_id&quot;</span> /&gt;</span>
+</span></code></pre>
+<p><code>optionText</code>&#x4E5F;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x53EF;&#x4EE5;&#x968F;&#x610F;&#x8BBE;&#x7F6E;&#x9009;&#x9879;&#x6587;&#x672C;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> choices = [
+   { id: <span class="hljs-number">123</span>, first_name: <span class="hljs-string">&apos;Leo&apos;</span>, last_name: <span class="hljs-string">&apos;Tolstoi&apos;</span> },
+   { id: <span class="hljs-number">456</span>, first_name: <span class="hljs-string">&apos;Jane&apos;</span>, last_name: <span class="hljs-string">&apos;Austen&apos;</span> },
+];
+<span class="hljs-keyword">const</span> optionRenderer = choice =&gt; <span class="hljs-string">`<span class="hljs-subst">${choice.first_name}</span> <span class="hljs-subst">${choice.last_name}</span>`</span>;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">RadioButtonGroupInput</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;author_id&quot;</span> <span class="hljs-attr">choices</span>=<span class="hljs-string">{choices}</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">{optionRenderer}</span> /&gt;</span>
+</span></code></pre>
+<p><code>optionText</code>&#x4E5F;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;React&#x5143;&#x7D20;&#xFF0C;&#x5B83;&#x5C06;&#x88AB;&#x514B;&#x9686;&#xFF0C;&#x5E76;&#x63A5;&#x6536;&#x76F8;&#x5173;&#x9009;&#x62E9;&#x4F5C;&#x4E3A;<code>record</code>&#x5C5E;&#x6027;&#x3002;&#x60A8;&#x53EF;&#x4EE5;&#x5728;&#x90A3;&#x91CC;&#x4F7F;&#x7528;Field&#x7EC4;&#x4EF6;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> choices = [
+   { id: <span class="hljs-number">123</span>, first_name: <span class="hljs-string">&apos;Leo&apos;</span>, last_name: <span class="hljs-string">&apos;Tolstoi&apos;</span> },
+   { id: <span class="hljs-number">456</span>, first_name: <span class="hljs-string">&apos;Jane&apos;</span>, last_name: <span class="hljs-string">&apos;Austen&apos;</span> },
+];
+<span class="hljs-keyword">const</span> FullNameField = ({ record }) =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{record.first_name} {record.last_name}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>;
+&lt;RadioButtonGroupInput source=&quot;gender&quot; choices={choices} optionText={&lt;FullNameField /&gt;}/&gt;
+</code></pre>
+<p>&#x9009;&#x9879;&#x88AB;&#x9ED8;&#x8BA4;&#x7FFB;&#x8BD1;&#xFF0C;&#x56E0;&#x6B64;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7FFB;&#x8BD1;&#x6807;&#x8BC6;&#x7B26;&#x4F5C;&#x4E3A;&#x9009;&#x9879;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> choices = [
+   { id: <span class="hljs-string">&apos;M&apos;</span>, name: <span class="hljs-string">&apos;myroot.gender.male&apos;</span> },
+   { id: <span class="hljs-string">&apos;F&apos;</span>, name: <span class="hljs-string">&apos;myroot.gender.female&apos;</span> },
+];
+</code></pre>
+<p>&#x7136;&#x800C;&#xFF0C;&#x5728;&#x67D0;&#x4E9B;&#x60C5;&#x51B5;&#x4E0B;&#xFF08;&#x4F8B;&#x5982;&#x5728;<code>&lt;ReferenceInput&gt;</code>&#x5185;&#xFF09;&#xFF0C;&#x60A8;&#x53EF;&#x80FD;&#x4E0D;&#x5E0C;&#x671B;&#x7FFB;&#x8BD1;&#x8BE5;&#x9009;&#x9879;&#x3002;&#x5728;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x8BF7;&#x5C06;<code>translateChoice</code>&#x5C5E;&#x6027;&#x8BBE;&#x7F6E;&#x4E3A;false&#x3002;</p>
+<pre><code class="lang-jsx">&lt;RadioButtonGroupInput source=<span class="hljs-string">&quot;gender&quot;</span> choices={choices} translateChoice={<span class="hljs-literal">false</span>}/&gt;
+</code></pre>
+<p>&#x6700;&#x540E;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x8986;&#x76D6;Material UI&#x7684;<code>&lt;RadioButtonGroup&gt;</code>&#x4EFB;&#x4F55;&#x5C5E;&#x6027;&#xFF0C;&#x8BF7;&#x4F7F;&#x7528;<code>options</code>&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code class="lang-jsx">&lt;RadioButtonGroupInput source=<span class="hljs-string">&quot;category&quot;</span> options={{
+    labelPosition: <span class="hljs-string">&apos;right&apos;</span>
+}} /&gt;
+</code></pre>
+<p>&#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605;<a href="http://www.material-ui.com/#/components/radio-button" target="_blank">Material UI SelectField documentation</a>&#x3002;</p>
+<p>&#x63D0;&#x793A;&#xFF1A;&#x5982;&#x679C;&#x8981;&#x4F7F;&#x7528;&#x76F8;&#x5173;&#x8BB0;&#x5F55;&#x5217;&#x8868;&#x586B;&#x5145;<code>choices</code>&#x5C5E;&#x6027;&#xFF0C;&#x5219;&#x5E94;&#x4F7F;&#x7528;<a href="#referenceinput"><code>&lt;ReferenceInput&gt;</code></a>&#x88C5;&#x9970;<code>&lt;RadioButtonGroupInput&gt;</code>&#xFF0C;&#x5E76;&#x5C06;&#x9009;&#x9879;&#x7559;&#x7A7A;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { RadioButtonGroupInput, ReferenceInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>
+
+&lt;ReferenceInput label=<span class="hljs-string">&quot;Author&quot;</span> source=<span class="hljs-string">&quot;author_id&quot;</span> reference=<span class="hljs-string">&quot;authors&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">RadioButtonGroupInput</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;last_name&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ReferenceInput</span>&gt;</span></span>
+</code></pre>
+<h3 id="ReferenceInput"><code>&lt;ReferenceInput&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p>&#x5BF9;&#x4E8E;&#x5916;&#x952E;&#x503C;&#x4F7F;&#x7528;<code>&lt;ReferenceInput&gt;</code>&#xFF0C;&#x5373;&#x8BA9;&#x7528;&#x6237;&#x4ECE;&#x53E6;&#x4E00;&#x4E2A;REST&#x7AEF;&#x70B9;&#x4E2D;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x503C;&#x3002;&#x8BE5;&#x7EC4;&#x4EF6;&#x5728;&#x5F15;&#x7528;&#x8D44;&#x6E90;&#x4E2D;&#x83B7;&#x53D6;&#x53EF;&#x80FD;&#x7684;&#x503C;&#xFF08;&#x4F7F;&#x7528;<code>GET_LIST</code>REST&#x65B9;&#x6CD5;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x6E32;&#x67D3;&#x59D4;&#x6258;&#x7ED9;&#x4E00;&#x4E2A;&#x5B50;&#x7EC4;&#x4EF6;&#xFF0C;&#x5B83;&#x5C06;&#x53EF;&#x80FD;&#x7684;&#x9009;&#x62E9;&#x4F5C;&#x4E3A;<code>choices</code>&#x5C5E;&#x6027;&#x4F20;&#x9012;&#x7ED9;&#x8BE5;&#x5B50;&#x7EC4;&#x4EF6;&#x3002;</p>
+<p>&#x8FD9;&#x610F;&#x5473;&#x7740;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>&lt;ReferenceInput&gt;</code>&#x5177;&#x6709;<a href="#selectinput"><code>&lt;SelectInput&gt;</code></a>, <a href="#autocompleteinput"><code>&lt;AutocompleteInput&gt;</code></a>&#x6216;<a href="#radiobuttongroupinput"><code>&lt;RadioButtonGroupInput&gt;</code></a>&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#xFF0C;&#x6216;&#x8005;&#x751A;&#x81F3;&#x4F7F;&#x7528;&#x60A8;&#x9009;&#x62E9;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x53EA;&#x8981;&#x5B83;&#x652F;&#x6301;<code>choices</code>&#x5C5E;&#x6027;&#x3002;</p>
+<p>&#x8BE5;&#x7EC4;&#x4EF6;&#x9700;&#x8981;&#x4E00;&#x4E2A;<code>source</code>&#x548C;<code>reference</code>&#x5C5E;&#x6027;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x8981;&#x4F7F;<code>comment</code>&#x7684;<code>post_id</code>&#x53EF;&#x7F16;&#x8F91;&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { ReferenceInput, SelectInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>
+
+&lt;ReferenceInput label=<span class="hljs-string">&quot;Post&quot;</span> source=<span class="hljs-string">&quot;post_id&quot;</span> reference=<span class="hljs-string">&quot;posts&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectInput</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;title&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ReferenceInput</span>&gt;</span></span>
+</code></pre>
+<p><img src="https://marmelab.com/admin-on-rest/img/reference-input.gif" alt="ReferenceInput"></p>
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;&#x4F60;<strong>&#x5FC5;&#x987B;</strong>&#x4E3A;&#x5F15;&#x7528;&#x8D44;&#x6E90;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;<code>&lt;Resource&gt;</code> - admin-on-rest&#x9700;&#x8981;&#x5B83;&#x6765;&#x83B7;&#x53D6;&#x5F15;&#x7528;&#x6570;&#x636E;&#x3002;&#x5982;&#x679C;&#x60A8;&#x60F3;&#x5728;&#x4FA7;&#x8FB9;&#x680F;&#x83DC;&#x5355;&#x4E2D;&#x9690;&#x85CF;&#x5B83;&#xFF0C;&#x4F60;<strong>&#x53EF;&#x4EE5;</strong>&#x7701;&#x7565;&#x6B64;&#x5F15;&#x7528;&#x4E2D;&#x7684;<code>list</code>&#x5C5E;&#x6027;&#x3002;</p>
+<pre><code class="lang-jsx">&lt;Admin restClient={myRestClient}&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Resource</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;comments&quot;</span> <span class="hljs-attr">list</span>=<span class="hljs-string">{CommentList}</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Resource</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;posts&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">Admin</span>&gt;</span>
+</span></code></pre>
+<p>&#x5F53;&#x5141;&#x8BB8;&#x7A7A;&#x503C;&#x65F6;&#xFF0C;&#x8BBE;&#x7F6E;<code>allowEmpty</code>&#x5C5E;&#x6027;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { ReferenceInput, SelectInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>
+
+&lt;ReferenceInput label=<span class="hljs-string">&quot;Post&quot;</span> source=<span class="hljs-string">&quot;post_id&quot;</span> reference=<span class="hljs-string">&quot;posts&quot;</span> allowEmpty&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectInput</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;title&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ReferenceInput</span>&gt;</span></span>
+</code></pre>
+<p><strong>&#x63D0;&#x793A;</strong>&#xFF1A;&#x5BF9;&#x4E8E;<code>&lt;Filter&gt;</code>&#x7EC4;&#x4EF6;&#x7684;&#x6240;&#x6709;Input&#x7EC4;&#x4EF6;&#x5B50;&#x9879;&#xFF0C;&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;<code>allowEmpty</code>&#xFF1A;</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> CommentFilter = (props) =&gt; (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Filter</span> {<span class="hljs-attr">...props</span>}&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ReferenceInput</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;Post&quot;</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;post_id&quot;</span> <span class="hljs-attr">reference</span>=<span class="hljs-string">&quot;posts&quot;</span>&gt;</span> // no need for allowEmpty
+            <span class="hljs-tag">&lt;<span class="hljs-name">SelectInput</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;title&quot;</span> /&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ReferenceInput</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">Filter</span>&gt;</span>
+);
+</span></code></pre>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x8C03;&#x6574;&#x6B64;&#x7EC4;&#x4EF6;&#x5982;&#x4F55;&#x4F7F;&#x7528;<code>perPage</code>&#xFF0C;<code>sort</code>&#x548C;<code>filter</code>&#x5C5E;&#x6027;&#x83B7;&#x53D6;&#x53EF;&#x80FD;&#x7684;&#x503C;&#x3002;</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// by default, fetches only the first 25 values. You can extend this limit</span>
+<span class="hljs-comment">// by setting the `perPage` prop.</span>
+&lt;ReferenceInput
+     source=<span class="hljs-string">&quot;post_id&quot;</span>
+     reference=<span class="hljs-string">&quot;posts&quot;</span>
+     perPage={<span class="hljs-number">100</span>}&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectInput</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;title&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ReferenceInput</span>&gt;</span></span>
+
+<span class="hljs-comment">// by default, orders the possible values by id desc. You can change this order</span>
+<span class="hljs-comment">// by setting the `sort` prop (an object with `field` and `order` properties).</span>
+&lt;ReferenceInput
+     source=<span class="hljs-string">&quot;post_id&quot;</span>
+     reference=<span class="hljs-string">&quot;posts&quot;</span>
+     sort={{ field: <span class="hljs-string">&apos;title&apos;</span>, order: <span class="hljs-string">&apos;ASC&apos;</span> }}&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectInput</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;title&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ReferenceInput</span>&gt;</span></span>
+
+<span class="hljs-comment">// you can filter the query used to populate the possible values. Use the</span>
+<span class="hljs-comment">// `filter` prop for that.</span>
+&lt;ReferenceInput
+     source=<span class="hljs-string">&quot;post_id&quot;</span>
+     reference=<span class="hljs-string">&quot;posts&quot;</span>
+     filter={{ is_published: <span class="hljs-literal">true</span> }}&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectInput</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;title&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ReferenceInput</span>&gt;</span></span>
+</code></pre>
+<p>&#x5C01;&#x95ED;&#x7684;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x8FDB;&#x4E00;&#x6B65;&#x8FC7;&#x6EE4;&#x7ED3;&#x679C;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x5BF9;&#x4E8E;<code>&lt;AutocompleteInput&gt;</code>&#xFF09;&#x3002;ReferenceInput&#x5C06;&#x4E00;&#x4E2A;<code>setFilter</code>&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x5C5E;&#x6027;&#x4F20;&#x9012;&#x7ED9;&#x5B83;&#x7684;&#x5B50;&#x7EC4;&#x4EF6;&#x3002;&#x5B83;&#x4F7F;&#x7528;&#x8BE5;&#x503C;&#x4E3A;&#x67E5;&#x8BE2;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x8FC7;&#x6EE4;&#x5668; - &#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x4E3A;<code>{ q: [searchText] }</code>&#x3002; &#x60A8;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x6620;&#x5C04;
+<code>searchText =&gt; searchQuery</code>&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;<code>filterToQuery</code>&#x51FD;&#x6570;&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code class="lang-jsx">&lt;ReferenceInput
+     source=<span class="hljs-string">&quot;post_id&quot;</span>
+     reference=<span class="hljs-string">&quot;posts&quot;</span>
+     filterToQuery={searchText =&gt; ({ title: searchText })}&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectInput</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;title&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ReferenceInput</span>&gt;</span></span>
+</code></pre>
+<h3 id="ReferenceArrayInput"><code>&lt;ReferenceArrayInput&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p>&#x4F7F;&#x7528;<code>&lt;ReferenceArrayInput&gt;</code>&#x7F16;&#x8F91;&#x5F15;&#x7528;&#x503C;&#x6570;&#x7EC4;&#xFF0C;&#x5373;&#x8BA9;&#x7528;&#x6237;&#x4ECE;&#x53E6;&#x4E00;&#x4E2A;REST&#x7AEF;&#x70B9;&#x4E2D;&#x9009;&#x62E9;&#x503C;&#x5217;&#x8868;&#xFF08;&#x901A;&#x5E38;&#x662F;&#x5916;&#x952E;&#xFF09;&#x3002;</p>
+<p>&#x5728;&#x5F15;&#x7528;&#x7AEF;&#x70B9;&#x4E2D;&#xFF0C;<code>&lt;ReferenceArrayInput&gt;</code>&#x83B7;&#x53D6;&#x76F8;&#x5173;&#x8D44;&#x6E90;&#xFF08;&#x4F7F;&#x7528;<code>CRUD_GET_MANY</code>REST&#x65B9;&#x6CD5;&#xFF09;&#x4E0E;&#x83B7;&#x53D6;&#x53EF;&#x80FD;&#x7684;&#x8D44;&#x6E90;&#xFF08;&#x4F7F;&#x7528;<code>CRUD_GET_MATCHING</code> REST&#x65B9;&#x6CD5;&#xFF09;&#x4E00;&#x6837;</p>
+<p>&#x4F8B;&#x5982;&#xFF0C;&#x5982;&#x679C;post&#x5BF9;&#x8C61;&#x6709;&#x5F88;&#x591A;&#x6807;&#x7B7E;&#xFF0C;&#x5219;post&#x8D44;&#x6E90;&#x53EF;&#x80FD;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-js">{
+    id: <span class="hljs-number">1234</span>,
+    tag_ids: [<span class="hljs-number">1</span>, <span class="hljs-number">23</span>, <span class="hljs-number">4</span>]
+}
+</code></pre>
+<p>&#x90A3;&#x4E48;<code>&lt;ReferenceArrayInput&gt;</code>&#x5C06;&#x4ECE;&#x8FD9;&#x4E24;&#x4E2A;&#x8C03;&#x7528;&#x4E2D;&#x83B7;&#x53D6;&#x6807;&#x7B7E;&#x8D44;&#x6E90;&#x7684;&#x5217;&#x8868;&#xFF1A;</p>
+<pre><code>http://myapi.com/tags?id=[1,23,4]
+http://myapi.com/tags?page=1&amp;perPage=25
+</code></pre><p>&#x4E00;&#x65E6;&#x63A5;&#x6536;&#x5230;&#x91CD;&#x590D;&#x6570;&#x636E;&#x5220;&#x9664;&#x7684;&#x5F15;&#x7528;&#x8D44;&#x6E90;&#xFF0C;&#x8BE5;&#x7EC4;&#x4EF6;&#x5C06;&#x6E32;&#x67D3;&#x59D4;&#x6258;&#x7ED9;&#x4E00;&#x4E2A;&#x5B50;&#x7EC4;&#x4EF6;&#xFF0C;&#x5B83;&#x5C06;&#x53EF;&#x80FD;&#x7684;&#x9009;&#x62E9;&#x4F5C;&#x4E3A;<code>choices</code>&#x5C5E;&#x6027;&#x4F20;&#x9012;&#x7ED9;&#x8BE5;&#x5B50;&#x7EC4;&#x4EF6;&#x3002;</p>
+<p>&#x8FD9;&#x610F;&#x5473;&#x7740;&#x60A8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5177;&#x6709;<a href="#selectarrayinput"><code>&lt;SelectArrayInput&gt;</code></a>&#x7684;<code>&lt;ReferenceArrayInput&gt;</code>&#xFF0C;&#x6216;&#x8005;&#x4F7F;&#x7528;&#x60A8;&#x9009;&#x62E9;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x53EA;&#x8981;&#x5B83;&#x652F;&#x6301;<code>choices</code>&#x5C5E;&#x6027;&#x3002;</p>
+<p>&#x8BE5;&#x7EC4;&#x4EF6;&#x9700;&#x8981;&#x4E00;&#x4E2A;<code>source</code>&#x548C;<code>reference</code>&#x5C5E;&#x6027;&#x3002; &#x4F8B;&#x5982;&#xFF0C;&#x8981;&#x4F7F;<code>post</code>&#x7684;<code>tag_ids</code>&#x53EF;&#x7F16;&#x8F91;&#xFF1A;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { ReferenceArrayInput, SelectArrayInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>
+
+&lt;ReferenceArrayInput source=<span class="hljs-string">&quot;tag_ids&quot;</span> reference=<span class="hljs-string">&quot;tags&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectArrayInput</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;name&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ReferenceArrayInput</span>&gt;</span></span>
+</code></pre>
+<p><img src="https://marmelab.com/admin-on-rest/img/select-array-input.gif" alt="SelectArrayInput"></p>
+<p><strong>&#x6CE8;&#x610F;</strong>&#xFF1A;&#x4F60;<em>&#x5FC5;&#x987B;</em>&#x4E3A;&#x5F15;&#x7528;&#x8D44;&#x6E90;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;<code>&lt;Resource&gt;</code> - admin-on-rest&#x9700;&#x8981;&#x5B83;&#x6765;&#x83B7;&#x53D6;&#x5F15;&#x7528;&#x6570;&#x636E;&#x3002; &#x5982;&#x679C;&#x8981;&#x5728;&#x4FA7;&#x8FB9;&#x680F;&#x83DC;&#x5355;&#x4E2D;&#x9690;&#x85CF;&#x5B83;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x6B64;&#x5F15;&#x7528;&#x4E2D;&#x7701;&#x7565;list&#x5C5E;&#x6027;&#x3002;</p>
+<pre><code class="lang-js">&lt;Admin restClient={myRestClient}&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Resource</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;posts&quot;</span> <span class="hljs-attr">list</span>=<span class="hljs-string">{PostList}</span> <span class="hljs-attr">edit</span>=<span class="hljs-string">{PostEdit}</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">Resource</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;tags&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">Admin</span>&gt;</span>
+</span></code></pre>
+<p>&#x5F53;&#x5141;&#x8BB8;&#x7A7A;&#x503C;&#x65F6;&#xFF0C;&#x8BBE;&#x7F6E;<code>allowEmpty</code>&#x5C5E;&#x6027;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { ReferenceArrayInput, SelectArrayInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>
+
+&lt;ReferenceArrayInput source=<span class="hljs-string">&quot;tag_ids&quot;</span> reference=<span class="hljs-string">&quot;tags&quot;</span> allowEmpty&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectArrayInput</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;name&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ReferenceArrayInput</span>&gt;</span></span>
+</code></pre>
+<p><strong>&#x63D0;&#x793A;</strong>&#xFF1A;&#x5BF9;&#x4E8E;<code>&lt;Filter&gt;</code>&#x7EC4;&#x4EF6;&#x7684;&#x6240;&#x6709;Input&#x7EC4;&#x4EF6;&#x5B50;&#x9879;&#xFF0C;&#x9ED8;&#x8BA4;&#x8BBE;&#x7F6E;<code>allowEmpty</code>&#xFF1A;</p>
+<p>&#x60A8;&#x53EF;&#x4EE5;&#x8C03;&#x6574;&#x6B64;&#x7EC4;&#x4EF6;&#x5982;&#x4F55;&#x4F7F;&#x7528;<code>perPage</code>&#xFF0C;<code>sort</code>&#x548C;<code>filter</code>&#x5C5E;&#x6027;&#x83B7;&#x53D6;&#x53EF;&#x80FD;&#x7684;&#x503C;&#x3002;</p>
+<pre><code class="lang-js"><span class="hljs-comment">// by default, fetches only the first 25 values. You can extend this limit</span>
+<span class="hljs-comment">// by setting the `perPage` prop.</span>
+&lt;ReferenceArrayInput
+     source=<span class="hljs-string">&quot;tag_ids&quot;</span>
+     reference=<span class="hljs-string">&quot;tags&quot;</span>
+     perPage={<span class="hljs-number">100</span>}&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectArrayInput</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;name&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ReferenceArrayInput</span>&gt;</span></span>
+
+<span class="hljs-comment">// by default, orders the possible values by id desc. You can change this order</span>
+<span class="hljs-comment">// by setting the `sort` prop (an object with `field` and `order` properties).</span>
+&lt;ReferenceArrayInput
+     source=<span class="hljs-string">&quot;tag_ids&quot;</span>
+     reference=<span class="hljs-string">&quot;tags&quot;</span>
+     sort={{ field: <span class="hljs-string">&apos;title&apos;</span>, order: <span class="hljs-string">&apos;ASC&apos;</span> }}&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectArrayInput</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;name&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ReferenceArrayInput</span>&gt;</span></span>
+
+<span class="hljs-comment">// you can filter the query used to populate the possible values. Use the</span>
+<span class="hljs-comment">// `filter` prop for that.</span>
+&lt;ReferenceArrayInput
+     source=<span class="hljs-string">&quot;tag_ids&quot;</span>
+     reference=<span class="hljs-string">&quot;tags&quot;</span>
+     filter={{ is_published: <span class="hljs-literal">true</span> }}&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectArrayInput</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;name&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ReferenceArrayInput</span>&gt;</span></span>
+</code></pre>
+<p>&#x5C01;&#x95ED;&#x7684;&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x8FDB;&#x4E00;&#x6B65;&#x8FC7;&#x6EE4;&#x7ED3;&#x679C;&#xFF08;&#x4F8B;&#x5982;&#xFF0C;&#x5BF9;&#x4E8E;<code>&lt;SelectArrayInput&gt;</code>&#xFF09;&#x3002;<code>ReferenceArrayInput</code>&#x5C06;&#x4E00;&#x4E2A;<code>setFilter</code>&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x5C5E;&#x6027;&#x4F20;&#x9012;&#x7ED9;&#x5B83;&#x7684;&#x5B50;&#x7EC4;&#x4EF6;&#x3002;&#x5B83;&#x4F7F;&#x7528;&#x8BE5;&#x503C;&#x4E3A;&#x67E5;&#x8BE2;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x8FC7;&#x6EE4;&#x5668; - &#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#x4E3A;<code>{ q: [searchText] }</code>&#x3002; &#x60A8;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x6620;&#x5C04;
+<code>searchText =&gt; searchQuery</code>&#x901A;&#x8FC7;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;<code>filterToQuery</code>&#x51FD;&#x6570;&#x5C5E;&#x6027;&#xFF1A;</p>
+<pre><code class="lang-js">&lt;ReferenceArrayInput
+     source=<span class="hljs-string">&quot;tag_ids&quot;</span>
+     reference=<span class="hljs-string">&quot;tags&quot;</span>
+     filterToQuery={searchText =&gt; ({ name: searchText })}&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectArrayInput</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;name&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ReferenceArrayInput</span>&gt;</span></span>
+</code></pre>
+<h3 id="RichTextInput"><code>&lt;RichTextInput&gt;</code>&#x7EC4;&#x4EF6;</h3>
+<p><code>&lt;RichTextInput&gt;</code> is the ideal component if you want to allow your users to edit some HTML contents. It
+is powered by <a href="https://quilljs.com/" target="_blank">Quill</a>.</p>
+<p><strong>Note</strong>: Due to its size, <code>&lt;RichTextInput&gt;</code> is not bundled by default with admin-on-rest. You must install it first, using npm:</p>
+<pre><code class="lang-sh">npm install aor-rich-text-input --save
+</code></pre>
+<p>Then use it as a normal input component:</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> RichTextInput <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;aor-rich-text-input&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">RichTextInput</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;body&quot;</span> /&gt;</span>
+</span></code></pre>
+<p><img src="img/rich-text-input.png" alt="RichTextInput"></p>
+<p>You can customize the rich text editor toolbar using the <code>toolbar</code> attribute, as described on the <a href="https://quilljs.com/docs/modules/toolbar/" target="_blank">Quill official toolbar documentation</a>.</p>
+<pre><code class="lang-jsx">&lt;RichTextInput source=<span class="hljs-string">&quot;body&quot;</span> toolbar={[ [<span class="hljs-string">&apos;bold&apos;</span>, <span class="hljs-string">&apos;italic&apos;</span>, <span class="hljs-string">&apos;underline&apos;</span>, <span class="hljs-string">&apos;link&apos;</span>] ]} /&gt;
+</code></pre>
+<h2 id="selectinput"><code>&lt;SelectInput&gt;</code></h2>
+<p>To let users choose a value in a list using a dropdown, use <code>&lt;SelectInput&gt;</code>. It renders using <a href="http://www.material-ui.com/#/components/select-field" target="_blank">Material ui&apos;s <code>&lt;SelectField&gt;</code></a>. Set the <code>choices</code> attribute to determine the options (with <code>id</code>, <code>name</code> tuples):</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { SelectInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectInput</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;category&quot;</span> <span class="hljs-attr">choices</span>=<span class="hljs-string">{[</span>
+    { <span class="hljs-attr">id:</span> &apos;<span class="hljs-attr">programming</span>&apos;, <span class="hljs-attr">name:</span> &apos;<span class="hljs-attr">Programming</span>&apos; },
+    { <span class="hljs-attr">id:</span> &apos;<span class="hljs-attr">lifestyle</span>&apos;, <span class="hljs-attr">name:</span> &apos;<span class="hljs-attr">Lifestyle</span>&apos; },
+    { <span class="hljs-attr">id:</span> &apos;<span class="hljs-attr">photography</span>&apos;, <span class="hljs-attr">name:</span> &apos;<span class="hljs-attr">Photography</span>&apos; },
+]} /&gt;</span>
+</span></code></pre>
+<p><img src="img/select-input.gif" alt="SelectInput"></p>
+<p>You can also customize the properties to use for the option name and value, thanks to the <code>optionText</code> and <code>optionValue</code> attributes:</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> choices = [
+    { _id: <span class="hljs-number">123</span>, full_name: <span class="hljs-string">&apos;Leo Tolstoi&apos;</span>, sex: <span class="hljs-string">&apos;M&apos;</span> },
+    { _id: <span class="hljs-number">456</span>, full_name: <span class="hljs-string">&apos;Jane Austen&apos;</span>, sex: <span class="hljs-string">&apos;F&apos;</span> },
+];
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectInput</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;author_id&quot;</span> <span class="hljs-attr">choices</span>=<span class="hljs-string">{choices}</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;full_name&quot;</span> <span class="hljs-attr">optionValue</span>=<span class="hljs-string">&quot;_id&quot;</span> /&gt;</span>
+</span></code></pre>
+<p><code>optionText</code> also accepts a function, so you can shape the option text at will:</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> choices = [
+   { id: <span class="hljs-number">123</span>, first_name: <span class="hljs-string">&apos;Leo&apos;</span>, last_name: <span class="hljs-string">&apos;Tolstoi&apos;</span> },
+   { id: <span class="hljs-number">456</span>, first_name: <span class="hljs-string">&apos;Jane&apos;</span>, last_name: <span class="hljs-string">&apos;Austen&apos;</span> },
+];
+<span class="hljs-keyword">const</span> optionRenderer = choice =&gt; <span class="hljs-string">`<span class="hljs-subst">${choice.first_name}</span> <span class="hljs-subst">${choice.last_name}</span>`</span>;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectInput</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;author_id&quot;</span> <span class="hljs-attr">choices</span>=<span class="hljs-string">{choices}</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">{optionRenderer}</span> /&gt;</span>
+</span></code></pre>
+<p><code>optionText</code> also accepts a React Element, that will be cloned and receive the related choice as the <code>record</code> prop. You can use Field components there.</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> choices = [
+   { id: <span class="hljs-number">123</span>, first_name: <span class="hljs-string">&apos;Leo&apos;</span>, last_name: <span class="hljs-string">&apos;Tolstoi&apos;</span> },
+   { id: <span class="hljs-number">456</span>, first_name: <span class="hljs-string">&apos;Jane&apos;</span>, last_name: <span class="hljs-string">&apos;Austen&apos;</span> },
+];
+<span class="hljs-keyword">const</span> FullNameField = ({ record }) =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>{record.first_name} {record.last_name}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></span>;
+&lt;SelectInput source=&quot;gender&quot; choices={choices} optionText={&lt;FullNameField /&gt;}/&gt;
+</code></pre>
+<p>Enabling the <code>allowEmpty</code> props adds an empty choice (with <code>null</code> value) on top of the options, and makes the value nullable:</p>
+<pre><code class="lang-jsx">&lt;SelectInput source=<span class="hljs-string">&quot;category&quot;</span> allowEmpty choices={[
+    { id: <span class="hljs-string">&apos;programming&apos;</span>, name: <span class="hljs-string">&apos;Programming&apos;</span> },
+    { id: <span class="hljs-string">&apos;lifestyle&apos;</span>, name: <span class="hljs-string">&apos;Lifestyle&apos;</span> },
+    { id: <span class="hljs-string">&apos;photography&apos;</span>, name: <span class="hljs-string">&apos;Photography&apos;</span> },
+]} /&gt;
+</code></pre>
+<p>The choices are translated by default, so you can use translation identifiers as choices:</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> choices = [
+   { id: <span class="hljs-string">&apos;M&apos;</span>, name: <span class="hljs-string">&apos;myroot.gender.male&apos;</span> },
+   { id: <span class="hljs-string">&apos;F&apos;</span>, name: <span class="hljs-string">&apos;myroot.gender.female&apos;</span> },
+];
+</code></pre>
+<p>However, in some cases, you may not want the choice to be translated. In that case, set the <code>translateChoice</code> prop to false.</p>
+<pre><code class="lang-jsx">&lt;SelectInput source=<span class="hljs-string">&quot;gender&quot;</span> choices={choices} translateChoice={<span class="hljs-literal">false</span>}/&gt;
+</code></pre>
+<p>Note that <code>translateChoice</code> is set to false when <code>&lt;SelectInput&gt;</code> is a child of <code>&lt;ReferenceInput&gt;</code>.</p>
+<p>Lastly, use the <code>options</code> attribute if you want to override any of Material UI&apos;s <code>&lt;SelectField&gt;</code> attributes:</p>
+<pre><code class="lang-jsx">&lt;SelectInput source=<span class="hljs-string">&quot;category&quot;</span> options={{
+    maxHeight: <span class="hljs-number">200</span>
+}} /&gt;
+</code></pre>
+<p>Refer to <a href="http://www.material-ui.com/#/components/select-field" target="_blank">Material UI SelectField documentation</a> for more details.</p>
+<p><strong>Tip</strong>: If you want to populate the <code>choices</code> attribute with a list of related records, you should decorate <code>&lt;SelectInput&gt;</code> with <a href="#referenceinput"><code>&lt;ReferenceInput&gt;</code></a>, and leave the <code>choices</code> empty:</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { SelectInput, ReferenceInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>
+
+&lt;ReferenceInput label=<span class="hljs-string">&quot;Author&quot;</span> source=<span class="hljs-string">&quot;author_id&quot;</span> reference=<span class="hljs-string">&quot;authors&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectInput</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;last_name&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ReferenceInput</span>&gt;</span></span>
+</code></pre>
+<p>If, instead of showing choices as a dropdown list, you prefer to display them as a list of radio buttons, try the <a href="#radiobuttongroupinput"><code>&lt;RadioButtonGroupInput&gt;</code></a>. And if the list is too big, prefer the <a href="#autocompleteinput"><code>&lt;AutocompleteInput&gt;</code></a>.</p>
+<h2 id="selectarrayinput"><code>&lt;SelectArrayInput&gt;</code></h2>
+<p>To let users choose several values in a list using a dropdown, use <code>&lt;SelectArrayInput&gt;</code>. It renders using <a href="https://github.com/TeamWertarbyte/material-ui-chip-input" target="_blank">material-ui-chip-input</a>. Set the <code>choices</code> attribute to determine the options (with <code>id</code>, <code>name</code> tuples):</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { SelectArrayInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectArrayInput</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;Tags&quot;</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;categories&quot;</span> <span class="hljs-attr">choices</span>=<span class="hljs-string">{[</span>
+    { <span class="hljs-attr">id:</span> &apos;<span class="hljs-attr">music</span>&apos;, <span class="hljs-attr">name:</span> &apos;<span class="hljs-attr">Music</span>&apos; },
+    { <span class="hljs-attr">id:</span> &apos;<span class="hljs-attr">photography</span>&apos;, <span class="hljs-attr">name:</span> &apos;<span class="hljs-attr">Photo</span>&apos; },
+    { <span class="hljs-attr">id:</span> &apos;<span class="hljs-attr">programming</span>&apos;, <span class="hljs-attr">name:</span> &apos;<span class="hljs-attr">Code</span>&apos; },
+    { <span class="hljs-attr">id:</span> &apos;<span class="hljs-attr">tech</span>&apos;, <span class="hljs-attr">name:</span> &apos;<span class="hljs-attr">Technology</span>&apos; },
+    { <span class="hljs-attr">id:</span> &apos;<span class="hljs-attr">sport</span>&apos;, <span class="hljs-attr">name:</span> &apos;<span class="hljs-attr">Sport</span>&apos; },
+]} /&gt;</span>
+</span></code></pre>
+<p><img src="img/select-array-input.gif" alt="SelectArrayInput"></p>
+<p>You can also customize the properties to use for the option name and value,
+thanks to the <code>optionText</code> and <code>optionValue</code> attributes.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> choices = [
+   { _id: <span class="hljs-string">&apos;1&apos;</span>, name: <span class="hljs-string">&apos;Book&apos;</span>, plural_name: <span class="hljs-string">&apos;Books&apos;</span> },
+   { _id: <span class="hljs-string">&apos;2&apos;</span>, name: <span class="hljs-string">&apos;Video&apos;</span>, plural_name: <span class="hljs-string">&apos;Videos&apos;</span> },
+   { _id: <span class="hljs-string">&apos;3&apos;</span>, name: <span class="hljs-string">&apos;Audio&apos;</span>, plural_name: <span class="hljs-string">&apos;Audios&apos;</span> },
+];
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectArrayInput</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;categories&quot;</span> <span class="hljs-attr">choices</span>=<span class="hljs-string">{choices}</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;plural_name&quot;</span> <span class="hljs-attr">optionValue</span>=<span class="hljs-string">&quot;_id&quot;</span> /&gt;</span>
+</span></code></pre>
+<p><code>optionText</code> also accepts a function, so you can shape the option text at will:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> choices = [
+   { id: <span class="hljs-string">&apos;1&apos;</span>, name: <span class="hljs-string">&apos;Book&apos;</span>, quantity: <span class="hljs-number">23</span> },
+   { id: <span class="hljs-string">&apos;2&apos;</span>, name: <span class="hljs-string">&apos;Video&apos;</span>, quantity: <span class="hljs-number">56</span> },
+   { id: <span class="hljs-string">&apos;3&apos;</span>, name: <span class="hljs-string">&apos;Audio&apos;</span>, quantity: <span class="hljs-number">12</span> },
+];
+<span class="hljs-keyword">const</span> optionRenderer = choice =&gt; <span class="hljs-string">`<span class="hljs-subst">${choice.name}</span> (<span class="hljs-subst">${choice.quantity}</span>)`</span>;
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectArrayInput</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;categories&quot;</span> <span class="hljs-attr">choices</span>=<span class="hljs-string">{choices}</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">{optionRenderer}</span> /&gt;</span>
+</span></code></pre>
+<p>The choices are translated by default, so you can use translation identifiers as choices:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> choices = [
+   { id: <span class="hljs-string">&apos;books&apos;</span>, name: <span class="hljs-string">&apos;myroot.category.books&apos;</span> },
+   { id: <span class="hljs-string">&apos;sport&apos;</span>, name: <span class="hljs-string">&apos;myroot.category.sport&apos;</span> },
+];
+</code></pre>
+<p>However, in some cases, you may not want the choice to be translated. In that case, set the <code>translateChoice</code> prop to false.</p>
+<pre><code class="lang-js">&lt;SelectArrayInput source=<span class="hljs-string">&quot;gender&quot;</span> choices={choices} translateChoice={<span class="hljs-literal">false</span>}/&gt;
+</code></pre>
+<p>Note that <code>translateChoice</code> is set to false when <code>&lt;SelectArrayInput&gt;</code> is a child of <code>&lt;ReferenceArrayInput&gt;</code>.</p>
+<p>Lastly, use the <code>options</code> attribute if you want to override any of the <code>&lt;ChipInput&gt;</code> attributes:</p>
+<pre><code class="lang-js">&lt;SelectArrayInput source=<span class="hljs-string">&quot;category&quot;</span> options={{ fullWidth: <span class="hljs-literal">true</span> }} /&gt;
+</code></pre>
+<p>Refer to <a href="https://github.com/TeamWertarbyte/material-ui-chip-input" target="_blank">the ChipInput documentation</a> for more details.</p>
+<p><strong>Tip</strong>: If you want to populate the <code>choices</code> attribute with a list of related records, you should decorate <code>&lt;SelectArrayInput&gt;</code> with <a href="#referencearrayinput"><code>&lt;ReferenceArrayInput&gt;</code></a>, and leave the <code>choices</code> empty:</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { SelectArrayInput, ReferenceArrayInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>
+
+&lt;ReferenceArrayInput source=<span class="hljs-string">&quot;tag_ids&quot;</span> reference=<span class="hljs-string">&quot;tags&quot;</span>&gt;
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SelectArrayInput</span> <span class="hljs-attr">optionText</span>=<span class="hljs-string">&quot;name&quot;</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ReferenceArrayInput</span>&gt;</span></span>
+</code></pre>
+<h2 id="textinput"><code>&lt;TextInput&gt;</code></h2>
+<p><code>&lt;TextInput&gt;</code> is the most common input. It is used for texts, emails, URL or passwords. In translates to an HTML <code>&lt;input&gt;</code> tag.</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> { TextInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">TextInput</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;title&quot;</span> /&gt;</span>
+</span></code></pre>
+<p><img src="img/text-input.png" alt="TextInput"></p>
+<p>You can choose a specific input type using the <code>type</code> attribute, for instance <code>text</code> (the default), <code>email</code>, <code>url</code>, or <code>password</code>:</p>
+<pre><code class="lang-jsx">&lt;TextInput label=<span class="hljs-string">&quot;Email Address&quot;</span> source=<span class="hljs-string">&quot;email&quot;</span> type=<span class="hljs-string">&quot;email&quot;</span> /&gt;
+</code></pre>
+<p><strong>Warning</strong>: Do not use <code>type=&quot;number&quot;</code>, or you&apos;ll receive a string as value (this is a <a href="https://github.com/facebook/react/issues/1425" target="_blank">known React bug</a>). Instead, use <a href="#numberinput"><code>&lt;NumberInput&gt;</code></a>.</p>
+<h2 id="transforming-input-value-tofrom-store">Transforming Input Value to/from Store</h2>
+<p>The data format returned by the input component may not be what your store desires. Since Admin-on-rest uses Redux Form, we can use its <code>parse()</code> and <code>format()</code> functions to transform the input value to and from the store. It&apos;s better to understand the <a href="http://redux-form.com/6.5.0/docs/ValueLifecycle.md/" target="_blank">input value&apos;s lifecycle</a> before you start.</p>
+<p>Mnemonic for the two functions:</p>
+<ul>
+<li><code>parse()</code>: input -&gt; store</li>
+<li><code>format()</code>: store -&gt; input</li>
+</ul>
+<p>Say the user would like to input values of 0-100 to a percentage field but your API (hence store) expects 0-1.0. You can use simple <code>parse()</code> and <code>format()</code> functions to archive the transform:</p>
+<pre><code class="lang-jsx">&lt;NumberInput source=<span class="hljs-string">&quot;percent&quot;</span> format={v =&gt; v*<span class="hljs-number">100</span>} parse={v =&gt; v/<span class="hljs-number">100</span>} label=<span class="hljs-string">&quot;Formatted number&quot;</span> /&gt;
+</code></pre>
+<p><code>&lt;DateInput&gt;</code> stores and returns a <code>Date</code> object. If you would like to store the ISO date <code>&quot;YYYY-MM-DD&quot;</code> in your store:</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> dateFormatter = v =&gt; {
+  <span class="hljs-comment">// v is a string of &quot;YYYY-MM-DD&quot; format</span>
+  <span class="hljs-keyword">const</span> match = <span class="hljs-regexp">/(\d{4})-(\d{2})-(\d{2})/</span>.exec(v);
+  <span class="hljs-keyword">if</span> (match === <span class="hljs-literal">null</span>) <span class="hljs-keyword">return</span>;
+  <span class="hljs-keyword">const</span> d = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(match[<span class="hljs-number">1</span>], <span class="hljs-built_in">parseInt</span>(match[<span class="hljs-number">2</span>])<span class="hljs-number">-1</span>, match[<span class="hljs-number">3</span>]);
+  <span class="hljs-keyword">if</span> (<span class="hljs-built_in">isNaN</span>(d)) <span class="hljs-keyword">return</span>;
+  <span class="hljs-keyword">return</span> d;
+};
+
+<span class="hljs-keyword">const</span> dateParser = v =&gt; {
+  <span class="hljs-comment">// v is a `Date` object</span>
+  <span class="hljs-keyword">if</span> (!(v <span class="hljs-keyword">instanceof</span> <span class="hljs-built_in">Date</span>) || <span class="hljs-built_in">isNaN</span>(v)) <span class="hljs-keyword">return</span>;
+  <span class="hljs-keyword">const</span> pad = <span class="hljs-string">&apos;00&apos;</span>;
+  <span class="hljs-keyword">const</span> yy = v.getFullYear().toString();
+  <span class="hljs-keyword">const</span> mm = ((v.getMonth() + <span class="hljs-number">1</span>).toString();
+  <span class="hljs-keyword">const</span> dd = v.getDate().toString();
+  <span class="hljs-keyword">return</span> <span class="hljs-string">`<span class="hljs-subst">${yy}</span>-<span class="hljs-subst">${(pad + mm).slice(-2)}</span>-<span class="hljs-subst">${(pad + dd).slice(-2)}</span>`</span>;
+};
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">DateInput</span> <span class="hljs-attr">source</span>=<span class="hljs-string">&quot;isodate&quot;</span> <span class="hljs-attr">format</span>=<span class="hljs-string">{dateFormatter}</span> <span class="hljs-attr">parse</span>=<span class="hljs-string">{dateParser}</span> <span class="hljs-attr">label</span>=<span class="hljs-string">&quot;ISO date&quot;</span> /&gt;</span>
+</span></code></pre>
+<h2 id="third-party-components">Third-Party Components</h2>
+<p>You can find components for admin-on-rest in third-party repositories.</p>
+<ul>
+<li><a href="https://github.com/dreinke/aor-color-input" target="_blank">dreinke/aor-color-input</a>: a color input using <a href="http://casesandberg.github.io/react-color/" target="_blank">React Color</a>, a collection of color pickers.</li>
+<li><a href="https://github.com/LoicMahieu/aor-tinymce-input" target="_blank">LoicMahieu/aor-tinymce-input</a>: a TinyMCE component, useful for editing HTML</li>
+</ul>
+<h2 id="writing-your-own-input-component">Writing Your Own Input Component</h2>
+<p>If you need a more specific input type, you can also write it yourself. You&apos;ll have to rely on redux-form&apos;s <a href="http://redux-form.com/6.5.0/docs/api/Field.md/" target="_blank"><code>&lt;Field&gt;</code></a> component, so as to handle the value update cycle.</p>
+<p>For instance, let&apos;s write a component to edit the latitude and longitude of the current record:</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in LatLongInput.js</span>
+<span class="hljs-keyword">import</span> { Field } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux-form&apos;</span>;
+<span class="hljs-keyword">const</span> LatLngInput = () =&gt; (
+    &lt;span&gt;
+        &lt;Field name=&quot;lat&quot; component=&quot;input&quot; type=&quot;number&quot; placeholder=&quot;latitude&quot; /&gt;
+        &amp;nbsp;
+        &lt;Field name=&quot;lng&quot; component=&quot;input&quot; type=&quot;number&quot; placeholder=&quot;longitude&quot; /&gt;
+    &lt;/span&gt;
+);
+export default LatLngInput;
+
+// in ItemEdit.js
+const ItemEdit = (props) =&gt; (
+    &lt;Edit {...props}&gt;
+        &lt;SimpleForm&gt;
+            &lt;LatLngInput /&gt;
+        &lt;/SimpleForm&gt;
+    &lt;/Edit&gt;
+);
+</code></pre>
+<p><code>LatLngInput</code> takes no props, because the <code>&lt;Field&gt;</code> component can access the current record via its context. The <code>name</code> prop serves as a selector for the record property to edit. All <code>Field</code> props except <code>name</code> and <code>component</code> are passed to the child component/element (an <code>&lt;input&gt;</code> in that example). Executing this component will render roughly the following code:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;longitude&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{record.lat}</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;longitude&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{record.lng}</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+</code></pre>
+<p>This component lacks a label. Admin-on-rest provides the <code>&lt;Labeled&gt;</code> component for that:</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in LatLongInput.js</span>
+<span class="hljs-keyword">import</span> { Field } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux-form&apos;</span>;
+<span class="hljs-keyword">import</span> { Labeled } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+<span class="hljs-keyword">const</span> LatLngInput = () =&gt; (
+    &lt;Labeled label=&quot;position&quot;&gt;
+        &lt;span&gt;
+            &lt;Field name=&quot;lat&quot; component=&quot;input&quot; type=&quot;number&quot; placeholder=&quot;latitude&quot; /&gt;
+            &amp;nbsp;
+            &lt;Field name=&quot;lng&quot; component=&quot;input&quot; type=&quot;number&quot; placeholder=&quot;longitude&quot; /&gt;
+        &lt;/span&gt;
+    &lt;/Labelled&gt;
+);
+export default LatLngInput;
+</code></pre>
+<p>Now the component will render with a label:</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">label</span>&gt;</span>Position<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;longitude&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{record.lat}</span> /&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;number&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;longitude&quot;</span> <span class="hljs-attr">value</span>=<span class="hljs-string">{record.lng}</span> /&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+</code></pre>
+<p>Adding a label to an input component is such a common operation that admin-on-rest has the ability to do it automatically: just set the <code>addLabel</code> prop, and specify the label in the <code>label</code> prop:</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in LatLongInput.js</span>
+<span class="hljs-keyword">import</span> { Field } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux-form&apos;</span>;
+<span class="hljs-keyword">const</span> LatLngInput = () =&gt; (
+    &lt;span&gt;
+        &lt;Field name=&quot;lat&quot; component=&quot;input&quot; type=&quot;number&quot; placeholder=&quot;latitude&quot; /&gt;
+        &amp;nbsp;
+        &lt;Field name=&quot;lng&quot; component=&quot;input&quot; type=&quot;number&quot; placeholder=&quot;longitude&quot; /&gt;
+    &lt;/span&gt;
+);
+export default LatLngInput;
+// in ItemEdit.js
+const ItemEdit = (props) =&gt; (
+    &lt;Edit {...props}&gt;
+        &lt;SimpleForm&gt;
+            &lt;LatLngInput addLabel label=&quot;Position&quot; /&gt;
+        &lt;/SimpleForm&gt;
+    &lt;/Edit&gt;
+);
+</code></pre>
+<p><strong>Tip</strong>: To avoid repeating them each time you use the component, you should define <code>label</code> and <code>addLabel</code> as <code>defaultProps</code>:</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in LatLongInput.js</span>
+<span class="hljs-keyword">import</span> { Field } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux-form&apos;</span>;
+<span class="hljs-keyword">const</span> LatLngInput = () =&gt; (
+    &lt;span&gt;
+        &lt;Field name=&quot;lat&quot; component=&quot;input&quot; type=&quot;number&quot; placeholder=&quot;latitude&quot; /&gt;
+        &amp;nbsp;
+        &lt;Field name=&quot;lng&quot; component=&quot;input&quot; type=&quot;number&quot; placeholder=&quot;longitude&quot; /&gt;
+    &lt;/span&gt;
+);
+LatLngInput.defaultProps = {
+    addLabel: true,
+    label: &apos;Position&apos;,
+}
+export default LatLngInput;
+// in ItemEdit.js
+const ItemEdit = (props) =&gt; (
+    &lt;Edit {...props}&gt;
+        &lt;SimpleForm&gt;
+            &lt;LatLngInput /&gt;
+        &lt;/SimpleForm&gt;
+    &lt;/Edit&gt;
+);
+</code></pre>
+<p><strong>Tip</strong>: The <code>&lt;Field&gt;</code> component supports dot notation in the <code>name</code> prop, to edit nested props:</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">const</span> LatLongInput = () =&gt; (
+    &lt;span&gt;
+        &lt;Field name=&quot;position.lat&quot; component=&quot;input&quot; type=&quot;number&quot; placeholder=&quot;latitude&quot; /&gt;
+        &amp;nbsp;
+        &lt;Field name=&quot;position.lng&quot; component=&quot;input&quot; type=&quot;number&quot; placeholder=&quot;longitude&quot; /&gt;
+    &lt;/span&gt;
+);
+</code></pre>
+<p>Instead of HTML <code>input</code> elements, you can use admin-on-rest components in <code>&lt;Field&gt;</code>. For instance, <code>&lt;NumberInput&gt;</code>:</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in LatLongInput.js</span>
+<span class="hljs-keyword">import</span> { Field } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;redux-form&apos;</span>;
+<span class="hljs-keyword">import</span> { NumberInput } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;admin-on-rest&apos;</span>;
+<span class="hljs-keyword">const</span> LatLngInput = () =&gt; (
+    &lt;span&gt;
+        &lt;Field name=&quot;lat&quot; component={NumberInput} label=&quot;latitude&quot; /&gt;
+        &amp;nbsp;
+        &lt;Field name=&quot;lng&quot; component={NumberInput} label=&quot;longitude&quot; /&gt;
+    &lt;/span&gt;
+);
+export default LatLngInput;
+
+// in ItemEdit.js
+const ItemEdit = (props) =&gt; (
+    &lt;Edit {...props}&gt;
+        &lt;SimpleForm&gt;
+            &lt;DisabledInput source=&quot;id&quot; /&gt;
+            &lt;LatLngInput /&gt;
+        &lt;/SimpleForm&gt;
+    &lt;/Edit&gt;
+);
+</code></pre>
+<p><code>&lt;NumberInput&gt;</code> receives the props passed to the <code>&lt;Field&gt;</code> component - <code>label</code> in the example. <code>&lt;NumberInput&gt;</code> is already labelled, so there is no need to also label the <code>&lt;LanLngInput&gt;</code> component - that&apos;s why <code>addLabel</code> isn&apos;t set as default prop this time.</p>
+<p><strong>Tip</strong>: If you need to pass a material ui component to <code>Field</code>, use a <a href="http://redux-form.com/6.5.0/examples/material-ui/" target="_blank">field renderer function</a> to map the props:</p>
+<pre><code class="lang-jsx"><span class="hljs-keyword">import</span> TextField <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;material-ui/TextField&apos;</span>;
+<span class="hljs-keyword">const</span> renderTextField = ({ input, label, meta: { touched, error }, ...custom }) =&gt; (
+    &lt;TextField
+        hintText={label}
+        floatingLabelText={label}
+        errorText={touched &amp;&amp; error}
+        {...input}
+        {...custom}
+    /&gt;
+);
+const LatLngInput = () =&gt; (
+    &lt;span&gt;
+        &lt;Field name=&quot;lat&quot; component={renderTextField} label=&quot;latitude&quot; /&gt;
+        &amp;nbsp;
+        &lt;Field name=&quot;lng&quot; component={renderTextField} label=&quot;longitude&quot; /&gt;
+    &lt;/span&gt;
+);
+</code></pre>
+<p>For more details on how to use redux-form&apos;s <code>&lt;Field&gt;</code> component, please refer to <a href="http://redux-form.com/6.5.0/docs/api/Field.md/" target="_blank">the redux-form doc</a>.</p>
+<p><strong>Tip</strong>: If you only need one <code>&lt;Field&gt;</code> component in a custom input, you can let admin-on-rest do the <code>&lt;Field&gt;</code> decoration for you by setting the <code>addField</code> default prop to <code>true</code>:</p>
+<pre><code class="lang-jsx"><span class="hljs-comment">// in PersonEdit.js</span>
+<span class="hljs-keyword">import</span> SexInput <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;./SexInput.js&apos;</span>;
+<span class="hljs-keyword">const</span> PersonEdit = (props) =&gt; (
+    &lt;Edit {...props}&gt;
+        &lt;SimpleForm&gt;
+            &lt;SexInput source=&quot;sex&quot; /&gt;
+        &lt;/SimpleForm&gt;
+    &lt;/Edit&gt;
+);
+
+// in SexInput.js
+import SelectField from &apos;material-ui/SelectField&apos;;
+import MenuItem from &apos;material-ui/MenuItem&apos;;
+const SexInput = ({ input, meta: { touched, error } }) =&gt; (
+    &lt;SelectField
+        floatingLabelText=&quot;Sex&quot;
+        errorText={touched &amp;&amp; error}
+        {...input}
+    &gt;
+        &lt;MenuItem value=&quot;M&quot; primaryText=&quot;Male&quot; /&gt;
+        &lt;MenuItem value=&quot;F&quot; primaryText=&quot;Female&quot; /&gt;
+    &lt;/SelectField&gt;
+);
+SexInput.defaultProps = {
+    addField: true, // require a &lt;Field&gt; decoration
+}
+export default SexInput;
+
+// equivalent of
+
+import SelectField from &apos;material-ui/SelectField&apos;;
+import MenuItem from &apos;material-ui/MenuItem&apos;;
+import { Field } from &apos;redux-form&apos;;
+const renderSexInput = ({ input, meta: { touched, error } }) =&gt; (
+    &lt;SelectField
+        floatingLabelText=&quot;Sex&quot;
+        errorText={touched &amp;&amp; error}
+        {...input}
+    &gt;
+        &lt;MenuItem value=&quot;M&quot; primaryText=&quot;Male&quot; /&gt;
+        &lt;MenuItem value=&quot;F&quot; primaryText=&quot;Female&quot; /&gt;
+    &lt;/SelectField&gt;
+);
+const SexInput = ({ source }) =&gt; &lt;Field name={source} component={renderSexInput} /&gt;
+export default SexInput;
+</code></pre>
+<p>Most admin-on-rest input components use <code>addField: true</code> in default props.</p>
+<p><strong>Tip</strong>: <code>&lt;Field&gt;</code> injects two props to its child component: <code>input</code> and <code>meta</code>. To learn more about these props, please refer to <a href="http://redux-form.com/6.5.0/docs/api/Field.md/#props" target="_blank">the <code>&lt;Field&gt;</code> component documentation</a> in the redux-form website.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../CreateEdit/#Toolbar" class="navigation navigation-prev " aria-label="Previous page: 工具栏">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="./#AutocompleteInput" class="navigation navigation-next " aria-label="Next page: AutocompleteInput 组件">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"输入组件","level":"1.10","depth":1,"next":{"title":"AutocompleteInput 组件","level":"1.10.1","depth":2,"anchor":"#AutocompleteInput","path":"Inputs/README.md","ref":"Inputs/README.md#AutocompleteInput","articles":[]},"previous":{"title":"工具栏","level":"1.9.15","depth":2,"anchor":"#Toolbar","path":"CreateEdit/README.md","ref":"CreateEdit/README.md#Toolbar","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["github-buttons","livereload"],"pluginsConfig":{"github-buttons":{"repo":"Kirk-Wang/admin-on-rest-cn","types":["star","fork","watch"],"size":"large"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Inputs/README.md","mtime":"2017-07-09T10:41:50.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2017-07-07T16:03:07.994Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github-buttons/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -30,7 +30,7 @@
     * [restClient（rest客户端）](Admin/README.md#restClient)
     * [title（标题）](Admin/README.md#title)
     * [dashboard（仪表盘）](Admin/README.md#dashboard)
-    * [menu（仪表盘）](Admin/README.md#menu)
+    * [menu（菜单）](Admin/README.md#menu)
     * [theme（主题）](Admin/README.md#theme)
     * [appLayout（app布局）](Admin/README.md#appLayout)
     * [customReducers（自定义Reducer）](Admin/README.md#customReducers)
@@ -102,8 +102,19 @@
     * [回车提交](CreateEdit/README.md#SubmitOnEnter)
     * [提交后重定向](CreateEdit/README.md#RedirectionAfterSubmission)
     * [工具栏](CreateEdit/README.md#Toolbar)
-
-
+* [输入组件](Inputs/README.md#InputComponents)
+    * [AutocompleteInput 组件](Inputs/README.md#AutocompleteInput)
+    * [BooleanInput与NullableBooleanInput 组件](Inputs/README.md#BooleanInput-NullableBooleanInput)
+    * [CheckboxGroupInput 组件](Inputs/README.md#CheckboxGroupInput)
+    * [DateInput 组件](Inputs/README.md#DateInput)
+    * [DisabledInput 组件](Inputs/README.md#DisabledInput)
+    * [ImageInput 组件](Inputs/README.md#ImageInput)
+    * [FileInput 组件](Inputs/README.md#FileInput)
+    * [LongTextInput 组件](Inputs/README.md#LongTextInput)
+    * [RadioButtonGroupInput 组件](Inputs/README.md#RadioButtonGroupInput)
+    * [ReferenceInput 组件](Inputs/README.md#ReferenceInput)
+    * [ReferenceArrayInput 组件](Inputs/README.md#ReferenceArrayInput)
+    * [RichTextInput 组件](Inputs/README.md#RichTextInput)
 
 
 
