@@ -711,16 +711,16 @@ import { ReferenceArrayInput, SelectArrayInput } from 'admin-on-rest'
 
 ### `<RichTextInput>`组件{#RichTextInput}
 
-`<RichTextInput>` is the ideal component if you want to allow your users to edit some HTML contents. It
-is powered by [Quill](https://quilljs.com/).
+如果要允许用户编辑一些HTML内容，则`<RichTextInput>`是理想的组件。 它
+由[Quill](https://quilljs.com/)提供支持。
 
-**Note**: Due to its size, `<RichTextInput>` is not bundled by default with admin-on-rest. You must install it first, using npm:
+**注意**：由于其大小，`<RichTextInput>`在默认情况下不与admin-on-rest绑定。您必须首先使用npm进行安装：
 
 ```sh
 npm install aor-rich-text-input --save
 ```
 
-Then use it as a normal input component:
+然后将其用作正常输入组件：
 
 ```jsx
 import RichTextInput from 'aor-rich-text-input';
@@ -728,17 +728,17 @@ import RichTextInput from 'aor-rich-text-input';
 <RichTextInput source="body" />
 ```
 
-![RichTextInput](./img/rich-text-input.png)
+![RichTextInput](https://marmelab.com/admin-on-rest/img/rich-text-input.png)
 
-You can customize the rich text editor toolbar using the `toolbar` attribute, as described on the [Quill official toolbar documentation](https://quilljs.com/docs/modules/toolbar/).
+您可以使用`toolbar`属性自定义富文本编辑器工具栏，如[Quill official toolbar documentation](https://quilljs.com/docs/modules/toolbar/)中所述。
 
 ```jsx
 <RichTextInput source="body" toolbar={[ ['bold', 'italic', 'underline', 'link'] ]} />
 ```
 
-## `<SelectInput>`
+### `<SelectInput>`组件{#SelectInput}
 
-To let users choose a value in a list using a dropdown, use `<SelectInput>`. It renders using [Material ui's `<SelectField>`](http://www.material-ui.com/#/components/select-field). Set the `choices` attribute to determine the options (with `id`, `name` tuples):
+要让用户使用下拉列表选择列表中的值，请使用`<SelectInput>`。它使用[Material ui的`<SelectField>`](http://www.material-ui.com/#/components/select-field)渲染。设置`choices`属性来确定选项（使用`id`，`name` tuples）：
 
 ```jsx
 import { SelectInput } from 'admin-on-rest';
@@ -750,9 +750,9 @@ import { SelectInput } from 'admin-on-rest';
 ]} />
 ```
 
-![SelectInput](./img/select-input.gif)
+![SelectInput](https://marmelab.com/admin-on-rest/img/select-input.gif)
 
-You can also customize the properties to use for the option name and value, thanks to the `optionText` and `optionValue` attributes:
+您还可以自定义用于选项名称和值的属性，这要归功于`optionText`和`optionValue`属性：
 
 ```jsx
 const choices = [
@@ -762,7 +762,7 @@ const choices = [
 <SelectInput source="author_id" choices={choices} optionText="full_name" optionValue="_id" />
 ```
 
-`optionText` also accepts a function, so you can shape the option text at will:
+`optionText`也接受一个函数，所以你可以随意设置选项文本：
 
 ```jsx
 const choices = [
@@ -773,7 +773,7 @@ const optionRenderer = choice => `${choice.first_name} ${choice.last_name}`;
 <SelectInput source="author_id" choices={choices} optionText={optionRenderer} />
 ```
 
-`optionText` also accepts a React Element, that will be cloned and receive the related choice as the `record` prop. You can use Field components there.
+`optionText`也接受一个React元素，它将被克隆，并接收相关选择作为`record`属性。您可以在那里使用Field组件。
 
 ```jsx
 const choices = [
@@ -784,7 +784,7 @@ const FullNameField = ({ record }) => <span>{record.first_name} {record.last_nam
 <SelectInput source="gender" choices={choices} optionText={<FullNameField />}/>
 ```
 
-Enabling the `allowEmpty` props adds an empty choice (with `null` value) on top of the options, and makes the value nullable:
+启用`allowEmpty`属性在选项之上添加一个空选项（带有`null`值），并使该值为空：
 
 ```jsx
 <SelectInput source="category" allowEmpty choices={[
@@ -794,7 +794,7 @@ Enabling the `allowEmpty` props adds an empty choice (with `null` value) on top 
 ]} />
 ```
 
-The choices are translated by default, so you can use translation identifiers as choices:
+默认情况下会翻译选项，因此您可以使用翻译标识符作为选项：
 
 ```jsx
 const choices = [
@@ -803,15 +803,15 @@ const choices = [
 ];
 ```
 
-However, in some cases, you may not want the choice to be translated. In that case, set the `translateChoice` prop to false.
+但是，在某些情况下，您可能不希望翻译该选择项。在这种情况下，请将`translateChoice`属性设置为false。
 
 ```jsx
 <SelectInput source="gender" choices={choices} translateChoice={false}/>
 ```
 
-Note that `translateChoice` is set to false when `<SelectInput>` is a child of `<ReferenceInput>`.
+请注意，当`<SelectInput>`是`<ReferenceInput>`的子级时，`translateChoice`是设置为false。
 
-Lastly, use the `options` attribute if you want to override any of Material UI's `<SelectField>` attributes:
+最后，如果要覆盖任何Material UI`<SelectField>`属性，请使用`options`属性：
 
 {% raw %}
 ```jsx
@@ -821,9 +821,9 @@ Lastly, use the `options` attribute if you want to override any of Material UI's
 ```
 {% endraw %}
 
-Refer to [Material UI SelectField documentation](http://www.material-ui.com/#/components/select-field) for more details.
+有关详细信息，请参阅[Material UI SelectField documentation](http://www.material-ui.com/#/components/select-field)。
 
-**Tip**: If you want to populate the `choices` attribute with a list of related records, you should decorate `<SelectInput>` with [`<ReferenceInput>`](#referenceinput), and leave the `choices` empty:
+**提示**：如果要使用相关记录的列表填充`choices`属性，则应使用[`<ReferenceInput>`](#referenceinput)装饰`<SelectInput>`，并使`choices`留空：
 
 ```jsx
 import { SelectInput, ReferenceInput } from 'admin-on-rest'
@@ -833,11 +833,11 @@ import { SelectInput, ReferenceInput } from 'admin-on-rest'
 </ReferenceInput>
 ```
 
-If, instead of showing choices as a dropdown list, you prefer to display them as a list of radio buttons, try the [`<RadioButtonGroupInput>`](#radiobuttongroupinput). And if the list is too big, prefer the [`<AutocompleteInput>`](#autocompleteinput).
+如果，而不是显示选择项作为下拉列表，您更喜欢将它们显示为单选按钮列表，请尝试[`<RadioButtonGroupInput>`](#radiobuttongroupinput)。如果列表太大，则更喜欢[`<AutocompleteInput>`](#autocompleteinput)。
 
-## `<SelectArrayInput>`
+### `<SelectArrayInput>`组件{#SelectArrayInput}
 
-To let users choose several values in a list using a dropdown, use `<SelectArrayInput>`. It renders using [material-ui-chip-input](https://github.com/TeamWertarbyte/material-ui-chip-input). Set the `choices` attribute to determine the options (with `id`, `name` tuples):
+要让用户使用下拉列表在列表中选择多个值，请使用`<SelectArrayInput>`。 它使用[material-ui-chip-input](https://github.com/TeamWertarbyte/material-ui-chip-input)渲染。 设置`choices`属性来确定选项（使用`id`，`name` tuples）：
 
 ```js
 import { SelectArrayInput } from 'admin-on-rest';
@@ -851,10 +851,9 @@ import { SelectArrayInput } from 'admin-on-rest';
 ]} />
 ```
 
-![SelectArrayInput](./img/select-array-input.gif)
+![SelectArrayInput](https://marmelab.com/admin-on-rest/img/select-array-input.gif)
 
-You can also customize the properties to use for the option name and value,
-thanks to the `optionText` and `optionValue` attributes.
+您还可以自定义要用于选项名称和值的属性，这归功于`optionText`和`optionValue`属性。
 
 ```js
 const choices = [
@@ -865,7 +864,7 @@ const choices = [
 <SelectArrayInput source="categories" choices={choices} optionText="plural_name" optionValue="_id" />
 ```
 
-`optionText` also accepts a function, so you can shape the option text at will:
+`optionText`也接受一个函数，所以你可以随意设置选项文本：
 
 ```js
 const choices = [
@@ -877,7 +876,7 @@ const optionRenderer = choice => `${choice.name} (${choice.quantity})`;
 <SelectArrayInput source="categories" choices={choices} optionText={optionRenderer} />
 ```
 
-The choices are translated by default, so you can use translation identifiers as choices:
+默认情况下会转换选项，因此您可以使用翻译标识符作为选择项：
 
 ```js
 const choices = [
@@ -886,15 +885,15 @@ const choices = [
 ];
 ```
 
-However, in some cases, you may not want the choice to be translated. In that case, set the `translateChoice` prop to false.
+但是，在某些情况下，您可能不希望翻译该选择项。在这种情况下，请将`translateChoice`属性设置为false。
 
 ```js
 <SelectArrayInput source="gender" choices={choices} translateChoice={false}/>
 ```
 
-Note that `translateChoice` is set to false when `<SelectArrayInput>` is a child of `<ReferenceArrayInput>`.
+请注意，当`<SelectArrayInput>`是`<ReferenceArrayInput>`的子级时，`translateChoice`设置为false。
 
-Lastly, use the `options` attribute if you want to override any of the `<ChipInput>` attributes:
+最后，如果要覆盖任何`<ChipInput>`属性，请使用`options`属性：
 
 {% raw %}
 ```js
@@ -902,9 +901,9 @@ Lastly, use the `options` attribute if you want to override any of the `<ChipInp
 ```
 {% endraw %}
 
-Refer to [the ChipInput documentation](https://github.com/TeamWertarbyte/material-ui-chip-input) for more details.
+有关详细信息，请参阅[the ChipInput documentation](https://github.com/TeamWertarbyte/material-ui-chip-input)。
 
-**Tip**: If you want to populate the `choices` attribute with a list of related records, you should decorate `<SelectArrayInput>` with [`<ReferenceArrayInput>`](#referencearrayinput), and leave the `choices` empty:
+**提示**：如果要使用相关记录的列表填充`choices`属性，则应使用[`<ReferenceArrayInput>`](#referencearrayinput)装饰`<SelectArrayInput>`，并留`choices`为空：
 
 ```js
 import { SelectArrayInput, ReferenceArrayInput } from 'admin-on-rest'
@@ -914,9 +913,9 @@ import { SelectArrayInput, ReferenceArrayInput } from 'admin-on-rest'
 </ReferenceArrayInput>
 ```
 
-## `<TextInput>`
+### `<TextInput>`组件{#TextInput}
 
-`<TextInput>` is the most common input. It is used for texts, emails, URL or passwords. In translates to an HTML `<input>` tag.
+`<TextInput>`是最常见的输入。它用于文本，电子邮件，URL或密码。转换成HTML`<input>`标签。
 
 ```jsx
 import { TextInput } from 'admin-on-rest';
@@ -924,31 +923,31 @@ import { TextInput } from 'admin-on-rest';
 <TextInput source="title" />
 ```
 
-![TextInput](./img/text-input.png)
+![TextInput](https://marmelab.com/admin-on-rest/img/text-input.png)
 
-You can choose a specific input type using the `type` attribute, for instance `text` (the default), `email`, `url`, or `password`:
+您可以使用`type`属性选择特定的输入类型，例如`text`（默认），`email`，`url`或`password`：
 
 ```jsx
 <TextInput label="Email Address" source="email" type="email" />
 ```
 
-**Warning**: Do not use `type="number"`, or you'll receive a string as value (this is a [known React bug](https://github.com/facebook/react/issues/1425)). Instead, use [`<NumberInput>`](#numberinput).
+**警告**：不要使用`type="number"`，或者你会收到一个字符串作为值（这是一个[known React bug](https://github.com/facebook/react/issues/1425)）。 而是使用[`<NumberInput>`](#numberinput)。
 
-## Transforming Input Value to/from Store
+### 转换输入值 到／从 Store{#TransformingInputValue-to-fromStore}
 
-The data format returned by the input component may not be what your store desires. Since Admin-on-rest uses Redux Form, we can use its `parse()` and `format()` functions to transform the input value to and from the store. It's better to understand the [input value's lifecycle](http://redux-form.com/6.5.0/docs/ValueLifecycle.md/) before you start.
+输入组件返回的数据格式可能不是您的store所需要的。由于Admin-on-rest使用Redux Form，我们可以使用它的`parse()`和`format()`函数来转换输入值到store或从store转换值。在你开始之前，最好理解[input value's lifecycle](http://redux-form.com/6.5.0/docs/ValueLifecycle.md/)。
 
-Mnemonic for the two functions:
+这两个函数的助记：
 - `parse()`: input -> store
 - `format()`: store -> input
 
-Say the user would like to input values of 0-100 to a percentage field but your API (hence store) expects 0-1.0. You can use simple `parse()` and `format()` functions to archive the transform:
+说用户想要输入0-100的值到百分比字段，但是你的API（现在存储）期望为0-1.0。您可以使用简单的`parse()`和`format()`函数来转换归档：
 
 ```jsx
 <NumberInput source="percent" format={v => v*100} parse={v => v/100} label="Formatted number" />
 ```
 
-`<DateInput>` stores and returns a `Date` object. If you would like to store the ISO date `"YYYY-MM-DD"` in your store:
+`<DateInput>`存储并返回一个`Date`对象。如果您要在您的store中存储ISO日期`"YYYY-MM-DD"`:
 
 ```jsx
 const dateFormatter = v => {
@@ -973,18 +972,18 @@ const dateParser = v => {
 <DateInput source="isodate" format={dateFormatter} parse={dateParser} label="ISO date" />
 ```
 
-## Third-Party Components
+### 第三方组件{#Third-PartyComponents}
 
-You can find components for admin-on-rest in third-party repositories.
+您可以在第三方仓库中为admin-on-rest找到组件。
 
-* [dreinke/aor-color-input](https://github.com/dreinke/aor-color-input): a color input using [React Color](http://casesandberg.github.io/react-color/), a collection of color pickers.
-* [LoicMahieu/aor-tinymce-input](https://github.com/LoicMahieu/aor-tinymce-input): a TinyMCE component, useful for editing HTML
+* [dreinke/aor-color-input](https://github.com/dreinke/aor-color-input)：一个使用[React Color](http://casesandberg.github.io/react-color/)的颜色输入，一个颜色选择器的集合。
+* [LoicMahieu/aor-tinymce-input](https://github.com/LoicMahieu/aor-tinymce-input)：TinyMCE组件，用于编辑HTML。
 
-## Writing Your Own Input Component
+### 编写自己的输入组件{#WritingYourOwnInputComponent}
 
-If you need a more specific input type, you can also write it yourself. You'll have to rely on redux-form's [`<Field>`](http://redux-form.com/6.5.0/docs/api/Field.md/) component, so as to handle the value update cycle.
+如果您需要更具体的输入类型，您还可以自己编写。您将不得不依靠redux-form的[`<Field>`](http://redux-form.com/6.5.0/docs/api/Field.md/)组件，以便处理值更新周期。
 
-For instance, let's write a component to edit the latitude and longitude of the current record:
+例如，我们编写一个组件来编辑当前记录的纬度和经度：
 
 ```jsx
 // in LatLongInput.js
@@ -1008,7 +1007,7 @@ const ItemEdit = (props) => (
 );
 ```
 
-`LatLngInput` takes no props, because the `<Field>` component can access the current record via its context. The `name` prop serves as a selector for the record property to edit. All `Field` props except `name` and `component` are passed to the child component/element (an `<input>` in that example). Executing this component will render roughly the following code:
+`LatLngInput`不需要属性，因为`<Field>`组件可以通过它的上下文访问当前记录。`name`属性用作编辑记录属性的选择器。除`name`和`component`之外的所有`Field`属性都传递给子组件/元素（在该示例中为`<input>`）。执行此组件将大致渲染以下代码：
 
 ```html
 <span>
@@ -1017,7 +1016,7 @@ const ItemEdit = (props) => (
 </span>
 ```
 
-This component lacks a label. Admin-on-rest provides the `<Labeled>` component for that:
+该组件缺少标签。 Admin-on-rest为它提供了`<Labeled>`组件：
 
 ```jsx
 // in LatLongInput.js
@@ -1035,7 +1034,7 @@ const LatLngInput = () => (
 export default LatLngInput;
 ```
 
-Now the component will render with a label:
+现在组件将使用标签进行渲染：
 
 ```html
 <label>Position</label>
@@ -1045,7 +1044,7 @@ Now the component will render with a label:
 </span>
 ```
 
-Adding a label to an input component is such a common operation that admin-on-rest has the ability to do it automatically: just set the `addLabel` prop, and specify the label in the `label` prop:
+将标签添加到输入组件是一个常见的操作，admin-on-rest可以自动做这件事：只需设置`addLabel`属性，然后在`label`属性中指定标签：
 
 ```jsx
 // in LatLongInput.js
@@ -1068,7 +1067,7 @@ const ItemEdit = (props) => (
 );
 ```
 
-**Tip**: To avoid repeating them each time you use the component, you should define `label` and `addLabel` as `defaultProps`:
+**提示**：为避免在每次使用组件时重复使用，您应该将`label`和`addLabel`定义为`defaultProps`：
 
 ```jsx
 // in LatLongInput.js
@@ -1095,7 +1094,7 @@ const ItemEdit = (props) => (
 );
 ```
 
-**Tip**: The `<Field>` component supports dot notation in the `name` prop, to edit nested props:
+**提示**：`<Field>`组件在`name`属性中支持点符号，来编辑嵌套属性：
 
 ```jsx
 const LatLongInput = () => (
@@ -1107,7 +1106,7 @@ const LatLongInput = () => (
 );
 ```
 
-Instead of HTML `input` elements, you can use admin-on-rest components in `<Field>`. For instance, `<NumberInput>`:
+而不是HTML`input`元素，您可以在`<Field>`中使用admin-on-rest组件。例如，`<NumberInput>`：
 
 ```jsx
 // in LatLongInput.js
@@ -1133,9 +1132,9 @@ const ItemEdit = (props) => (
 );
 ```
 
-`<NumberInput>` receives the props passed to the `<Field>` component - `label` in the example. `<NumberInput>` is already labelled, so there is no need to also label the `<LanLngInput>` component - that's why `addLabel` isn't set as default prop this time.
+`<NumberInput>`接收传递给`<Field>`组件的属性 - 在示例中的`label`。`<NumberInput>`已经被标记了，所以没有必要也标注`<LanLngInput>`组件，这就是为什么这次`addLabel`没有被设置为默认的。
 
-**Tip**: If you need to pass a material ui component to `Field`, use a [field renderer function](http://redux-form.com/6.5.0/examples/material-ui/) to map the props:
+**提示**：如果您需要将material ui组件传递到`Field`，请使用[field renderer function](http://redux-form.com/6.5.0/examples/material-ui/)来映射属性：
 
 ```jsx
 import TextField from 'material-ui/TextField';
@@ -1157,9 +1156,9 @@ const LatLngInput = () => (
 );
 ```
 
-For more details on how to use redux-form's `<Field>` component, please refer to [the redux-form doc](http://redux-form.com/6.5.0/docs/api/Field.md/).
+有关如何使用redux-form的`<Field>`组件的更多细节，请参阅[the redux-form doc](http://redux-form.com/6.5.0/docs/api/Field.md/)。
 
-**Tip**: If you only need one `<Field>` component in a custom input, you can let admin-on-rest do the `<Field>` decoration for you by setting the `addField` default prop to `true`:
+**提示**：如果在自定义输入中只需要一个`<Field>`组件，你可以让admin-on-rest为你做`<Field>`装饰，通过将`addField`默认属性设置为`true`：
 
 ```jsx
 // in PersonEdit.js
@@ -1209,6 +1208,6 @@ const SexInput = ({ source }) => <Field name={source} component={renderSexInput}
 export default SexInput;
 ```
 
-Most admin-on-rest input components use `addField: true` in default props.
+大多数admin-on-rest输入组件在默认属性中使用`addField: true`。
 
-**Tip**: `<Field>` injects two props to its child component: `input` and `meta`. To learn more about these props, please refer to [the `<Field>` component documentation](http://redux-form.com/6.5.0/docs/api/Field.md/#props) in the redux-form website.
+**提示**：`<Field>`向其子组件注入两个属性：`input`和`meta`。要了解有关这些属性的更多信息，请在redux-form网站参阅[the `<Field>` component documentation](http://redux-form.com/6.5.0/docs/api/Field.md/#props)。
