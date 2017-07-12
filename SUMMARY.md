@@ -121,6 +121,14 @@
     * [转换输入值 到／从 Store](Inputs/README.md#TransformingInputValue-to-fromStore)
     * [第三方组件](Inputs/README.md#Third-PartyComponents)
     * [编写自己的输入组件](Inputs/README.md#WritingYourOwnInputComponent)
+* [身份验证](Authentication/README.md#Authentication)
+    * [配置认证客户端](Authentication/README.md#Configuring-the-Auth-Client)
+    * [发送凭证到REST API](Authentication/README.md#SendingCredentials-to-the-REST-API)
+    * [添加注销按钮](Authentication/README.md#Adding-a-Logout-Button)
+    * [在API上捕获身份验证错误](Authentication/README.md#CatchingAuthenticationErrorsOnTheAPI)
+    * [检查导航期间的凭据](Authentication/README.md#CheckingCredentialsDuringNavigation)
+    * [自定义登录和注销组件](Authentication/README.md#CustomizingTheLogin-and-Logout Components)
+    * [限制对自定义页面的访问](Authentication/README.md#RestrictingAccessToACustomPage)
 
 
 

@@ -1,0 +1,11 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "files.autoSave": "off",
+    "editor.tabSize": 2,
+    "javascript.validate.enable": false,
+    "tslint.enable": true,
+    "workbench.colorTheme": "Material Theme",
+    "workbench.iconTheme": "vs-seti",
+    "editor.fontSize": 16,
+    "typescript.validate.enable": true
+}
