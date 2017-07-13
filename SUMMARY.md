@@ -129,7 +129,13 @@
     * [检查导航期间的凭据](Authentication/README.md#CheckingCredentialsDuringNavigation)
     * [自定义登录和注销组件](Authentication/README.md#CustomizingTheLogin-and-Logout Components)
     * [限制对自定义页面的访问](Authentication/README.md#RestrictingAccessToACustomPage)
-
+* [主题化](Theming/README.md#Theming)
+    * [重写组件样式](Theming/README.md#Overriding-A-Component-Style)
+    * [条件格式](Theming/README.md#Conditional-Formatting)
+    * [响应效用](Theming/README.md#Responsive-Utility)
+    * [使用预定义的主题](Theming/README.md#Using-a-Predefined-Theme)
+    * [编写自定义主题](Theming/README.md#Writing-a-Custom-Theme)
+    * [使用自定义布局](Theming/README.md#Using-a-Custom-Layout)
 
 
 
