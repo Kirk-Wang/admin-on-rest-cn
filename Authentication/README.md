@@ -64,7 +64,7 @@ const App = () => (
 
 要在调用REST API路由时使用凭据，您必须进行调整，这次是`restClient`。 如[REST client documentation](RestClients.html#adding-custom-headers)中所述，`simpleRestClient`和`jsonServerRestClient`将`httpClient`作为第二个参数。这就是您可以更改请求标题，Cookie等的地方。
 
-例如，要将登录期间获取的令牌作为`Authorization`标头传递，请按如下所示配置REST客户端：
+例如，要将登录期间获取的令牌作为`Authorization`标头传递，请按如下所示配置REST客户端： 
 
 ```jsx
 import { simpleRestClient, fetchUtils, Admin, Resource } from 'admin-on-rest';
