@@ -144,6 +144,15 @@
     * [Bonus: 乐观渲染](Actions/README.md#Optimistic-Rendering)
     * [使用自定义Reducer](Actions/README.md#Using-a-Custom-Reducer)
     * [结论](Actions/README.md#Conclusion)
+* [翻译](Translation/README.md#Translation)
+    * [改变区域设置](Translation/README.md#Changing-Locale)
+    * [可用区域设置](Translation/README.md#Available-Locales)
+    * [在运行时更改区域设置](Translation/README.md#Changing-Locale-At-Runtime)
+    * [使用浏览器区域设置](Translation/README.md#Using-The-Browser-Locale)
+    * [翻译信息](Translation/README.md#Translation-Messages)
+    * [翻译资源和字段名称](Translation/README.md#Translating-Resource-and-Field-Names)
+    * [混合界面和域翻译](Translation/README.md#Mixing-Interface-and-Domain-Translations)
+    * [翻译自己的组件](Translation/README.md#Translating-Your-Own-Components)
 
 
 
