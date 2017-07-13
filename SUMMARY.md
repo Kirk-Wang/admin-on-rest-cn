@@ -136,7 +136,14 @@
     * [使用预定义的主题](Theming/README.md#Using-a-Predefined-Theme)
     * [编写自定义主题](Theming/README.md#Writing-a-Custom-Theme)
     * [使用自定义布局](Theming/README.md#Using-a-Custom-Layout)
-
+* [编写动作](Actions/README.md#Writing-Actions)
+    * [简单的方式](Actions/README.md#The-Simple-Way)
+    * [使用REST客户端而不是Fetch](Actions/README.md#Using-The-REST-Client-Instead-of-Fetch)
+    * [使用自定义动作创建者](Actions/README.md#Using-a-Custom-Action-Creator)
+    * [使用自定义传奇处理副作用](Actions/README.md#Handling-Side-Effects-With-a-Custom-Saga)
+    * [Bonus: 乐观渲染](Actions/README.md#Optimistic-Rendering)
+    * [使用自定义Reducer](Actions/README.md#Using-a-Custom-Reducer)
+    * [结论](Actions/README.md#Conclusion)
 
 
 
