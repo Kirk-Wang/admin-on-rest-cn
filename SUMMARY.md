@@ -153,6 +153,7 @@
     * [翻译资源和字段名称](Translation/README.md#Translating-Resource-and-Field-Names)
     * [混合界面和域翻译](Translation/README.md#Mixing-Interface-and-Domain-Translations)
     * [翻译自己的组件](Translation/README.md#Translating-Your-Own-Components)
+    * [使用特定Polyglot Features](Translation/README.md#Using-Specific-Polyglot-Features)
 
 
 
