@@ -157,6 +157,9 @@
 * [在其它React app中包含admin-on-rest](CustomApp/README.md#Including-admin-on-rest-on-another-React-app)
 * [引用](Reference/README.md#Reference)
 * [FAQ](FAQ/README.md#FAQ)
+    * [我的资源可以有自定义标识符/主键吗?](FAQ/README.md#can-i-have-custom-identifiers-primary-keys-for-my-resources)
+    * [如何根据用户权限自定义UI？](FAQ/README.md#how-can-i-customize-the-ui-depending-on-the-user-permissions)
+    * [如何根据其输入值自定义表单？](FAQ/README.md#how-can-i-customize-forms-depending-on-its-inputs-values)
 
 
 
