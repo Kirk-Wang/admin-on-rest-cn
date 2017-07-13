@@ -1,7 +1,5 @@
 # 引用{#Reference}
 
-<div style="column-count:3" markdown="1">
-
 * `<Actions>`
 * [`<Admin>`](./Admin.html)
 * `<AdminRoutes>`
@@ -88,5 +86,3 @@
 * `<Toolbar>`
 * [`<UrlField>`](./Fields.html#urlfield)
 * `<ViewTitle>`
-
-</div>

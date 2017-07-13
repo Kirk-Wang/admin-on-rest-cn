@@ -156,6 +156,7 @@
     * [使用特定Polyglot Features](Translation/README.md#Using-Specific-Polyglot-Features)
 * [在其它React app中包含admin-on-rest](CustomApp/README.md#Including-admin-on-rest-on-another-React-app)
 * [引用](Reference/README.md#Reference)
+* [FAQ](FAQ/README.md#FAQ)
 
 
 
