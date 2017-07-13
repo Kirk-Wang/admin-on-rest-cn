@@ -1,11 +1,14 @@
-# admin-on-rest 中文文档~~~<a aria-label="Star azu/JavaScript-Plugin-Architecture on GitHub" href="https://github.com/Kirk-Wang/admin-on-rest-cn/" class="github-button"><img src="https://monosnap.com/file/MZsfLjZNkSNwTJ33apkwpBjlBZLbSh.png" alt="GitHub"></a>
+# admin-on-rest 中文文档
+
 admin-on-rest是一个用于构建在REST服务之上的浏览器中运行的管理应用程序前端框架，它使用了ES6，[React](https://facebook.github.io/react/)和[Material Design](https://material.io/)。 它被 [marmelab](https://marmelab.com/) 开源和维护。 
+
+[Documentation](https://marmelab.com/admin-on-rest/) - [Source](https://github.com/marmelab/admin-on-rest)
 
 [👀演示](https://marmelab.com/admin-on-rest-demo/) - [👃文档](https://kirk-wang.gitbooks.io/admin-on-rest/) - [发行版本](https://github.com/marmelab/admin-on-rest/releases) - [服务支持](http://stackoverflow.com/questions/tagged/admin-on-rest)- [社区](https://www.admin-on-rest.com/)
 
 [![admin-on-rest-视频展示（请自带梯子）](https://marmelab.com/admin-on-rest/img/admin-on-rest-demo-still.png)](https://vimeo.com/205118063)
 
-## 产品功能
+## 产品功能{#Features}
 
 * 适应任何REST后端
 * 完善的文档
@@ -30,7 +33,7 @@ admin-on-rest是一个用于构建在REST服务之上的浏览器中运行的管
 * 可以被包含在另一个React应用中
 * 受流行库 [ng-admin](https://github.com/marmelab/ng-admin) 的启发 (ng-admin 也是被marmelab开源和维护)
 
-## Installation
+## 安装{#Installation}
 
 Admin-on-rest 可以从npm获得. 你可以安装它（和它所必需的依赖）
 使用：
@@ -39,11 +42,11 @@ Admin-on-rest 可以从npm获得. 你可以安装它（和它所必需的依赖�
 npm install --save-dev admin-on-rest
 ```
 
-## 用法
+## 用法{#Usage}
 
 阅读大约15分钟的 [教程](./Tutorial.html) 介绍。之后，前往[文档](./index.html)，或者检出一个栗子🌰用法的[演示源码](https://github.com/marmelab/admin-on-rest-demo)。
 
-## 秒👀看个栗子🌰
+## 秒👀看个栗子🌰{#At-a-Glance}
 
 ```jsx
 // in app.js
@@ -116,7 +119,7 @@ export const PostCreate = (props) => (
 ```
 {% endraw %}
 
-## 它是否适用于我的REST API？
+## 它是否适用于我的REST API？{#Does-It-Work-With-My-REST-API}
 
 Yes.
 
@@ -126,11 +129,11 @@ Admin-on-rest使用一种称为*REST client*概念的适配器方法。它目前
 
 查看详细的[REST客户端文档](https://marmelab.com/admin-on-rest/RestClients.html)。
 
-## 包含🔋电池但可拆装
+## 包含🔋电池但可拆装{#Batteries-Included-But-Removable}
 
 Admin-on-rest被设计为一个松散合的React组件库，它建立在[material-ui](http://www.material-ui.com/#/)之上，除了控制器功能实现了Redux方法以外。它也非常容易用你自己的方法去替换admin-on-rest的一部分，例如，去自定义datagrid，GraphQL代替REST，或者bootstrap代替Material Design。
 
-## 贡献
+## 贡献{#Contributing}
 
 欢迎所有在[GitHub repository](https://github.com/marmelab/admin-on-rest)上的PR。尝试遵循现有文件的编码风格，并包括单元测试和文档。为全面的代码审查做好准备，并且对合并要有耐心 - 这是一项开源的倡议。
 
@@ -175,10 +178,10 @@ $ cd ../myapp
 $ npm run
 ```
 
-## 许可
+## 许可{#License}
 
 Admin-on-rest遵循[MIT Licence](https://github.com/marmelab/admin-on-rest/blob/master/LICENSE.md)， 由[marmelab](http://marmelab.com)赞助和支持。
 
-## 捐赠
+## 捐赠{#Donate}
 
 这个库是免费使用的，即使是商业用途。如果你想要回馈，请交流它，帮助新人，或贡献代码。但最好的回馈是**捐赠给慈善机构**。我们推荐 [Doctors Without Borders](http://www.doctorswithoutborders.org/)。
